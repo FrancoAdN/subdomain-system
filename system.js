@@ -19,7 +19,7 @@ const app = express();
 app.use(bodyParser.json({limit:'50mb', extended:true}));
 
 app.use(bodyParser.urlencoded({limit:'50mb', extended:true}));
-
+/*
 app.get('/', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `tabla`';
@@ -31,6 +31,10 @@ app.get('/', (req, resp) => {
           con.end();
         });
     });
+});*/
+
+app.get('/', (req, resp) => {
+    resp.send("WELCOME TO THE SYSTEM SERVER OF MAXPOWER INDUSTRIAL AUTOMATION \n\n\n\nTHIS SERVER IS USED TO MAKE REQUESTS");
 });
 
 app.listen(3030, () => console.log('Server running'));
