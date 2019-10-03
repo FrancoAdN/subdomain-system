@@ -43,11 +43,28 @@ app.get('/ord_ext', (req, resp) => {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
-          let arr = [];
+          /*let arr = [];
           for(let r of result){
             let json = {id: r.id_ext, emp: r.emp, incoterm: r.incoterm, mon: r.moneda, fecha: r.fecha, pmde: r.pmde, tabla:[], orden: r.orden};
             json.tabla.push(r.cant, r.descr, r.punit);
             arr.push(json);
+          }*/
+          let index = result[0].id_ext;
+          let json = {id: result[0].id_ext, emp: result[0].emp, inco: result[0].incoterm, mon: result[0].moneda,
+            pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
+          let arr = []
+          for(let i = 1; i < result.length; i++){
+              if(result[i].id_ext == index)
+                json.tabla.push({cant: result[i].cant, descr: result[i].descr, punit: result[i].punit});
+              else{
+                  arr.push(json);
+                  index = result[i].id_ext;
+                  json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda,
+                    pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
+              }
+              if(i == result.length -1)
+                arr.push(json);
+              
           }
           resp.send(arr);
           con.end();
