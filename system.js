@@ -38,7 +38,7 @@ app.get('/ord_nac', (req, resp) => {
 });
 app.get('/ord_ext', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT * FROM `ord_ext`';
+    const sql =  'SELECT * FROM `ord_ext` oe INNER JOIN `tabla` t ON oe.orden = t.orden';
     con.connect(function(err) {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
