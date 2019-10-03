@@ -43,7 +43,13 @@ app.get('/ord_ext', (req, resp) => {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
-          resp.send(result);
+          let arr = [];
+          for(let r of result){
+            let json = {id: r.id_ext, emp: r.emp, incoterm: r.incoterm, mon: r.moneda, fecha: r.fecha, pmde: r.pmde, tabla:[], orden: r.orden};
+            json.tabla.push(r.cant, r.descr, r.punit);
+            arr.push(json);
+          }
+          resp.send(arr);
           con.end();
         });
     });
