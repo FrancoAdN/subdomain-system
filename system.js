@@ -174,7 +174,7 @@ app.post('/emp', (req, resp) => {
           }else if(result.length == 0){
             const qry = `INSERT into 'emp' (emp, cuit, dir, loc, web, telcom, rub, descrub, cont, mail, tel, contb, mailb, telb) 
             VALUES ("${emp.emp}", ${emp.cuit}, "${emp.dir}", "${emp.loc}", "${emp.web}", ${emp.telcom}, "${emp.rub}", "${emp.descrub}", "${emp.cont}", "${emp.mail}", ${emp.tel}, "${emp.contb}", "${emp.mailb}", ${emp.telb});`;
-            con.query(sql, function (err, result, fields) {
+            con.query(qry, function (err, result, fields) {
                 if (err){
                     console.error(err);
                     resp.send("0");
