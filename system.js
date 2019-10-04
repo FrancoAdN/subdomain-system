@@ -28,9 +28,15 @@ app.get('/ord_nac', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `ord_nac`';
     con.connect(function(err) {
-        if (err) throw err;
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
         con.query(sql, function (err, result, fields) {
-          if (err) throw err;
+          if (err) {
+            console.error(err);
+            resp.send("0");
+          }
           resp.send(result);
           con.end();
         });
@@ -40,9 +46,15 @@ app.get('/ord_ext', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `ord_ext` oe INNER JOIN `tabla` t ON oe.orden = t.orden';
     con.connect(function(err) {
-        if (err) throw err;
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
         con.query(sql, function (err, result, fields) {
-          if (err) throw err;
+          if (err){
+              console.error(err);
+              resp.send("0");
+          }
           //PARSING FROM RESULTS TO TABLE
           let index = result[0].id_ext;
           let json = {id: result[0].id_ext, emp: result[0].emp, inco: result[0].incoterm, mon: result[0].moneda,
@@ -71,10 +83,15 @@ app.get('/rep_lab', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `rep_lab`';
     con.connect(function(err) {
-        if (err) throw err;
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
         con.query(sql, function (err, result, fields) {
-          if (err) throw err;
-          resp.send(result);
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }          resp.send(result);
           con.end();
         });
     });
@@ -83,9 +100,15 @@ app.get('/asis_tec', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `asis_tec`';
     con.connect(function(err) {
-        if (err) throw err;
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
         con.query(sql, function (err, result, fields) {
-          if (err) throw err;
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
           resp.send(result);
           con.end();
         });
@@ -95,9 +118,15 @@ app.get('/venta_prod', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `venta_prod`';
     con.connect(function(err) {
-        if (err) throw err;
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
         con.query(sql, function (err, result, fields) {
-          if (err) throw err;
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
           resp.send(result);
           con.end();
         });
@@ -108,9 +137,15 @@ app.get('/tabla', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `tabla`';
     con.connect(function(err) {
-        if (err) throw err;
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
         con.query(sql, function (err, result, fields) {
-          if (err) throw err;
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
           resp.send(result);
           con.end();
         });
@@ -124,8 +159,36 @@ app.post('/emp', (req, resp) => {
     emp.telb = parseInt(emp.telb);
     emp.telcom = parseInt(emp.telcom);
 
-    console.log(emp);
+    const con = connectionSQL();
 
-    resp.send("INSERT DONE");
+    const sql =  "SELECT * FROM `emp` WHERE `emp` = '" + emp.emp  + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+          if (err){
+            console.error(err);
+            resp.send("0");
+          }else if(result.length == 0){
+            const qry = `INSERT into 'emp' (emp, cuit, dir, loc, web, telcom, rub, descrub, cont, mail, tel, contb, mailb, telb) 
+            VALUES ("${emp.emp}", ${emp.cuit}, "${emp.dir}", "${emp.loc}", "${emp.web}", ${emp.telcom}, "${emp.rub}", "${emp.descrub}", "${emp.cont}", "${emp.mail}", ${emp.tel}, "${emp.contb}", "${emp.mailb}", ${emp.telb});`;
+            con.query(sql, function (err, result, fields) {
+                if (err){
+                    console.error(err);
+                    resp.send("0");
+                }else{
+                    resp.send("1");
+                }
+                con.end();
+            });
+          }else{
+            resp.send("2");
+          }
+          con.end();
+        });
+    });
 });
+
 app.listen(3030, () => console.log('Server running'));
