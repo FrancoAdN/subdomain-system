@@ -118,7 +118,14 @@ app.get('/tabla', (req, resp) => {
 });
 
 app.post('/emp', (req, resp) => {
-    console.log(req.body);
+    let emp = req.body;
+    emp.cuit = parseInt(emp.cuit);
+    emp.tel = parseInt(emp.tel);
+    emp.telb = parseInt(emp.telb);
+    emp.telcom = parseInt(emp.telcom);
+
+    console.log(emp);
+
     resp.send("INSERT DONE");
 });
 app.listen(3030, () => console.log('Server running'));
