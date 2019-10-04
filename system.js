@@ -181,7 +181,6 @@ app.post('/emp', (req, resp) => {
                 }else{
                     resp.send("1");
                 }
-                con.end();
             });
           }else{
             resp.send("2");
