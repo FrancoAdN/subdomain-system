@@ -179,6 +179,7 @@ app.post('/emp', (req, resp) => {
                     console.error(err);
                     resp.send("0");
                 }else{
+                    console.log("INSERT DONE");
                     resp.send("1");
                 }
             });
