@@ -43,12 +43,7 @@ app.get('/ord_ext', (req, resp) => {
         if (err) throw err;
         con.query(sql, function (err, result, fields) {
           if (err) throw err;
-          /*let arr = [];
-          for(let r of result){
-            let json = {id: r.id_ext, emp: r.emp, incoterm: r.incoterm, mon: r.moneda, fecha: r.fecha, pmde: r.pmde, tabla:[], orden: r.orden};
-            json.tabla.push(r.cant, r.descr, r.punit);
-            arr.push(json);
-          }*/
+          //PARSING FROM RESULTS TO TABLE
           let index = result[0].id_ext;
           let json = {id: result[0].id_ext, emp: result[0].emp, inco: result[0].incoterm, mon: result[0].moneda,
             pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
@@ -122,5 +117,8 @@ app.get('/tabla', (req, resp) => {
     });
 });
 
-
+app.post('/emp', (req, resp) => {
+    console.log(req.body);
+    resp.send("INSERT DONE");
+});
 app.listen(3030, () => console.log('Server running'));
