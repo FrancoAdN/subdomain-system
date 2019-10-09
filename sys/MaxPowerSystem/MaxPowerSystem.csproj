@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F65482CD-6DDE-427A-B4C2-EB9511947935}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MaxPowerSystem</RootNamespace>
+    <AssemblyName>MaxPowerSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clientREST.cs" />
+    <Compile Include="compExteriorUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="compExteriorUC.Designer.cs">
+      <DependentUpon>compExteriorUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="compNacUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="compNacUC.Designer.cs">
+      <DependentUpon>compNacUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbEnterprise.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dbEnterprise.Designer.cs">
+      <DependentUpon>dbEnterprise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbOrdExt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dbOrdExt.Designer.cs">
+      <DependentUpon>dbOrdExt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbTecAsist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dbTecAsist.Designer.cs">
+      <DependentUpon>dbTecAsist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbVentProd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dbVentProd.Designer.cs">
+      <DependentUpon>dbVentProd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Detalle.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Files.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="repProdUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="repProdUC.Designer.cs">
+      <DependentUpon>repProdUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tecAsistUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="tecAsistUC.Designer.cs">
+      <DependentUpon>tecAsistUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uploadDataBaseUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uploadDataBaseUC.Designer.cs">
+      <DependentUpon>uploadDataBaseUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ventaProdUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ventaProdUC.Designer.cs">
+      <DependentUpon>ventaProdUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewDataBaseUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="viewDataBaseUC.Designer.cs">
+      <DependentUpon>viewDataBaseUC.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="compExteriorUC.resx">
+      <DependentUpon>compExteriorUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="compNacUC.resx">
+      <DependentUpon>compNacUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbEnterprise.resx">
+      <DependentUpon>dbEnterprise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbOrdExt.resx">
+      <DependentUpon>dbOrdExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbTecAsist.resx">
+      <DependentUpon>dbTecAsist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbVentProd.resx">
+      <DependentUpon>dbVentProd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="repProdUC.resx">
+      <DependentUpon>repProdUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tecAsistUC.resx">
+      <DependentUpon>tecAsistUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uploadDataBaseUC.resx">
+      <DependentUpon>uploadDataBaseUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ventaProdUC.resx">
+      <DependentUpon>ventaProdUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewDataBaseUC.resx">
+      <DependentUpon>viewDataBaseUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <None Include="static\icon-search.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\search16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
