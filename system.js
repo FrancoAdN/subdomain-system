@@ -193,6 +193,8 @@ app.post('/emp', (req, resp) => {
     });
 });
 app.get('/emp/:id', (req, resp) => {
+    const con = connectionSQL();
+    
     let sql = "SELECT * FROM `emp` WHERE";
     if(parseInt(req.params.id))
         sql += " `cuit` = " + req.params.id;
