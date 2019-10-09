@@ -113,6 +113,11 @@
     <Compile Include="repProdUC.Designer.cs">
       <DependentUpon>repProdUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resources\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="tecAsistUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -166,6 +171,10 @@
     <EmbeddedResource Include="repProdUC.resx">
       <DependentUpon>repProdUC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="tecAsistUC.resx">
       <DependentUpon>tecAsistUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +197,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="static\temp_asist_tec.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -224,8 +234,6 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <None Include="static\icon-search.png" />
-    <None Include="Resources\Image1.bmp" />
-    <None Include="Resources\search16.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

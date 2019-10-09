@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+
 
 namespace MaxPowerSystem
 {
@@ -33,41 +35,76 @@ namespace MaxPowerSystem
                 !string.IsNullOrEmpty(boxHours.Text) &&
                 !string.IsNullOrEmpty(boxDetalle.Text))
             {
-                List<Files> data = new List<Files>();
-                data.Add(new Files(boxEnterprise.Text, "<empresa>"));
-                data.Add(new Files(boxAsist.Text, "<asistencia>"));
-                data.Add(new Files(detail, "<detalle>"));
-                data.Add(new Files(boxPrice.Text, "<precio>"));
-                data.Add(new Files(boxForm.Text, "<formadepago>"));
+                JToken json = "";
+                bool err = false; 
+                clientREST client = new clientREST();
 
-                string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Asistencia Técnica\asist_tec.docx";
-                bool done = false;
+                client.endPoint = "http://system.maxpower-ar.com/emp/" + boxEnterprise.Text;
+
+                client.httpMethod = httpVerb.GET;
+
+
+                string resp = string.Empty;
 
                 try
                 {
-                    done = F1.CreateWordDocument(@"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_asist_tec.docx", filepath, data);
+                    resp = client.makeRequest();
+                    json = JToken.Parse(resp);
+                    if (json.Type != JTokenType.Array)
+                    {
+                        err = true;
+                        Console.WriteLine(json["errorMessages"]);
+                    }
+
+                    if (!(json.Count() == 1))
+                        err = true;
+
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al generar el archivo (Cod. 4)");
-
+                    MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                 }
 
-               
-                if (done)
+                if (!err)
                 {
-                    boxEnterprise.Text = "";
-                    boxAsist.Text = "";
-                    boxPrice.Text = "";
-                    boxForm.Text = "";
-                    boxDays.Text = "";
-                    boxHours.Text = "";
-                    boxDetalle.Text = "";
-                    boxDays.Text = "";
-                    boxHours.Text = "";
 
+                    Console.WriteLine(json);
+                    List<Files> data = new List<Files>();
+                    data.Add(new Files(boxEnterprise.Text, "<empresa>"));
+                    data.Add(new Files(boxAsist.Text, "<asistencia>"));
+                    data.Add(new Files(detail, "<detalle>"));
+                    data.Add(new Files(boxPrice.Text, "<precio>"));
+                    data.Add(new Files(boxForm.Text, "<formadepago>"));
+                    
+
+                    string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Asistencia Técnica\asist_tec.docx";
+                    bool done = false;
+
+                    try
+                    {
+                        done = F1.CreateWordDocument(@"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_asist_tec.docx", filepath, data);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al generar el archivo (Cod. 4)");
+
+                    }
+
+
+                    if (done)
+                    {
+                        boxEnterprise.Text = "";
+                        boxAsist.Text = "";
+                        boxPrice.Text = "";
+                        boxForm.Text = "";
+                        boxDays.Text = "";
+                        boxHours.Text = "";
+                        boxDetalle.Text = "";
+                        boxDays.Text = "";
+                        boxHours.Text = "";
+
+                    }
                 }
-
             }
             else
             {

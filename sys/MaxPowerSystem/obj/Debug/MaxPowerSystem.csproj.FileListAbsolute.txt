@@ -57,3 +57,4 @@ C:\Users\User\Desktop\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csprojAssembly
 C:\Users\User\Desktop\sys\MaxPowerSystem\bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\Desktop\sys\MaxPowerSystem\bin\Debug\Newtonsoft.Json.xml
 C:\Users\User\Desktop\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.CopyComplete
+C:\Users\User\Desktop\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.Resources.Resource.resources
