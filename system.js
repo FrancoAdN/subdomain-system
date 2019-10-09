@@ -79,6 +79,8 @@ app.get('/ord_ext', (req, resp) => {
     });
 });
 
+
+
 app.get('/rep_lab', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `rep_lab`';
@@ -186,6 +188,29 @@ app.post('/emp', (req, resp) => {
           }else{
             resp.send("2");
           }
+          con.end();
+        });
+    });
+});
+app.get('/emp/:id', (req, resp) => {
+    let sql = "SELECT * FROM `emp` WHERE";
+    if(parseInt(req.params.id))
+        sql += " `cuit` = " + req.params.id;
+    else
+        sql += " `emp` = '" + req.params.id +"';";
+    
+    console.log(sql);
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
+          resp.send(result);
           con.end();
         });
     });
