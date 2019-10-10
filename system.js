@@ -218,4 +218,22 @@ app.get('/emp/:id', (req, resp) => {
     });
 });
 
+app.get('/last', (req, resp) => {
+    const sql = 'SELECT * FROM last';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
+          resp.send(result);
+          con.end();
+        });
+    });
+});
+
 app.listen(3030, () => console.log('Server running'));
