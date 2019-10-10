@@ -219,6 +219,7 @@ app.get('/emp/:id', (req, resp) => {
 });
 
 app.get('/last', (req, resp) => {
+    const con = connectionSQL();
     const sql = 'SELECT * FROM last';
     con.connect(function(err) {
         if (err) {
