@@ -98,6 +98,10 @@ app.get('/rep_lab', (req, resp) => {
         });
     });
 });
+
+
+
+
 app.get('/asis_tec', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `asis_tec`';
@@ -116,6 +120,15 @@ app.get('/asis_tec', (req, resp) => {
         });
     });
 });
+
+
+app.post('/asis_tec', (req, resp) => {
+    const data = req.body;
+
+    resp.send("1");
+}),
+
+
 app.get('/venta_prod', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `venta_prod`';
