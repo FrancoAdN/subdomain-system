@@ -231,7 +231,7 @@ app.get('/last', (req, resp) => {
                 console.error(err);
                 resp.send("0");
             }
-          resp.send(result[0].num);
+          resp.send(result);
           con.end();
         });
     });
