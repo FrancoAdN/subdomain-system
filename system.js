@@ -201,7 +201,7 @@ app.get('/emp/:id', (req, resp) => {
     else
         sql += " `emp` = '" + req.params.id +"';";
     
-    console.log(sql);
+
     con.connect(function(err) {
         if (err) {
             console.error(err);
@@ -231,7 +231,7 @@ app.get('/last', (req, resp) => {
                 console.error(err);
                 resp.send("0");
             }
-          resp.send(result[0]);
+          resp.send(result[0].num);
           con.end();
         });
     });
