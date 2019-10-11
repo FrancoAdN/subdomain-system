@@ -112,7 +112,7 @@ app.post('/rep_lab', (req, resp) => {
     for(let t of data.tabla){
         t.cant = parseInt(t.cant);
         t.unit = parseInt(t.unit);
-        const ins = `INSERT INTO tabla (cant, descr, punit, orden) VALUES (${t.cant}, '${t.desc}', ${t.punit}, '${data.orden}');`;
+        const ins = `INSERT INTO tabla (cant, descr, punit, orden) VALUES (${t.cant}, '${t.desc}', ${t.unit}, '${data.noferta}');`;
         sql += ins;
     }
     const con = connectionSQL();
