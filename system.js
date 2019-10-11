@@ -94,7 +94,8 @@ app.get('/rep_lab', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }          resp.send(result);
+            }          
+            resp.send(result);
           con.end();
         });
     });
@@ -106,7 +107,7 @@ app.post('/rep_lab', (req, resp) => {
     data.plazomax = parseInt(data.plazomax);
     data['conf'] = false;
     const nof = parseInt(data.noferta.split('-')[1]);
-    let sql =  `INSERT INTO rep_lab (emp, edm, precio, cdp, fdp, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.edm}', ${data.precio}, '${data.entrega}', '${data.formadepago}', '${data.plazomax}', '${data.orden}', '${data.fecha}', ${data.conf});
+    let sql =  `INSERT INTO rep_lab (emp, edm, precio, cdp, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.entrega}', ${data.precio}, '${data.formadepago}', '${data.plazomax}', '${data.orden}', '${data.fecha}', ${data.conf});
     UPDATE last SET num = ${nof};`;
     for(let t of data.tabla){
         t.cant = parseInt(t.cant);
