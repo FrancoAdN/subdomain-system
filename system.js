@@ -201,6 +201,11 @@ app.get('/venta_prod', (req, resp) => {
     });
 });
 
+app.post('/venta_prod', (req, resp) => {
+    console.log(req.body);
+    resp.send("1");
+})
+
 app.get('/tabla', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `tabla`';
