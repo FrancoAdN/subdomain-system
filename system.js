@@ -114,6 +114,7 @@ app.post('/rep_lab', (req, resp) => {
         const ins = `INSERT INTO tabla (cant, descr, punit, orden) VALUES (${t.cant}, '${t.desc}', ${t.punit}, '${data.orden}');`;
         sql += ins;
     }
+    console.log(data);
     const con = connectionSQL();
     con.connect(function(err) {
         if (err) {
