@@ -100,6 +100,39 @@ app.get('/rep_lab', (req, resp) => {
     });
 });
 
+app.post('/rep_lab', (req, resp) => {
+    let data = req.body;
+    data.precio = parseInt(data.precio);
+    data.plazomax = parseInt(data.plazomax);
+    data['conf'] = false;
+    const nof = parseInt(data.noferta.split('-')[1]);
+    const sql =  `INSERT INTO rep_lab (emp, edm, precio, cdp, fdp, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.edm}', ${data.precio}, '${data.entrega}', '${data.formadepago}', '${data.plazomax}', '${data.orden}', '${data.fecha}', ${data.conf});
+    UPDATE last SET num = ${nof};`;
+    for(let t of data.tabla){
+        t.cant = parseInt(t.cant);
+        t.unit = parseInt(t.unit);
+        const ins = `INSERT INTO tabla (cant, descr, punit, orden) VALUES (${t.cant}, '${t.desc}', ${t.punit}, '${data.orden}');`;
+        sql += ins;
+    }
+    const con = connectionSQL();
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
+          resp.send(result);
+          con.end();
+        });
+    });
+
+    resp.send("1");
+});
+
 
 app.get('/asis_tec', (req, resp) => {
     const con = connectionSQL();
@@ -123,7 +156,6 @@ app.get('/asis_tec', (req, resp) => {
 
 app.post('/asis_tec', (req, resp) => {
     const data = req.body;
-    data.tel = parseInt(data.tel);
     data.precio = parseInt(data.precio);
     const nof = parseInt(data.noferta.split('-')[1]);
     data['conf'] = false;
