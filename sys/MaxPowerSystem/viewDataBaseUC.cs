@@ -67,7 +67,10 @@ namespace MaxPowerSystem
                     string resp = string.Empty;
 
                     resp = client.makeRequest();
-                    
+                    if (resp == "0")
+                        MessageBox.Show("SQL ERROR (Cod. 0)");    
+                    else if (resp == "6")
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
                     {

@@ -249,7 +249,6 @@ namespace MaxPowerSystem
             this.viewDataBaseUC1.Name = "viewDataBaseUC1";
             this.viewDataBaseUC1.Size = new System.Drawing.Size(669, 325);
             this.viewDataBaseUC1.TabIndex = 0;
-            this.viewDataBaseUC1.Load += new System.EventHandler(this.ViewDataBaseUC1_Load);
             // 
             // Form1
             // 

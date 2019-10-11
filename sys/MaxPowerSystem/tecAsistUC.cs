@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
-
+using System.Net;
 
 namespace MaxPowerSystem
 {
@@ -49,10 +49,15 @@ namespace MaxPowerSystem
                 try
                 {
                     resp = client.makeRequest();
+                    if (resp == "0")
+                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                    else if (resp == "6")
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
                     {
                         err = true;
+                        MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                         Console.WriteLine(json["errorMessages"]);
                     }
 
@@ -60,7 +65,7 @@ namespace MaxPowerSystem
                         err = true;
 
                 }
-                catch (Exception ex)
+                catch (WebException)
                 {
                     MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                 }
@@ -68,42 +73,113 @@ namespace MaxPowerSystem
                 if (!err)
                 {
 
-                    Console.WriteLine(json);
                     List<Files> data = new List<Files>();
+                    data.Add(new Files(DateTime.Now.ToString("dd/MM/yyyy"), "<fecha>"));
+                    data.Add(new Files((string)json[0]["cont"],"<para>"));
+                    data.Add(new Files((string)json[0]["mail"], "<email>"));
+                    data.Add(new Files((string)json[0]["tel"], "<tel>"));
                     data.Add(new Files(boxEnterprise.Text, "<empresa>"));
                     data.Add(new Files(boxAsist.Text, "<asistencia>"));
                     data.Add(new Files(detail, "<detalle>"));
                     data.Add(new Files(boxPrice.Text, "<precio>"));
                     data.Add(new Files(boxForm.Text, "<formadepago>"));
-                    
 
-                    string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Asistencia Técnica\asist_tec.docx";
-                    bool done = false;
+                    client.endPoint = "http://system.maxpower-ar.com/last";
 
                     try
                     {
-                        done = F1.CreateWordDocument(@"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_asist_tec.docx", filepath, data);
+                        resp = client.makeRequest();
+
+                        if (resp == "0")
+                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                        else if (resp == "6")
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+
+                        json = JToken.Parse(resp);
+                        if (json.Type != JTokenType.Array)
+                        {
+                            err = true;
+                            MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                            Console.WriteLine(json["errorMessages"]);
+                        }
+
                     }
-                    catch (Exception ex)
+                    catch (WebException)
                     {
-                        MessageBox.Show("Error al generar el archivo (Cod. 4)");
-
+                        MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                     }
 
-
-                    if (done)
+                    if (!err)
                     {
-                        boxEnterprise.Text = "";
-                        boxAsist.Text = "";
-                        boxPrice.Text = "";
-                        boxForm.Text = "";
-                        boxDays.Text = "";
-                        boxHours.Text = "";
-                        boxDetalle.Text = "";
-                        boxDays.Text = "";
-                        boxHours.Text = "";
+                        int nof = (int)json[0]["num"] + 1;
+                        data.Add(new Files("MAX-"+nof+"-AR19-1", "<noferta>"));
+                        string filepath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Asistencia Técnica\asist_tec.docx";
+                        bool done = false;
 
+                        try
+                        {
+                            done = F1.CreateWordDocument(@"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_asist_tec.docx", filepath, data);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al generar el archivo (Cod. 4)");
+
+                        }
+
+
+                        if (done)
+                        {
+                            boxEnterprise.Text = "";
+                            boxAsist.Text = "";
+                            boxPrice.Text = "";
+                            boxForm.Text = "";
+                            boxDays.Text = "";
+                            boxHours.Text = "";
+                            boxDetalle.Text = "";
+                            boxDays.Text = "";
+                            boxHours.Text = "";
+
+                            client.postJSON = string.Empty;
+                            client.postJSON = "{";
+                            char[] tr = { '{', '}' };
+                            string aux = string.Empty;
+                            foreach (Files d in data)
+                            {
+                                aux += d.toSTR();
+                            }
+                            aux = aux.Remove(aux.Length - 1);
+                            client.postJSON += aux;
+                            client.postJSON += "}";
+
+
+                            client.endPoint = "http://system.maxpower-ar.com/asis_tec";
+
+                            client.httpMethod = httpVerb.POST;
+
+
+                            resp = string.Empty;
+
+                            try
+                            {
+                                resp = client.makeRequest();
+                                if (resp == "0")
+                                    MessageBox.Show("SQL ERROR (Cod. 0)");
+                                else if (resp == "1")
+                                    MessageBox.Show("Operación finalizada con éxito");
+                                else if (resp == "2")
+                                    MessageBox.Show("Ya existen registros de la empresa ingresada (Cod. 2)");
+                                else
+                                    MessageBox.Show("Error al enviar al servidor (Cod. 5)");
+                            }
+                            catch (WebException)
+                            {
+                                MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                            }
+
+                            data.Clear();
+                        }
                     }
+                    
                 }
             }
             else

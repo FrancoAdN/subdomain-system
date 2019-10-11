@@ -25,5 +25,11 @@ namespace MaxPowerSystem
         public string Desc => desc;
         public string Unit => unit;
         public string Total => total;
+
+        public string toSTR()
+        {
+            string data = "{\"cant\": \"" + this.cant + "\", \"desc\": \"" + this.desc + "\", \"unit\": \"" + this.unit + "\"}"; 
+            return data;
+        }
     }
 }

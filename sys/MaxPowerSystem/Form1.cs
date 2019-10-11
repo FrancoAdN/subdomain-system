@@ -9,15 +9,13 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 using Word = Microsoft.Office.Interop.Word;
 
 namespace MaxPowerSystem
 {
     public partial class Form1 : Form
     {
-
-
-        
 
         public Form1()
         {
@@ -53,7 +51,7 @@ namespace MaxPowerSystem
         }
         public bool CreateWordDocument(object filename, object SaveAs, object arr)
         {
-            
+           
 
             //Console.WriteLine("CREATE WORD DOC");
             Word.Application wordApp = new Word.Application();
@@ -85,7 +83,6 @@ namespace MaxPowerSystem
                     }
                 }
 
-                this.FindAndReplace(wordApp, "<fecha>", DateTime.Now.ToString("dd/MM/yyyy"));
 
             }
             else

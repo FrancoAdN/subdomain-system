@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json.Linq;
 
 namespace MaxPowerSystem
 {
@@ -21,6 +22,13 @@ namespace MaxPowerSystem
         public string Ref
         {
             get { return reference; }
+        }
+
+        public string toSTR()
+        {
+            char[] tr = { '<', '>' };
+            string data = "\"" + this.reference.Trim(tr) + "\": \"" + this.data+ "\",";
+            return data;
         }
     }
 }
