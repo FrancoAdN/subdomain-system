@@ -42,6 +42,8 @@ app.get('/ord_nac', (req, resp) => {
         });
     });
 });
+
+
 app.get('/ord_ext', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `ord_ext` oe INNER JOIN `tabla` t ON oe.orden = t.orden';
@@ -80,7 +82,6 @@ app.get('/ord_ext', (req, resp) => {
 });
 
 
-
 app.get('/rep_lab', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `rep_lab`';
@@ -98,8 +99,6 @@ app.get('/rep_lab', (req, resp) => {
         });
     });
 });
-
-
 
 
 app.get('/asis_tec', (req, resp) => {
@@ -124,6 +123,28 @@ app.get('/asis_tec', (req, resp) => {
 
 app.post('/asis_tec', (req, resp) => {
     const data = req.body;
+    data.tel = parseInt(data.tel);
+    data.precio = parseInt(data.precio);
+    const nof = parseInt(data.noferta.split('-')[1]);
+    data['conf'] = false;
+
+
+    const con = connectionSQL();
+    const sql =  `INSERT INTO asis_tec (emp, tipo, precio, fdp, det, orden, fecha, confirmado) values ('${data.empresa}', '${data.asistencia}', ${data.precio}, '${data.formadepago}', '${data.detalle}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    UPDATE last SET num = ${nof};`;
+    con.connect(function(err) {
+        if (err){
+            console.error(err);
+            resp.send('0');
+        }
+        con.query(sql, function (err, result, fields) {
+          if (err){
+              console.error(err);
+              resp.send('0');
+          }
+          con.end();
+        });
+    });
 
     resp.send("1");
 }),
@@ -205,6 +226,8 @@ app.post('/emp', (req, resp) => {
         });
     });
 });
+
+
 app.get('/emp/:id', (req, resp) => {
     const con = connectionSQL();
     
