@@ -84,7 +84,7 @@ app.get('/ord_ext', (req, resp) => {
 
 app.get('/rep_lab', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT * FROM `rep_lab`';
+    const sql =  'SELECT * FROM `rep_lab` rp INNER JOIN `tabla` t ON rp.orden = t.orden';
     con.connect(function(err) {
         if (err) {
             console.error(err);
