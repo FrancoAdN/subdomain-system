@@ -126,7 +126,6 @@ app.post('/rep_lab', (req, resp) => {
                 console.error(err);
                 resp.send("0");
             }
-          resp.send(result);
           con.end();
         });
     });
