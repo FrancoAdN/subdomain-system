@@ -95,7 +95,7 @@ app.get('/rep_lab', (req, resp) => {
                 console.error(err);
                 resp.send("0");
             }          
-            resp.send(JSON.stringify(result));
+            resp.send(JSON.stringify(result[0]));
           con.end();
         });
     });
