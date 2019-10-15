@@ -45,8 +45,35 @@ app.get('/ord_nac', (req, resp) => {
 
 app.post('/ord_nac', (req, resp) => {
     const data = req.body;
-    console.log(data);
-    resp.send('1');
+
+    data.precio = parseInt(data.precio);
+    data.plazomax = parseInt(data.plazomax);
+    data['conf'] = false;
+    const nof = parseInt(data.noferta.split('-')[1]);
+    let sql =  `INSERT INTO ord_nac (emp, fdp, moneda, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.formadepago}', '${data.moneda}', '${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    UPDATE last SET num = ${nof};`;
+    for(let t of data.tabla){
+        t.cant = parseInt(t.cant);
+        t.unit = parseInt(t.unit);
+        const ins = `INSERT INTO tabla (cant, descr, punit, orden) VALUES (${t.cant}, '${t.desc}', ${t.unit}, '${data.noferta}');`;
+        sql += ins;
+    }
+    const con = connectionSQL();
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
+          con.end();
+        });
+    });
+
+    resp.send("1");
 })
 
 app.get('/ord_ext', (req, resp) => {
