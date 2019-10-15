@@ -89,7 +89,7 @@ app.post('/ord_ext', (req, resp) => {
     data.plazomax = parseInt(data.plazomax);
     data['conf'] = false;
     const nof = parseInt(data.noferta.split('-')[1]);
-    let sql =  `INSERT INTO ord_ext (emp, incoterm, moneda, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.inco}', ${data.moneda}, '${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    let sql =  `INSERT INTO ord_ext (emp, incoterm, moneda, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.inco}', '${data.moneda}', '${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
     UPDATE last SET num = ${nof};`;
     for(let t of data.tabla){
         t.cant = parseInt(t.cant);
