@@ -43,6 +43,11 @@ app.get('/ord_nac', (req, resp) => {
     });
 });
 
+app.post('/ord_nac', (req, resp) => {
+    const data = req.body;
+    console.log(data);
+    resp.send('1');
+})
 
 app.get('/ord_ext', (req, resp) => {
     const con = connectionSQL();
