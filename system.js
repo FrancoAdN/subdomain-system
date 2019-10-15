@@ -87,7 +87,6 @@ app.get('/ord_ext', (req, resp) => {
 });
 
 app.post('/ord_ext', (req, resp) => {
-    console.log(req.body);
     const data = req.body;
 
     data.precio = parseInt(data.precio);
