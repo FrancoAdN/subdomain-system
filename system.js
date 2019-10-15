@@ -81,6 +81,11 @@ app.get('/ord_ext', (req, resp) => {
     });
 });
 
+app.post('/ord_ext', (req, resp) => {
+    console.log(req.body);
+    resp.send('1');
+})
+
 
 app.get('/rep_lab', (req, resp) => {
     const con = connectionSQL();
