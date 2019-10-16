@@ -40,7 +40,7 @@ app.get('/ord_nac', (req, resp) => {
 
           //PARSING FROM RESULTS TO TABLE
           let index = result[0].id_nac;
-          let json = {id: result[0].id_nac, emp: result[0].emp, inco: result[0].fdp, mon: result[0].moneda,
+          let json = {id: result[0].id_nac, emp: result[0].emp, inco: result[0].fdp, mon: result[0].moneda, precio: result[0].precio,
             pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, conf: result[0].Confirmado, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
           let arr = []
           for(let i = 1; i < result.length; i++){
@@ -49,7 +49,7 @@ app.get('/ord_nac', (req, resp) => {
               else{
                   arr.push(json);
                   index = result[i].id_ext;
-                  json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda,
+                  json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda, precio: result[i].precio,
                     pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, conf: result[i].Confirmado, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
               }
               if(i == result.length -1)
@@ -71,7 +71,7 @@ app.post('/ord_nac', (req, resp) => {
     data.plazomax = parseInt(data.plazomax);
     data['conf'] = false;
     const nof = parseInt(data.noferta.split('-')[1]);
-    let sql =  `INSERT INTO ord_nac (emp, fdp, moneda, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.formadepago}', '${data.moneda}', '${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    let sql =  `INSERT INTO ord_nac (emp, fdp, moneda, precio, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.formadepago}', '${data.moneda}', ${data.precio},'${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
     UPDATE last SET num = ${nof};`;
     for(let t of data.tabla){
         t.cant = parseInt(t.cant);
@@ -112,7 +112,7 @@ app.get('/ord_ext', (req, resp) => {
           }
           //PARSING FROM RESULTS TO TABLE
           let index = result[0].id_ext;
-          let json = {id: result[0].id_ext, emp: result[0].emp, inco: result[0].incoterm, mon: result[0].moneda,
+          let json = {id: result[0].id_ext, emp: result[0].emp, inco: result[0].incoterm, mon: result[0].moneda, precio: result[0].precio,
             pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, conf: result[0].Confirmado, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
           let arr = []
           for(let i = 1; i < result.length; i++){
@@ -121,7 +121,7 @@ app.get('/ord_ext', (req, resp) => {
               else{
                   arr.push(json);
                   index = result[i].id_ext;
-                  json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda,
+                  json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda, precio: result[i].precio,
                     pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, conf: result[i].Confirmado, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
               }
               if(i == result.length -1)
@@ -139,12 +139,11 @@ app.get('/ord_ext', (req, resp) => {
 
 app.post('/ord_ext', (req, resp) => {
     const data = req.body;
-
     data.precio = parseInt(data.precio);
     data.plazomax = parseInt(data.plazomax);
     data['conf'] = false;
     const nof = parseInt(data.noferta.split('-')[1]);
-    let sql =  `INSERT INTO ord_ext (emp, incoterm, moneda, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.inco}', '${data.moneda}', '${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    let sql =  `INSERT INTO ord_ext (emp, incoterm, moneda, precio, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.inco}', '${data.moneda}', ${data.precio}, '${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
     UPDATE last SET num = ${nof};`;
     for(let t of data.tabla){
         t.cant = parseInt(t.cant);
