@@ -37,11 +37,11 @@ app.get('/ord_nac', (req, resp) => {
               console.error(err);
               resp.send("0");
           }
-          
+
           //PARSING FROM RESULTS TO TABLE
           let index = result[0].id_nac;
           let json = {id: result[0].id_nac, emp: result[0].emp, inco: result[0].fdp, mon: result[0].moneda,
-            pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
+            pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, conf: result[0].Confirmado, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
           let arr = []
           for(let i = 1; i < result.length; i++){
               if(result[i].id_ext == index)
@@ -50,7 +50,7 @@ app.get('/ord_nac', (req, resp) => {
                   arr.push(json);
                   index = result[i].id_ext;
                   json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda,
-                    pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
+                    pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, conf: result[i].Confirmado, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
               }
               if(i == result.length -1)
                 arr.push(json);
@@ -113,7 +113,7 @@ app.get('/ord_ext', (req, resp) => {
           //PARSING FROM RESULTS TO TABLE
           let index = result[0].id_ext;
           let json = {id: result[0].id_ext, emp: result[0].emp, inco: result[0].incoterm, mon: result[0].moneda,
-            pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
+            pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, conf: result[0].Confirmado, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
           let arr = []
           for(let i = 1; i < result.length; i++){
               if(result[i].id_ext == index)
@@ -122,7 +122,7 @@ app.get('/ord_ext', (req, resp) => {
                   arr.push(json);
                   index = result[i].id_ext;
                   json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda,
-                    pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
+                    pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, conf: result[i].Confirmado, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
               }
               if(i == result.length -1)
                 arr.push(json);
@@ -172,6 +172,7 @@ app.post('/ord_ext', (req, resp) => {
 
 
 app.get('/rep_lab', (req, resp) => {
+
     const con = connectionSQL();
     const sql =  'SELECT * FROM `rep_lab` rp INNER JOIN `tabla` t ON rp.orden = t.orden';
     con.connect(function(err) {
@@ -180,11 +181,32 @@ app.get('/rep_lab', (req, resp) => {
             resp.send("0");
         }
         con.query(sql, function (err, result, fields) {
-            if (err) {
-                console.error(err);
-                resp.send("0");
-            }          
-            resp.send(result);
+          if (err){
+              console.error(err);
+              resp.send("0");
+          }
+          //PARSING FROM RESULTS TO TABLE
+          let index = result[0].id_rep;
+          let json = {id: result[0].id_rep, emp: result[0].emp, edm: result[0].edm, precio: result[0].precio,
+            cdp: result[0].cdp, pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, conf: result[0].Confirmado, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
+          let arr = []
+          for(let i = 1; i < result.length; i++){
+              if(result[i].id_rep == index)
+                json.tabla.push({cant: result[i].cant, descr: result[i].descr, punit: result[i].punit});
+              else{
+                  arr.push(json);
+                  index = result[i].id_rep;
+                  json = {id: result[i].id_rep, emp: result[i].emp, edm: result[i].edm, precio: result[i].precio,
+                    cdp: result[i].cdp, pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, conf: result[i].Confirmado, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
+              }
+              if(i == result.length -1)
+                arr.push(json);
+              
+          }
+          if(result.length == 1) 
+            arr.push(json);
+
+          resp.send(arr);
           con.end();
         });
     });
