@@ -26,7 +26,7 @@ app.get('/', (req, resp) => {
 
 app.get('/ord_nac', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT * FROM `ord_nac`';
+    const sql =  'SELECT * FROM `ord_nac` oc INNER JOIN `tabla` t ON  oc.orden = t.orden';
     con.connect(function(err) {
         if (err) {
             console.error(err);
@@ -45,7 +45,6 @@ app.get('/ord_nac', (req, resp) => {
 
 app.post('/ord_nac', (req, resp) => {
     const data = req.body;
-
     data.precio = parseInt(data.precio);
     data.plazomax = parseInt(data.plazomax);
     data['conf'] = false;
