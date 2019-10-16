@@ -37,7 +37,7 @@ app.get('/ord_nac', (req, resp) => {
               console.error(err);
               resp.send("0");
           }
-          console.log(result);
+          
           //PARSING FROM RESULTS TO TABLE
           let index = result[0].id_nac;
           let json = {id: result[0].id_nac, emp: result[0].emp, inco: result[0].fdp, mon: result[0].moneda,
@@ -58,7 +58,7 @@ app.get('/ord_nac', (req, resp) => {
           }
           if(result.length == 1) 
             arr.push(json);
-            
+
           resp.send(arr);
           con.end();
         });
@@ -128,6 +128,9 @@ app.get('/ord_ext', (req, resp) => {
                 arr.push(json);
               
           }
+          if(result.length == 1) 
+            arr.push(json);
+
           resp.send(arr);
           con.end();
         });
