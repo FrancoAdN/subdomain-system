@@ -37,6 +37,7 @@ app.get('/ord_nac', (req, resp) => {
               console.error(err);
               resp.send("0");
           }
+          console.log(result);
           //PARSING FROM RESULTS TO TABLE
           let index = result[0].id_ext;
           let json = {id: result[0].id_ext, emp: result[0].emp, inco: result[0].incoterm, mon: result[0].moneda,
