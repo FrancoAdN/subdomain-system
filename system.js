@@ -68,7 +68,6 @@ app.get('/ord_nac', (req, resp) => {
 app.post('/ord_nac', (req, resp) => {
     const data = req.body;
     const precio = parseInt(data.total.split(' ')[0]);
-    console.log(data);
     data['conf'] = false;
     const nof = parseInt(data.noferta.split('-')[1]);
     let sql =  `INSERT INTO ord_nac (emp, fdp, moneda, precio, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.formadepago}', '${data.moneda}', ${precio},'${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
