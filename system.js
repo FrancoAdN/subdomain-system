@@ -69,6 +69,7 @@ app.post('/ord_nac', (req, resp) => {
     const data = req.body;
     data.precio = parseInt(data.precio);
     data.plazomax = parseInt(data.plazomax);
+    console.log(data);
     data['conf'] = false;
     const nof = parseInt(data.noferta.split('-')[1]);
     let sql =  `INSERT INTO ord_nac (emp, fdp, moneda, precio, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.formadepago}', '${data.moneda}', ${data.precio},'${data.dias}', '${data.noferta}', '${data.fecha}', ${data.conf});
@@ -89,12 +90,13 @@ app.post('/ord_nac', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }
+            }else
+                resp.send("1");
           con.end();
         });
     });
 
-    resp.send("1");
+    
 })
 
 app.get('/ord_ext', (req, resp) => {
@@ -161,12 +163,12 @@ app.post('/ord_ext', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }
+            }else
+                resp.send("1");
           con.end();
         });
     });
 
-    resp.send("1");
 })
 
 
