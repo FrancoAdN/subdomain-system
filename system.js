@@ -284,7 +284,7 @@ app.get('/ord_ext/:id', (req, resp) => {
 
 app.get('/ord_ext/emp/:id', (req, resp) => {
     const emp = req.params.id;
-    const sql =  "SELECT * FROM `ord_ext` oe INNER JOIN `tabla` t ON oe.orden = t.orden AND oe.orden = '" + emp + "';";
+    const sql =  "SELECT * FROM `ord_ext` oe INNER JOIN `tabla` t ON oe.orden = t.orden AND oe.emp = '" + emp + "';";
     const con = connectionSQL();
     con.connect(function(err) {
         if (err) {
