@@ -65,6 +65,95 @@ app.get('/ord_nac', (req, resp) => {
     });
 });
 
+app.get('/ord_nac/:id', (req, resp) => {
+    const orden = req.params.id;
+    const sql =  "SELECT * FROM `ord_nac` oc INNER JOIN `tabla` t ON oc.orden = t.orden AND oc.orden = '" + orden + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+          if (err){
+              console.error(err);
+              resp.send("0");
+          }
+          if(result.length != 0){
+          //PARSING FROM RESULTS TO TABLE
+            let index = result[0].id_nac;
+            let json = {id: result[0].id_nac, emp: result[0].emp, inco: result[0].fdp, mon: result[0].moneda, precio: result[0].precio,
+                pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, conf: result[0].Confirmado, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
+            let arr = []
+            for(let i = 1; i < result.length; i++){
+                if(result[i].id_ext == index)
+                    json.tabla.push({cant: result[i].cant, descr: result[i].descr, punit: result[i].punit});
+                else{
+                    arr.push(json);
+                    index = result[i].id_ext;
+                    json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda, precio: result[i].precio,
+                        pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, conf: result[i].Confirmado, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
+                }
+                if(i == result.length -1)
+                    arr.push(json);
+                
+            }
+            if(result.length == 1) 
+                arr.push(json);
+
+            resp.send(arr);
+          }else{
+              resp.send('7');
+          }
+          con.end();
+        });
+    });
+})
+
+app.get('/ord_nac/emp/:id', (req, resp) => {
+    const emp = req.params.id;
+    const orden = req.params.id;
+    const sql =  "SELECT * FROM `ord_nac` oc INNER JOIN `tabla` t ON oc.orden = t.orden AND oc.emp = '" + emp + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+          if (err){
+              console.error(err);
+              resp.send("0");
+          }
+          if(result.length != 0){
+          //PARSING FROM RESULTS TO TABLE
+            let index = result[0].id_nac;
+            let json = {id: result[0].id_nac, emp: result[0].emp, inco: result[0].fdp, mon: result[0].moneda, precio: result[0].precio,
+                pmde: result[0].pmde, fecha: result[0].fecha, orden: result[0].orden, conf: result[0].Confirmado, tabla:[{cant: result[0].cant, descr: result[0].descr, punit: result[0].punit}]};
+            let arr = []
+            for(let i = 1; i < result.length; i++){
+                if(result[i].id_ext == index)
+                    json.tabla.push({cant: result[i].cant, descr: result[i].descr, punit: result[i].punit});
+                else{
+                    arr.push(json);
+                    index = result[i].id_ext;
+                    json = {id: result[i].id_ext, emp: result[i].emp, inco: result[i].incoterm, mon: result[i].moneda, precio: result[i].precio,
+                        pmde: result[i].pmde, fecha: result[i].fecha, orden: result[i].orden, conf: result[i].Confirmado, tabla:[{cant: result[i].cant, descr: result[i].descr, punit: result[i].punit}]};
+                }
+                if(i == result.length -1)
+                    arr.push(json);
+                
+            }
+            if(result.length == 1) 
+                arr.push(json);
+
+            resp.send(arr);
+          }else{
+              resp.send('8');
+          }
+          con.end();
+        });
+    });
+})
+
 app.post('/ord_nac', (req, resp) => {
     const data = req.body;
     const precio = parseInt(data.total.split(' ')[0]);
