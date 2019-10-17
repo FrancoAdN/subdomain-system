@@ -870,8 +870,10 @@ app.get('/emp/:id', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }
-          resp.send(result);
+            }else if(result.length != 0)
+                resp.send(result);
+            else
+                resp.send("9");
           con.end();
         });
     });
