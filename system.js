@@ -422,6 +422,25 @@ app.post('/emp', (req, resp) => {
 });
 
 
+app.get('/emp', (req, resp) => {
+    const sql = "SELECT * FROM `emp`";
+    const con = connectionSQL();
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else
+                resp.send(result);
+          con.end();
+        });
+    });
+});
+
 app.get('/emp/:id', (req, resp) => {
     const con = connectionSQL();
     
