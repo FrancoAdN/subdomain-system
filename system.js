@@ -68,6 +68,7 @@ app.get('/ord_nac', (req, resp) => {
 app.get('/ord_nac/:id', (req, resp) => {
     const orden = req.params.id;
     const sql =  "SELECT * FROM `ord_nac` oc INNER JOIN `tabla` t ON oc.orden = t.orden AND oc.orden = '" + orden + "';";
+    const con = connectionSQL();
     con.connect(function(err) {
         if (err) {
             console.error(err);
@@ -113,6 +114,7 @@ app.get('/ord_nac/emp/:id', (req, resp) => {
     const emp = req.params.id;
     const orden = req.params.id;
     const sql =  "SELECT * FROM `ord_nac` oc INNER JOIN `tabla` t ON oc.orden = t.orden AND oc.emp = '" + emp + "';";
+    const con = connectionSQL();
     con.connect(function(err) {
         if (err) {
             console.error(err);
