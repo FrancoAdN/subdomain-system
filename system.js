@@ -915,8 +915,9 @@ app.get('/tabla', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
+            }else{
+                resp.send(result);
             }
-          resp.send(result);
           con.end();
         });
     });
@@ -935,8 +936,14 @@ app.get('/tabla/:id', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
+            }else{
+                let response = [];
+                for(let r of result){
+                    let json = {cant: r.cant, descr: r.descr, punit: r.punit, total: (r.cant * r.punit)};
+                    response.push(response);
+                }
+                resp.send(response);
             }
-          resp.send(result);
           con.end();
         });
     });
