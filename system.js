@@ -922,5 +922,24 @@ app.get('/tabla', (req, resp) => {
     });
 });
 
+app.get('/tabla/:id', (req, resp) => {
+    const orden = req.params.id;
+    const con = connectionSQL();
+    const sql =  "SELECT * FROM `tabla` WHERE orden LIKE '"+ orden +"';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
+          resp.send(result);
+          con.end();
+        });
+    });
+});
 
 app.listen(3030, () => console.log('Server running'));
