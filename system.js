@@ -936,8 +936,10 @@ app.get('/tabla/:id', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }else{
+            }else if (result.length != 0){
                 resp.send(result);
+            }else{
+                resp.send("10");
             }
           con.end();
         });
