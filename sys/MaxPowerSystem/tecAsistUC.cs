@@ -50,15 +50,20 @@ namespace MaxPowerSystem
                 {
                     resp = client.makeRequest();
                     if (resp == "0")
+                    {
+                        err = true;
                         MessageBox.Show("SQL ERROR (Cod. 0)");
+                    }
                     else if (resp == "6")
+                    {
+                        err = true;
                         MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                    }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
                     {
                         err = true;
                         MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
-                        Console.WriteLine(json["errorMessages"]);
                     }
 
                     if (!(json.Count() == 1))
@@ -67,6 +72,7 @@ namespace MaxPowerSystem
                 }
                 catch (WebException)
                 {
+                    err = true;
                     MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                 }
 
@@ -175,7 +181,9 @@ namespace MaxPowerSystem
                             {
                                 MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                             }
-
+                            string f = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Asistencia Técnica\MAX-" + nof + "-AR19-1.docx";
+                            System.IO.File.Delete(f);
+                            System.IO.File.Move(filepath, f);
                             data.Clear();
                         }
                     }

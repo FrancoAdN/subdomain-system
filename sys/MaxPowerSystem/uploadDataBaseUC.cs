@@ -81,11 +81,13 @@ namespace MaxPowerSystem
                 {
                     MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                 }
-                
+
 
                 if (resp == "0")
+                {
                     MessageBox.Show("SQL ERROR (Cod. 0)");
-                else if(resp == "1")
+                }
+                else if (resp == "1")
                 {
                     MessageBox.Show("Operación finalizada con éxito");
                     boxEmp.Text = string.Empty;
@@ -104,7 +106,9 @@ namespace MaxPowerSystem
                     boxMailB.Text = string.Empty;
                 }
                 else if (resp == "2")
+                {
                     MessageBox.Show("Ya existen registros de la empresa ingresada (Cod. 2)");
+                }
 
             }
             

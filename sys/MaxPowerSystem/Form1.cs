@@ -170,7 +170,7 @@ namespace MaxPowerSystem
 
                         myWordDoc.Tables[n_table].Rows[i+1].Cells[2].Range.Text = data[i].Cant;
 
-                        myWordDoc.Tables[n_table].Rows[i+1].Cells[3].Range.Text = data[i].Desc+i;
+                        myWordDoc.Tables[n_table].Rows[i+1].Cells[3].Range.Text = data[i].Desc;
 
                         myWordDoc.Tables[n_table].Rows[i+1].Cells[4].Range.Text = data[i].Unit;
 

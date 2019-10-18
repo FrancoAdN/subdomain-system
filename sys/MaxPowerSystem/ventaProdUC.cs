@@ -27,69 +27,6 @@ namespace MaxPowerSystem
         {
             object temp = @"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_vent_prod.docx";
             object SaveAs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Venta de productos\test_vent.docx";
-            /* if (Productos.Count > 0 &&
-                !string.IsNullOrEmpty(EntBox.Text) &&
-                !string.IsNullOrEmpty(EntregaBox.Text) &&
-                !string.IsNullOrEmpty(PayBox.Text) &&
-                !string.IsNullOrEmpty(maxPlBox.Text))
-             {
-                 int precio = 0;
-                 foreach (Detalle d in Productos)
-                 {
-                     int n;
-                     bool isNumber = int.TryParse(d.Total, out n);
-                     if(isNumber)
-                         precio += n;
-                 }
-
-                 Form1 F1 = new Form1();
-                 Productos.Add(new Detalle("Cant.", "Descripción", "Precio unitario USD", "Precio Total USD"));
-                 try
-                 {
-                     F1.CreateTableWord(temp, SaveAs, Productos, 3);
-                 }
-                 catch (Exception ex)
-                 {
-                     MessageBox.Show("Error al generar el archivo (Cod. 4)");
-                 }
-
-
-                 Productos.Clear();
-
-
-
-                 List<Files> data = new List<Files>();
-                 data.Add(new Files(EntBox.Text, "<empresa>"));
-                 data.Add(new Files(precio.ToString(), "<precio>"));
-                 data.Add(new Files(EntregaBox.Text, "<entrega>"));
-                 data.Add(new Files(PayBox.Text, "<formadepago>"));
-                 data.Add(new Files(maxPlBox.Text, "<plazomax>"));
-
-                 bool done = false;
-                 try
-                 {
-                     done = F1.CreateWordDocument(SaveAs, SaveAs, data);
-                 }
-                 catch(Exception ex)
-                 {
-                     MessageBox.Show("Error al generar el archivo (Cod. 4)");
-                 }
-
-
-                 if (done)
-                 {
-                     EntBox.Text = "";
-                     EntregaBox.Text = "";
-                     PayBox.Text = "";
-                     maxPlBox.Text = "";
-
-                 }
-
-             }
-             else
-             {
-                 MessageBox.Show("Todo los campos deben estar completos");
-             }*/
             if (Productos.Count > 0 &&
               !string.IsNullOrEmpty(EntBox.Text) &&
               !string.IsNullOrEmpty(EntregaBox.Text) &&
@@ -117,15 +54,20 @@ namespace MaxPowerSystem
                 {
                     resp = client.makeRequest();
                     if (resp == "0")
+                    {
                         MessageBox.Show("SQL ERROR (Cod. 0)");
+                        err = true;
+                    }
                     else if (resp == "6")
+                    {
                         MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        err = true;
+                    }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
                     {
                         err = true;
                         MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
-                        Console.WriteLine(json["errorMessages"]);
                     }
 
                     if (!(json.Count() == 1))
@@ -134,6 +76,7 @@ namespace MaxPowerSystem
                 }
                 catch (WebException)
                 {
+                    err = true;
                     MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                 }
 
@@ -150,6 +93,7 @@ namespace MaxPowerSystem
                     }
                     catch (Exception ex)
                     {
+                        err = true;
                         MessageBox.Show("Error al generar el archivo (Cod. 4)");
                     }
 
@@ -163,21 +107,27 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
 
                         if (resp == "0")
+                        {
                             MessageBox.Show("SQL ERROR (Cod. 0)");
+                            err = true;
+                        }
                         else if (resp == "6")
+                        {
                             MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            err = true;
+                        }
 
                         json = JToken.Parse(resp);
                         if (json.Type != JTokenType.Array)
                         {
                             err = true;
                             MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
-                            Console.WriteLine(json["errorMessages"]);
                         }
 
                     }
                     catch (WebException)
                     {
+                        err = true;
                         MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                     }
 
@@ -252,6 +202,9 @@ namespace MaxPowerSystem
                             {
                                 MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                             }
+                            string f = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Venta de productos\MAX-" + nof + "-AR19-1.docx";
+                            System.IO.File.Delete(f);
+                            System.IO.File.Move((string)SaveAs, f);
                             Productos.Clear();
                             data.Clear();
                         }

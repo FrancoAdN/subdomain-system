@@ -96,6 +96,8 @@
             this.leftBut.TabIndex = 0;
             this.leftBut.Text = "<";
             this.leftBut.UseVisualStyleBackColor = true;
+            this.leftBut.Visible = false;
+            this.leftBut.MouseClick += new System.Windows.Forms.MouseEventHandler(this.antReg);
             // 
             // leftLab
             // 
@@ -107,6 +109,7 @@
             this.leftLab.TabIndex = 1;
             this.leftLab.Text = "0";
             this.leftLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.leftLab.Visible = false;
             // 
             // rightLab
             // 
@@ -118,6 +121,7 @@
             this.rightLab.TabIndex = 2;
             this.rightLab.Text = "0";
             this.rightLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rightLab.Visible = false;
             // 
             // rightBut
             // 
@@ -128,6 +132,8 @@
             this.rightBut.TabIndex = 3;
             this.rightBut.Text = ">";
             this.rightBut.UseVisualStyleBackColor = true;
+            this.rightBut.Visible = false;
+            this.rightBut.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RightBut_MouseClick);
             // 
             // newSearch
             // 

@@ -40,6 +40,8 @@
             this.labDate = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.labOrden = new System.Windows.Forms.Label();
+            this.labP = new System.Windows.Forms.Label();
+            this.labPrec = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labEnt
@@ -150,10 +152,32 @@
             this.labOrden.Size = new System.Drawing.Size(0, 24);
             this.labOrden.TabIndex = 8;
             // 
+            // labP
+            // 
+            this.labP.AutoSize = true;
+            this.labP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labP.Location = new System.Drawing.Point(391, 170);
+            this.labP.Name = "labP";
+            this.labP.Size = new System.Drawing.Size(40, 18);
+            this.labP.TabIndex = 23;
+            this.labP.Text = "aaaa";
+            // 
+            // labPrec
+            // 
+            this.labPrec.AutoSize = true;
+            this.labPrec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPrec.Location = new System.Drawing.Point(265, 170);
+            this.labPrec.Name = "labPrec";
+            this.labPrec.Size = new System.Drawing.Size(105, 18);
+            this.labPrec.TabIndex = 22;
+            this.labPrec.Text = "Precio Total:";
+            // 
             // dbOrdExt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labP);
+            this.Controls.Add(this.labPrec);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.labDate);
             this.Controls.Add(this.labOrden);
@@ -185,5 +209,7 @@
         private System.Windows.Forms.Label labDate;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labOrden;
+        private System.Windows.Forms.Label labP;
+        private System.Windows.Forms.Label labPrec;
     }
 }

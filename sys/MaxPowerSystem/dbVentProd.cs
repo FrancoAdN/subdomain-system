@@ -7,24 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace MaxPowerSystem
 {
     public partial class dbVentProd : UserControl
     {
         public string db;
+        public JToken json;
+        public int Index;
+        public TableLayoutPanel panel = new TableLayoutPanel();
         public dbVentProd()
         {
             InitializeComponent();
         }
 
-       public void changeVal(string ord, string ent, string edm, string cdp, string pmde, string date, string indb)
+       public void changeVal(string indb)
         {
             int i = 0;
-            TableLayoutPanel panel = new TableLayoutPanel();
+            Controls.Remove(panel);
             panel.Location = new System.Drawing.Point(265, 40);
-            panel.Size = new Size(375, 130);
-            panel.MaximumSize = new Size(375, 130);
+            panel.Size = new Size(375, 100);
+            panel.MaximumSize = new Size(375, 100);
             panel.AutoScroll = true;
 
             panel.ColumnCount = 4;
@@ -33,8 +37,10 @@ namespace MaxPowerSystem
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.5F));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.5F));
 
-            panel.RowCount = 10;
+            panel.RowCount = json[Index]["tabla"].Count() + 1;
             panel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            panel.Controls.Clear();
 
             Label cant = new Label();
             cant.Text = "Cant";
@@ -67,29 +73,46 @@ namespace MaxPowerSystem
 
             for (i = 1; i < panel.RowCount; i++)
             {
-                for (int j = 0; j < panel.ColumnCount; j++)
-                {
-                    Label test = new Label();
-                    test.Text = i + "" + j;
-                    test.AutoSize = false;
-                    test.TextAlign = ContentAlignment.MiddleCenter;
-                    panel.Controls.Add(test, j, i);
-                }
+
+                Label cantText = new Label();
+                cantText.Text = (String)json[Index]["tabla"][i - 1]["cant"];
+                int n_cant = (int)json[Index]["tabla"][i - 1]["cant"];
+                cantText.AutoSize = false;
+                cantText.TextAlign = ContentAlignment.MiddleCenter;
+                panel.Controls.Add(cantText, 0, i);
+
+
+                Label descText = new Label();
+                descText.Text = (String)json[Index]["tabla"][i - 1]["descr"];
+                descText.AutoSize = true;
+                descText.TextAlign = ContentAlignment.MiddleCenter;
+                panel.Controls.Add(descText, 1, i);
+
+                Label punitText = new Label();
+                punitText.Text = (String)json[Index]["tabla"][i - 1]["punit"];
+                int n_punit = (int)json[Index]["tabla"][i - 1]["punit"];
+                punitText.AutoSize = false;
+                punitText.TextAlign = ContentAlignment.MiddleCenter;
+                panel.Controls.Add(punitText, 2, i);
+
+                Label totalText = new Label();
+                totalText.Text = (n_punit * n_cant).ToString();
+                totalText.AutoSize = false;
+                totalText.TextAlign = ContentAlignment.MiddleCenter;
+                panel.Controls.Add(totalText, 3, i);
             }
-
-
-
 
             Controls.Add(panel);
 
-            labOrden.Text = ord;
-            entLab.Text = ent;
-            edmLab.Text = edm;
-            cdpLab.Text = cdp;
-            pmdeLab.Text = pmde;
-            labDate.Text = date;
+            labOrden.Text = (String)json[Index]["orden"];
+            entLab.Text = (String)json[Index]["emp"];
+            edmLab.Text = (String)json[Index]["edm"];
+            cdpLab.Text = (String)json[Index]["cdp"];
+            pmdeLab.Text = (String)json[Index]["pmde"];
+            labDate.Text = (String)json[Index]["fecha"];
+            labP.Text = (String)json[Index]["precio"];
             db = indb;
-        }
+       }
 
         private void edm_click(object sender, EventArgs e)
         {

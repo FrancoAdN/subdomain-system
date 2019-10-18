@@ -15,6 +15,8 @@ namespace MaxPowerSystem
     {
         public string db;
         public JToken json;
+        public int Index;
+        public TableLayoutPanel panel = new TableLayoutPanel();
         public dbOrdExt()
         {
             InitializeComponent();
@@ -27,10 +29,10 @@ namespace MaxPowerSystem
         public void changeVal(string indb)
         {
             int i = 0;
-            TableLayoutPanel panel = new TableLayoutPanel();
+            Controls.Remove(panel);
             panel.Location = new System.Drawing.Point(265, 40);
-            panel.Size = new Size(375, 130);
-            panel.MaximumSize = new Size(375, 130);
+            panel.Size = new Size(375, 100);
+            panel.MaximumSize = new Size(375, 100);
             panel.AutoScroll = true;
 
             panel.ColumnCount = 4;
@@ -39,8 +41,10 @@ namespace MaxPowerSystem
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.5F));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.5F));
 
-            panel.RowCount = json["tabla"].Count() + 1;
+            panel.RowCount = json[Index]["tabla"].Count() + 1;
             panel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+
+            panel.Controls.Clear();
 
             Label cant = new Label();
             cant.Text = "Cant";
@@ -73,23 +77,24 @@ namespace MaxPowerSystem
 
             for (i = 1; i < panel.RowCount; i++)
             {
+
                 Label cantText = new Label();
-                cantText.Text = (String)json["tabla"][i - 1]["cant"];
-                int n_cant = (int)json["tabla"][i - 1]["cant"];
+                cantText.Text = (String)json[Index]["tabla"][i - 1]["cant"];
+                int n_cant = (int)json[Index]["tabla"][i - 1]["cant"];
                 cantText.AutoSize = false;
                 cantText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(cantText, 0, i);
 
 
                 Label descText = new Label();
-                descText.Text = (String)json["tabla"][i - 1]["descr"];
-                descText.AutoSize = false;
+                descText.Text = (String)json[Index]["tabla"][i - 1]["descr"];
+                descText.AutoSize = true;
                 descText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(descText, 1, i);
 
                 Label punitText = new Label();
-                punitText.Text = (String)json["tabla"][i - 1]["punit"];
-                int n_punit = (int)json["tabla"][i - 1]["punit"];
+                punitText.Text = (String)json[Index]["tabla"][i - 1]["punit"];
+                int n_punit = (int)json[Index]["tabla"][i - 1]["punit"];
                 punitText.AutoSize = false;
                 punitText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(punitText, 2, i);
@@ -99,14 +104,6 @@ namespace MaxPowerSystem
                 totalText.AutoSize = false;
                 totalText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(totalText, 3, i);
-                /*for (int j = 0; j < panel.ColumnCount; j++)
-                {
-                    Label test = new Label();
-                    test.Text = i + "" + j;
-                    test.AutoSize = false;
-                    test.TextAlign = ContentAlignment.MiddleCenter;
-                    panel.Controls.Add(test, j, i);
-                }*/
             }
 
 
@@ -114,12 +111,13 @@ namespace MaxPowerSystem
 
             Controls.Add(panel);
 
-            labOrden.Text = (String)json["orden"];
-            labValEnt.Text = (String)json["emp"];
-            labValInco.Text = (String)json["inco"];
-            labValMon.Text = (String)json["mon"];
-            labValPmde.Text = (String)json["pmde"] + " días";
-            labDate.Text = (String)json["fecha"];
+            labOrden.Text = (String)json[Index]["orden"];
+            labValEnt.Text = (String)json[Index]["emp"];
+            labValInco.Text = (String)json[Index]["inco"];
+            labValMon.Text = (String)json[Index]["mon"];
+            labValPmde.Text = (String)json[Index]["pmde"] + " días";
+            labP.Text = (String)json[Index]["precio"];
+            labDate.Text = (String)json[Index]["fecha"];
             db = indb;
         }
 
