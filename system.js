@@ -939,7 +939,7 @@ app.get('/tabla/:id', (req, resp) => {
             }else{
                 let response = [];
                 for(let r of result){
-                    let json = {cant: r.cant, descr: r.descr, punit: r.punit, total: (r.cant * r.punit)};
+                    let json = {cant: r.cant, descr: r.descr, punit: r.punit};
                     response.push(response);
                 }
                 resp.send(response);
