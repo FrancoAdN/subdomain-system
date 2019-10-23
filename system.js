@@ -1,6 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
+const schedule = require('node-schedule');
+
+var rule = new schedule.RecurrenceRule();
+rule.dayOfWeek = [new schedule.Range(0, 6)];
+rule.hour = 9;
+rule.minute = 22;
+ 
+var j = schedule.scheduleJob(rule, function(){
+  console.log('Today is recognized by Rebecca Black!');
+});
 
 
 function connectionSQL(){
