@@ -34,7 +34,7 @@ namespace MaxPowerSystem
 
         private void genWord(object sender, MouseEventArgs e)
         {
-            object temp = @"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_compra_nac.docx";
+            object temp = @"C:\Program Files\Maxpower\Maxpower System\static\temp_compra_nac.docx";
             object SaveAs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Orden de compra nacional\test_comp_nac.docx";
            
             if ((Productos.Count > 0 || !string.IsNullOrEmpty(BoxRefOrd.Text)) &&

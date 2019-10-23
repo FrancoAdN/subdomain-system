@@ -64,7 +64,7 @@ namespace MaxPowerSystem
         private void genWord(object sender, MouseEventArgs e)
         {
 
-            object temp = @"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_rep_prod.docx";
+            object temp = @"C:\Program Files\Maxpower\Maxpower System\static\temp_rep_prod.docx";
             object SaveAs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Reparación de laboratorio\test_rep.docx";
             if (Productos.Count > 0 &&
                !string.IsNullOrEmpty(EntBox.Text) &&

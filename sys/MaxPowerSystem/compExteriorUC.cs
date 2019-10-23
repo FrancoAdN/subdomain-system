@@ -43,7 +43,7 @@ namespace MaxPowerSystem
         private void createBuyO(object sender, MouseEventArgs e)
         {
 
-            object temp = @"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_compra_ext.docx";
+            object temp = @"C:\Program Files\Maxpower\Maxpower System\static\temp_compra_ext.docx";
             object SaveAs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Orden de compra exterior\test_comp_ext.docx";
             if ((Productos.Count > 0 || !string.IsNullOrEmpty(BoxRefOrd.Text)) &&
                !string.IsNullOrEmpty(EntBox.Text) &&

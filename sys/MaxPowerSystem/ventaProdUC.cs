@@ -25,7 +25,7 @@ namespace MaxPowerSystem
 
         private void ButtonWordFile_Click(object sender, EventArgs e)
         {
-            object temp = @"C:\Users\User\Desktop\sys\MaxPowerSystem\static\temp_vent_prod.docx";
+            object temp = @"C:\Program Files\Maxpower\Maxpower System\static\temp_vent_prod.docx";
             object SaveAs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Venta de productos\test_vent.docx";
             if (Productos.Count > 0 &&
               !string.IsNullOrEmpty(EntBox.Text) &&

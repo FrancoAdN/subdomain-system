@@ -113,7 +113,7 @@ namespace MaxPowerSystem
 
         public void CreateTableWord(object filename, object SaveAs, object arr, int n_table)
         {
-            
+
             Word.Application wordApp = new Word.Application();
             object missing = Missing.Value;
             Word.Document myWordDoc = null;
@@ -131,10 +131,10 @@ namespace MaxPowerSystem
                                         ref missing, ref missing, ref missing, ref missing);
                 myWordDoc.Activate();
 
-                              
+
                 object findText = "<table>";
 
-                
+
                 Word.Range rng = myWordDoc.Range();
                 rng.Find.ClearFormatting();
                 if (rng.Find.Execute(ref findText,
@@ -151,33 +151,47 @@ namespace MaxPowerSystem
                     Word.Table tableobj;
                     tableobj = myWordDoc.Tables.Add(rng, 1, 5, ref missing, ref missing);
                     //5
+
+                    myWordDoc.Tables[n_table].Columns[1].SetWidth(50, Word.WdRulerStyle.wdAdjustNone);
+                    myWordDoc.Tables[n_table].Columns[2].SetWidth(50, Word.WdRulerStyle.wdAdjustNone);
+                    myWordDoc.Tables[n_table].Columns[3].SetWidth(200, Word.WdRulerStyle.wdAdjustNone);
+                    myWordDoc.Tables[n_table].Columns[4].SetWidth(80, Word.WdRulerStyle.wdAdjustNone);
+                    myWordDoc.Tables[n_table].Columns[5].SetWidth(80, Word.WdRulerStyle.wdAdjustNone);
+
+
+
+                    myWordDoc.Tables[n_table].Rows[1].Range.Paragraphs.Alignment =
+                    Word.WdParagraphAlignment.wdAlignParagraphCenter;
+                    myWordDoc.Tables[n_table].Borders.InsideLineStyle = Word.WdLineStyle.wdLineStyleSingle;
+                    myWordDoc.Tables[n_table].Borders.OutsideLineStyle = Word.WdLineStyle.wdLineStyleSingle;
+
                     myWordDoc.Tables[n_table].Rows[1].Cells[1].Range.Text = "Item";
-                   
+
                     myWordDoc.Tables[n_table].Rows[1].Cells[2].Range.Text = data[0].Cant;
-                    
+
                     myWordDoc.Tables[n_table].Rows[1].Cells[3].Range.Text = data[0].Desc;
-                   
+
                     myWordDoc.Tables[n_table].Rows[1].Cells[4].Range.Text = data[0].Unit;
-                 
+
                     myWordDoc.Tables[n_table].Rows[1].Cells[5].Range.Text = data[0].Total;
 
 
 
-                    for (int i = 1; i < data.Count ; i++)
+                    for (int i = 1; i < data.Count; i++)
                     {
                         myWordDoc.Tables[n_table].Rows.Add(ref missing);
-                        myWordDoc.Tables[n_table].Rows[i+1].Cells[1].Range.Text = i.ToString();
+                        myWordDoc.Tables[n_table].Rows[i + 1].Cells[1].Range.Text = i.ToString();
 
-                        myWordDoc.Tables[n_table].Rows[i+1].Cells[2].Range.Text = data[i].Cant;
+                        myWordDoc.Tables[n_table].Rows[i + 1].Cells[2].Range.Text = data[i].Cant;
 
-                        myWordDoc.Tables[n_table].Rows[i+1].Cells[3].Range.Text = data[i].Desc;
+                        myWordDoc.Tables[n_table].Rows[i + 1].Cells[3].Range.Text = data[i].Desc;
 
-                        myWordDoc.Tables[n_table].Rows[i+1].Cells[4].Range.Text = data[i].Unit;
+                        myWordDoc.Tables[n_table].Rows[i + 1].Cells[4].Range.Text = data[i].Unit;
 
 
-                        myWordDoc.Tables[n_table].Rows[i+1].Cells[5].Range.Text = data[i].Total;
+                        myWordDoc.Tables[n_table].Rows[i + 1].Cells[5].Range.Text = data[i].Total;
 
-                        tableobj.Rows[i+1].Range.Font.Underline = 0;
+                        tableobj.Rows[i + 1].Range.Font.Underline = 0;
                     }
 
                     tableobj.Rows[1].Range.Font.Underline = 0;
@@ -188,13 +202,13 @@ namespace MaxPowerSystem
                     MessageBox.Show("Text not found.");
                 }
 
-               
+
 
             }
             else
             {
                 MessageBox.Show("File not Found!");
-               
+
             }
 
             myWordDoc.SaveAs(ref SaveAs, ref missing, ref missing, ref missing,
