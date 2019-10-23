@@ -44,7 +44,7 @@ var j = schedule.scheduleJob(rule, function(){
         con.query(sql, function (err, result, fields) {
             if (err) { console.error(err);}
             else{
-                for(let vp of resul){
+                for(let vp of result){
                     let c = checkDate(vp.fecha, vp.pmde);
                     if(c && vp.Confirmado)
                         notifications.push({cod: c, db: 'venta_prod', orden: vp.orden});
