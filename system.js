@@ -12,8 +12,9 @@ function checkDate(fech, sum){
     
     let ant = new Date(year, month, days);
     let date = new Date(year, month, days);
+    ant.setDate(date.getDate() + (sum - 1));
     date.setDate(date.getDate() + sum);
-    ant.setDate(date.getDate() - 1);
+    
     
     let today = new Date();
 
@@ -31,7 +32,7 @@ function checkDate(fech, sum){
     else
         return undefined;
 
-    console.log(ant.toDateString());
+
     //return;
 }
 //console.log(checkDate('16/10/2019', 6));
@@ -40,7 +41,7 @@ let notifications = [];
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 12;
-rule.minute = 21;
+rule.minute = 30;
 
 //DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
