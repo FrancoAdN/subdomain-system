@@ -6,7 +6,7 @@ const schedule = require('node-schedule');
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(0, 6)];
 rule.hour = 9;
-rule.minute = 22;
+rule.minute = 24;
  
 var j = schedule.scheduleJob(rule, function(){
   console.log('Today is recognized by Rebecca Black!');
