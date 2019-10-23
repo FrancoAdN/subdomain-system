@@ -40,7 +40,7 @@ let notifications = [];
 
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 12;
+rule.hour = 01;
 rule.minute = 30;
 
 //DATE SCHEDULE
@@ -60,6 +60,9 @@ var j = schedule.scheduleJob(rule, function(){
                     else if(c && !vp.Confirmado)
                         notifications.push({cod: 3, db: 'venta_prod', orden: vp.orden});
                 }
+
+                if(notifications.length == 0)
+                    notifications.push("Sin notificaciones");
             }
           con.end();
         });
