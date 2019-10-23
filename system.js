@@ -3,13 +3,59 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const schedule = require('node-schedule');
 
+
+function checkDate(fech, sum){
+    let sp = fech.split('/');
+    const days = sp[0] ;
+    const month = sp[1] - 1;
+    const year = sp[2];
+    
+    let ant = new Date(year, month, days-1);
+    let date = new Date(year, month, days);
+    date.setDate(date.getDate() + sum);
+    
+    let today = new Date();
+
+    if(today.toDateString() > date.toDateString())
+        return 0;
+    else if(today.toDateString() == date.toDateString())
+        return 1;
+    else if(ant.toDateString() == date.toDateString())
+        return 2;
+    else
+        return undefined;
+    //return;
+}
+//console.log(checkDate('16/10/2019', 6));
+let notifications = [];
+
 var rule = new schedule.RecurrenceRule();
-rule.dayOfWeek = [new schedule.Range(0, 6)];
-rule.hour = 9;
+rule.dayOfWeek = [new schedule.Range(1, 5)];
+rule.hour = 11;
 rule.minute = 24;
- 
+
+//DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
-  console.log('Today is recognized by Rebecca Black!');
+    notifications.length = 0;
+    const con = connectionSQL();
+    const sql =  'SELECT pmde, fecha, Confirmado, orden FROM venta_prod WHERE entregado = false';
+    con.connect(function(err) {
+        if (err) {console.error(err);}
+        con.query(sql, function (err, result, fields) {
+            if (err) { console.error(err);}
+            else{
+                for(let vp of resul){
+                    let c = checkDate(vp.fecha, vp.pmde);
+                    if(c && vp.Confirmado)
+                        notifications.push({cod: c, db: 'venta_prod', orden: vp.orden});
+                    else if(c && !vp.Confirmado)
+                        notifications.push({cod: 3, db: 'venta_prod', orden: vp.orden});
+                }
+            }
+          con.end();
+        });
+    });
+    //console.log('Today is recognized by Rebecca Black!');
 });
 
 
@@ -955,5 +1001,18 @@ app.get('/tabla/:id', (req, resp) => {
         });
     });
 });
+
+
+// region NOTIFICATIONS
+
+app.get('/notif', (req, resp) => {
+    resp.send(notifications);
+});
+
+app.get('/notif/:id', (req, resp) => {
+    resp.send(notifications[req.params.id]);
+});
+// end of region
+
 
 app.listen(3030, () => console.log('Server running'));
