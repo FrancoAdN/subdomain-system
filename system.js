@@ -13,7 +13,7 @@ function checkDate(fech, sum){
     let ant = new Date(year, month, days);
     let date = new Date(year, month, days);
     date.setDate(date.getDate() + sum);
-    ant.setDate(date.getDate() +(sum - 1));
+    ant.setDate(date.getDate() - 1);
     
     let today = new Date();
 
@@ -33,7 +33,7 @@ let notifications = [];
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 11;
-rule.minute = 49;
+rule.minute = 51;
 
 //DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
