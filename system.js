@@ -34,8 +34,8 @@ let notifications = [];
 
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 10;
-rule.minute = 32;
+rule.hour = 12;
+rule.minute = 30;
 
 //DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
@@ -1037,6 +1037,47 @@ app.get('/notif/:id', (req, resp) => {
     resp.send(notifications[req.params.id]);
 });
 // end of region
+
+
+//region ORDENES A CONFIRMAR
+app.get('/nconfirm', (req, resp) => {
+    const con = connectionSQL();
+    const sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM asis_tec WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_nac WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false;';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                let nconfirm = [];
+                let cont = 0;
+                for(let r of result){
+                    if(r.length != 0){
+                        for(let p of r)
+                            nconfirm.push(p);
+                    }else
+                        cont++;
+                    
+                }
+
+                if(cont == 4)
+                    resp.send('11');
+                else
+                    resp.send(nconfirm);
+            }
+                
+          con.end();
+        });
+    });
+});
+
+
+//end of region
+
 
 
 app.listen(3030, () => console.log('Server running'));
