@@ -56,11 +56,11 @@
             this.cmbDb.FormattingEnabled = true;
             this.cmbDb.Items.AddRange(new object[] {
             "Empresas",
-            "Reparación de laboratorio",
-            "Venta de productos",
+            "Cot. Asistencia técnica",
+            "Cot. Reparación de laboratorio",
+            "Cot. Venta de productos",
             "Orden de compra exterior",
             "Orden de compra nacional",
-            "Asistencia técnica",
             "(seleccionar)"});
             this.cmbDb.Location = new System.Drawing.Point(223, 3);
             this.cmbDb.Name = "cmbDb";

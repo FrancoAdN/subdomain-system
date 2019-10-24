@@ -66,7 +66,10 @@ namespace MaxPowerSystem
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Controls.Add(this.button1);
+            flowLayoutPanel1.Controls.Add(this.button4);
             flowLayoutPanel1.Controls.Add(this.button2);
+            flowLayoutPanel1.Controls.Add(this.button6);
+            flowLayoutPanel1.Controls.Add(this.button5);
             flowLayoutPanel1.Controls.Add(this.button8);
             flowLayoutPanel1.Controls.Add(this.ATButton);
             flowLayoutPanel1.Controls.Add(this.RLButton);
@@ -74,9 +77,6 @@ namespace MaxPowerSystem
             flowLayoutPanel1.Controls.Add(this.button3);
             flowLayoutPanel1.Controls.Add(this.OCNButton);
             flowLayoutPanel1.Controls.Add(this.OCEButton);
-            flowLayoutPanel1.Controls.Add(this.button4);
-            flowLayoutPanel1.Controls.Add(this.button5);
-            flowLayoutPanel1.Controls.Add(this.button6);
             flowLayoutPanel1.Controls.Add(this.OACButton);
             flowLayoutPanel1.Controls.Add(this.button9);
             flowLayoutPanel1.Controls.Add(this.button10);
@@ -94,14 +94,14 @@ namespace MaxPowerSystem
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(197, 28);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Base de datos";
+            this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button2.Location = new System.Drawing.Point(3, 37);
+            this.button2.Location = new System.Drawing.Point(3, 73);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 28);
             this.button2.TabIndex = 0;
@@ -113,7 +113,7 @@ namespace MaxPowerSystem
             // 
             this.button8.AutoSize = true;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button8.Location = new System.Drawing.Point(3, 71);
+            this.button8.Location = new System.Drawing.Point(3, 175);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(197, 30);
             this.button8.TabIndex = 6;
@@ -124,7 +124,7 @@ namespace MaxPowerSystem
             // ATButton
             // 
             this.ATButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ATButton.Location = new System.Drawing.Point(11, 107);
+            this.ATButton.Location = new System.Drawing.Point(11, 211);
             this.ATButton.Margin = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.ATButton.Name = "ATButton";
             this.ATButton.Size = new System.Drawing.Size(177, 28);
@@ -137,7 +137,7 @@ namespace MaxPowerSystem
             // RLButton
             // 
             this.RLButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RLButton.Location = new System.Drawing.Point(11, 141);
+            this.RLButton.Location = new System.Drawing.Point(11, 245);
             this.RLButton.Margin = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.RLButton.Name = "RLButton";
             this.RLButton.Size = new System.Drawing.Size(177, 28);
@@ -150,7 +150,7 @@ namespace MaxPowerSystem
             // VPButton
             // 
             this.VPButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VPButton.Location = new System.Drawing.Point(11, 175);
+            this.VPButton.Location = new System.Drawing.Point(11, 279);
             this.VPButton.Margin = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.VPButton.Name = "VPButton";
             this.VPButton.Size = new System.Drawing.Size(177, 28);
@@ -164,7 +164,7 @@ namespace MaxPowerSystem
             // 
             this.button3.AutoSize = true;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button3.Location = new System.Drawing.Point(3, 209);
+            this.button3.Location = new System.Drawing.Point(3, 313);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(197, 30);
             this.button3.TabIndex = 7;
@@ -175,7 +175,7 @@ namespace MaxPowerSystem
             // OCNButton
             // 
             this.OCNButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCNButton.Location = new System.Drawing.Point(11, 245);
+            this.OCNButton.Location = new System.Drawing.Point(11, 349);
             this.OCNButton.Margin = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.OCNButton.Name = "OCNButton";
             this.OCNButton.Size = new System.Drawing.Size(177, 28);
@@ -188,7 +188,7 @@ namespace MaxPowerSystem
             // OCEButton
             // 
             this.OCEButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OCEButton.Location = new System.Drawing.Point(11, 279);
+            this.OCEButton.Location = new System.Drawing.Point(11, 383);
             this.OCEButton.Margin = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.OCEButton.Name = "OCEButton";
             this.OCEButton.Size = new System.Drawing.Size(177, 28);
@@ -202,17 +202,17 @@ namespace MaxPowerSystem
             // 
             this.button4.AutoSize = true;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button4.Location = new System.Drawing.Point(3, 313);
+            this.button4.Location = new System.Drawing.Point(3, 37);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(197, 30);
+            this.button4.Size = new System.Drawing.Size(205, 30);
             this.button4.TabIndex = 8;
-            this.button4.Text = "Solicitudes";
+            this.button4.Text = "Solicitudes de cotización";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(11, 349);
+            this.button5.Location = new System.Drawing.Point(11, 141);
             this.button5.Margin = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(177, 28);
@@ -224,7 +224,7 @@ namespace MaxPowerSystem
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(11, 383);
+            this.button6.Location = new System.Drawing.Point(11, 107);
             this.button6.Margin = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(177, 28);

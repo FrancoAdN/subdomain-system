@@ -70,9 +70,9 @@
             this.labInco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labInco.Location = new System.Drawing.Point(14, 70);
             this.labInco.Name = "labInco";
-            this.labInco.Size = new System.Drawing.Size(163, 18);
+            this.labInco.Size = new System.Drawing.Size(139, 18);
             this.labInco.TabIndex = 8;
-            this.labInco.Text = "Entrega del material:";
+            this.labInco.Text = "Lugar de entrega:";
             // 
             // labEnt
             // 

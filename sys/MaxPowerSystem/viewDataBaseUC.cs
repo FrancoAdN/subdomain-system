@@ -336,7 +336,7 @@ namespace MaxPowerSystem
                 }
                 
             }
-            else if (view == "Reparación de laboratorio")
+            else if (view == "Cot. Reparación de laboratorio")
             {
                 JToken json = "";
 
@@ -476,7 +476,7 @@ namespace MaxPowerSystem
                 dbVentProd1.BringToFront();
                 
             }
-            else if(view == "Venta de productos")
+            else if(view == "Cot. Venta de productos")
             {
                 JToken json = "";
 
@@ -615,7 +615,7 @@ namespace MaxPowerSystem
                 
                 
             }
-            else if(view == "Asistencia técnica")
+            else if(view == "Cot. Asistencia técnica")
             {
                 JToken json = "";
                 if (string.IsNullOrEmpty(ord) && string.IsNullOrEmpty(ent))

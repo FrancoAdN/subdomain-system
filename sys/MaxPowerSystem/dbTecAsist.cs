@@ -51,5 +51,7 @@ namespace MaxPowerSystem
             labDate.Text = (String)json[Index]["fecha"];
             labOrden.Text = (String)json[Index]["orden"];
         }
+
+
     }
 }

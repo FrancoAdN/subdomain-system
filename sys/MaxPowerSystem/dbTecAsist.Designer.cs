@@ -60,9 +60,9 @@
             this.labPrec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPrec.Location = new System.Drawing.Point(14, 191);
             this.labPrec.Name = "labPrec";
-            this.labPrec.Size = new System.Drawing.Size(112, 18);
+            this.labPrec.Size = new System.Drawing.Size(62, 18);
             this.labPrec.TabIndex = 9;
-            this.labPrec.Text = "Precio (ARS):";
+            this.labPrec.Text = "Precio:";
             // 
             // labType
             // 
@@ -127,7 +127,7 @@
             // labPrice
             // 
             this.labPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labPrice.Location = new System.Drawing.Point(132, 191);
+            this.labPrice.Location = new System.Drawing.Point(82, 191);
             this.labPrice.Name = "labPrice";
             this.labPrice.Size = new System.Drawing.Size(198, 21);
             this.labPrice.TabIndex = 23;
