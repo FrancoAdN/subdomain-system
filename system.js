@@ -1040,7 +1040,7 @@ app.get('/notif/:id', (req, resp) => {
 
 
 //region ORDENES A CONFIRMAR
-app.get('/nconf', (req, resp) => {
+app.get('/nconfirm', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false; SELECT emp, fecha, orden FROM ord_nac WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false;';
     con.connect(function(err) {
@@ -1075,6 +1075,49 @@ app.get('/nconf', (req, resp) => {
     });
 });
 
+
+app.get('/nconfirm/:ord', (req, resp) => {
+    const orden = req.params.ord;
+    const con = connectionSQL();
+    let sql = "SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, fecha, orden FROM asis_tec WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, fecha, orden FROM ord_nac WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+
+
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                let nconfirm = [];
+                let cont = 0;
+                for(let r of result){
+                    if(r.length != 0){
+                        for(let p of r)
+                            nconfirm.push(p);
+                        break;
+                    }else
+                        cont++;
+                    
+                }
+
+                if(cont == 5)
+                    resp.send('7');
+                else
+                    resp.send(nconfirm);
+            }
+                
+          con.end();
+        });
+    });
+});
 
 //end of region
 
