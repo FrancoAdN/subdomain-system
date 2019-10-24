@@ -120,10 +120,22 @@
   <metadata name="flowLayoutPanel1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="newSearch.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAAV1JREFUSEvtkr9OwnAUhUkcnJwcGBz0IQgLo9GAizNh8SlkMLo4dWgKtLvM5Q3c
+        CaMvwODG7kTCUL+THA0iTVtkcOBLbijnd++59/enduD/E8fx6Wg06g6Hwwd+74kO38de3h2ZEAGGSyJb
+        j8FgsGCt59Tq2PzVZi/soiEtCIIT/t+gT93s0SXV8OQyuLP0gzRNj1gbK4fmV5bL4TNfanJLW9GOyJsT
+        M0vloKDryRqWcqFJX7kMU7dUDEV6LZkmtJQLOW3lEi1LxZCsp5jpQi3lQoNbN2haKobkjor0WizlQl5I
+        rMoM842OBvMFhVO9Fsu/CMPwjJwPYmKpPDTpUaitj7fdhc3flMMwl5argfGTm8z57hNtQmeuY9HkWlOD
+        9yiKLlxWDQyvMZl9mTlWxESTy1zan5oIDOoYtYjm+oXKdG9N8thskiTJuZf2x0aTZ8v7RZPLXC/M0oEy
+        1Gqf8vMU1I+pltcAAAAASUVORK5CYII=
+</value>
+  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAlokAAAEAIAD0SwEAFgAAACgAAACWAAAAEgEAAAEAIAAAAAAAGEEBACMuAAAjLgAAAAAAAAAA

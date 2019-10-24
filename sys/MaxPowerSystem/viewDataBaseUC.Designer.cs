@@ -79,7 +79,7 @@
             this.countPanel.Controls.Add(this.leftLab, 1, 0);
             this.countPanel.Controls.Add(this.rightLab, 2, 0);
             this.countPanel.Controls.Add(this.rightBut, 3, 0);
-            this.countPanel.Location = new System.Drawing.Point(245, 295);
+            this.countPanel.Location = new System.Drawing.Point(340, 396);
             this.countPanel.Name = "countPanel";
             this.countPanel.RowCount = 1;
             this.countPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -208,28 +208,28 @@
             // 
             this.dbEnterprise1.Location = new System.Drawing.Point(0, 47);
             this.dbEnterprise1.Name = "dbEnterprise1";
-            this.dbEnterprise1.Size = new System.Drawing.Size(656, 245);
+            this.dbEnterprise1.Size = new System.Drawing.Size(920, 333);
             this.dbEnterprise1.TabIndex = 14;
             // 
             // dbVentProd1
             // 
             this.dbVentProd1.Location = new System.Drawing.Point(0, 47);
             this.dbVentProd1.Name = "dbVentProd1";
-            this.dbVentProd1.Size = new System.Drawing.Size(656, 245);
+            this.dbVentProd1.Size = new System.Drawing.Size(920, 343);
             this.dbVentProd1.TabIndex = 12;
             // 
             // dbOrdExt1
             // 
             this.dbOrdExt1.Location = new System.Drawing.Point(0, 47);
             this.dbOrdExt1.Name = "dbOrdExt1";
-            this.dbOrdExt1.Size = new System.Drawing.Size(656, 245);
+            this.dbOrdExt1.Size = new System.Drawing.Size(920, 330);
             this.dbOrdExt1.TabIndex = 11;
             // 
             // dbTecAsist1
             // 
             this.dbTecAsist1.Location = new System.Drawing.Point(0, 47);
             this.dbTecAsist1.Name = "dbTecAsist1";
-            this.dbTecAsist1.Size = new System.Drawing.Size(656, 245);
+            this.dbTecAsist1.Size = new System.Drawing.Size(920, 330);
             this.dbTecAsist1.TabIndex = 10;
             // 
             // viewDataBaseUC
@@ -249,7 +249,7 @@
             this.Controls.Add(this.countPanel);
             this.Controls.Add(this.cmbDb);
             this.Name = "viewDataBaseUC";
-            this.Size = new System.Drawing.Size(656, 333);
+            this.Size = new System.Drawing.Size(1000, 450);
             this.countPanel.ResumeLayout(false);
             this.countPanel.PerformLayout();
             this.ResumeLayout(false);

@@ -127,7 +127,7 @@ namespace MaxPowerSystem
             // 
             this.labPor.AutoSize = true;
             this.labPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labPor.Location = new System.Drawing.Point(371, 23);
+            this.labPor.Location = new System.Drawing.Point(420, 23);
             this.labPor.Name = "labPor";
             this.labPor.Size = new System.Drawing.Size(32, 18);
             this.labPor.TabIndex = 8;
@@ -136,9 +136,9 @@ namespace MaxPowerSystem
             // boxDays
             // 
             this.boxDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxDays.Location = new System.Drawing.Point(409, 20);
+            this.boxDays.Location = new System.Drawing.Point(458, 20);
             this.boxDays.Name = "boxDays";
-            this.boxDays.Size = new System.Drawing.Size(22, 24);
+            this.boxDays.Size = new System.Drawing.Size(27, 24);
             this.boxDays.TabIndex = 9;
             this.boxDays.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxDays_KeyPress);
             // 
@@ -146,7 +146,7 @@ namespace MaxPowerSystem
             // 
             this.labDay.AutoSize = true;
             this.labDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labDay.Location = new System.Drawing.Point(437, 23);
+            this.labDay.Location = new System.Drawing.Point(491, 23);
             this.labDay.Name = "labDay";
             this.labDay.Size = new System.Drawing.Size(55, 18);
             this.labDay.TabIndex = 10;
@@ -155,9 +155,9 @@ namespace MaxPowerSystem
             // boxHours
             // 
             this.boxHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxHours.Location = new System.Drawing.Point(498, 20);
+            this.boxHours.Location = new System.Drawing.Point(552, 20);
             this.boxHours.Name = "boxHours";
-            this.boxHours.Size = new System.Drawing.Size(22, 24);
+            this.boxHours.Size = new System.Drawing.Size(25, 24);
             this.boxHours.TabIndex = 11;
             this.boxHours.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxHours_KeyPress);
             // 
@@ -165,28 +165,28 @@ namespace MaxPowerSystem
             // 
             this.labAsist.AutoSize = true;
             this.labAsist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labAsist.Location = new System.Drawing.Point(526, 23);
+            this.labAsist.Location = new System.Drawing.Point(583, 23);
             this.labAsist.Name = "labAsist";
-            this.labAsist.Size = new System.Drawing.Size(115, 18);
+            this.labAsist.Size = new System.Drawing.Size(270, 18);
             this.labAsist.TabIndex = 12;
-            this.labAsist.Text = "hs de Asistencia";
+            this.labAsist.Text = "hs de Asistencia técnica de un ingeniero";
             // 
             // labTec
             // 
             this.labTec.AutoSize = true;
             this.labTec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labTec.Location = new System.Drawing.Point(371, 57);
+            this.labTec.Location = new System.Drawing.Point(583, 57);
             this.labTec.Name = "labTec";
-            this.labTec.Size = new System.Drawing.Size(258, 18);
+            this.labTec.Size = new System.Drawing.Size(98, 18);
             this.labTec.TabIndex = 13;
-            this.labTec.Text = "Técnica de un Ingeniero especializado";
+            this.labTec.Text = "especializado";
             this.labTec.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // labForAsist
             // 
             this.labForAsist.AutoSize = true;
             this.labForAsist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labForAsist.Location = new System.Drawing.Point(371, 87);
+            this.labForAsist.Location = new System.Drawing.Point(676, 57);
             this.labForAsist.Name = "labForAsist";
             this.labForAsist.Size = new System.Drawing.Size(173, 18);
             this.labForAsist.TabIndex = 14;
@@ -195,17 +195,17 @@ namespace MaxPowerSystem
             // boxDetalle
             // 
             this.boxDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxDetalle.Location = new System.Drawing.Point(374, 121);
+            this.boxDetalle.Location = new System.Drawing.Point(381, 101);
             this.boxDetalle.Multiline = true;
             this.boxDetalle.Name = "boxDetalle";
-            this.boxDetalle.Size = new System.Drawing.Size(267, 154);
+            this.boxDetalle.Size = new System.Drawing.Size(472, 174);
             this.boxDetalle.TabIndex = 15;
             // 
             // buttonWordFile
             // 
             this.buttonWordFile.AutoSize = true;
             this.buttonWordFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.buttonWordFile.Location = new System.Drawing.Point(282, 290);
+            this.buttonWordFile.Location = new System.Drawing.Point(381, 311);
             this.buttonWordFile.Name = "buttonWordFile";
             this.buttonWordFile.Size = new System.Drawing.Size(142, 31);
             this.buttonWordFile.TabIndex = 16;
@@ -235,7 +235,7 @@ namespace MaxPowerSystem
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "tecAsistUC";
-            this.Size = new System.Drawing.Size(656, 333);
+            this.Size = new System.Drawing.Size(920, 359);
             this.ResumeLayout(false);
             this.PerformLayout();
 

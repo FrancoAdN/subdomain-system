@@ -94,7 +94,7 @@
             // 
             this.labTelCom.AutoSize = true;
             this.labTelCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTelCom.Location = new System.Drawing.Point(214, 80);
+            this.labTelCom.Location = new System.Drawing.Point(287, 80);
             this.labTelCom.Name = "labTelCom";
             this.labTelCom.Size = new System.Drawing.Size(118, 18);
             this.labTelCom.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             this.labWeb.AutoSize = true;
             this.labWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labWeb.Location = new System.Drawing.Point(214, 20);
+            this.labWeb.Location = new System.Drawing.Point(287, 20);
             this.labWeb.Name = "labWeb";
             this.labWeb.Size = new System.Drawing.Size(46, 18);
             this.labWeb.TabIndex = 4;
@@ -114,7 +114,7 @@
             // 
             this.groupCont.Controls.Add(this.panel1);
             this.groupCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.groupCont.Location = new System.Drawing.Point(442, 14);
+            this.groupCont.Location = new System.Drawing.Point(628, 20);
             this.groupCont.Name = "groupCont";
             this.groupCont.Size = new System.Drawing.Size(200, 108);
             this.groupCont.TabIndex = 7;
@@ -157,7 +157,7 @@
             // 
             this.groupContB.Controls.Add(this.panel2);
             this.groupContB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
-            this.groupContB.Location = new System.Drawing.Point(442, 128);
+            this.groupContB.Location = new System.Drawing.Point(628, 134);
             this.groupContB.Name = "groupContB";
             this.groupContB.Size = new System.Drawing.Size(200, 108);
             this.groupContB.TabIndex = 8;
@@ -200,7 +200,7 @@
             // 
             this.labRub.AutoSize = true;
             this.labRub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labRub.Location = new System.Drawing.Point(214, 140);
+            this.labRub.Location = new System.Drawing.Point(287, 140);
             this.labRub.Name = "labRub";
             this.labRub.Size = new System.Drawing.Size(54, 18);
             this.labRub.TabIndex = 9;
@@ -211,12 +211,12 @@
             this.labDescRub.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.labDescRub.HideSelection = false;
             this.labDescRub.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.labDescRub.Location = new System.Drawing.Point(217, 173);
+            this.labDescRub.Location = new System.Drawing.Point(290, 173);
             this.labDescRub.Multiline = true;
             this.labDescRub.Name = "labDescRub";
             this.labDescRub.ReadOnly = true;
             this.labDescRub.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.labDescRub.Size = new System.Drawing.Size(210, 60);
+            this.labDescRub.Size = new System.Drawing.Size(284, 69);
             this.labDescRub.TabIndex = 10;
             this.labDescRub.Click += new System.EventHandler(this.LabDescRub_Click);
             // 
@@ -235,7 +235,7 @@
             this.Controls.Add(this.labCuit);
             this.Controls.Add(this.labEmp);
             this.Name = "dbEnterprise";
-            this.Size = new System.Drawing.Size(656, 245);
+            this.Size = new System.Drawing.Size(920, 330);
             this.groupCont.ResumeLayout(false);
             this.groupCont.PerformLayout();
             this.panel1.ResumeLayout(false);

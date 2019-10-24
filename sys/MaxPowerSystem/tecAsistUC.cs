@@ -227,5 +227,7 @@ namespace MaxPowerSystem
                 MessageBox.Show("Solo se aceptan numeros");
             }
         }
+
+
     }
 }

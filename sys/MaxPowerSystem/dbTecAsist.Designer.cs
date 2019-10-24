@@ -48,7 +48,7 @@
             // 
             this.labFdp.AutoSize = true;
             this.labFdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFdp.Location = new System.Drawing.Point(14, 189);
+            this.labFdp.Location = new System.Drawing.Point(14, 217);
             this.labFdp.Name = "labFdp";
             this.labFdp.Size = new System.Drawing.Size(127, 18);
             this.labFdp.TabIndex = 10;
@@ -58,7 +58,7 @@
             // 
             this.labPrec.AutoSize = true;
             this.labPrec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPrec.Location = new System.Drawing.Point(14, 163);
+            this.labPrec.Location = new System.Drawing.Point(14, 191);
             this.labPrec.Name = "labPrec";
             this.labPrec.Size = new System.Drawing.Size(112, 18);
             this.labPrec.TabIndex = 9;
@@ -89,7 +89,7 @@
             // 
             this.labDate.AutoSize = true;
             this.labDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDate.Location = new System.Drawing.Point(489, 217);
+            this.labDate.Location = new System.Drawing.Point(721, 237);
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(110, 18);
             this.labDate.TabIndex = 19;
@@ -99,7 +99,7 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(600, 207);
+            this.button1.Location = new System.Drawing.Point(832, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 35);
             this.button1.TabIndex = 20;
@@ -120,14 +120,14 @@
             this.labTdAsist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.labTdAsist.Location = new System.Drawing.Point(14, 91);
             this.labTdAsist.Name = "labTdAsist";
-            this.labTdAsist.Size = new System.Drawing.Size(316, 72);
+            this.labTdAsist.Size = new System.Drawing.Size(316, 93);
             this.labTdAsist.TabIndex = 22;
             this.labTdAsist.Text = "label2";
             // 
             // labPrice
             // 
             this.labPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labPrice.Location = new System.Drawing.Point(132, 163);
+            this.labPrice.Location = new System.Drawing.Point(132, 191);
             this.labPrice.Name = "labPrice";
             this.labPrice.Size = new System.Drawing.Size(198, 21);
             this.labPrice.TabIndex = 23;
@@ -136,7 +136,7 @@
             // fdpLab
             // 
             this.fdpLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.fdpLab.Location = new System.Drawing.Point(14, 209);
+            this.fdpLab.Location = new System.Drawing.Point(14, 237);
             this.fdpLab.Name = "fdpLab";
             this.fdpLab.Size = new System.Drawing.Size(316, 21);
             this.fdpLab.TabIndex = 24;
@@ -145,9 +145,9 @@
             // labDet
             // 
             this.labDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labDet.Location = new System.Drawing.Point(336, 41);
+            this.labDet.Location = new System.Drawing.Point(352, 41);
             this.labDet.Name = "labDet";
-            this.labDet.Size = new System.Drawing.Size(316, 149);
+            this.labDet.Size = new System.Drawing.Size(514, 143);
             this.labDet.TabIndex = 26;
             this.labDet.Text = "label5";
             // 
@@ -156,7 +156,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(454, 20);
+            this.label6.Location = new System.Drawing.Point(579, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 18);
             this.label6.TabIndex = 25;
@@ -190,7 +190,7 @@
             this.Controls.Add(this.labType);
             this.Controls.Add(this.labEnt);
             this.Name = "dbTecAsist";
-            this.Size = new System.Drawing.Size(656, 245);
+            this.Size = new System.Drawing.Size(920, 333);
             this.ResumeLayout(false);
             this.PerformLayout();
 

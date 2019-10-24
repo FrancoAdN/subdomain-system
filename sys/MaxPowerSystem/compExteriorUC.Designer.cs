@@ -54,10 +54,10 @@
             // maxPlBox
             // 
             this.maxPlBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.maxPlBox.Location = new System.Drawing.Point(216, 246);
+            this.maxPlBox.Location = new System.Drawing.Point(216, 243);
             this.maxPlBox.Multiline = true;
             this.maxPlBox.Name = "maxPlBox";
-            this.maxPlBox.Size = new System.Drawing.Size(53, 25);
+            this.maxPlBox.Size = new System.Drawing.Size(88, 25);
             this.maxPlBox.TabIndex = 49;
             this.maxPlBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maxPlBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
@@ -75,7 +75,7 @@
             // agregarProd
             // 
             this.agregarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.agregarProd.Location = new System.Drawing.Point(283, 184);
+            this.agregarProd.Location = new System.Drawing.Point(554, 187);
             this.agregarProd.Name = "agregarProd";
             this.agregarProd.Size = new System.Drawing.Size(129, 29);
             this.agregarProd.TabIndex = 48;
@@ -88,7 +88,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label7.Location = new System.Drawing.Point(278, 16);
+            this.label7.Location = new System.Drawing.Point(456, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 18);
             this.label7.TabIndex = 47;
@@ -99,14 +99,14 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.90278F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.09722F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel1.Controls.Add(this.DescBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.CantBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.UnitPrBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(281, 43);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(459, 40);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.82888F));
@@ -122,7 +122,7 @@
             this.DescBox.Location = new System.Drawing.Point(77, 51);
             this.DescBox.Multiline = true;
             this.DescBox.Name = "DescBox";
-            this.DescBox.Size = new System.Drawing.Size(160, 81);
+            this.DescBox.Size = new System.Drawing.Size(159, 81);
             this.DescBox.TabIndex = 34;
             // 
             // CantBox
@@ -141,10 +141,10 @@
             // 
             this.UnitPrBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UnitPrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.UnitPrBox.Location = new System.Drawing.Point(243, 51);
+            this.UnitPrBox.Location = new System.Drawing.Point(242, 51);
             this.UnitPrBox.Multiline = true;
             this.UnitPrBox.Name = "UnitPrBox";
-            this.UnitPrBox.Size = new System.Drawing.Size(113, 81);
+            this.UnitPrBox.Size = new System.Drawing.Size(114, 81);
             this.UnitPrBox.TabIndex = 35;
             this.UnitPrBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UnitPrBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
@@ -168,7 +168,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label4.Location = new System.Drawing.Point(77, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 48);
+            this.label4.Size = new System.Drawing.Size(159, 48);
             this.label4.TabIndex = 36;
             this.label4.Text = "Descripción";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,9 +178,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(243, 0);
+            this.label6.Location = new System.Drawing.Point(242, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(113, 48);
+            this.label6.Size = new System.Drawing.Size(114, 48);
             this.label6.TabIndex = 37;
             this.label6.Text = "Precio Unitario";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,14 +191,14 @@
             this.EntBox.Location = new System.Drawing.Point(19, 40);
             this.EntBox.Multiline = true;
             this.EntBox.Name = "EntBox";
-            this.EntBox.Size = new System.Drawing.Size(250, 25);
+            this.EntBox.Size = new System.Drawing.Size(285, 25);
             this.EntBox.TabIndex = 45;
             // 
             // buttonWordFile
             // 
             this.buttonWordFile.AutoSize = true;
             this.buttonWordFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.buttonWordFile.Location = new System.Drawing.Point(237, 290);
+            this.buttonWordFile.Location = new System.Drawing.Point(311, 296);
             this.buttonWordFile.Name = "buttonWordFile";
             this.buttonWordFile.Size = new System.Drawing.Size(203, 31);
             this.buttonWordFile.TabIndex = 51;
@@ -219,6 +219,7 @@
             // combInco
             // 
             this.combInco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combInco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.combInco.FormattingEnabled = true;
             this.combInco.Items.AddRange(new object[] {
             "EXW, Ex Works",
@@ -234,7 +235,7 @@
             "DDP, Delivered Duty Paid"});
             this.combInco.Location = new System.Drawing.Point(92, 109);
             this.combInco.Name = "combInco";
-            this.combInco.Size = new System.Drawing.Size(177, 21);
+            this.combInco.Size = new System.Drawing.Size(212, 26);
             this.combInco.TabIndex = 54;
             // 
             // label5
@@ -259,6 +260,7 @@
             // 
             // combMon
             // 
+            this.combMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.combMon.FormattingEnabled = true;
             this.combMon.Items.AddRange(new object[] {
             "USD",
@@ -268,13 +270,13 @@
             "REAL BRASILEÑO"});
             this.combMon.Location = new System.Drawing.Point(92, 184);
             this.combMon.Name = "combMon";
-            this.combMon.Size = new System.Drawing.Size(177, 21);
+            this.combMon.Size = new System.Drawing.Size(212, 26);
             this.combMon.TabIndex = 56;
             // 
             // BoxRefOrd
             // 
             this.BoxRefOrd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.BoxRefOrd.Location = new System.Drawing.Point(436, 246);
+            this.BoxRefOrd.Location = new System.Drawing.Point(607, 246);
             this.BoxRefOrd.Multiline = true;
             this.BoxRefOrd.Name = "BoxRefOrd";
             this.BoxRefOrd.Size = new System.Drawing.Size(204, 25);
@@ -285,7 +287,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label10.Location = new System.Drawing.Point(285, 246);
+            this.label10.Location = new System.Drawing.Point(456, 249);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(145, 18);
             this.label10.TabIndex = 59;
@@ -310,7 +312,7 @@
             this.Controls.Add(this.buttonWordFile);
             this.Controls.Add(this.label1);
             this.Name = "compExteriorUC";
-            this.Size = new System.Drawing.Size(656, 333);
+            this.Size = new System.Drawing.Size(920, 330);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

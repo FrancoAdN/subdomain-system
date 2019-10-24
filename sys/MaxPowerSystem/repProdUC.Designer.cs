@@ -52,10 +52,10 @@
             // maxPlBox
             // 
             this.maxPlBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.maxPlBox.Location = new System.Drawing.Point(216, 244);
+            this.maxPlBox.Location = new System.Drawing.Point(216, 251);
             this.maxPlBox.Multiline = true;
             this.maxPlBox.Name = "maxPlBox";
-            this.maxPlBox.Size = new System.Drawing.Size(53, 25);
+            this.maxPlBox.Size = new System.Drawing.Size(88, 25);
             this.maxPlBox.TabIndex = 53;
             this.maxPlBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.maxPlBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
@@ -64,7 +64,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label8.Location = new System.Drawing.Point(16, 244);
+            this.label8.Location = new System.Drawing.Point(16, 251);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(180, 18);
             this.label8.TabIndex = 54;
@@ -73,7 +73,7 @@
             // agregarProd
             // 
             this.agregarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
-            this.agregarProd.Location = new System.Drawing.Point(283, 182);
+            this.agregarProd.Location = new System.Drawing.Point(554, 187);
             this.agregarProd.Name = "agregarProd";
             this.agregarProd.Size = new System.Drawing.Size(129, 29);
             this.agregarProd.TabIndex = 50;
@@ -86,7 +86,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label7.Location = new System.Drawing.Point(278, 14);
+            this.label7.Location = new System.Drawing.Point(456, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(116, 18);
             this.label7.TabIndex = 49;
@@ -97,14 +97,14 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.90278F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.09722F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel1.Controls.Add(this.DescBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.CantBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.UnitPrBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(281, 41);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(459, 41);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 35.82888F));
@@ -120,7 +120,7 @@
             this.DescBox.Location = new System.Drawing.Point(79, 51);
             this.DescBox.Multiline = true;
             this.DescBox.Name = "DescBox";
-            this.DescBox.Size = new System.Drawing.Size(165, 81);
+            this.DescBox.Size = new System.Drawing.Size(164, 81);
             this.DescBox.TabIndex = 34;
             // 
             // CantBox
@@ -139,10 +139,10 @@
             // 
             this.UnitPrBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UnitPrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.UnitPrBox.Location = new System.Drawing.Point(250, 51);
+            this.UnitPrBox.Location = new System.Drawing.Point(249, 51);
             this.UnitPrBox.Multiline = true;
             this.UnitPrBox.Name = "UnitPrBox";
-            this.UnitPrBox.Size = new System.Drawing.Size(106, 81);
+            this.UnitPrBox.Size = new System.Drawing.Size(107, 81);
             this.UnitPrBox.TabIndex = 35;
             this.UnitPrBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UnitPrBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
@@ -166,7 +166,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label4.Location = new System.Drawing.Point(79, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(165, 48);
+            this.label4.Size = new System.Drawing.Size(164, 48);
             this.label4.TabIndex = 36;
             this.label4.Text = "Descripción";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,9 +176,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(250, 0);
+            this.label6.Location = new System.Drawing.Point(249, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 48);
+            this.label6.Size = new System.Drawing.Size(107, 48);
             this.label6.TabIndex = 37;
             this.label6.Text = "Precio Unitario (USD)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -189,23 +189,23 @@
             this.EntBox.Location = new System.Drawing.Point(19, 38);
             this.EntBox.Multiline = true;
             this.EntBox.Name = "EntBox";
-            this.EntBox.Size = new System.Drawing.Size(250, 25);
+            this.EntBox.Size = new System.Drawing.Size(285, 25);
             this.EntBox.TabIndex = 47;
             // 
             // PayBox
             // 
             this.PayBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.PayBox.Location = new System.Drawing.Point(19, 184);
+            this.PayBox.Location = new System.Drawing.Point(19, 187);
             this.PayBox.Multiline = true;
             this.PayBox.Name = "PayBox";
-            this.PayBox.Size = new System.Drawing.Size(250, 48);
+            this.PayBox.Size = new System.Drawing.Size(285, 48);
             this.PayBox.TabIndex = 52;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label5.Location = new System.Drawing.Point(16, 158);
+            this.label5.Location = new System.Drawing.Point(16, 161);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 18);
             this.label5.TabIndex = 46;
@@ -215,7 +215,7 @@
             // 
             this.buttonWordFile.AutoSize = true;
             this.buttonWordFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.buttonWordFile.Location = new System.Drawing.Point(216, 289);
+            this.buttonWordFile.Location = new System.Drawing.Point(311, 296);
             this.buttonWordFile.Name = "buttonWordFile";
             this.buttonWordFile.Size = new System.Drawing.Size(238, 31);
             this.buttonWordFile.TabIndex = 55;
@@ -229,7 +229,7 @@
             this.EntregaBox.Location = new System.Drawing.Point(19, 100);
             this.EntregaBox.Multiline = true;
             this.EntregaBox.Name = "EntregaBox";
-            this.EntregaBox.Size = new System.Drawing.Size(250, 48);
+            this.EntregaBox.Size = new System.Drawing.Size(285, 48);
             this.EntregaBox.TabIndex = 51;
             // 
             // label2
@@ -269,7 +269,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "repProdUC";
-            this.Size = new System.Drawing.Size(656, 333);
+            this.Size = new System.Drawing.Size(920, 330);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

@@ -87,3 +87,61 @@ C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSyst
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.CopyComplete
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.exe
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.pdb
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\bin\Debug\MaxPowerSystem.exe.config
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\bin\Debug\MaxPowerSystem.exe
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\bin\Debug\MaxPowerSystem.pdb
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csprojAssemblyReference.cache
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\Interop.VBIDE.dll
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.ResolveComReference.cache
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.compExteriorUC.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.compNacUC.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbEnterprise.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbOrdExt.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbTecAsist.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbVentProd.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.Form1.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.Properties.Resources.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.repProdUC.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.Resources.Resource.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.tecAsistUC.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.uploadDataBaseUC.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.ventaProdUC.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.viewDataBaseUC.resources
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.GenerateResource.cache
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.CopyComplete
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.exe
+C:\Users\User\Desktop\new-sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.pdb
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\bin\Debug\MaxPowerSystem.exe.config
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\bin\Debug\MaxPowerSystem.exe
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\bin\Debug\MaxPowerSystem.pdb
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.csprojAssemblyReference.cache
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\Interop.VBIDE.dll
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.ResolveComReference.cache
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.compExteriorUC.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.compNacUC.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbEnterprise.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbOrdConf.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbOrdExt.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbTecAsist.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbVentProd.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.Form1.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.OrdConfUC.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.Properties.Resources.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.repProdUC.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.Resources.Resource.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.tecAsistUC.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.uploadDataBaseUC.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.ventaProdUC.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.viewDataBaseUC.resources
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.GenerateResource.cache
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.CopyComplete
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.exe
+C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.pdb

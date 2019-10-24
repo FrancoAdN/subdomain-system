@@ -232,6 +232,7 @@ namespace MaxPowerSystem
             repProdUC1.Hide();
             compExteriorUC1.Hide();
             compNacUC1.Hide();
+            ordConfUC1.Hide();
             
         }
 
@@ -244,6 +245,7 @@ namespace MaxPowerSystem
             repProdUC1.Hide();
             compExteriorUC1.Hide();
             compNacUC1.Hide();
+            ordConfUC1.Hide();
 
             viewDataBaseUC1.Show();
             viewDataBaseUC1.BringToFront();
@@ -258,6 +260,7 @@ namespace MaxPowerSystem
             repProdUC1.Hide();
             compExteriorUC1.Hide();
             compNacUC1.Hide();
+            ordConfUC1.Hide();
 
             uploadDataBaseUC1.Show();
             uploadDataBaseUC1.BringToFront();
@@ -272,6 +275,7 @@ namespace MaxPowerSystem
             repProdUC1.Hide();
             compExteriorUC1.Hide();
             compNacUC1.Hide();
+            ordConfUC1.Hide();
 
             tecAsistUC1.Show();
             tecAsistUC1.BringToFront();
@@ -286,6 +290,7 @@ namespace MaxPowerSystem
             ventaProdUC1.Hide();
             compExteriorUC1.Hide();
             compNacUC1.Hide();
+            ordConfUC1.Hide();
 
             repProdUC1.Show();
             repProdUC1.BringToFront();
@@ -300,6 +305,7 @@ namespace MaxPowerSystem
             repProdUC1.Hide();
             compExteriorUC1.Hide();
             compNacUC1.Hide();
+            ordConfUC1.Hide();
 
             ventaProdUC1.Show();
             ventaProdUC1.BringToFront();
@@ -313,6 +319,7 @@ namespace MaxPowerSystem
             ventaProdUC1.Hide();
             repProdUC1.Hide();
             compNacUC1.Hide();
+            ordConfUC1.Hide();
 
             compExteriorUC1.Show();
             compExteriorUC1.BringToFront();
@@ -326,6 +333,7 @@ namespace MaxPowerSystem
             ventaProdUC1.Hide();
             repProdUC1.Hide();
             compExteriorUC1.Hide();
+            ordConfUC1.Hide();
 
             compNacUC1.Show();
             compNacUC1.BringToFront();
@@ -346,6 +354,7 @@ namespace MaxPowerSystem
                 repProdUC1.Hide();
                 compNacUC1.Hide();
                 compExteriorUC1.Hide();
+                ordConfUC1.Hide();
 
             }
             else
@@ -375,6 +384,7 @@ namespace MaxPowerSystem
                 repProdUC1.Hide();
                 compNacUC1.Hide();
                 compExteriorUC1.Hide();
+                ordConfUC1.Hide();
             }
             else
             {
@@ -386,5 +396,22 @@ namespace MaxPowerSystem
                 OCNButton.Visible = true;
             }
         }
+
+        private void OACButton_MouseClick(object sender, MouseEventArgs e)
+        {
+            uploadDataBaseUC1.Hide();
+            viewDataBaseUC1.Hide();
+            tecAsistUC1.Hide();
+            ventaProdUC1.Hide();
+            repProdUC1.Hide();
+            compNacUC1.Hide();
+            compExteriorUC1.Hide();
+            ordConfUC1.Hide();
+
+            ordConfUC1.Show();
+            ordConfUC1.BringToFront();
+        }
+
+
     }
 }

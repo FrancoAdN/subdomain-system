@@ -31,8 +31,8 @@ namespace MaxPowerSystem
             int i = 0;
             Controls.Remove(panel);
             panel.Location = new System.Drawing.Point(265, 40);
-            panel.Size = new Size(375, 100);
-            panel.MaximumSize = new Size(375, 100);
+            panel.Size = new Size(620, 200);
+            panel.MaximumSize = new Size(620, 200);
             panel.AutoScroll = true;
 
             panel.ColumnCount = 4;
