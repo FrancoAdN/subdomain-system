@@ -193,6 +193,36 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.compExteriorUC.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.compNacUC.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.dbEnterprise.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.dbOrdConf.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.dbOrdExt.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.dbTecAsist.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.dbVentProd.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.Form1.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.OrdConfUC.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.repProdUC.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.Resources.Resource.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.tecAsistUC.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.uploadDataBaseUC.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.ventaProdUC.resources" />
+    <EmbeddedResource Include="obj\Debug\MaxPowerSystem.viewDataBaseUC.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.compExteriorUC.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.compNacUC.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.dbEnterprise.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.dbOrdExt.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.dbTecAsist.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.dbVentProd.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.Form1.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.Properties.Resources.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.repProdUC.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.Resources.Resource.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.tecAsistUC.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.uploadDataBaseUC.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.ventaProdUC.resources" />
+    <EmbeddedResource Include="obj\Release\MaxPowerSystem.viewDataBaseUC.resources" />
     <EmbeddedResource Include="OrdConfUC.resx">
       <DependentUpon>OrdConfUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +250,23 @@
     <EmbeddedResource Include="viewDataBaseUC.resx">
       <DependentUpon>viewDataBaseUC.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\MaxPowerSystem.exe.config" />
+    <None Include="bin\Release\MaxPowerSystem.exe.config" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\MaxPowerSystem.csproj.CopyComplete" />
+    <None Include="obj\Debug\MaxPowerSystem.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\MaxPowerSystem.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\MaxPowerSystem.csproj.ResolveComReference.cache" />
+    <None Include="obj\Debug\MaxPowerSystem.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\MaxPowerSystem.csproj.CopyComplete" />
+    <None Include="obj\Release\MaxPowerSystem.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\MaxPowerSystem.csproj.GenerateResource.cache" />
+    <None Include="obj\Release\MaxPowerSystem.csproj.ResolveComReference.cache" />
+    <None Include="obj\Release\MaxPowerSystem.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -265,7 +312,29 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\MaxPowerSystem.exe" />
+    <Content Include="bin\Debug\MaxPowerSystem.pdb" />
+    <Content Include="bin\Release\MaxPowerSystem.exe" />
+    <Content Include="bin\Release\MaxPowerSystem.pdb" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
     <Content Include="favicon.ico" />
+    <Content Include="obj\Debug\Interop.Microsoft.Office.Core.dll" />
+    <Content Include="obj\Debug\Interop.Microsoft.Office.Interop.Word.dll" />
+    <Content Include="obj\Debug\Interop.VBIDE.dll" />
+    <Content Include="obj\Debug\MaxPowerSystem.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\MaxPowerSystem.exe" />
+    <Content Include="obj\Debug\MaxPowerSystem.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Resources.Resource.Designer.cs.dll" />
+    <Content Include="obj\Release\Interop.Microsoft.Office.Core.dll" />
+    <Content Include="obj\Release\Interop.Microsoft.Office.Interop.Word.dll" />
+    <Content Include="obj\Release\Interop.VBIDE.dll" />
+    <Content Include="obj\Release\MaxPowerSystem.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\MaxPowerSystem.exe" />
+    <Content Include="obj\Release\MaxPowerSystem.pdb" />
+    <Content Include="obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Release\TempPE\Resources.Resource.Designer.cs.dll" />
     <None Include="static\icon-search.png" />
   </ItemGroup>
   <ItemGroup>

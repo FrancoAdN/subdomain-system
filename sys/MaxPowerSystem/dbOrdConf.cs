@@ -13,31 +13,32 @@ namespace MaxPowerSystem
 {
     public partial class dbOrdConf : UserControl
     {
-        public string db;
+        //public string db;
         public JToken json;
-        public int Index;
+        public int Index = 0;
         public TableLayoutPanel panel = new TableLayoutPanel();
         public dbOrdConf()
         {
             InitializeComponent();
         }
 
-        public void changeVal(string indb)
+        public void changeVal()
         {
+            Console.WriteLine(json);
             int i = 0;
             Controls.Remove(panel);
-            panel.Location = new System.Drawing.Point(265, 40);
-            panel.Size = new Size(375, 100);
-            panel.MaximumSize = new Size(375, 100);
+            panel.Location = new System.Drawing.Point(50, 50);
+            panel.Size = new Size(800, 400);
+            panel.MaximumSize = new Size(800, 400);
             panel.AutoScroll = true;
 
             panel.ColumnCount = 4;
-            panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 14F));
-            panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 45F));
+            panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
+            panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35F));
             panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.5F));
-            panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.5F));
+            panel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25.5F));
 
-            panel.RowCount = json[Index]["tabla"].Count() + 1;
+            panel.RowCount = json.Count() + 1;
             panel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
 
             panel.Controls.Clear();
@@ -75,43 +76,42 @@ namespace MaxPowerSystem
             {
 
                 Label ordText = new Label();
-                ordText.Text = (String)json[Index][i - 1]["orden"];
+                ordText.Text = (String)json[i - 1]["orden"];
                 ordText.AutoSize = false;
                 ordText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(ordText, 0, i);
 
 
                 Label empText = new Label();
-                empText.Text = (String)json[Index][i - 1]["emp"];
+                empText.Text = (String)json[i - 1]["emp"];
                 empText.AutoSize = true;
                 empText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(empText, 1, i);
 
                 Label dateText = new Label();
-                dateText.Text = (String)json[Index][i - 1]["date"];
+                dateText.Text = (String)json[i - 1]["fecha"];
                 dateText.AutoSize = true;
                 dateText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(dateText, 2, i);
 
+
                 Label pmdeText = new Label();
-                pmdeText.Text = (String)json[Index][i - 1]["pmde"];
+                if (json[i - 1]["pmde"] != null)
+                    pmdeText.Text = (String)json[i - 1]["pmde"];
+                else
+                    pmdeText.Text = "-";
                 pmdeText.AutoSize = false;
                 pmdeText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(pmdeText, 3, i);
+                
+                
             }
 
             Controls.Add(panel);
 
         }
 
-        private void date_click(object sender, MouseEventArgs e)
-        {
-            MessageBox.Show(labDate.Text);
-        }
 
-        private void regen_file(object sender, MouseEventArgs e)
-        {
-            Console.WriteLine("Regen file " + db);
-        }
+
     }
 }
