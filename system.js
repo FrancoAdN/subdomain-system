@@ -31,7 +31,7 @@ function checkDate(fech, sum){
     else if(today.toDateString() == ant.toDateString())
         return 2;
     else
-        return undefined;
+        return null;
 
 
     //return;
@@ -42,7 +42,7 @@ let notifications = [];
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 9;
-rule.minute = 34;
+rule.minute = 37;
 
 //DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
@@ -58,7 +58,7 @@ var j = schedule.scheduleJob(rule, function(){
                 for(let vp of result){
                     let notif = checkDate(vp.fecha, vp.pmde);
                     console.log(notif);
-                    if(notif)
+                    if(notif != null)
                         notifications.push({cod: notif, db: 'venta_prod', orden: vp.orden});
                 }
 
