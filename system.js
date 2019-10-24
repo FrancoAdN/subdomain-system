@@ -1124,7 +1124,7 @@ app.get('/nconfirm/:ord', (req, resp) => {
 });
 
 
-app.get('/nconfirm', (req, resp) => {
+app.get('/confirm', (req, resp) => {
     const con = connectionSQL();
     let sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = true; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = true; SELECT emp, fecha, orden FROM ord_nac WHERE Confirmado = true; SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = true;';
     sql += 'SELECT emp, fecha, orden FROM asis_tec WHERE Confirmado = true';
