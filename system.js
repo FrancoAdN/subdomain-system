@@ -34,8 +34,8 @@ let notifications = [];
 
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 12;
-rule.minute = 40;
+rule.hour = 15;
+rule.minute = 30;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -485,6 +485,7 @@ app.get('/rep_lab', (req, resp) => {
         });
     });
 });
+
 app.get('/rep_lab/:id', (req, resp) => {
     const orden = req.params.id;
     const sql =  "SELECT * FROM `rep_lab` rp INNER JOIN `tabla` t ON rp.orden = t.orden AND rp.orden = '" + orden + "';";
@@ -528,6 +529,7 @@ app.get('/rep_lab/:id', (req, resp) => {
         });
     });    
 });
+
 app.get('/rep_lab/emp/:id',(req, resp) => {
     const emp = req.params.id;
     const sql =  "SELECT * FROM `rep_lab` rp INNER JOIN `tabla` t ON rp.orden = t.orden AND rp.emp = '" + emp + "';";
@@ -571,6 +573,7 @@ app.get('/rep_lab/emp/:id',(req, resp) => {
         });
     });
 });
+
 app.post('/rep_lab', (req, resp) => {
     let data = req.body;
     data.precio = parseInt(data.precio);
@@ -1120,6 +1123,86 @@ app.get('/nconfirm/:ord', (req, resp) => {
     });
 });
 
+
+app.get('/nconfirm', (req, resp) => {
+    const con = connectionSQL();
+    let sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = true; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = true; SELECT emp, fecha, orden FROM ord_nac WHERE Confirmado = true; SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = true;';
+    sql += 'SELECT emp, fecha, orden FROM asis_tec WHERE Confirmado = true';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                let nconfirm = [];
+                let cont = 0;
+                for(let r of result){
+                    if(r.length != 0){
+                        for(let p of r)
+                            nconfirm.push(p);
+                    }else
+                        cont++;
+                    
+                }
+
+                if(cont == 4)
+                    resp.send('11');
+                else
+                    resp.send(nconfirm);
+            }
+                
+          con.end();
+        });
+    });
+});
+
+
+app.get('/confirm/:ord', (req, resp) => {
+    const orden = req.params.ord;
+    const con = connectionSQL();
+    let sql = "SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = true AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = true AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, fecha, orden FROM asis_tec WHERE Confirmado = true AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = true AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, fecha, orden FROM ord_nac WHERE Confirmado = true AND orden LIKE '" + orden +"' ;";
+
+
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                let nconfirm = [];
+                let cont = 0;
+                for(let r of result){
+                    if(r.length != 0){
+                        for(let p of r)
+                            nconfirm.push(p);
+                        break;
+                    }else
+                        cont++;
+                    
+                }
+
+                if(cont == 5)
+                    resp.send('7');
+                else
+                    resp.send(nconfirm);
+            }
+                
+          con.end();
+        });
+    });
+});
 //end of region
 
 
