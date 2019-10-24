@@ -35,7 +35,7 @@ let notifications = [];
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 10;
-rule.minute = 10;
+rule.minute = 15;
 
 //DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
@@ -50,7 +50,7 @@ var j = schedule.scheduleJob(rule, function(){
         con.query(sql, function (err, result, fields) {
             if (err) { console.error(err);}
             else{
-                for(let vp of result){
+                for(let r of result){
                     let notif = checkDate(r.fecha, r.pmde);
                     console.log(notif);
                     if(notif != null)
