@@ -52,25 +52,21 @@ var j = schedule.scheduleJob(rule, function(){
             else{
                 for(let r of result[0]){
                     let notif = checkDate(r.fecha, r.pmde);
-                    console.log(notif);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'venta_prod', orden: r.orden});
                 }
                 for(let r of result[1]){
                     let notif = checkDate(r.fecha, r.pmde);
-                    console.log(notif);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'rep_lab', orden: r.orden});
                 }
                 for(let r of result[2]){
                     let notif = checkDate(r.fecha, r.pmde);
-                    console.log(notif);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'ord_nac', orden: r.orden});
                 }
                 for(let r of result[3]){
                     let notif = checkDate(r.fecha, r.pmde);
-                    console.log(notif);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'ord_ext', orden: r.orden});
                 }
