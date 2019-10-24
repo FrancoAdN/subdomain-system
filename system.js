@@ -102,7 +102,7 @@ var j = schedule.scheduleJob(rule, function(){
             }
           con.end();
         });
-    });
+    });*/
 
 
     //ORDEN DE COMPRA NACIONAL
