@@ -19,11 +19,12 @@ function checkDate(fech, sum){
     let today = new Date();
 
 
-    console.log(ant.toDateString());
-    console.log(today.toDateString());
+    console.log("ant: " + ant);
+    console.log("data: " + date);
+    console.log("today: " + today);
     console.log('\n');
 
-    if(today.toDateString() > date.toDateString())
+    if(today.toDateString() < date.toDateString())
         return 0;
     else if(today.toDateString() == date.toDateString())
         return 1;
@@ -40,11 +41,12 @@ let notifications = [];
 
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 01;
-rule.minute = 30;
+rule.hour = 9;
+rule.minute = 18;
 
 //DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
+
     notifications.length = 0;
     const con = connectionSQL();
     const sql =  'SELECT pmde, fecha, Confirmado, orden FROM venta_prod WHERE entregado = false';
@@ -67,7 +69,7 @@ var j = schedule.scheduleJob(rule, function(){
           con.end();
         });
     });
-    //console.log('Today is recognized by Rebecca Black!');
+
 });
 
 
