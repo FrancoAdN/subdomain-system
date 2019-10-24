@@ -35,7 +35,7 @@ let notifications = [];
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 10;
-rule.minute = 15;
+rule.minute = 27;
 
 //DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
@@ -44,96 +44,31 @@ var j = schedule.scheduleJob(rule, function(){
 
     //VENTA DE PRODUCTOS
     let con = connectionSQL();
-    let sql =  'SELECT pmde, fecha, orden FROM venta_prod WHERE entregado = false AND Confirmado = true';
+    let sql =  'SELECT pmde, fecha, orden FROM venta_prod WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM rep_lab WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM ord_nac WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM ord_ext WHERE entregado = false AND Confirmado = true;';
     con.connect(function(err) {
         if (err) {console.error(err);}
         con.query(sql, function (err, result, fields) {
             if (err) { console.error(err);}
             else{
-                for(let r of result){
+                for(let r of result[0]){
                     let notif = checkDate(r.fecha, r.pmde);
                     console.log(notif);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'venta_prod', orden: r.orden});
                 }
-
-            }
-          con.end();
-        });
-    });
-
-
-    //REPARACIÓN DE LABORATORIO
-    con = connectionSQL();
-    sql =  'SELECT pmde, fecha, orden FROM rep_lab WHERE entregado = false AND Confirmado = true';
-    con.connect(function(err) {
-        if (err) {console.error(err);}
-        con.query(sql, function (err, result, fields) {
-            if (err) { console.error(err);}
-            else{
-                for(let r of result){
+                for(let r of result[1]){
                     let notif = checkDate(r.fecha, r.pmde);
                     console.log(notif);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'rep_lab', orden: r.orden});
                 }
-            }
-          con.end();
-        });
-    });
-
-
-    //ASISTENCIA TÉCNICA
-    /*con = connectionSQL();
-    sql =  'SELECT pmde, fecha, orden FROM asis_tec WHERE entregado = false AND Confirmado = true';
-    con.connect(function(err) {
-        if (err) {console.error(err);}
-        con.query(sql, function (err, result, fields) {
-            if (err) { console.error(err);}
-            else{
-                for(let r of result){
-                    let notif = checkDate(r.fecha, r.pmde);
-                    console.log(notif);
-                    if(notif != null)
-                        notifications.push({cod: notif, db: 'asis_tec', orden: r.orden});
-                }
-
-
-            }
-          con.end();
-        });
-    });*/
-
-
-    //ORDEN DE COMPRA NACIONAL
-    con = connectionSQL();
-    sql =  'SELECT pmde, fecha, orden FROM ord_nac WHERE entregado = false AND Confirmado = true';
-    con.connect(function(err) {
-        if (err) {console.error(err);}
-        con.query(sql, function (err, result, fields) {
-            if (err) { console.error(err);}
-            else{
-                for(let r of result){
+                for(let r of result[2]){
                     let notif = checkDate(r.fecha, r.pmde);
                     console.log(notif);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'ord_nac', orden: r.orden});
                 }
-            }
-          con.end();
-        });
-    });
-
-
-    //ORDEN DE COMPRA EXTERIOR
-    con = connectionSQL();
-    sql =  'SELECT pmde, fecha, orden FROM ord_ext WHERE entregado = false AND Confirmado = true';
-    con.connect(function(err) {
-        if (err) {console.error(err);}
-        con.query(sql, function (err, result, fields) {
-            if (err) { console.error(err);}
-            else{
-                for(let r of result){
+                for(let r of result[3]){
                     let notif = checkDate(r.fecha, r.pmde);
                     console.log(notif);
                     if(notif != null)
@@ -144,6 +79,11 @@ var j = schedule.scheduleJob(rule, function(){
           con.end();
         });
     });
+
+
+    
+
+
 });
 
 
