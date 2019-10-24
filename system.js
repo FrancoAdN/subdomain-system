@@ -35,7 +35,7 @@ let notifications = [];
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 12;
-rule.minute = 30;
+rule.minute = 40;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -1040,9 +1040,9 @@ app.get('/notif/:id', (req, resp) => {
 
 
 //region ORDENES A CONFIRMAR
-app.get('/nconfirm', (req, resp) => {
+app.get('/nconf', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM asis_tec WHERE Confirmado = false; SELECT emp, fecha, orden FROM ord_nac WHERE Confirmado = false;';
+    const sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false; SELECT emp, fecha, orden FROM ord_nac WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false;';
     con.connect(function(err) {
         if (err) {
             console.error(err);
