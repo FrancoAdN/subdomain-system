@@ -31,20 +31,149 @@ namespace MaxPowerSystem
             bool err = false;    
             string ord = ordBox.Text;
             string view = cmbDb2.Text;
-           // if (!string.IsNullOrEmpty(ord) && view == "Ordenes a confirmar")
 
-
-
-            // nconfirm 
-            // confirm
-
-            if (view == "Ordenes a confirmar")
+            if (view == "Ordenes confirmadas")
             {
+                dbOrdConf1.Hide();
+                JToken json = "";
+                if (!string.IsNullOrEmpty(ord))
+                {
+                    client.endPoint = "http://system.maxpower-ar.com/confirm/" + ord;
+                    Console.WriteLine(client.endPoint);
+
+                    client.httpMethod = httpVerb.GET;
+
+                    string resp = string.Empty;
+
+                    resp = client.makeRequest();
+                    if (resp == "0")
+                    {
+                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        err = true;
+                    }
+                    else if (resp == "7")
+                    {
+                        err = true;
+                        MessageBox.Show("No existen los registros buscados (Cod. 7)");
+                    }
+
+                    json = JToken.Parse(resp);
+                    if (json.Type != JTokenType.Array)
+                    {
+                        err = true;
+
+                    }
+                }
+                else
+                {
+                    client.endPoint = "http://system.maxpower-ar.com/confirm";
+
+                    client.httpMethod = httpVerb.GET;
+
+                    string resp = string.Empty;
+
+                    resp = client.makeRequest();
+                    if (resp == "0")
+                    {
+                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        err = true;
+                    }
+                    else if (resp == "12")
+                    {
+                        err = true;
+                        MessageBox.Show("No existen ordenes confirmadas (Cod. 12)");
+                    }
+
+                    json = JToken.Parse(resp);
+                    if (json.Type != JTokenType.Array)
+                    {
+                        err = true;
+
+                    }
+                }
+
+                if (!err)
+                {
+                    dbOrdConf1.json = json;
+                    dbOrdConf1.changeVal();
+                    dbOrdConf1.Show();
+                    dbOrdConf1.BringToFront();
+                }
+            }
+            else if (view == "Ordenes sin confirmar")
+            {
+                dbOrdConf1.Hide();
+                JToken json = "";
+                if (!string.IsNullOrEmpty(ord))
+                {
+                    client.endPoint = "http://system.maxpower-ar.com/nconfirm/" + ord;
+
+                    client.httpMethod = httpVerb.GET;
+
+                    string resp = string.Empty;
+
+                    resp = client.makeRequest();
+                    if (resp == "0")
+                    {
+                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        err = true;
+                    }
+                    else if (resp == "7")
+                    {
+                        err = true;
+                        MessageBox.Show("No existen los registros buscados (Cod. 7)");
+                    }
+
+                    json = JToken.Parse(resp);
+                    if (json.Type != JTokenType.Array)
+                    {
+                        err = true;
+
+                    }
+                }
+                else
+                {
+                    client.endPoint = "http://system.maxpower-ar.com/nconfirm";
+
+                    client.httpMethod = httpVerb.GET;
+
+                    string resp = string.Empty;
+
+                    resp = client.makeRequest();
+                    if (resp == "0")
+                    {
+                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        err = true;
+                    }
+                    else if (resp == "12")
+                    {
+                        err = true;
+                        MessageBox.Show("Todas las ordenes están confirmadas (Cod. 11)");
+                    }
+
+                    json = JToken.Parse(resp);
+                    if (json.Type != JTokenType.Array)
+                    {
+                        err = true;
+
+                    }
+                }
+
+                if (!err)
+                {
+                    ordBox.Text = string.Empty;
+                    dbOrdConf1.json = json;
+                    dbOrdConf1.changeVal();
+                    dbOrdConf1.Show();
+                    dbOrdConf1.BringToFront();
+                }
 
             }
+            else
+                dbOrdConf1.Hide();
 
 
-    
+
         }
     }
 }

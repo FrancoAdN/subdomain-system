@@ -241,7 +241,7 @@ namespace MaxPowerSystem
             this.OACButton.Name = "OACButton";
             this.OACButton.Size = new System.Drawing.Size(197, 30);
             this.OACButton.TabIndex = 11;
-            this.OACButton.Text = "Ordenes a confirmar";
+            this.OACButton.Text = "Consulta de ordenes";
             this.OACButton.UseVisualStyleBackColor = true;
             this.OACButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OACButton_MouseClick);
             // 

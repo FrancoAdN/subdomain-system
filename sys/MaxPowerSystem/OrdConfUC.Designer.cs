@@ -42,19 +42,21 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label1.Location = new System.Drawing.Point(98, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 18);
+            this.label1.Size = new System.Drawing.Size(53, 18);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Orden";
+            this.label1.Text = "Orden:";
             // 
             // cmbDb2
             // 
+            this.cmbDb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDb2.DropDownWidth = 210;
             this.cmbDb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.cmbDb2.FormattingEnabled = true;
             this.cmbDb2.ItemHeight = 18;
             this.cmbDb2.Items.AddRange(new object[] {
-            "Ordenes a confirmar\t",
-            "Ordenes sin confirmar"});
+            "Ordenes confirmadas",
+            "Ordenes sin confirmar",
+            "(seleccionar)"});
             this.cmbDb2.Location = new System.Drawing.Point(224, 5);
             this.cmbDb2.Name = "cmbDb2";
             this.cmbDb2.Size = new System.Drawing.Size(210, 26);
@@ -76,14 +78,14 @@
             this.ordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.ordBox.Location = new System.Drawing.Point(153, 84);
             this.ordBox.Name = "ordBox";
-            this.ordBox.Size = new System.Drawing.Size(100, 24);
+            this.ordBox.Size = new System.Drawing.Size(189, 24);
             this.ordBox.TabIndex = 5;
             // 
             // dbOrdConf1
             // 
-            this.dbOrdConf1.Location = new System.Drawing.Point(0, 0);
+            this.dbOrdConf1.Location = new System.Drawing.Point(0, 37);
             this.dbOrdConf1.Name = "dbOrdConf1";
-            this.dbOrdConf1.Size = new System.Drawing.Size(656, 333);
+            this.dbOrdConf1.Size = new System.Drawing.Size(978, 524);
             this.dbOrdConf1.TabIndex = 6;
             // 
             // OrdConfUC

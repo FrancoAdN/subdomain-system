@@ -145,3 +145,5 @@ C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPo
 C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.CopyComplete
 C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.exe
 C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPowerSystem.pdb
+C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbOrdConf.resources
+C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.OrdConfUC.resources
