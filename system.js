@@ -1040,9 +1040,9 @@ app.get('/notif/:id', (req, resp) => {
 
 
 //region ORDENES A CONFIRMAR
-app.get('/nconf', (req, resp) => {
+app.get('/nconfirm', (req, resp) => {
     const con = connectionSQL();
-    const sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM asis_tec WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_nac WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false;';
+    const sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM asis_tec WHERE Confirmado = false; SELECT emp, fecha, orden FROM ord_nac WHERE Confirmado = false;';
     con.connect(function(err) {
         if (err) {
             console.error(err);
