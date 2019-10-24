@@ -42,25 +42,24 @@ let notifications = [];
 var rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 9;
-rule.minute = 18;
+rule.minute = 30;
 
 //DATE SCHEDULE
 var j = schedule.scheduleJob(rule, function(){
 
     notifications.length = 0;
     const con = connectionSQL();
-    const sql =  'SELECT pmde, fecha, Confirmado, orden FROM venta_prod WHERE entregado = false';
+    const sql =  'SELECT pmde, fecha, orden FROM venta_prod WHERE entregado = false AND Confirmado = true';
     con.connect(function(err) {
         if (err) {console.error(err);}
         con.query(sql, function (err, result, fields) {
             if (err) { console.error(err);}
             else{
                 for(let vp of result){
-                    let c = checkDate(vp.fecha, vp.pmde);
-                    if(c && vp.Confirmado)
-                        notifications.push({cod: c, db: 'venta_prod', orden: vp.orden});
-                    else if(c && !vp.Confirmado)
-                        notifications.push({cod: 3, db: 'venta_prod', orden: vp.orden});
+                    let notif = checkDate(vp.fecha, vp.pmde);
+                    console.log(notif);
+                    if(notif)
+                        notifications.push({cod: notif, db: 'venta_prod', orden: vp.orden});
                 }
 
                 if(notifications.length == 0)
