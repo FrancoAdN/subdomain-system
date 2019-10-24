@@ -32,13 +32,13 @@ function checkDate(fech, sum){
 
 let notifications = [];
 
-var rule = new schedule.RecurrenceRule();
+let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 12;
 rule.minute = 30;
 
 //DATE SCHEDULE
-var j = schedule.scheduleJob(rule, function(){
+const j = schedule.scheduleJob(rule, function(){
 
     notifications.length = 0;
 
@@ -1040,7 +1040,7 @@ app.get('/notif/:id', (req, resp) => {
 
 
 //region ORDENES A CONFIRMAR
-app.get('/nconfirm', (req, resp) => {
+app.get('/nconf', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM asis_tec WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_nac WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false;';
     con.connect(function(err) {
