@@ -1219,17 +1219,35 @@ app.post('/confirm', (req, resp) => {
        4 = AS
     */
     let sql;
-    if(data.db == 0){
+    if(data.db == 0)
        sql = "UPDATE venta_prod SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
-    }else if(data.db == 1){
+    else if(data.db == 1)
         sql = "UPDATE rep_lab SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
-    }else if(data.db == 2){
+    else if(data.db == 2)
         sql = "UPDATE ord_nac SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
-    }else if(data.db == 3 ){
+    else if(data.db == 3 )
         sql = "UPDATE ord_ext SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
-    }else if(data.db == 4){
+    else if(data.db == 4)
         sql = "UPDATE asis_tec SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
-    }
+    
+    const con = connectionSQL();
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                resp.send("1");
+                console.log("UPDATE");
+            }
+          con.end();
+        });
+    });
+
    resp.send("13");
 
 });
