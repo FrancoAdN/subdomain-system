@@ -1141,8 +1141,8 @@ app.get('/confirm', (req, resp) => {
                 let nconfirm = [];
                 let cont = 0;
                 for(let i = 0; i < result.length; i++){
-                    if(r.length != 0){
-                        for(let p of r){
+                    if(result[i].length != 0){
+                        for(let p of result[i]){
                             p["db"] = i;
                             nconfirm.push(p);
                         }
@@ -1187,8 +1187,8 @@ app.get('/confirm/:ord', (req, resp) => {
                 let nconfirm = [];
                 let cont = 0;
                 for(let i = 0; i < result.length; i++){
-                    if(r.length != 0){
-                        for(let p of r){
+                    if(result[i].length != 0){
+                        for(let p of result[i]){
                             p["db"] = i;
                             nconfirm.push(p);
                         }
