@@ -76,11 +76,15 @@ namespace MaxPowerSystem
 
             for (i = 1; i < panel.RowCount; i++)
             {
+                int d = 0;
+                if (db)
+                     d = (int)json[i - 1]["db"];
+
                 string ordn = (String)json[i - 1]["orden"];
 
                 Label ordText = new Label();
                 if (db)
-                    ordText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn);
+                    ordText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn, d);
 
                 ordText.Text = ordn;
                 ordText.AutoSize = false;
@@ -90,7 +94,7 @@ namespace MaxPowerSystem
 
                 Label empText = new Label();
                 if (db)
-                    empText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn);
+                    empText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn, d);
 
                 empText.Text = (String)json[i - 1]["emp"];
                 empText.AutoSize = true;
@@ -99,7 +103,7 @@ namespace MaxPowerSystem
 
                 Label dateText = new Label();
                 if (db)
-                    dateText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn);
+                    dateText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn, d);
 
                 dateText.Text = (String)json[i - 1]["fecha"];
                 dateText.AutoSize = true;
@@ -110,7 +114,7 @@ namespace MaxPowerSystem
                 Label pmdeText = new Label();
 
                 if (db)
-                    pmdeText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn);
+                    pmdeText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn, d);
 
                 if (json[i - 1]["pmde"] != null)
                     pmdeText.Text = (String)json[i - 1]["pmde"];
@@ -130,7 +134,7 @@ namespace MaxPowerSystem
 
 
 
-        public void ConfirmOrder(object sender, EventArgs e, string order)
+        public void ConfirmOrder(object sender, EventArgs e, string order, int db)
         {
             
             if (MessageBox.Show("¿Desea confirmar la orden "+ order +"?", "Maxpower System dice: ", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -145,6 +149,7 @@ namespace MaxPowerSystem
 
                 JObject json = new JObject();
                 json["order"] = order;
+                json["db"] = db;
 
                 client.postJSON = json.ToString();
 
