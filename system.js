@@ -1242,7 +1242,7 @@ app.post('/confirm', (req, resp) => {
                 resp.send("0");
             }else if(result){
                 resp.send("1");
-                console.log("UPDATE");
+                console.log(sql);
             }else
                 resp.send("13");
           con.end();
