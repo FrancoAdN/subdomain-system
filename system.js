@@ -1240,15 +1240,15 @@ app.post('/confirm', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }else{
+            }else if(result){
                 resp.send("1");
                 console.log("UPDATE");
-            }
+            }else
+                resp.send("13");
           con.end();
         });
     });
 
-   resp.send("13");
 
 });
 //end of region
