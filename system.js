@@ -1140,10 +1140,13 @@ app.get('/confirm', (req, resp) => {
             }else{
                 let nconfirm = [];
                 let cont = 0;
-                for(let r of result){
+                for(let i = 0; i < result.length; i++){
                     if(r.length != 0){
-                        for(let p of r)
+                        for(let p of r){
+                            p["db"] = i;
                             nconfirm.push(p);
+                        }
+                            
                     }else
                         cont++;
                     
@@ -1183,18 +1186,20 @@ app.get('/confirm/:ord', (req, resp) => {
             }else{
                 let nconfirm = [];
                 let cont = 0;
-                for(let r of result){
+                for(let i = 0; i < result.length; i++){
                     if(r.length != 0){
-                        for(let p of r)
+                        for(let p of r){
+                            p["db"] = i;
                             nconfirm.push(p);
-                        break;
+                        }
+                            
                     }else
                         cont++;
                     
                 }
 
-                if(cont == 5)
-                    resp.send('7');
+                if(cont == 4)
+                    resp.send('11');
                 else
                     resp.send(nconfirm);
             }
@@ -1202,6 +1207,11 @@ app.get('/confirm/:ord', (req, resp) => {
           con.end();
         });
     });
+});
+
+app.post('/confirm', (req, resp) => {
+    console.log(req.body);
+    resp.send("13");
 });
 //end of region
 

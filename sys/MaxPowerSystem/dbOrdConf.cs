@@ -15,6 +15,7 @@ namespace MaxPowerSystem
     {
         //public string db;
         public JToken json;
+        public bool db;
         public int Index = 0;
         public TableLayoutPanel panel = new TableLayoutPanel();
         public dbOrdConf()
@@ -22,9 +23,10 @@ namespace MaxPowerSystem
             InitializeComponent();
         }
 
+
+
         public void changeVal()
         {
-            Console.WriteLine(json);
             int i = 0;
             Controls.Remove(panel);
             panel.Location = new System.Drawing.Point(50, 50);
@@ -74,21 +76,31 @@ namespace MaxPowerSystem
 
             for (i = 1; i < panel.RowCount; i++)
             {
+                string ordn = (String)json[i - 1]["orden"];
 
                 Label ordText = new Label();
-                ordText.Text = (String)json[i - 1]["orden"];
+                if (db)
+                    ordText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn);
+
+                ordText.Text = ordn;
                 ordText.AutoSize = false;
                 ordText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(ordText, 0, i);
 
 
                 Label empText = new Label();
+                if (db)
+                    empText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn);
+
                 empText.Text = (String)json[i - 1]["emp"];
                 empText.AutoSize = true;
                 empText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(empText, 1, i);
 
                 Label dateText = new Label();
+                if (db)
+                    dateText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn);
+
                 dateText.Text = (String)json[i - 1]["fecha"];
                 dateText.AutoSize = true;
                 dateText.TextAlign = ContentAlignment.MiddleCenter;
@@ -96,10 +108,15 @@ namespace MaxPowerSystem
 
 
                 Label pmdeText = new Label();
+
+                if (db)
+                    pmdeText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn);
+
                 if (json[i - 1]["pmde"] != null)
                     pmdeText.Text = (String)json[i - 1]["pmde"];
                 else
                     pmdeText.Text = "-";
+
                 pmdeText.AutoSize = false;
                 pmdeText.TextAlign = ContentAlignment.MiddleCenter;
                 panel.Controls.Add(pmdeText, 3, i);
@@ -112,6 +129,39 @@ namespace MaxPowerSystem
         }
 
 
+
+        public void ConfirmOrder(object sender, EventArgs e, string order)
+        {
+            
+            if (MessageBox.Show("¿Desea confirmar la orden "+ order +"?", "Maxpower System dice: ", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Console.WriteLine("Confirm: " + order);
+                //GuardarProyecto();
+                clientREST client = new clientREST();
+
+                client.endPoint = "http://localhost:3030/confirm/";
+
+                client.httpMethod = httpVerb.POST;
+
+                JObject json = new JObject();
+                json["order"] = order;
+
+                client.postJSON = json.ToString();
+
+                string resp = string.Empty;
+
+                resp = client.makeRequest();
+
+                if (resp == "0")
+                    MessageBox.Show("SQL ERROR (Cod. 0)");
+                else if (resp == "13")
+                    MessageBox.Show("Error al confirmar la orden (Cod. 13)");
+                else if(resp == "1") { }
+                    
+
+            }
+
+        }
 
     }
 }

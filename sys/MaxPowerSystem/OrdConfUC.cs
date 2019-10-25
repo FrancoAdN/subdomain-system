@@ -39,7 +39,6 @@ namespace MaxPowerSystem
                 if (!string.IsNullOrEmpty(ord))
                 {
                     client.endPoint = "http://system.maxpower-ar.com/confirm/" + ord;
-                    Console.WriteLine(client.endPoint);
 
                     client.httpMethod = httpVerb.GET;
 
@@ -94,6 +93,7 @@ namespace MaxPowerSystem
 
                 if (!err)
                 {
+                    dbOrdConf1.db = false;
                     dbOrdConf1.json = json;
                     dbOrdConf1.changeVal();
                     dbOrdConf1.Show();
@@ -161,6 +161,7 @@ namespace MaxPowerSystem
 
                 if (!err)
                 {
+                    dbOrdConf1.db = true;
                     ordBox.Text = string.Empty;
                     dbOrdConf1.json = json;
                     dbOrdConf1.changeVal();
