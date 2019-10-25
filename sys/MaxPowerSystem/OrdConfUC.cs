@@ -43,7 +43,7 @@ namespace MaxPowerSystem
                     client.httpMethod = httpVerb.GET;
 
                     string resp = string.Empty;
-                    
+
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
@@ -93,11 +93,13 @@ namespace MaxPowerSystem
 
                 if (!err)
                 {
+                    ordBox.Text = string.Empty;
                     dbOrdConf1.db = false;
-                    dbOrdConf1.json = json;
+                    dbOrdConf1.json = (JArray)json;
                     dbOrdConf1.changeVal();
                     dbOrdConf1.Show();
                     dbOrdConf1.BringToFront();
+                    cmbDb2.SelectedIndex = cmbDb2.Items.Count - 1;
                 }
             }
             else if (view == "Ordenes sin confirmar")
@@ -133,8 +135,8 @@ namespace MaxPowerSystem
                 }
                 else
                 {
+                    
                     client.endPoint = "http://system.maxpower-ar.com/nconfirm";
-
                     client.httpMethod = httpVerb.GET;
 
                     string resp = string.Empty;
@@ -163,7 +165,8 @@ namespace MaxPowerSystem
                 {
                     dbOrdConf1.db = true;
                     ordBox.Text = string.Empty;
-                    dbOrdConf1.json = json;
+                    cmbDb2.SelectedIndex = cmbDb2.Items.Count - 1;
+                    dbOrdConf1.json = (JArray)json;
                     dbOrdConf1.changeVal();
                     dbOrdConf1.Show();
                     dbOrdConf1.BringToFront();
