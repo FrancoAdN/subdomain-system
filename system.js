@@ -1210,7 +1210,7 @@ app.get('/confirm/:ord', (req, resp) => {
 });
 
 app.post('/confirm', (req, resp) => {
-    console.log(req.body);
+    const data = req.body;
     /*
        0 = VP
        1 = RL
@@ -1218,7 +1218,20 @@ app.post('/confirm', (req, resp) => {
        3 = OCE
        4 = AS
     */
-    resp.send("13");
+    let sql;
+    if(data.db == 0){
+       sql = "UPDATE venta_prod SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+    }else if(data.db == 1){
+        sql = "UPDATE rep_lab SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+    }else if(data.db == 2){
+        sql = "UPDATE ord_nac SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+    }else if(data.db == 3 ){
+        sql = "UPDATE ord_ext SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+    }else if(data.db == 4){
+        sql = "UPDATE asis_tec SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+    }
+   resp.send("13");
+
 });
 //end of region
 

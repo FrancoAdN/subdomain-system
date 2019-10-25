@@ -76,7 +76,7 @@ namespace MaxPowerSystem
 
             for (i = 1; i < panel.RowCount; i++)
             {
-                int d;
+                int d = 0;
                 if (db)
                      d = (int)json[i - 1]["db"];
 

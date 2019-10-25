@@ -43,7 +43,7 @@ namespace MaxPowerSystem
                     client.httpMethod = httpVerb.GET;
 
                     string resp = string.Empty;
-
+                    
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
