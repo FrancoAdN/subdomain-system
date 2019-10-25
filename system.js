@@ -1059,16 +1059,19 @@ app.get('/nconfirm', (req, resp) => {
             }else{
                 let nconfirm = [];
                 let cont = 0;
-                for(let r of result){
-                    if(r.length != 0){
-                        for(let p of r)
+                for(let i = 0; i <  result.length; i++){
+                    if(result[i].length != 0){
+                        for(let p of result[i]){
+                            p["db"] = i;
                             nconfirm.push(p);
+                        }
+                            
                     }else
                         cont++;
                     
                 }
 
-                if(cont == 4)
+                if(cont == 5)
                     resp.send('11');
                 else
                     resp.send(nconfirm);
@@ -1085,9 +1088,9 @@ app.get('/nconfirm/:ord', (req, resp) => {
     const con = connectionSQL();
     let sql = "SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
     sql += "SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, fecha, orden FROM asis_tec WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
     sql += "SELECT emp, pmde, fecha, orden FROM ord_nac WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, fecha, orden FROM asis_tec WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
 
 
     con.connect(function(err) {
@@ -1102,11 +1105,13 @@ app.get('/nconfirm/:ord', (req, resp) => {
             }else{
                 let nconfirm = [];
                 let cont = 0;
-                for(let r of result){
-                    if(r.length != 0){
-                        for(let p of r)
+                for(let i = 0; i <  result.length; i++){
+                    if(result[i].length != 0){
+                        for(let p of result[i]){
+                            p["db"] = i;
                             nconfirm.push(p);
-                        break;
+                        }
+                            
                     }else
                         cont++;
                     
@@ -1140,13 +1145,10 @@ app.get('/confirm', (req, resp) => {
             }else{
                 let nconfirm = [];
                 let cont = 0;
-                for(let i = 0; i < result.length; i++){
-                    if(result[i].length != 0){
-                        for(let p of result[i]){
-                            p["db"] = i;
+                for(let r of result){
+                    if(r.length != 0){
+                        for(let p of r)
                             nconfirm.push(p);
-                        }
-                            
                     }else
                         cont++;
                     
@@ -1186,20 +1188,18 @@ app.get('/confirm/:ord', (req, resp) => {
             }else{
                 let nconfirm = [];
                 let cont = 0;
-                for(let i = 0; i < result.length; i++){
-                    if(result[i].length != 0){
-                        for(let p of result[i]){
-                            p["db"] = i;
+                for(let r of result){
+                    if(r.length != 0){
+                        for(let p of r)
                             nconfirm.push(p);
-                        }
-                            
+                        break;
                     }else
                         cont++;
                     
                 }
 
-                if(cont == 4)
-                    resp.send('11');
+                if(cont == 5)
+                    resp.send('7');
                 else
                     resp.send(nconfirm);
             }
@@ -1211,6 +1211,13 @@ app.get('/confirm/:ord', (req, resp) => {
 
 app.post('/confirm', (req, resp) => {
     console.log(req.body);
+    /*
+       0 = VP
+       1 = RL
+       2 = OCN
+       3 = OCE
+       4 = AS
+    */
     resp.send("13");
 });
 //end of region

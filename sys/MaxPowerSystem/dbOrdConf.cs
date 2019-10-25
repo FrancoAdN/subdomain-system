@@ -76,9 +76,9 @@ namespace MaxPowerSystem
 
             for (i = 1; i < panel.RowCount; i++)
             {
-                int d = 0;
+                string d = string.Empty;
                 if (db)
-                     d = (int)json[i - 1]["db"];
+                     d = (String)json[i - 1]["db"];
 
                 string ordn = (String)json[i - 1]["orden"];
 
@@ -134,7 +134,7 @@ namespace MaxPowerSystem
 
 
 
-        public void ConfirmOrder(object sender, EventArgs e, string order, int db)
+        public void ConfirmOrder(object sender, EventArgs e, string order, string db)
         {
             
             if (MessageBox.Show("¿Desea confirmar la orden "+ order +"?", "Maxpower System dice: ", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -143,7 +143,7 @@ namespace MaxPowerSystem
                 //GuardarProyecto();
                 clientREST client = new clientREST();
 
-                client.endPoint = "http://localhost:3030/confirm/";
+                client.endPoint = "http://system.maxpower-ar.com/confirm";
 
                 client.httpMethod = httpVerb.POST;
 
