@@ -76,9 +76,9 @@ namespace MaxPowerSystem
 
             for (i = 1; i < panel.RowCount; i++)
             {
-                string d = string.Empty;
+                int d;
                 if (db)
-                     d = (String)json[i - 1]["db"];
+                     d = (int)json[i - 1]["db"];
 
                 string ordn = (String)json[i - 1]["orden"];
 
@@ -134,7 +134,7 @@ namespace MaxPowerSystem
 
 
 
-        public void ConfirmOrder(object sender, EventArgs e, string order, string db)
+        public void ConfirmOrder(object sender, EventArgs e, string order, int db)
         {
             
             if (MessageBox.Show("¿Desea confirmar la orden "+ order +"?", "Maxpower System dice: ", MessageBoxButtons.YesNo) == DialogResult.Yes)
