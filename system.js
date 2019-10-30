@@ -1086,11 +1086,11 @@ app.get('/nconfirm', (req, resp) => {
 app.get('/nconfirm/:ord', (req, resp) => {
     const orden = req.params.ord;
     const con = connectionSQL();
-    let sql = "SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, pmde, fecha, orden FROM ord_nac WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, fecha, orden FROM asis_tec WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    let sql = "SELECT emp, pmde, orden FROM venta_prod WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, orden FROM rep_lab WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, orden FROM ord_nac WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, orden FROM ord_ext WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, orden FROM asis_tec WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
 
 
     con.connect(function(err) {
@@ -1242,7 +1242,6 @@ app.post('/confirm', (req, resp) => {
                 resp.send("0");
             }else if(result){
                 resp.send("1");
-                console.log(sql);
             }else
                 resp.send("13");
           con.end();
