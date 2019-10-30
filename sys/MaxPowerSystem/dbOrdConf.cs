@@ -158,6 +158,7 @@ namespace MaxPowerSystem
                 JObject sjson = new JObject();
                 sjson["orden"] = order;
                 sjson["db"] = db;
+                sjson["fecha"] = DateTime.Now.ToString("dd/MM/yyyy");
 
                 client.postJSON = sjson.ToString();
 
