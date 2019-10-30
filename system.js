@@ -34,8 +34,8 @@ let notifications = [];
 
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 15;
-rule.minute = 30;
+rule.hour = 10;
+rule.minute = 06;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -44,29 +44,32 @@ const j = schedule.scheduleJob(rule, function(){
 
     //VENTA DE PRODUCTOS
     let con = connectionSQL();
-    let sql =  'SELECT pmde, fecha, orden FROM venta_prod WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM rep_lab WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM ord_nac WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM ord_ext WHERE entregado = false AND Confirmado = true;';
+    let sql =  "SELECT pmde, fecha_conf, orden FROM venta_prod WHERE entregado = false AND Confirmado = true;";
+    sql += "SELECT pmde, fecha_conf, orden FROM rep_lab WHERE entregado = false AND Confirmado = true;";
+    sql += "SELECT pmde, fecha_conf, orden FROM ord_nac WHERE entregado = false AND Confirmado = true;";
+    sql += "SELECT pmde, fecha_conf, orden FROM ord_ext WHERE entregado = false AND Confirmado = true;";
     con.connect(function(err) {
         if (err) {console.error(err);}
         con.query(sql, function (err, result, fields) {
             if (err) { console.error(err);}
             else{
                 for(let r of result[0]){
-                    let notif = checkDate(r.fecha, r.pmde);
+                    let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'venta_prod', orden: r.orden});
                 }
                 for(let r of result[1]){
-                    let notif = checkDate(r.fecha, r.pmde);
+                    let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'rep_lab', orden: r.orden});
                 }
                 for(let r of result[2]){
-                    let notif = checkDate(r.fecha, r.pmde);
+                    let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'ord_nac', orden: r.orden});
                 }
                 for(let r of result[3]){
-                    let notif = checkDate(r.fecha, r.pmde);
+                    let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'ord_ext', orden: r.orden});
                 }
@@ -1086,11 +1089,11 @@ app.get('/nconfirm', (req, resp) => {
 app.get('/nconfirm/:ord', (req, resp) => {
     const orden = req.params.ord;
     const con = connectionSQL();
-    let sql = "SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, pmde, fecha, orden FROM ord_nac WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
-    sql += "SELECT emp, fecha, orden FROM asis_tec WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    let sql = "SELECT emp, pmde, orden FROM venta_prod WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, orden FROM rep_lab WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, orden FROM ord_nac WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, pmde, orden FROM ord_ext WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
+    sql += "SELECT emp, orden FROM asis_tec WHERE Confirmado = false AND orden LIKE '" + orden +"' ;";
 
 
     con.connect(function(err) {
@@ -1220,15 +1223,15 @@ app.post('/confirm', (req, resp) => {
     */
     let sql;
     if(data.db == 0)
-       sql = "UPDATE venta_prod SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+       sql = "UPDATE venta_prod SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     else if(data.db == 1)
-        sql = "UPDATE rep_lab SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+        sql = "UPDATE rep_lab SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     else if(data.db == 2)
-        sql = "UPDATE ord_nac SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+        sql = "UPDATE ord_nac SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     else if(data.db == 3 )
-        sql = "UPDATE ord_ext SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+        sql = "UPDATE ord_ext SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     else if(data.db == 4)
-        sql = "UPDATE asis_tec SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+        sql = "UPDATE asis_tec SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     
     const con = connectionSQL();
     con.connect(function(err) {
@@ -1242,7 +1245,6 @@ app.post('/confirm', (req, resp) => {
                 resp.send("0");
             }else if(result){
                 resp.send("1");
-                console.log(sql);
             }else
                 resp.send("13");
           con.end();

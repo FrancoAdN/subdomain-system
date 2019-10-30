@@ -49,6 +49,18 @@ namespace MaxPowerSystem
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+<<<<<<< HEAD
+=======
+            this.notificacionesUC1 = new MaxPowerSystem.NotificacionesUC();
+            this.compNacUC1 = new MaxPowerSystem.compNacUC();
+            this.compExteriorUC1 = new MaxPowerSystem.compExteriorUC();
+            this.repProdUC1 = new MaxPowerSystem.repProdUC();
+            this.ventaProdUC1 = new MaxPowerSystem.ventaProdUC();
+            this.tecAsistUC1 = new MaxPowerSystem.tecAsistUC();
+            this.viewDataBaseUC1 = new MaxPowerSystem.viewDataBaseUC();
+            this.uploadDataBaseUC1 = new MaxPowerSystem.uploadDataBaseUC();
+            this.ordConfUC1 = new MaxPowerSystem.OrdConfUC();
+>>>>>>> 0bc4b05aff589005b97cddda80fb50134cf782bc
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -365,9 +377,11 @@ namespace MaxPowerSystem
             this.button11.TabIndex = 14;
             this.button11.Text = "Notificaciones";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button11_MouseClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.notificacionesUC1);
             this.panel1.Controls.Add(this.compNacUC1);
             this.panel1.Controls.Add(this.compExteriorUC1);
             this.panel1.Controls.Add(this.repProdUC1);
@@ -381,6 +395,74 @@ namespace MaxPowerSystem
             this.panel1.Size = new System.Drawing.Size(984, 561);
             this.panel1.TabIndex = 0;
             // 
+<<<<<<< HEAD
+=======
+            // notificacionesUC1
+            // 
+            this.notificacionesUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.notificacionesUC1.Location = new System.Drawing.Point(0, 0);
+            this.notificacionesUC1.Name = "notificacionesUC1";
+            this.notificacionesUC1.Size = new System.Drawing.Size(984, 561);
+            this.notificacionesUC1.TabIndex = 8;
+            // 
+            // compNacUC1
+            // 
+            this.compNacUC1.Location = new System.Drawing.Point(3, 28);
+            this.compNacUC1.Name = "compNacUC1";
+            this.compNacUC1.Size = new System.Drawing.Size(984, 400);
+            this.compNacUC1.TabIndex = 6;
+            // 
+            // compExteriorUC1
+            // 
+            this.compExteriorUC1.Location = new System.Drawing.Point(3, 28);
+            this.compExteriorUC1.Name = "compExteriorUC1";
+            this.compExteriorUC1.Size = new System.Drawing.Size(981, 400);
+            this.compExteriorUC1.TabIndex = 5;
+            // 
+            // repProdUC1
+            // 
+            this.repProdUC1.Location = new System.Drawing.Point(3, 28);
+            this.repProdUC1.Name = "repProdUC1";
+            this.repProdUC1.Size = new System.Drawing.Size(981, 400);
+            this.repProdUC1.TabIndex = 4;
+            // 
+            // ventaProdUC1
+            // 
+            this.ventaProdUC1.Location = new System.Drawing.Point(3, 28);
+            this.ventaProdUC1.Name = "ventaProdUC1";
+            this.ventaProdUC1.Size = new System.Drawing.Size(981, 400);
+            this.ventaProdUC1.TabIndex = 3;
+            // 
+            // tecAsistUC1
+            // 
+            this.tecAsistUC1.Location = new System.Drawing.Point(3, 28);
+            this.tecAsistUC1.Name = "tecAsistUC1";
+            this.tecAsistUC1.Size = new System.Drawing.Size(984, 561);
+            this.tecAsistUC1.TabIndex = 1;
+            // 
+            // viewDataBaseUC1
+            // 
+            this.viewDataBaseUC1.Location = new System.Drawing.Point(3, 10);
+            this.viewDataBaseUC1.Name = "viewDataBaseUC1";
+            this.viewDataBaseUC1.Size = new System.Drawing.Size(984, 561);
+            this.viewDataBaseUC1.TabIndex = 0;
+            // 
+            // uploadDataBaseUC1
+            // 
+            this.uploadDataBaseUC1.Location = new System.Drawing.Point(3, 28);
+            this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
+            this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
+            this.uploadDataBaseUC1.TabIndex = 2;
+            this.uploadDataBaseUC1.Load += new System.EventHandler(this.UploadDataBaseUC1_Load);
+            // 
+            // ordConfUC1
+            // 
+            this.ordConfUC1.Location = new System.Drawing.Point(3, 28);
+            this.ordConfUC1.Name = "ordConfUC1";
+            this.ordConfUC1.Size = new System.Drawing.Size(978, 561);
+            this.ordConfUC1.TabIndex = 7;
+            // 
+>>>>>>> 0bc4b05aff589005b97cddda80fb50134cf782bc
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -592,7 +674,11 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
+<<<<<<< HEAD
         private System.Windows.Forms.PictureBox pictureBox1;
+=======
+        private NotificacionesUC notificacionesUC1;
+>>>>>>> 0bc4b05aff589005b97cddda80fb50134cf782bc
     }
 }
 

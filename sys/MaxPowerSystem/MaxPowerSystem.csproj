@@ -122,6 +122,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="NotificacionesUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NotificacionesUC.Designer.cs">
+      <DependentUpon>NotificacionesUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrdConfUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotificacionesUC.resx">
+      <DependentUpon>NotificacionesUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\MaxPowerSystem.compExteriorUC.resources" />
     <EmbeddedResource Include="obj\Debug\MaxPowerSystem.compNacUC.resources" />

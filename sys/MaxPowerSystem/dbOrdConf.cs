@@ -122,7 +122,6 @@ namespace MaxPowerSystem
                 if (db)
                     pmdeText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn, d, inx);
 
-                Console.WriteLine(json[i - 1]["pmde"]);
                 if (json[i - 1]["pmde"] != null)
                     pmdeText.Text = (String)json[i - 1]["pmde"];
                 else
@@ -158,6 +157,7 @@ namespace MaxPowerSystem
                 JObject sjson = new JObject();
                 sjson["orden"] = order;
                 sjson["db"] = db;
+                sjson["fecha"] = DateTime.Now.ToString("dd/MM/yyyy");
 
                 client.postJSON = sjson.ToString();
 
