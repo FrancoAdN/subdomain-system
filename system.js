@@ -34,8 +34,8 @@ let notifications = [];
 
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 15;
-rule.minute = 30;
+rule.hour = 10;
+rule.minute = 00;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -1220,15 +1220,15 @@ app.post('/confirm', (req, resp) => {
     */
     let sql;
     if(data.db == 0)
-       sql = "UPDATE venta_prod SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+       sql = "UPDATE venta_prod SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     else if(data.db == 1)
-        sql = "UPDATE rep_lab SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+        sql = "UPDATE rep_lab SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     else if(data.db == 2)
-        sql = "UPDATE ord_nac SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+        sql = "UPDATE ord_nac SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     else if(data.db == 3 )
-        sql = "UPDATE ord_ext SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+        sql = "UPDATE ord_ext SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     else if(data.db == 4)
-        sql = "UPDATE asis_tec SET Confirmado=true WHERE orden LIKE '" +data.orden +"'";
+        sql = "UPDATE asis_tec SET Confirmado=true, fecha_conf = '" + data.fecha + "' WHERE orden LIKE '" +data.orden +"'";
     
     const con = connectionSQL();
     con.connect(function(err) {
