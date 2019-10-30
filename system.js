@@ -44,29 +44,32 @@ const j = schedule.scheduleJob(rule, function(){
 
     //VENTA DE PRODUCTOS
     let con = connectionSQL();
-    let sql =  'SELECT pmde, fecha, orden FROM venta_prod WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM rep_lab WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM ord_nac WHERE entregado = false AND Confirmado = true;SELECT pmde, fecha, orden FROM ord_ext WHERE entregado = false AND Confirmado = true;';
+    let sql =  "SELECT pmde, fecha_conf, orden FROM venta_prod WHERE entregado = false AND Confirmado = true;";
+    sql += "SELECT pmde, fecha_conf, orden FROM rep_lab WHERE entregado = false AND Confirmado = true;";
+    sql += "SELECT pmde, fecha_conf, orden FROM ord_nac WHERE entregado = false AND Confirmado = true;";
+    sql += "SELECT pmde, fecha_conf, orden FROM ord_ext WHERE entregado = false AND Confirmado = true;";
     con.connect(function(err) {
         if (err) {console.error(err);}
         con.query(sql, function (err, result, fields) {
             if (err) { console.error(err);}
             else{
                 for(let r of result[0]){
-                    let notif = checkDate(r.fecha, r.pmde);
+                    let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'venta_prod', orden: r.orden});
                 }
                 for(let r of result[1]){
-                    let notif = checkDate(r.fecha, r.pmde);
+                    let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'rep_lab', orden: r.orden});
                 }
                 for(let r of result[2]){
-                    let notif = checkDate(r.fecha, r.pmde);
+                    let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'ord_nac', orden: r.orden});
                 }
                 for(let r of result[3]){
-                    let notif = checkDate(r.fecha, r.pmde);
+                    let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'ord_ext', orden: r.orden});
                 }

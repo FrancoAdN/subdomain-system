@@ -49,6 +49,7 @@ namespace MaxPowerSystem
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.notificacionesUC1 = new MaxPowerSystem.NotificacionesUC();
             this.compNacUC1 = new MaxPowerSystem.compNacUC();
             this.compExteriorUC1 = new MaxPowerSystem.compExteriorUC();
             this.repProdUC1 = new MaxPowerSystem.repProdUC();
@@ -362,9 +363,11 @@ namespace MaxPowerSystem
             this.button11.TabIndex = 14;
             this.button11.Text = "Notificaciones";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button11_MouseClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.notificacionesUC1);
             this.panel1.Controls.Add(this.compNacUC1);
             this.panel1.Controls.Add(this.compExteriorUC1);
             this.panel1.Controls.Add(this.repProdUC1);
@@ -377,6 +380,14 @@ namespace MaxPowerSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 561);
             this.panel1.TabIndex = 0;
+            // 
+            // notificacionesUC1
+            // 
+            this.notificacionesUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.notificacionesUC1.Location = new System.Drawing.Point(0, 0);
+            this.notificacionesUC1.Name = "notificacionesUC1";
+            this.notificacionesUC1.Size = new System.Drawing.Size(984, 561);
+            this.notificacionesUC1.TabIndex = 8;
             // 
             // compNacUC1
             // 
@@ -577,6 +588,7 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
+        private NotificacionesUC notificacionesUC1;
     }
 }
 
