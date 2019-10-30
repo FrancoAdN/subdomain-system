@@ -49,8 +49,6 @@ namespace MaxPowerSystem
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-=======
             this.notificacionesUC1 = new MaxPowerSystem.NotificacionesUC();
             this.compNacUC1 = new MaxPowerSystem.compNacUC();
             this.compExteriorUC1 = new MaxPowerSystem.compExteriorUC();
@@ -60,7 +58,6 @@ namespace MaxPowerSystem
             this.viewDataBaseUC1 = new MaxPowerSystem.viewDataBaseUC();
             this.uploadDataBaseUC1 = new MaxPowerSystem.uploadDataBaseUC();
             this.ordConfUC1 = new MaxPowerSystem.OrdConfUC();
->>>>>>> 0bc4b05aff589005b97cddda80fb50134cf782bc
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -395,8 +392,6 @@ namespace MaxPowerSystem
             this.panel1.Size = new System.Drawing.Size(984, 561);
             this.panel1.TabIndex = 0;
             // 
-<<<<<<< HEAD
-=======
             // notificacionesUC1
             // 
             this.notificacionesUC1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -462,7 +457,6 @@ namespace MaxPowerSystem
             this.ordConfUC1.Size = new System.Drawing.Size(978, 561);
             this.ordConfUC1.TabIndex = 7;
             // 
->>>>>>> 0bc4b05aff589005b97cddda80fb50134cf782bc
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -674,11 +668,9 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
-<<<<<<< HEAD
         private System.Windows.Forms.PictureBox pictureBox1;
-=======
         private NotificacionesUC notificacionesUC1;
->>>>>>> 0bc4b05aff589005b97cddda80fb50134cf782bc
+
     }
 }
 
