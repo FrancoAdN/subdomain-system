@@ -114,7 +114,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(474, 216);
+            this.label7.Location = new System.Drawing.Point(474, 238);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(36, 18);
             this.label7.TabIndex = 11;
@@ -124,7 +124,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(448, 193);
+            this.label8.Location = new System.Drawing.Point(448, 215);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 18);
             this.label8.TabIndex = 10;
@@ -134,7 +134,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(474, 152);
+            this.label9.Location = new System.Drawing.Point(474, 156);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 18);
             this.label9.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(474, 129);
+            this.label10.Location = new System.Drawing.Point(474, 133);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 18);
             this.label10.TabIndex = 8;
@@ -154,7 +154,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(448, 106);
+            this.label11.Location = new System.Drawing.Point(448, 110);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(82, 18);
             this.label11.TabIndex = 7;
@@ -174,7 +174,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(474, 245);
+            this.label13.Location = new System.Drawing.Point(474, 267);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(44, 18);
             this.label13.TabIndex = 12;
@@ -183,7 +183,7 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(807, 278);
+            this.button1.Location = new System.Drawing.Point(799, 314);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(39, 37);
             this.button1.TabIndex = 28;
@@ -233,7 +233,7 @@
             this.boxEsp.Location = new System.Drawing.Point(31, 250);
             this.boxEsp.Multiline = true;
             this.boxEsp.Name = "boxEsp";
-            this.boxEsp.Size = new System.Drawing.Size(354, 50);
+            this.boxEsp.Size = new System.Drawing.Size(354, 101);
             this.boxEsp.TabIndex = 19;
             // 
             // boxWeb
@@ -248,7 +248,7 @@
             // boxCont
             // 
             this.boxCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxCont.Location = new System.Drawing.Point(553, 104);
+            this.boxCont.Location = new System.Drawing.Point(553, 108);
             this.boxCont.Multiline = true;
             this.boxCont.Name = "boxCont";
             this.boxCont.Size = new System.Drawing.Size(244, 22);
@@ -257,7 +257,7 @@
             // boxTel
             // 
             this.boxTel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxTel.Location = new System.Drawing.Point(553, 130);
+            this.boxTel.Location = new System.Drawing.Point(553, 134);
             this.boxTel.Multiline = true;
             this.boxTel.Name = "boxTel";
             this.boxTel.Size = new System.Drawing.Size(244, 22);
@@ -267,7 +267,7 @@
             // boxMail
             // 
             this.boxMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxMail.Location = new System.Drawing.Point(553, 158);
+            this.boxMail.Location = new System.Drawing.Point(553, 162);
             this.boxMail.Multiline = true;
             this.boxMail.Name = "boxMail";
             this.boxMail.Size = new System.Drawing.Size(244, 22);
@@ -276,7 +276,7 @@
             // boxContB
             // 
             this.boxContB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxContB.Location = new System.Drawing.Point(553, 191);
+            this.boxContB.Location = new System.Drawing.Point(553, 213);
             this.boxContB.Multiline = true;
             this.boxContB.Name = "boxContB";
             this.boxContB.Size = new System.Drawing.Size(244, 22);
@@ -285,7 +285,7 @@
             // boxTelB
             // 
             this.boxTelB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxTelB.Location = new System.Drawing.Point(553, 217);
+            this.boxTelB.Location = new System.Drawing.Point(553, 239);
             this.boxTelB.Multiline = true;
             this.boxTelB.Name = "boxTelB";
             this.boxTelB.Size = new System.Drawing.Size(244, 22);
@@ -295,7 +295,7 @@
             // boxMailB
             // 
             this.boxMailB.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxMailB.Location = new System.Drawing.Point(553, 243);
+            this.boxMailB.Location = new System.Drawing.Point(553, 265);
             this.boxMailB.Multiline = true;
             this.boxMailB.Name = "boxMailB";
             this.boxMailB.Size = new System.Drawing.Size(244, 22);
@@ -374,7 +374,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "uploadDataBaseUC";
-            this.Size = new System.Drawing.Size(920, 330);
+            this.Size = new System.Drawing.Size(920, 400);
             this.ResumeLayout(false);
             this.PerformLayout();
 

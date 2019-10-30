@@ -382,28 +382,28 @@ namespace MaxPowerSystem
             // 
             this.compNacUC1.Location = new System.Drawing.Point(3, 28);
             this.compNacUC1.Name = "compNacUC1";
-            this.compNacUC1.Size = new System.Drawing.Size(984, 333);
+            this.compNacUC1.Size = new System.Drawing.Size(984, 400);
             this.compNacUC1.TabIndex = 6;
             // 
             // compExteriorUC1
             // 
-            this.compExteriorUC1.Location = new System.Drawing.Point(0, 28);
+            this.compExteriorUC1.Location = new System.Drawing.Point(3, 28);
             this.compExteriorUC1.Name = "compExteriorUC1";
-            this.compExteriorUC1.Size = new System.Drawing.Size(981, 333);
+            this.compExteriorUC1.Size = new System.Drawing.Size(981, 400);
             this.compExteriorUC1.TabIndex = 5;
             // 
             // repProdUC1
             // 
             this.repProdUC1.Location = new System.Drawing.Point(3, 28);
             this.repProdUC1.Name = "repProdUC1";
-            this.repProdUC1.Size = new System.Drawing.Size(981, 333);
+            this.repProdUC1.Size = new System.Drawing.Size(981, 400);
             this.repProdUC1.TabIndex = 4;
             // 
             // ventaProdUC1
             // 
             this.ventaProdUC1.Location = new System.Drawing.Point(3, 28);
             this.ventaProdUC1.Name = "ventaProdUC1";
-            this.ventaProdUC1.Size = new System.Drawing.Size(981, 333);
+            this.ventaProdUC1.Size = new System.Drawing.Size(981, 400);
             this.ventaProdUC1.TabIndex = 3;
             // 
             // tecAsistUC1
@@ -415,7 +415,7 @@ namespace MaxPowerSystem
             // 
             // viewDataBaseUC1
             // 
-            this.viewDataBaseUC1.Location = new System.Drawing.Point(0, 28);
+            this.viewDataBaseUC1.Location = new System.Drawing.Point(3, 10);
             this.viewDataBaseUC1.Name = "viewDataBaseUC1";
             this.viewDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.viewDataBaseUC1.TabIndex = 0;
