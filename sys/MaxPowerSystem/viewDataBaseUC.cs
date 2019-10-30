@@ -1005,7 +1005,7 @@ namespace MaxPowerSystem
                 }
                 
             }
-            else if(view == "Asistencia técnica")
+            else if(view == "Cot. Asistencia técnica")
             {
                 if (dbTecAsist1.Index > 0)
                 {
@@ -1014,7 +1014,7 @@ namespace MaxPowerSystem
                     dbTecAsist1.changeVal();
                 }
             }
-            else if(view == "Reparación de laboratorio" || view == "Venta de productos")
+            else if(view == "Cot. Reparación de laboratorio" || view == "Cot. Venta de productos")
             {
                 if (dbVentProd1.Index > 0)
                 {
@@ -1048,7 +1048,7 @@ namespace MaxPowerSystem
                 }
 
             }
-            else if (view == "Asistencia técnica")
+            else if (view == "Cot. Asistencia técnica")
             {
                 if (dbTecAsist1.Index < dbTecAsist1.json.Count() - 1)
                 {
@@ -1057,7 +1057,7 @@ namespace MaxPowerSystem
                     dbTecAsist1.changeVal();
                 }
             }
-            else if (view == "Reparación de laboratorio" || view == "Venta de productos")
+            else if (view == "Cot. Reparación de laboratorio" || view == "Cot. Venta de productos")
             {
                 if (dbVentProd1.Index < dbVentProd1.json.Count() - 1)
                 {
