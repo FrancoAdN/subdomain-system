@@ -166,7 +166,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.90278F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.09722F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.Controls.Add(this.DescBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.CantBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.UnitPrBox, 1, 1);
@@ -186,7 +186,7 @@
             // 
             this.DescBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DescBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.DescBox.Location = new System.Drawing.Point(77, 51);
+            this.DescBox.Location = new System.Drawing.Point(76, 51);
             this.DescBox.Multiline = true;
             this.DescBox.Name = "DescBox";
             this.DescBox.Size = new System.Drawing.Size(159, 81);
@@ -199,7 +199,7 @@
             this.CantBox.Location = new System.Drawing.Point(3, 51);
             this.CantBox.Multiline = true;
             this.CantBox.Name = "CantBox";
-            this.CantBox.Size = new System.Drawing.Size(68, 81);
+            this.CantBox.Size = new System.Drawing.Size(67, 81);
             this.CantBox.TabIndex = 33;
             this.CantBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CantBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
@@ -208,10 +208,10 @@
             // 
             this.UnitPrBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UnitPrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.UnitPrBox.Location = new System.Drawing.Point(242, 51);
+            this.UnitPrBox.Location = new System.Drawing.Point(241, 51);
             this.UnitPrBox.Multiline = true;
             this.UnitPrBox.Name = "UnitPrBox";
-            this.UnitPrBox.Size = new System.Drawing.Size(114, 81);
+            this.UnitPrBox.Size = new System.Drawing.Size(115, 81);
             this.UnitPrBox.TabIndex = 35;
             this.UnitPrBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UnitPrBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
@@ -223,7 +223,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 48);
+            this.label3.Size = new System.Drawing.Size(67, 48);
             this.label3.TabIndex = 35;
             this.label3.Text = "Cantidad";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,7 +233,7 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(77, 0);
+            this.label4.Location = new System.Drawing.Point(76, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(159, 48);
             this.label4.TabIndex = 36;
@@ -245,9 +245,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(242, 0);
+            this.label6.Location = new System.Drawing.Point(241, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 48);
+            this.label6.Size = new System.Drawing.Size(115, 48);
             this.label6.TabIndex = 37;
             this.label6.Text = "Precio Unitario";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -264,6 +264,7 @@
             // buttonWordFile
             // 
             this.buttonWordFile.AutoSize = true;
+            this.buttonWordFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonWordFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.buttonWordFile.Location = new System.Drawing.Point(311, 296);
             this.buttonWordFile.Name = "buttonWordFile";

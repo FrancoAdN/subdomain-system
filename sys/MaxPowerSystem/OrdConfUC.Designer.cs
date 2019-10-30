@@ -34,20 +34,22 @@
             this.newSearch = new System.Windows.Forms.Button();
             this.ordBox = new System.Windows.Forms.TextBox();
             this.dbOrdConf1 = new MaxPowerSystem.dbOrdConf();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(98, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 18);
+            this.label1.Size = new System.Drawing.Size(59, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Orden:";
             // 
             // cmbDb2
             // 
+            this.cmbDb2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbDb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDb2.DropDownWidth = 210;
             this.cmbDb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
@@ -57,7 +59,7 @@
             "Ordenes confirmadas",
             "Ordenes sin confirmar",
             "(seleccionar)"});
-            this.cmbDb2.Location = new System.Drawing.Point(224, 5);
+            this.cmbDb2.Location = new System.Drawing.Point(325, 5);
             this.cmbDb2.Name = "cmbDb2";
             this.cmbDb2.Size = new System.Drawing.Size(210, 26);
             this.cmbDb2.TabIndex = 2;
@@ -65,10 +67,11 @@
             // 
             // newSearch
             // 
+            this.newSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.newSearch.Image = ((System.Drawing.Image)(resources.GetObject("newSearch.Image")));
-            this.newSearch.Location = new System.Drawing.Point(598, 5);
+            this.newSearch.Location = new System.Drawing.Point(577, 5);
             this.newSearch.Name = "newSearch";
-            this.newSearch.Size = new System.Drawing.Size(31, 26);
+            this.newSearch.Size = new System.Drawing.Size(31, 27);
             this.newSearch.TabIndex = 4;
             this.newSearch.UseVisualStyleBackColor = true;
             this.newSearch.Visible = false;
@@ -76,29 +79,40 @@
             // ordBox
             // 
             this.ordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.ordBox.Location = new System.Drawing.Point(153, 84);
+            this.ordBox.Location = new System.Drawing.Point(163, 81);
             this.ordBox.Name = "ordBox";
             this.ordBox.Size = new System.Drawing.Size(189, 24);
             this.ordBox.TabIndex = 5;
             // 
             // dbOrdConf1
             // 
-            this.dbOrdConf1.Location = new System.Drawing.Point(0, 37);
+            this.dbOrdConf1.Location = new System.Drawing.Point(3, 56);
             this.dbOrdConf1.Name = "dbOrdConf1";
             this.dbOrdConf1.Size = new System.Drawing.Size(978, 524);
             this.dbOrdConf1.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(61, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 18);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Buscar por:";
             // 
             // OrdConfUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dbOrdConf1);
             this.Controls.Add(this.ordBox);
             this.Controls.Add(this.newSearch);
             this.Controls.Add(this.cmbDb2);
             this.Controls.Add(this.label1);
             this.Name = "OrdConfUC";
-            this.Size = new System.Drawing.Size(656, 333);
+            this.Size = new System.Drawing.Size(978, 333);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +125,6 @@
         private System.Windows.Forms.Button newSearch;
         private System.Windows.Forms.TextBox ordBox;
         private dbOrdConf dbOrdConf1;
+        private System.Windows.Forms.Label label2;
     }
 }

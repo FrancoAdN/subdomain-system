@@ -42,16 +42,17 @@
             this.labEnt = new System.Windows.Forms.Label();
             this.cuitBox = new System.Windows.Forms.TextBox();
             this.labCuit = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dbEnterprise1 = new MaxPowerSystem.dbEnterprise();
             this.dbVentProd1 = new MaxPowerSystem.dbVentProd();
             this.dbOrdExt1 = new MaxPowerSystem.dbOrdExt();
             this.dbTecAsist1 = new MaxPowerSystem.dbTecAsist();
-            this.label1 = new System.Windows.Forms.Label();
             this.countPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // cmbDb
             // 
+            this.cmbDb.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cmbDb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.cmbDb.FormattingEnabled = true;
@@ -90,6 +91,7 @@
             // 
             // leftBut
             // 
+            this.leftBut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.leftBut.Dock = System.Windows.Forms.DockStyle.Fill;
             this.leftBut.Location = new System.Drawing.Point(3, 3);
             this.leftBut.Name = "leftBut";
@@ -126,6 +128,7 @@
             // 
             // rightBut
             // 
+            this.rightBut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rightBut.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rightBut.Location = new System.Drawing.Point(127, 3);
             this.rightBut.Name = "rightBut";
@@ -138,6 +141,7 @@
             // 
             // newSearch
             // 
+            this.newSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.newSearch.Image = ((System.Drawing.Image)(resources.GetObject("newSearch.Image")));
             this.newSearch.Location = new System.Drawing.Point(548, 25);
             this.newSearch.Name = "newSearch";
@@ -205,6 +209,16 @@
             this.labCuit.TabIndex = 8;
             this.labCuit.Text = "Cuit/cuil:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(27, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 18);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Buscar por:";
+            // 
             // dbEnterprise1
             // 
             this.dbEnterprise1.Location = new System.Drawing.Point(0, 65);
@@ -232,16 +246,6 @@
             this.dbTecAsist1.Name = "dbTecAsist1";
             this.dbTecAsist1.Size = new System.Drawing.Size(920, 330);
             this.dbTecAsist1.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 18);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Buscar por:";
             // 
             // viewDataBaseUC
             // 

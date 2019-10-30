@@ -204,6 +204,7 @@ namespace MaxPowerSystem
             // buttonWordFile
             // 
             this.buttonWordFile.AutoSize = true;
+            this.buttonWordFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonWordFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.buttonWordFile.Location = new System.Drawing.Point(381, 311);
             this.buttonWordFile.Name = "buttonWordFile";
