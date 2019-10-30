@@ -147,7 +147,7 @@
             this.labOrden.AutoSize = true;
             this.labOrden.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labOrden.ForeColor = System.Drawing.Color.Red;
-            this.labOrden.Location = new System.Drawing.Point(245, 0);
+            this.labOrden.Location = new System.Drawing.Point(340, 5);
             this.labOrden.Name = "labOrden";
             this.labOrden.Size = new System.Drawing.Size(0, 24);
             this.labOrden.TabIndex = 8;
