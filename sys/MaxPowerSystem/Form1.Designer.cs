@@ -49,6 +49,7 @@ namespace MaxPowerSystem
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.solicitudesUC1 = new MaxPowerSystem.solicitudesUC();
             this.notificacionesUC1 = new MaxPowerSystem.NotificacionesUC();
             this.compNacUC1 = new MaxPowerSystem.compNacUC();
             this.compExteriorUC1 = new MaxPowerSystem.compExteriorUC();
@@ -65,16 +66,8 @@ namespace MaxPowerSystem
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.compNacUC1 = new MaxPowerSystem.compNacUC();
-            this.compExteriorUC1 = new MaxPowerSystem.compExteriorUC();
-            this.repProdUC1 = new MaxPowerSystem.repProdUC();
-            this.ventaProdUC1 = new MaxPowerSystem.ventaProdUC();
-            this.tecAsistUC1 = new MaxPowerSystem.tecAsistUC();
-            this.viewDataBaseUC1 = new MaxPowerSystem.viewDataBaseUC();
-            this.uploadDataBaseUC1 = new MaxPowerSystem.uploadDataBaseUC();
-            this.ordConfUC1 = new MaxPowerSystem.OrdConfUC();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -141,6 +134,7 @@ namespace MaxPowerSystem
             this.button4.TabIndex = 8;
             this.button4.Text = "Solicitudes ";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button4_MouseClick);
             // 
             // button2
             // 
@@ -378,6 +372,7 @@ namespace MaxPowerSystem
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.solicitudesUC1);
             this.panel1.Controls.Add(this.notificacionesUC1);
             this.panel1.Controls.Add(this.compNacUC1);
             this.panel1.Controls.Add(this.compExteriorUC1);
@@ -391,6 +386,14 @@ namespace MaxPowerSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 561);
             this.panel1.TabIndex = 0;
+            // 
+            // solicitudesUC1
+            // 
+            this.solicitudesUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.solicitudesUC1.Location = new System.Drawing.Point(0, 0);
+            this.solicitudesUC1.Name = "solicitudesUC1";
+            this.solicitudesUC1.Size = new System.Drawing.Size(984, 561);
+            this.solicitudesUC1.TabIndex = 9;
             // 
             // notificacionesUC1
             // 
@@ -444,7 +447,7 @@ namespace MaxPowerSystem
             // 
             // uploadDataBaseUC1
             // 
-            this.uploadDataBaseUC1.Location = new System.Drawing.Point(3, 28);
+            this.uploadDataBaseUC1.Location = new System.Drawing.Point(15, 28);
             this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
             this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.uploadDataBaseUC1.TabIndex = 2;
@@ -521,6 +524,15 @@ namespace MaxPowerSystem
             this.panel6.Size = new System.Drawing.Size(273, 67);
             this.panel6.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(17, 13);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 33);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -532,72 +544,6 @@ namespace MaxPowerSystem
             this.label5.Size = new System.Drawing.Size(81, 29);
             this.label5.TabIndex = 0;
             this.label5.Text = "Menu";
-            // 
-            // compNacUC1
-            // 
-            this.compNacUC1.Location = new System.Drawing.Point(3, 28);
-            this.compNacUC1.Name = "compNacUC1";
-            this.compNacUC1.Size = new System.Drawing.Size(984, 400);
-            this.compNacUC1.TabIndex = 6;
-            // 
-            // compExteriorUC1
-            // 
-            this.compExteriorUC1.Location = new System.Drawing.Point(3, 28);
-            this.compExteriorUC1.Name = "compExteriorUC1";
-            this.compExteriorUC1.Size = new System.Drawing.Size(981, 400);
-            this.compExteriorUC1.TabIndex = 5;
-            // 
-            // repProdUC1
-            // 
-            this.repProdUC1.Location = new System.Drawing.Point(3, 28);
-            this.repProdUC1.Name = "repProdUC1";
-            this.repProdUC1.Size = new System.Drawing.Size(981, 400);
-            this.repProdUC1.TabIndex = 4;
-            // 
-            // ventaProdUC1
-            // 
-            this.ventaProdUC1.Location = new System.Drawing.Point(3, 28);
-            this.ventaProdUC1.Name = "ventaProdUC1";
-            this.ventaProdUC1.Size = new System.Drawing.Size(981, 400);
-            this.ventaProdUC1.TabIndex = 3;
-            // 
-            // tecAsistUC1
-            // 
-            this.tecAsistUC1.Location = new System.Drawing.Point(3, 28);
-            this.tecAsistUC1.Name = "tecAsistUC1";
-            this.tecAsistUC1.Size = new System.Drawing.Size(984, 561);
-            this.tecAsistUC1.TabIndex = 1;
-            // 
-            // viewDataBaseUC1
-            // 
-            this.viewDataBaseUC1.Location = new System.Drawing.Point(3, 10);
-            this.viewDataBaseUC1.Name = "viewDataBaseUC1";
-            this.viewDataBaseUC1.Size = new System.Drawing.Size(984, 561);
-            this.viewDataBaseUC1.TabIndex = 0;
-            // 
-            // uploadDataBaseUC1
-            // 
-            this.uploadDataBaseUC1.Location = new System.Drawing.Point(15, 28);
-            this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
-            this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
-            this.uploadDataBaseUC1.TabIndex = 2;
-            this.uploadDataBaseUC1.Load += new System.EventHandler(this.UploadDataBaseUC1_Load);
-            // 
-            // ordConfUC1
-            // 
-            this.ordConfUC1.Location = new System.Drawing.Point(3, 28);
-            this.ordConfUC1.Name = "ordConfUC1";
-            this.ordConfUC1.Size = new System.Drawing.Size(978, 561);
-            this.ordConfUC1.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(17, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 33);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -670,7 +616,7 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private NotificacionesUC notificacionesUC1;
-
+        private solicitudesUC solicitudesUC1;
     }
 }
 

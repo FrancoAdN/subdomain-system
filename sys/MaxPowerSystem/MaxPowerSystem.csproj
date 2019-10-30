@@ -152,6 +152,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="solicitudesUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="solicitudesUC.Designer.cs">
+      <DependentUpon>solicitudesUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="tecAsistUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     <EmbeddedResource Include="Resources\Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="solicitudesUC.resx">
+      <DependentUpon>solicitudesUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="tecAsistUC.resx">
       <DependentUpon>tecAsistUC.cs</DependentUpon>

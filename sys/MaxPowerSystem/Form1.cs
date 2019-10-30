@@ -234,6 +234,7 @@ namespace MaxPowerSystem
             compNacUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
             
         }
 
@@ -248,6 +249,7 @@ namespace MaxPowerSystem
             compNacUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             viewDataBaseUC1.Show();
             viewDataBaseUC1.BringToFront();
@@ -264,6 +266,7 @@ namespace MaxPowerSystem
             compNacUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             uploadDataBaseUC1.Show();
             uploadDataBaseUC1.BringToFront();
@@ -280,6 +283,7 @@ namespace MaxPowerSystem
             compNacUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             tecAsistUC1.Show();
             tecAsistUC1.BringToFront();
@@ -296,6 +300,7 @@ namespace MaxPowerSystem
             compNacUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             repProdUC1.Show();
             repProdUC1.BringToFront();
@@ -312,6 +317,7 @@ namespace MaxPowerSystem
             compNacUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             ventaProdUC1.Show();
             ventaProdUC1.BringToFront();
@@ -327,6 +333,7 @@ namespace MaxPowerSystem
             compNacUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             compExteriorUC1.Show();
             compExteriorUC1.BringToFront();
@@ -342,6 +349,7 @@ namespace MaxPowerSystem
             compExteriorUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             compNacUC1.Show();
             compNacUC1.BringToFront();
@@ -364,6 +372,7 @@ namespace MaxPowerSystem
                 compExteriorUC1.Hide();
                 ordConfUC1.Hide();
                 notificacionesUC1.Hide();
+                solicitudesUC1.Hide();
 
             }
             else
@@ -395,6 +404,7 @@ namespace MaxPowerSystem
                 compExteriorUC1.Hide();
                 ordConfUC1.Hide();
                 notificacionesUC1.Hide();
+                solicitudesUC1.Hide();
             }
             else
             {
@@ -418,6 +428,7 @@ namespace MaxPowerSystem
             compExteriorUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             ordConfUC1.Show();
             ordConfUC1.BringToFront();
@@ -434,9 +445,27 @@ namespace MaxPowerSystem
             compExteriorUC1.Hide();
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
 
             notificacionesUC1.Show();
             notificacionesUC1.BringToFront();
+        }
+
+        private void Button4_MouseClick(object sender, MouseEventArgs e)
+        {
+            uploadDataBaseUC1.Hide();
+            viewDataBaseUC1.Hide();
+            tecAsistUC1.Hide();
+            ventaProdUC1.Hide();
+            repProdUC1.Hide();
+            compNacUC1.Hide();
+            compExteriorUC1.Hide();
+            ordConfUC1.Hide();
+            notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
+
+            solicitudesUC1.Show();
+            solicitudesUC1.BringToFront();
         }
     }
 
