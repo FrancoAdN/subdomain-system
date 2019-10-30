@@ -35,7 +35,7 @@ let notifications = [];
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 10;
-rule.minute = 00;
+rule.minute = 06;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){

@@ -122,7 +122,6 @@ namespace MaxPowerSystem
                 if (db)
                     pmdeText.Click += (sender2, e2) => ConfirmOrder(sender2, e2, ordn, d, inx);
 
-                Console.WriteLine(json[i - 1]["pmde"]);
                 if (json[i - 1]["pmde"] != null)
                     pmdeText.Text = (String)json[i - 1]["pmde"];
                 else
