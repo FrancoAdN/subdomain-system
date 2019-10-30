@@ -99,7 +99,6 @@ namespace MaxPowerSystem
                     dbOrdConf1.changeVal();
                     dbOrdConf1.Show();
                     dbOrdConf1.BringToFront();
-                    cmbDb2.SelectedIndex = cmbDb2.Items.Count - 1;
                 }
             }
             else if (view == "Ordenes sin confirmar")
