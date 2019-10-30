@@ -119,7 +119,7 @@
             this.entLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.entLab.Location = new System.Drawing.Point(50, 41);
             this.entLab.Name = "entLab";
-            this.entLab.Size = new System.Drawing.Size(50, 29);
+            this.entLab.Size = new System.Drawing.Size(250, 29);
             this.entLab.TabIndex = 21;
             this.entLab.Text = "label1";
             // 

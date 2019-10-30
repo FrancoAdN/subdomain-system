@@ -537,28 +537,28 @@ namespace MaxPowerSystem
             // 
             this.compNacUC1.Location = new System.Drawing.Point(3, 28);
             this.compNacUC1.Name = "compNacUC1";
-            this.compNacUC1.Size = new System.Drawing.Size(984, 400);
+            this.compNacUC1.Size = new System.Drawing.Size(984, 561);
             this.compNacUC1.TabIndex = 6;
             // 
             // compExteriorUC1
             // 
             this.compExteriorUC1.Location = new System.Drawing.Point(3, 28);
             this.compExteriorUC1.Name = "compExteriorUC1";
-            this.compExteriorUC1.Size = new System.Drawing.Size(981, 400);
+            this.compExteriorUC1.Size = new System.Drawing.Size(981, 561);
             this.compExteriorUC1.TabIndex = 5;
             // 
             // repProdUC1
             // 
             this.repProdUC1.Location = new System.Drawing.Point(3, 28);
             this.repProdUC1.Name = "repProdUC1";
-            this.repProdUC1.Size = new System.Drawing.Size(981, 400);
+            this.repProdUC1.Size = new System.Drawing.Size(981, 561);
             this.repProdUC1.TabIndex = 4;
             // 
             // ventaProdUC1
             // 
             this.ventaProdUC1.Location = new System.Drawing.Point(3, 28);
             this.ventaProdUC1.Name = "ventaProdUC1";
-            this.ventaProdUC1.Size = new System.Drawing.Size(981, 400);
+            this.ventaProdUC1.Size = new System.Drawing.Size(981, 561);
             this.ventaProdUC1.TabIndex = 3;
             // 
             // tecAsistUC1

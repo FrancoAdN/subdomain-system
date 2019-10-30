@@ -47,7 +47,13 @@
             this.dbVentProd1 = new MaxPowerSystem.dbVentProd();
             this.dbOrdExt1 = new MaxPowerSystem.dbOrdExt();
             this.dbTecAsist1 = new MaxPowerSystem.dbTecAsist();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.countPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbDb
@@ -155,7 +161,7 @@
             // 
             this.ordLab.AutoSize = true;
             this.ordLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordLab.Location = new System.Drawing.Point(46, 139);
+            this.ordLab.Location = new System.Drawing.Point(50, 139);
             this.ordLab.Name = "ordLab";
             this.ordLab.Size = new System.Drawing.Size(59, 18);
             this.ordLab.TabIndex = 4;
@@ -183,7 +189,7 @@
             // 
             this.labEnt.AutoSize = true;
             this.labEnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEnt.Location = new System.Drawing.Point(46, 177);
+            this.labEnt.Location = new System.Drawing.Point(50, 177);
             this.labEnt.Name = "labEnt";
             this.labEnt.Size = new System.Drawing.Size(80, 18);
             this.labEnt.TabIndex = 6;
@@ -203,7 +209,7 @@
             // 
             this.labCuit.AutoSize = true;
             this.labCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCuit.Location = new System.Drawing.Point(46, 217);
+            this.labCuit.Location = new System.Drawing.Point(50, 217);
             this.labCuit.Name = "labCuit";
             this.labCuit.Size = new System.Drawing.Size(74, 18);
             this.labCuit.TabIndex = 8;
@@ -221,35 +227,65 @@
             // 
             // dbEnterprise1
             // 
-            this.dbEnterprise1.Location = new System.Drawing.Point(0, 65);
+            this.dbEnterprise1.Location = new System.Drawing.Point(0, 56);
             this.dbEnterprise1.Name = "dbEnterprise1";
             this.dbEnterprise1.Size = new System.Drawing.Size(920, 333);
             this.dbEnterprise1.TabIndex = 14;
             // 
             // dbVentProd1
             // 
-            this.dbVentProd1.Location = new System.Drawing.Point(0, 65);
+            this.dbVentProd1.Location = new System.Drawing.Point(0, 56);
             this.dbVentProd1.Name = "dbVentProd1";
             this.dbVentProd1.Size = new System.Drawing.Size(920, 343);
             this.dbVentProd1.TabIndex = 12;
             // 
             // dbOrdExt1
             // 
-            this.dbOrdExt1.Location = new System.Drawing.Point(0, 65);
+            this.dbOrdExt1.Location = new System.Drawing.Point(0, 56);
             this.dbOrdExt1.Name = "dbOrdExt1";
             this.dbOrdExt1.Size = new System.Drawing.Size(920, 330);
             this.dbOrdExt1.TabIndex = 11;
             // 
             // dbTecAsist1
             // 
-            this.dbTecAsist1.Location = new System.Drawing.Point(0, 65);
+            this.dbTecAsist1.Location = new System.Drawing.Point(0, 56);
             this.dbTecAsist1.Name = "dbTecAsist1";
             this.dbTecAsist1.Size = new System.Drawing.Size(920, 330);
             this.dbTecAsist1.TabIndex = 10;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 170);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(15, 208);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(15, 130);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            // 
             // viewDataBaseUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dbEnterprise1);
             this.Controls.Add(this.dbVentProd1);
@@ -268,6 +304,9 @@
             this.Size = new System.Drawing.Size(1000, 470);
             this.countPanel.ResumeLayout(false);
             this.countPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,6 +332,9 @@
         private dbVentProd dbVentProd1;
         private dbEnterprise dbEnterprise1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 
 
