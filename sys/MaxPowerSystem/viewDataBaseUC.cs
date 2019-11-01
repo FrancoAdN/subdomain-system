@@ -44,12 +44,12 @@ namespace MaxPowerSystem
             string view = cmbDb.Text;
             if (!string.IsNullOrEmpty(cuit) && view != "Empresas")
             {
-                MessageBox.Show("No se puede buscar por cuit en " + view);
+                MessageBox.Show("No se puede buscar por cuit en " + view, "Maxpower System dice: ");
                 return;
             }
             else if (!string.IsNullOrEmpty(ord) && view == "Empresas")
             {
-                MessageBox.Show("No se puede buscar por orden en " + view);
+                MessageBox.Show("No se puede buscar por orden en " + view, "Maxpower System dice: ");
                 return;
             }
             
@@ -69,18 +69,18 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "6")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                     }
                     else if (resp == "9")
                     {
                         err = true;
-                        MessageBox.Show("No existen registros (Cod. 9)");
+                        MessageBox.Show("No existen registros (Cod. 9)", "Maxpower System dice: ");
                     }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
@@ -102,17 +102,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
                             err = true;
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                         }
                         else if (resp == "7")
                         {
-                            MessageBox.Show("No existen registros (Cod. 7)");
+                            MessageBox.Show("No existen registros (Cod. 7)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -134,17 +134,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "8")
                         {
-                            MessageBox.Show("No existen registros (Cod. 8)");
+                            MessageBox.Show("No existen registros (Cod. 8)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -212,18 +212,18 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "6")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                     }
                     else if (resp == "9")
                     {
                         err = true;
-                        MessageBox.Show("No existen registros (Cod. 9)");
+                        MessageBox.Show("No existen registros (Cod. 9)", "Maxpower System dice: ");
                     }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
@@ -245,17 +245,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
                             err = true;
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                         }
                         else if (resp == "7")
                         {
-                            MessageBox.Show("No existen registros (Cod. 7)");
+                            MessageBox.Show("No existen registros (Cod. 7)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -277,17 +277,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "8")
                         {
-                            MessageBox.Show("No existen registros (Cod. 8)");
+                            MessageBox.Show("No existen registros (Cod. 8)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -354,18 +354,18 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "6")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                     }
                     else if (resp == "9")
                     {
                         err = true;
-                        MessageBox.Show("No existen registros (Cod. 9)");
+                        MessageBox.Show("No existen registros (Cod. 9)", "Maxpower System dice: ");
                     }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
@@ -387,17 +387,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
                             err = true;
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                         }
                         else if (resp == "7")
                         {
-                            MessageBox.Show("No existen registros (Cod. 7)");
+                            MessageBox.Show("No existen registros (Cod. 7)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -419,17 +419,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "8")
                         {
-                            MessageBox.Show("No existen registros (Cod. 8)");
+                            MessageBox.Show("No existen registros (Cod. 8)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -495,18 +495,18 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "6")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                     }
                     else if (resp == "9")
                     {
                         err = true;
-                        MessageBox.Show("No existen registros (Cod. 9)");
+                        MessageBox.Show("No existen registros (Cod. 9)", "Maxpower System dice: ");
                     }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
@@ -527,17 +527,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
                             err = true;
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                         }
                         else if (resp == "7")
                         {
-                            MessageBox.Show("No existen registros (Cod. 7)");
+                            MessageBox.Show("No existen registros (Cod. 7)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -558,17 +558,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "8")
                         {
-                            MessageBox.Show("No existen registros (Cod. 8)");
+                            MessageBox.Show("No existen registros (Cod. 8)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -634,18 +634,18 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "6")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                     }
                     else if (resp == "9")
                     {
                         err = true;
-                        MessageBox.Show("No existen registros (Cod. 9)");
+                        MessageBox.Show("No existen registros (Cod. 9)", "Maxpower System dice: ");
                     }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
@@ -666,17 +666,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
                             err = true;
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                         }
                         else if (resp == "7")
                         {
-                            MessageBox.Show("No existen registros (Cod. 7)");
+                            MessageBox.Show("No existen registros (Cod. 7)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -697,17 +697,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "8")
                         {
-                            MessageBox.Show("No existen registros (Cod. 8)");
+                            MessageBox.Show("No existen registros (Cod. 8)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -774,15 +774,15 @@ namespace MaxPowerSystem
                     if (resp == "0")
                     {
                         err = true;
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                     }
                     else if (resp == "6")
                     {
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                         err = true;
                     }else if(resp == "9")
                     {
-                        MessageBox.Show("No existen registros (Cod. 9)");
+                        MessageBox.Show("No existen registros (Cod. 9)", "Maxpower System dice: ");
                         err = true;
                     }
                         
@@ -807,17 +807,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "9")
                         {
-                            MessageBox.Show("No existen registros (Cod. 9)");
+                            MessageBox.Show("No existen registros (Cod. 9)", "Maxpower System dice: ");
                             err = true;
                         }
                         json = JToken.Parse(resp);
@@ -837,17 +837,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "9") {
                             err = true;
-                            MessageBox.Show("No existen los registros buscados (Cod. 9)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 9)", "Maxpower System dice: ");
                         }
                         json = JToken.Parse(resp);
                         if (json.Type != JTokenType.Array)
@@ -909,18 +909,18 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "6")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                     }
                     else if (resp == "9")
                     {
                         err = true;
-                        MessageBox.Show("No existen registros (Cod. 9)");
+                        MessageBox.Show("No existen registros (Cod. 9)", "Maxpower System dice: ");
                     }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
@@ -941,17 +941,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
                             err = true;
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                         }
                         else if (resp == "7")
                         {
-                            MessageBox.Show("No existen registros (Cod. 7)");
+                            MessageBox.Show("No existen registros (Cod. 7)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -972,17 +972,17 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
                         if (resp == "0")
                         {
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "6")
                         {
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                             err = true;
                         }
                         else if (resp == "8")
                         {
-                            MessageBox.Show("No existen registros (Cod. 8)");
+                            MessageBox.Show("No existen registros (Cod. 8)", "Maxpower System dice: ");
                             err = true;
                         }
 
@@ -1069,7 +1069,7 @@ namespace MaxPowerSystem
             if (!Char.IsDigit(chr) && chr != 8)
             {
                 e.Handled = true;
-                MessageBox.Show("Solo se aceptan numeros");
+                MessageBox.Show("Solo se aceptan numeros", "Maxpower System dice: ");
             }
         }
 

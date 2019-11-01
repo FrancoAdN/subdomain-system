@@ -166,9 +166,9 @@ namespace MaxPowerSystem
                 resp = client.makeRequest();
 
                 if (resp == "0")
-                    MessageBox.Show("SQL ERROR (Cod. 0)");
+                    MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                 else if (resp == "13")
-                    MessageBox.Show("Error al confirmar la orden (Cod. 13)");
+                    MessageBox.Show("Error al confirmar la orden (Cod. 13)", "Maxpower System dice: ");
                 else if(resp == "1") {
                     json.RemoveAt(idx - 1);
                     this.changeVal();
