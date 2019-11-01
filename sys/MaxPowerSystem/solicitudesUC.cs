@@ -52,11 +52,7 @@ namespace MaxPowerSystem
                     err = true;
                 }
                 json = JToken.Parse(resp);
-                if (json.Type != JTokenType.Array)
-                {
-                    err = true;
-                    MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
-                }
+             
                 if (!(json.Count() == 1))
                     err = true;
 
