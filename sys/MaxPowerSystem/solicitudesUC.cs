@@ -35,21 +35,43 @@ namespace MaxPowerSystem
                 bool err = false;
                 clientREST client = new clientREST();
 
-                client.endPoint = "http://system.maxpower-ar.com/emp/" + boxCli.Text;
+                client.endPoint = "http://system.maxpower-ar.com/emp/" + cli;
 
                 client.httpMethod = httpVerb.GET;
                 string resp = string.Empty;
-                try
+
+                resp = client.makeRequest();
+                if (resp == "0")
                 {
+                    MessageBox.Show("SQL ERROR (Cod. 0)");
+                    err = true;
+                }
+                else if (resp == "9")
+                {
+                    MessageBox.Show("No existen los registros buscados (Cod. 9)");
+                    err = true;
+                }
+                json = JToken.Parse(resp);
+                if (json.Type != JTokenType.Array)
+                {
+                    err = true;
+                    MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                }
+                if (!(json.Count() == 1))
+                    err = true;
+
+                
+                if (!err)
+                {
+                    client.endPoint = "http://system.maxpower-ar.com/last";
+
+                    client.httpMethod = httpVerb.GET;
+                    resp = string.Empty;
+
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
                         MessageBox.Show("SQL ERROR (Cod. 0)");
-                        err = true;
-                    }
-                    else if (resp == "6")
-                    {
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
                         err = true;
                     }
                     json = JToken.Parse(resp);
@@ -58,32 +80,31 @@ namespace MaxPowerSystem
                         err = true;
                         MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
                     }
-
                     if (!(json.Count() == 1))
                         err = true;
 
                 }
-                catch (WebException)
-                {
-                    err = true;
-                    MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
-                }
-                //MessageBox.Show("Debe completar todos los campos para poder guardar la solicitud.");
+
+
                 if (!err)
                 {
                     JObject postJ = new JObject();
-                    postJ["proc"] = boxPrec.Text;
-                    postJ["cliente"] = boxCli.Text;
-                    postJ["descr"] = boxDesc.Text;
+                    postJ["orden"] = "MAX-" +json[0]["num"]+"-AR19-1";
+                    postJ["proc"] = prec;
+                    postJ["cliente"] = cli;
+                    postJ["descr"] = desc;
                     postJ["fecha"] = DateTime.Now.ToString("dd/MM/yyyy");
 
                     client.endPoint = "http://system.maxpower-ar.com/sol";
                     client.httpMethod = httpVerb.POST;
                     client.postJSON = postJ.ToString();
+                    resp = string.Empty;
+                    resp = client.makeRequest();
+
                     if (resp == "0")
                         MessageBox.Show("SQL ERROR (Cod. 0)");
-                    else if (resp == "13")
-                        MessageBox.Show("Error al confirmar la orden (Cod. 13)");
+                    else if (resp == "14")
+                        MessageBox.Show("No se pudo ingresar la solicitud (Cod. 14)");
                     else if (resp == "1")
                     {
                         MessageBox.Show("La solicitud ha sido ingresada con éxito.");
@@ -92,9 +113,6 @@ namespace MaxPowerSystem
                         boxPrec.Text = string.Empty;
 
                     }
-
-
-
                 }
 
 

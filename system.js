@@ -1259,13 +1259,70 @@ app.post('/confirm', (req, resp) => {
 //region SOLICITUDES
 
 app.get('/sol', (req, resp) => {
-    resp.send("1");
+    const con = connectionSQL();
+    let sql =  'SELECT * FROM solicitudes';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                resp.send(result);
+            }
+                
+          con.end();
+        });
+    });
+});
+app.get('/sol/:ord', (req, resp) => {
+    const con = connectionSQL();
+    const ord = req.params.ord;
+    let sql =  "SELECT * FROM solicitudes WHERE orden = '" + ord + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                resp.send(result);
+            }
+                
+          con.end();
+        });
+    });
 });
 
 app.post('/sol', (req, resp) => {
+    const con = connectionSQL();
     const data = req.body;
-    console.log(data);
-    resp.send("1");
+    const nof = parseInt(data.noferta.split('-')[1]);
+    let sql =  `INSERT INTO solicitudes (orden, fecha, procedencia, cliente, descr) values ('${data.orden}', '${data.fecha}', '${data.proc}', '${data.dias}', '${data.cliente}', '${data.descr}');
+    UPDATE last SET num = ${nof};`;
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                resp.send("1");
+            }
+                
+          con.end();
+        });
+    });
+
 });
 
 //enf of region
