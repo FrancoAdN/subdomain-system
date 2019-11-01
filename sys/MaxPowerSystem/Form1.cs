@@ -224,6 +224,7 @@ namespace MaxPowerSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             //HIDE EVERY USER CONTROL
             uploadDataBaseUC1.Hide();
             tecAsistUC1.Hide();
@@ -467,6 +468,8 @@ namespace MaxPowerSystem
             solicitudesUC1.Show();
             solicitudesUC1.BringToFront();
         }
+
+
     }
 
 }

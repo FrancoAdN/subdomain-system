@@ -93,7 +93,7 @@ namespace MaxPowerSystem
                 int n_punit = (int)json[Index]["tabla"][i - 1]["punit"];
                 punitText.AutoSize = false;
                 punitText.TextAlign = ContentAlignment.MiddleCenter;
-                panel.Controls.Add(punitText, 2, i);
+                panel.Controls.Add(punitText, 2, i);  
 
                 Label totalText = new Label();
                 totalText.Text = (n_punit * n_cant).ToString();
