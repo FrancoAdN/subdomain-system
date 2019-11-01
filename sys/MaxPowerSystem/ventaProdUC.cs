@@ -275,9 +275,7 @@ namespace MaxPowerSystem
             }
         }
 
-      
-
-
+ 
     }
 
 

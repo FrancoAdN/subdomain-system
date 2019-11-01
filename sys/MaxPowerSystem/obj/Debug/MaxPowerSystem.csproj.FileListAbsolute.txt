@@ -147,5 +147,4 @@ C:\Users\User\Documents\vistas buensa sin ordconf\MaxPowerSystem\obj\Debug\MaxPo
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbOrdConf.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.OrdConfUC.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.NotificacionesUC.resources
-C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.solicitudesUC.resources

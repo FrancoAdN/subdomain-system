@@ -35,6 +35,8 @@
             this.ordBox = new System.Windows.Forms.TextBox();
             this.dbOrdConf1 = new MaxPowerSystem.dbOrdConf();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -101,10 +103,20 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Buscar por:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(60, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 81;
+            this.pictureBox1.TabStop = false;
+            // 
             // OrdConfUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dbOrdConf1);
             this.Controls.Add(this.ordBox);
@@ -113,6 +125,7 @@
             this.Controls.Add(this.label1);
             this.Name = "OrdConfUC";
             this.Size = new System.Drawing.Size(978, 333);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +139,6 @@
         private System.Windows.Forms.TextBox ordBox;
         private dbOrdConf dbOrdConf1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
