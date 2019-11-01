@@ -1041,7 +1041,8 @@ app.get('/notif', (req, resp) => {
 
 app.get('/notif/:id', (req, resp) => {
     resp.send(notifications[req.params.id]);
-});*/
+});
+*/
 // end of region
 
 
@@ -1322,6 +1323,7 @@ app.get('/sol/emp/:emp', (req, resp) => {
         });
     });
 });
+
 app.post('/sol', (req, resp) => {
     const con = connectionSQL();
     const data = req.body;
