@@ -25,6 +25,7 @@ namespace MaxPowerSystem
             dbOrdExt1.Hide();
             dbVentProd1.Hide();
             dbTecAsist1.Hide();
+            dbSolicitudesUC1.Hide();
             cmbDb.SelectedIndex = cmbDb.Items.Count - 1;
 
             //init(15, 5);
@@ -164,6 +165,7 @@ namespace MaxPowerSystem
                 dbTecAsist1.Hide();
                 dbEnterprise1.Hide();
                 dbOrdExt1.Hide();
+                dbSolicitudesUC1.Hide();
 
                 if (!err)
                 {
@@ -305,6 +307,7 @@ namespace MaxPowerSystem
                 dbTecAsist1.Hide();
                 dbEnterprise1.Hide();
                 dbOrdExt1.Hide();
+                dbSolicitudesUC1.Hide();
 
                 if (!err)
                 {
@@ -447,6 +450,7 @@ namespace MaxPowerSystem
                 dbTecAsist1.Hide();
                 dbEnterprise1.Hide();
                 dbVentProd1.Hide();
+                dbSolicitudesUC1.Hide();
 
                 if (!err)
                 {
@@ -583,6 +587,7 @@ namespace MaxPowerSystem
                 dbTecAsist1.Hide();
                 dbEnterprise1.Hide();
                 dbVentProd1.Hide();
+                dbSolicitudesUC1.Hide();
 
                 if (!err)
                 {
@@ -719,6 +724,7 @@ namespace MaxPowerSystem
 
                 }
                 dbOrdExt1.Hide();
+                dbSolicitudesUC1.Hide();
                 dbVentProd1.Hide();
                 dbEnterprise1.Hide();
                 dbTecAsist1.Hide();
@@ -858,6 +864,7 @@ namespace MaxPowerSystem
                 dbTecAsist1.Hide();
                 dbEnterprise1.Hide();
                 dbVentProd1.Hide();
+                dbSolicitudesUC1.Hide();
 
                 if (!err)
                 {
@@ -888,6 +895,142 @@ namespace MaxPowerSystem
                 
 
             }
+            else if (view == "Solicitudes")
+            {
+                JToken json = "";
+                if (string.IsNullOrEmpty(ord) && string.IsNullOrEmpty(ent))
+                {
+                    client.endPoint = "http://system.maxpower-ar.com/sol";
+
+                    client.httpMethod = httpVerb.GET;
+
+                    string resp = string.Empty;
+
+                    resp = client.makeRequest();
+                    if (resp == "0")
+                    {
+                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        err = true;
+                    }
+                    else if (resp == "6")
+                    {
+                        err = true;
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                    }
+                    else if (resp == "9")
+                    {
+                        err = true;
+                        MessageBox.Show("No existen registros (Cod. 9)");
+                    }
+                    json = JToken.Parse(resp);
+                    if (json.Type != JTokenType.Array)
+                    {
+                        err = true;
+                    }
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(ord))
+                    {
+                        client.endPoint = "http://system.maxpower-ar.com/sol/" + ord;
+
+                        client.httpMethod = httpVerb.GET;
+
+                        string resp = string.Empty;
+
+                        resp = client.makeRequest();
+                        if (resp == "0")
+                        {
+                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            err = true;
+                        }
+                        else if (resp == "6")
+                        {
+                            err = true;
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        }
+                        else if (resp == "7")
+                        {
+                            MessageBox.Show("No existen registros (Cod. 7)");
+                            err = true;
+                        }
+
+                        json = JToken.Parse(resp);
+                        if (json.Type != JTokenType.Array)
+                        {
+                            err = true;
+                        }
+                    }
+                    else if (!string.IsNullOrEmpty(ent))
+                    {
+                        client.endPoint = "http://system.maxpower-ar.com/sol/emp/" + ent;
+                        Console.WriteLine("aa");
+                        client.httpMethod = httpVerb.GET;
+
+                        string resp = string.Empty;
+
+                        resp = client.makeRequest();
+                        if (resp == "0")
+                        {
+                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            err = true;
+                        }
+                        else if (resp == "6")
+                        {
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            err = true;
+                        }
+                        else if (resp == "8")
+                        {
+                            MessageBox.Show("No existen registros (Cod. 8)");
+                            err = true;
+                        }
+
+                        json = JToken.Parse(resp);
+                        if (json.Type != JTokenType.Array)
+                        {
+                            err = true;
+
+                        }
+                    }
+
+                    entBox.Text = string.Empty;
+                    ordBox.Text = string.Empty;
+
+                }
+                dbOrdExt1.Hide();
+                dbSolicitudesUC1.Hide();
+                dbVentProd1.Hide();
+                dbEnterprise1.Hide();
+                dbTecAsist1.Hide();
+                if (!err)
+                {
+                    if (json.Count() == 1)
+                    {
+                        leftBut.Visible = false;
+                        leftLab.Visible = false;
+                        rightBut.Visible = false;
+                        rightLab.Visible = false;
+                    }
+                    else
+                    {
+                        leftBut.Visible = true;
+                        leftLab.Text = (dbSolicitudesUC1.Index + 1).ToString();
+                        leftLab.Visible = true;
+                        rightBut.Visible = true;
+                        rightLab.Text = json.Count().ToString();
+                        rightLab.Visible = true;
+                    }
+
+                    dbSolicitudesUC1.json = json;
+                    dbSolicitudesUC1.Index = 0;
+                    dbSolicitudesUC1.changeVal();
+                    dbSolicitudesUC1.Show();
+                    dbSolicitudesUC1.BringToFront();
+                }
+
+
+            }
             else
             {
                 dbEnterprise1.Hide();
@@ -908,6 +1051,7 @@ namespace MaxPowerSystem
             dbEnterprise1.Hide();
             dbVentProd1.Hide();
             dbTecAsist1.Hide();
+            dbSolicitudesUC1.Hide();
             newSearch.Visible = false;
 
             leftBut.Visible = false;
@@ -1032,6 +1176,15 @@ namespace MaxPowerSystem
                     dbEnterprise1.changeVal();
                 }
             }
+            else if (view == "Solicitudes")
+            {
+                if (dbVentProd1.Index > 0)
+                {
+                    dbSolicitudesUC1.Index -= 1;
+                    leftLab.Text = (dbSolicitudesUC1.Index + 1).ToString();
+                    dbSolicitudesUC1.changeVal();
+                }
+            }
         }
 
         private void RightBut_MouseClick(object sender, MouseEventArgs e)
@@ -1075,8 +1228,16 @@ namespace MaxPowerSystem
                     dbEnterprise1.changeVal();
                 }
             }
+            else if (view == "Solicitudes")
+            {
+                if (dbSolicitudesUC1.Index < dbSolicitudesUC1.json.Count() - 1)
+                {
+                    dbSolicitudesUC1.Index += 1;
+                    leftLab.Text = (dbSolicitudesUC1.Index + 1).ToString();
+                    dbSolicitudesUC1.changeVal();
+                }
+            }
         }
-
 
     }
 }

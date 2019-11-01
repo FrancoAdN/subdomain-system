@@ -35,7 +35,6 @@
             this.leftLab = new System.Windows.Forms.Label();
             this.rightLab = new System.Windows.Forms.Label();
             this.rightBut = new System.Windows.Forms.Button();
-            this.newSearch = new System.Windows.Forms.Button();
             this.ordLab = new System.Windows.Forms.Label();
             this.ordBox = new System.Windows.Forms.TextBox();
             this.entBox = new System.Windows.Forms.TextBox();
@@ -43,17 +42,19 @@
             this.cuitBox = new System.Windows.Forms.TextBox();
             this.labCuit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.newSearch = new System.Windows.Forms.Button();
             this.dbEnterprise1 = new MaxPowerSystem.dbEnterprise();
             this.dbVentProd1 = new MaxPowerSystem.dbVentProd();
             this.dbOrdExt1 = new MaxPowerSystem.dbOrdExt();
             this.dbTecAsist1 = new MaxPowerSystem.dbTecAsist();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.dbSolicitudesUC1 = new MaxPowerSystem.dbSolicitudesUC();
             this.countPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbDb
@@ -64,6 +65,7 @@
             this.cmbDb.FormattingEnabled = true;
             this.cmbDb.Items.AddRange(new object[] {
             "Empresas",
+            "Solicitudes",
             "Cot. Asistencia técnica",
             "Cot. Reparación de laboratorio",
             "Cot. Venta de productos",
@@ -145,18 +147,6 @@
             this.rightBut.Visible = false;
             this.rightBut.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RightBut_MouseClick);
             // 
-            // newSearch
-            // 
-            this.newSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.newSearch.Image = ((System.Drawing.Image)(resources.GetObject("newSearch.Image")));
-            this.newSearch.Location = new System.Drawing.Point(548, 25);
-            this.newSearch.Name = "newSearch";
-            this.newSearch.Size = new System.Drawing.Size(31, 27);
-            this.newSearch.TabIndex = 3;
-            this.newSearch.UseVisualStyleBackColor = true;
-            this.newSearch.Visible = false;
-            this.newSearch.Click += new System.EventHandler(this.new_Search);
-            // 
             // ordLab
             // 
             this.ordLab.AutoSize = true;
@@ -225,6 +215,45 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Buscar por:";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(15, 130);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(15, 208);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(15, 170);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // newSearch
+            // 
+            this.newSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.newSearch.Image = ((System.Drawing.Image)(resources.GetObject("newSearch.Image")));
+            this.newSearch.Location = new System.Drawing.Point(548, 25);
+            this.newSearch.Name = "newSearch";
+            this.newSearch.Size = new System.Drawing.Size(31, 27);
+            this.newSearch.TabIndex = 3;
+            this.newSearch.UseVisualStyleBackColor = true;
+            this.newSearch.Visible = false;
+            this.newSearch.Click += new System.EventHandler(this.new_Search);
+            // 
             // dbEnterprise1
             // 
             this.dbEnterprise1.Location = new System.Drawing.Point(0, 56);
@@ -253,36 +282,17 @@
             this.dbTecAsist1.Size = new System.Drawing.Size(920, 330);
             this.dbTecAsist1.TabIndex = 10;
             // 
-            // pictureBox1
+            // dbSolicitudesUC1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 170);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(15, 208);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 32;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 130);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 33;
-            this.pictureBox3.TabStop = false;
+            this.dbSolicitudesUC1.Location = new System.Drawing.Point(0, 58);
+            this.dbSolicitudesUC1.Name = "dbSolicitudesUC1";
+            this.dbSolicitudesUC1.Size = new System.Drawing.Size(920, 328);
+            this.dbSolicitudesUC1.TabIndex = 34;
             // 
             // viewDataBaseUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.dbSolicitudesUC1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -304,9 +314,9 @@
             this.Size = new System.Drawing.Size(1000, 470);
             this.countPanel.ResumeLayout(false);
             this.countPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,6 +345,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private dbSolicitudesUC dbSolicitudesUC1;
     }
 
 

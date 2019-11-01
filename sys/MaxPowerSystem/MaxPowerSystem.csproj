@@ -102,6 +102,12 @@
     <Compile Include="dbOrdExt.Designer.cs">
       <DependentUpon>dbOrdExt.cs</DependentUpon>
     </Compile>
+    <Compile Include="dbSolicitudesUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dbSolicitudesUC.Designer.cs">
+      <DependentUpon>dbSolicitudesUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="dbTecAsist.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dbOrdExt.resx">
       <DependentUpon>dbOrdExt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dbSolicitudesUC.resx">
+      <DependentUpon>dbSolicitudesUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dbTecAsist.resx">
       <DependentUpon>dbTecAsist.cs</DependentUpon>

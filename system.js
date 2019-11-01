@@ -1292,23 +1292,41 @@ app.get('/sol/:ord', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }else{
+            }else if(result.length != 0)
                 resp.send(result);
-            }
-                
+            else
+                resp.send("7");
           con.end();
         });
     });
 });
 
+app.get('/sol/emp/:emp', (req, resp) => {
+    const con = connectionSQL();
+    const emp = req.params.emp;
+    let sql =  "SELECT * FROM solicitudes WHERE cliente = '" + emp + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else if(result.length != 0)
+                resp.send(result);
+            else
+                resp.send("8");
+          con.end();
+        });
+    });
+});
 app.post('/sol', (req, resp) => {
     const con = connectionSQL();
     const data = req.body;
-    console.log(data);
-    console.log(data.cliente);
     const nof = parseInt(data.orden.split('-')[1]);
     let sql =  `INSERT INTO solicitudes (orden, fecha, procedencia, cliente, descr) VALUES ('${data.orden}', '${data.fecha}', '${data.proc}', '${data.cliente}', '${data.descr}'); UPDATE last SET num = ${nof};`;
-    //UPDATE last SET num = ${nof};
     con.connect(function(err) {
         if (err) {
             console.error(err);
