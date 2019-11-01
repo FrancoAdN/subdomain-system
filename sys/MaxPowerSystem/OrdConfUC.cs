@@ -47,13 +47,13 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "7")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 7)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 7)", "Maxpower System dice: ");
                     }
 
                     json = JToken.Parse(resp);
@@ -74,13 +74,13 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "12")
                     {
                         err = true;
-                        MessageBox.Show("No existen ordenes confirmadas (Cod. 12)");
+                        MessageBox.Show("No existen ordenes confirmadas (Cod. 12)", "Maxpower System dice: ");
                     }
 
                     json = JToken.Parse(resp);
@@ -116,13 +116,13 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "7")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 7)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 7)", "Maxpower System dice: ");
                     }
 
                     json = JToken.Parse(resp);
@@ -143,13 +143,13 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     else if (resp == "12")
                     {
                         err = true;
-                        MessageBox.Show("Todas las ordenes están confirmadas (Cod. 11)");
+                        MessageBox.Show("Todas las ordenes están confirmadas (Cod. 11)", "Maxpower System dice: ");
                     }
 
                     json = JToken.Parse(resp);

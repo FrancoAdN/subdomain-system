@@ -26,7 +26,7 @@ namespace MaxPowerSystem
             string desc = boxDesc.Text;
 
             if (string.IsNullOrEmpty(prec) || string.IsNullOrEmpty(cli) || string.IsNullOrEmpty(desc))
-                MessageBox.Show("Debe completar todos los campos para poder guardar la solicitud.");
+                MessageBox.Show("Debe completar todos los campos para poder guardar la solicitud.", "Maxpower System dice: ");
             else
             {
 
@@ -43,12 +43,12 @@ namespace MaxPowerSystem
                 resp = client.makeRequest();
                 if (resp == "0")
                 {
-                    MessageBox.Show("SQL ERROR (Cod. 0)");
+                    MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                     err = true;
                 }
                 else if (resp == "9")
                 {
-                    MessageBox.Show("No existen los registros buscados (Cod. 9)");
+                    MessageBox.Show("No existen los registros buscados (Cod. 9)", "Maxpower System dice: ");
                     err = true;
                 }
                 json = JToken.Parse(resp);
@@ -67,14 +67,14 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
                     if (resp == "0")
                     {
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         err = true;
                     }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
                     {
                         err = true;
-                        MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                        MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)", "Maxpower System dice: ");
                     }
                     if (!(json.Count() == 1))
                         err = true;
@@ -99,12 +99,12 @@ namespace MaxPowerSystem
                     resp = client.makeRequest();
 
                     if (resp == "0")
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                     else if (resp == "14")
-                        MessageBox.Show("No se pudo ingresar la solicitud (Cod. 14)");
+                        MessageBox.Show("No se pudo ingresar la solicitud (Cod. 14)", "Maxpower System dice: ");
                     else if (resp == "1")
                     {
-                        MessageBox.Show("La solicitud ha sido ingresada con éxito.");
+                        MessageBox.Show("La solicitud ha sido ingresada con éxito.", "Maxpower System dice: ");
                         boxDesc.Text = string.Empty;
                         boxCli.Text = string.Empty;
                         boxPrec.Text = string.Empty;

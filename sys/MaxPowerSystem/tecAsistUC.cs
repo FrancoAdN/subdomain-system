@@ -52,18 +52,18 @@ namespace MaxPowerSystem
                     if (resp == "0")
                     {
                         err = true;
-                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                        MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                     }
                     else if (resp == "6")
                     {
                         err = true;
-                        MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                        MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
                     }
                     json = JToken.Parse(resp);
                     if (json.Type != JTokenType.Array)
                     {
                         err = true;
-                        MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                        MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)", "Maxpower System dice: ");
                     }
 
                     if (!(json.Count() == 1))
@@ -73,16 +73,25 @@ namespace MaxPowerSystem
                 catch (WebException)
                 {
                     err = true;
-                    MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                    MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)", "Maxpower System dice: ");
                 }
 
                 if (!err)
                 {
-
                     List<Files> data = new List<Files>();
+                    string msg = $"Contacto 1: {json[0]["cont"]}\n\nContacto 2: {json[0]["contb"]}\n\n\nPresione \"Si\" para el contacto 1, \"No\" para el contacto 2";
+                    if (MessageBox.Show(msg, "Maxpower System dice: ", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        data.Add(new Files((string)json[0]["cont"], "<para>"));
+                        data.Add(new Files((string)json[0]["mail"], "<email>"));
+                    }
+                    else
+                    {
+                        data.Add(new Files((string)json[0]["contb"], "<para>"));
+                        data.Add(new Files((string)json[0]["mailb"], "<email>"));
+                    }
+
                     data.Add(new Files(DateTime.Now.ToString("dd/MM/yyyy"), "<fecha>"));
-                    data.Add(new Files((string)json[0]["cont"],"<para>"));
-                    data.Add(new Files((string)json[0]["mail"], "<email>"));
                     data.Add(new Files((string)json[0]["tel"], "<tel>"));
                     data.Add(new Files(boxEnterprise.Text, "<empresa>"));
                     data.Add(new Files(boxAsist.Text, "<asistencia>"));
@@ -97,22 +106,22 @@ namespace MaxPowerSystem
                         resp = client.makeRequest();
 
                         if (resp == "0")
-                            MessageBox.Show("SQL ERROR (Cod. 0)");
+                            MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                         else if (resp == "6")
-                            MessageBox.Show("No existen los registros buscados (Cod. 6)");
+                            MessageBox.Show("No existen los registros buscados (Cod. 6)", "Maxpower System dice: ");
 
                         json = JToken.Parse(resp);
                         if (json.Type != JTokenType.Array)
                         {
                             err = true;
-                            MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                            MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)", "Maxpower System dice: ");
                             Console.WriteLine(json["errorMessages"]);
                         }
 
                     }
                     catch (WebException)
                     {
-                        MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                        MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)", "Maxpower System dice: ");
                     }
 
                     if (!err)
@@ -128,7 +137,7 @@ namespace MaxPowerSystem
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show("Error al generar el archivo (Cod. 4)");
+                            MessageBox.Show("Error al generar el archivo (Cod. 4)", "Maxpower System dice: ");
 
                         }
 
@@ -169,17 +178,17 @@ namespace MaxPowerSystem
                             {
                                 resp = client.makeRequest();
                                 if (resp == "0")
-                                    MessageBox.Show("SQL ERROR (Cod. 0)");
+                                    MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
                                 else if (resp == "1")
-                                    MessageBox.Show("Operación finalizada con éxito");
+                                    MessageBox.Show("Operación finalizada con éxito", "Maxpower System dice: ");
                                 else if (resp == "2")
-                                    MessageBox.Show("Ya existen registros de la empresa ingresada (Cod. 2)");
+                                    MessageBox.Show("Ya existen registros de la empresa ingresada (Cod. 2)", "Maxpower System dice: ");
                                 else
-                                    MessageBox.Show("Error al enviar al servidor (Cod. 5)");
+                                    MessageBox.Show("Error al enviar al servidor (Cod. 5)", "Maxpower System dice: ");
                             }
                             catch (WebException)
                             {
-                                MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)");
+                                MessageBox.Show("No se pudo conectar con el servidor (Cod. 3)", "Maxpower System dice: ");
                             }
                             string f = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Asistencia Técnica\MAX-" + nof + "-AR19-1.docx";
                             System.IO.File.Delete(f);
@@ -192,7 +201,7 @@ namespace MaxPowerSystem
             }
             else
             {
-                MessageBox.Show("Todo los campos deben estar completos");
+                MessageBox.Show("Todo los campos deben estar completos", "Maxpower System dice: ");
             }
 
         }
@@ -204,7 +213,7 @@ namespace MaxPowerSystem
             if (!Char.IsDigit(chr) && chr != 8)
             {
                 e.Handled = true;
-                MessageBox.Show("Solo se aceptan numeros");
+                MessageBox.Show("Solo se aceptan numeros", "Maxpower System dice: ");
             }
         }
 
@@ -214,7 +223,7 @@ namespace MaxPowerSystem
             if (!Char.IsDigit(chr) && chr != 8)
             {
                 e.Handled = true;
-                MessageBox.Show("Solo se aceptan numeros");
+                MessageBox.Show("Solo se aceptan numeros", "Maxpower System dice: ");
             }
         }
 
@@ -224,7 +233,7 @@ namespace MaxPowerSystem
             if (!Char.IsDigit(chr) && chr != 8)
             {
                 e.Handled = true;
-                MessageBox.Show("Solo se aceptan numeros");
+                MessageBox.Show("Solo se aceptan numeros", "Maxpower System dice: ");
             }
         }
 
