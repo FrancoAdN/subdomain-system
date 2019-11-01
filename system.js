@@ -1307,7 +1307,7 @@ app.post('/sol', (req, resp) => {
     console.log(data);
     console.log(data.cliente);
     const nof = parseInt(data.orden.split('-')[1]);
-    let sql =  `INSERT INTO solicitudes (orden, fecha, procedencia, cliente, descr) values ('${data.orden}', '${data.fecha}', '${data.proc}', '${data.dias}', '${data.cliente}', '${data.descr}');
+    let sql =  `INSERT INTO solicitudes (orden, fecha, procedencia, cliente, descr) values ('${data.orden}', '${data.fecha}', '${data.proc}', '${data.dias}', 'a', '${data.descr}');
     UPDATE last SET num = ${nof};`;
     con.connect(function(err) {
         if (err) {
