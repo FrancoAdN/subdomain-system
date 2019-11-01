@@ -29,7 +29,7 @@ namespace MaxPowerSystem
                 MessageBox.Show("Debe completar todos los campos para poder guardar la solicitud.");
             else
             {
-                
+
 
                 JToken json = "";
                 bool err = false;
@@ -72,21 +72,34 @@ namespace MaxPowerSystem
                 if (!err)
                 {
                     JObject postJ = new JObject();
-                    postJ["prec"] = boxPrec.Text;
+                    postJ["proc"] = boxPrec.Text;
                     postJ["cliente"] = boxCli.Text;
                     postJ["descr"] = boxDesc.Text;
+                    postJ["fecha"] = DateTime.Now.ToString("dd/MM/yyyy");
 
-                    //client.endPoint = 
+                    client.endPoint = "http://system.maxpower-ar.com/sol";
+                    client.httpMethod = httpVerb.POST;
+                    client.postJSON = postJ.ToString();
+                    if (resp == "0")
+                        MessageBox.Show("SQL ERROR (Cod. 0)");
+                    else if (resp == "13")
+                        MessageBox.Show("Error al confirmar la orden (Cod. 13)");
+                    else if (resp == "1")
+                    {
+                        MessageBox.Show("La solicitud ha sido ingresada con éxito.");
+                        boxDesc.Text = string.Empty;
+                        boxCli.Text = string.Empty;
+                        boxPrec.Text = string.Empty;
+
+                    }
+
+
+
                 }
 
 
-                boxDesc.Text = string.Empty;
-                boxCli.Text = string.Empty;
-                boxPrec.Text = string.Empty;
+
             }
-                
-                
-            
         }
     }
 }

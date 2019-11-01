@@ -1034,14 +1034,14 @@ app.get('/tabla/:id', (req, resp) => {
 
 
 // region NOTIFICATIONS
-
+/*
 app.get('/notif', (req, resp) => {
     resp.send(notifications);
 });
 
 app.get('/notif/:id', (req, resp) => {
     resp.send(notifications[req.params.id]);
-});
+});*/
 // end of region
 
 
