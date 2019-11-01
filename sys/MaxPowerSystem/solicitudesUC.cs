@@ -85,7 +85,8 @@ namespace MaxPowerSystem
                 if (!err)
                 {
                     JObject postJ = new JObject();
-                    postJ["orden"] = "MAX-" +json[0]["num"]+"-AR19-1";
+                    int nof = (int)json[0]["num"] + 1;
+                    postJ["orden"] = "MAX-" + nof +"-AR19-1";
                     postJ["proc"] = prec;
                     postJ["cliente"] = cli;
                     postJ["descr"] = desc;
