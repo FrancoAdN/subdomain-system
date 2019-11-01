@@ -1079,18 +1079,22 @@ namespace MaxPowerSystem
             {
                 labEnt.Visible = true;
                 entBox.Visible = true;
+                pbEnt.Visible = true;
 
                 labCuit.Visible = true;
                 cuitBox.Visible = true;
+                pbCuit.Visible = true;
 
             }
             else
             {
                 labEnt.Visible = false;
                 entBox.Visible = false;
+                pbEnt.Visible = false;
 
                 labCuit.Visible = false;
                 cuitBox.Visible = false;
+                pbCuit.Visible = false;
             }
         }
 
@@ -1100,18 +1104,22 @@ namespace MaxPowerSystem
             {
                 ordBox.Visible = true;
                 ordLab.Visible = true;
+                pbOrd.Visible = true;
 
                 labCuit.Visible = true;
                 cuitBox.Visible = true;
+                pbCuit.Visible = true;
 
             }
             else
             {
                 ordBox.Visible = false;
                 ordLab.Visible = false;
+                pbOrd.Visible = false;
 
                 labCuit.Visible = false;
                 cuitBox.Visible = false;
+                pbCuit.Visible = false;
             }
         }
 
@@ -1121,18 +1129,22 @@ namespace MaxPowerSystem
             {
                 ordBox.Visible = true;
                 ordLab.Visible = true;
+                pbOrd.Visible = true;
 
                 entBox.Visible = true;
                 labEnt.Visible = true;
+                pbEnt.Visible = true;
 
             }
             else
             {
                 ordBox.Visible = false;
                 ordLab.Visible = false;
+                pbOrd.Visible = false;
 
                 entBox.Visible = false;
                 labEnt.Visible = false;
+                pbEnt.Visible = false;
             }
         }
 
