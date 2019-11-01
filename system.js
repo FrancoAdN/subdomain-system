@@ -1278,6 +1278,7 @@ app.get('/sol', (req, resp) => {
         });
     });
 });
+
 app.get('/sol/:ord', (req, resp) => {
     const con = connectionSQL();
     const ord = req.params.ord;
