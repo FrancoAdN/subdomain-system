@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const schedule = require('node-schedule');
 
-
+/*
 function checkDate(fech, sum){
     let sp = fech.split('/');
     const days = sp[0] ;
@@ -84,7 +84,7 @@ const j = schedule.scheduleJob(rule, function(){
 
 
 });
-
+*/
 
 function connectionSQL(){
     const con = mysql.createConnection({
