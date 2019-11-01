@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const schedule = require('node-schedule');
 
-
+/*
 function checkDate(fech, sum){
     let sp = fech.split('/');
     const days = sp[0] ;
@@ -34,8 +34,8 @@ let notifications = [];
 
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 12;
-rule.minute = 10;
+//rule.hour = 12;
+//rule.minute = 10;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -84,7 +84,7 @@ const j = schedule.scheduleJob(rule, function(){
 
 
 });
-
+*/
 
 function connectionSQL(){
     const con = mysql.createConnection({
@@ -1034,14 +1034,14 @@ app.get('/tabla/:id', (req, resp) => {
 
 
 // region NOTIFICATIONS
-
+/*
 app.get('/notif', (req, resp) => {
     resp.send(notifications);
 });
 
 app.get('/notif/:id', (req, resp) => {
     resp.send(notifications[req.params.id]);
-});
+});*/
 // end of region
 
 
@@ -1254,6 +1254,99 @@ app.post('/confirm', (req, resp) => {
 
 });
 //end of region
+
+
+//region SOLICITUDES
+
+app.get('/sol', (req, resp) => {
+    const con = connectionSQL();
+    let sql =  'SELECT * FROM solicitudes';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                resp.send(result);
+            }
+                
+          con.end();
+        });
+    });
+});
+
+app.get('/sol/:ord', (req, resp) => {
+    const con = connectionSQL();
+    const ord = req.params.ord;
+    let sql =  "SELECT * FROM solicitudes WHERE orden = '" + ord + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else if(result.length != 0)
+                resp.send(result);
+            else
+                resp.send("7");
+          con.end();
+        });
+    });
+});
+
+app.get('/sol/emp/:emp', (req, resp) => {
+    const con = connectionSQL();
+    const emp = req.params.emp;
+    let sql =  "SELECT * FROM solicitudes WHERE cliente = '" + emp + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else if(result.length != 0)
+                resp.send(result);
+            else
+                resp.send("8");
+          con.end();
+        });
+    });
+});
+app.post('/sol', (req, resp) => {
+    const con = connectionSQL();
+    const data = req.body;
+    const nof = parseInt(data.orden.split('-')[1]);
+    let sql =  `INSERT INTO solicitudes (orden, fecha, procedencia, cliente, descr) VALUES ('${data.orden}', '${data.fecha}', '${data.proc}', '${data.cliente}', '${data.descr}'); UPDATE last SET num = ${nof};`;
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                resp.send("1");
+            }
+                
+          con.end();
+        });
+    });
+
+});
+
+//enf of region
 
 
 

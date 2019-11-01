@@ -63,7 +63,6 @@ C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\bin\Debug\MaxPowerSyst
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\bin\Debug\MaxPowerSystem.pdb
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\bin\Debug\Newtonsoft.Json.dll
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\bin\Debug\Newtonsoft.Json.xml
-C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csprojAssemblyReference.cache
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\Interop.Microsoft.Office.Core.dll
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\Interop.Microsoft.Office.Interop.Word.dll
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\Interop.VBIDE.dll
@@ -148,3 +147,5 @@ C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSyst
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.OrdConfUC.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.NotificacionesUC.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.solicitudesUC.resources
+C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.dbSolicitudesUC.resources
+C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csprojAssemblyReference.cache
