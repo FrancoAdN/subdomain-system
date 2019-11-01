@@ -1003,6 +1003,7 @@ namespace MaxPowerSystem
                 dbVentProd1.Hide();
                 dbEnterprise1.Hide();
                 dbTecAsist1.Hide();
+
                 if (!err)
                 {
                     if (json.Count() == 1)
@@ -1178,7 +1179,7 @@ namespace MaxPowerSystem
             }
             else if (view == "Solicitudes")
             {
-                if (dbVentProd1.Index > 0)
+                if (dbSolicitudesUC1.Index > 0)
                 {
                     dbSolicitudesUC1.Index -= 1;
                     leftLab.Text = (dbSolicitudesUC1.Index + 1).ToString();
