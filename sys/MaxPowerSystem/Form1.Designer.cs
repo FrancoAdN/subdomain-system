@@ -467,7 +467,6 @@ namespace MaxPowerSystem
             this.label5.TabIndex = 0;
             this.label5.Text = "Menu";
             // 
-<<<<<<< HEAD
             // solicitudesUC1
             // 
             this.solicitudesUC1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -484,8 +483,6 @@ namespace MaxPowerSystem
             this.notificacionesUC1.Size = new System.Drawing.Size(984, 561);
             this.notificacionesUC1.TabIndex = 8;
             // 
-=======
->>>>>>> 1cf4ff9d358692b3813d793cc68ec45d9adcd41b
             // compNacUC1
             // 
             this.compNacUC1.Location = new System.Drawing.Point(3, 28);
