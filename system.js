@@ -34,8 +34,8 @@ let notifications = [];
 
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 12;
-rule.minute = 10;
+//rule.hour = 12;
+//rule.minute = 10;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -1254,6 +1254,21 @@ app.post('/confirm', (req, resp) => {
 
 });
 //end of region
+
+
+//region SOLICITUDES
+
+app.get('/sol', (req, resp) => {
+    resp.send("1");
+});
+
+app.post('/sol', (req, resp) => {
+    const data = req.body;
+    console.log(data);
+    resp.send("1");
+});
+
+//enf of region
 
 
 

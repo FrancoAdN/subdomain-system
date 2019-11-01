@@ -545,7 +545,6 @@ namespace MaxPowerSystem
             this.label5.TabIndex = 0;
             this.label5.Text = "Menu";
             // 
-<<<<<<< HEAD
             // compNacUC1
             // 
             this.compNacUC1.Location = new System.Drawing.Point(3, 28);
@@ -612,8 +611,6 @@ namespace MaxPowerSystem
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-=======
->>>>>>> d0810b84f53b4c0435e4695ca9ebc09c2ad530e4
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
