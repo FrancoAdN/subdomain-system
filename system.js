@@ -35,7 +35,7 @@ let notifications = [];
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 08;
-rule.minute = 55;
+rule.minute = 58;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -1035,7 +1035,7 @@ app.get('/tabla/:id', (req, resp) => {
 
 
 // region NOTIFICATIONS
-/*
+
 app.get('/notif', (req, resp) => {
     resp.send(notifications);
 });
@@ -1043,7 +1043,6 @@ app.get('/notif', (req, resp) => {
 app.get('/notif/:id', (req, resp) => {
     resp.send(notifications[req.params.id]);
 });
-*/
 // end of region
 
 
