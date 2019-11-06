@@ -26,16 +26,16 @@ function checkDate(fech, sum){
     console.log(five, today);
     console.log(week, today);
 
-    if(today.toDateString() < date.toDateString())
-        return 0;
-    else if(today.toDateString() == date.toDateString())
-        return 1;
-    else if(today.toDateString() == ant.toDateString())
-        return 2;
-    else if(today.toDateString() == week.toDateString())
+    if(today.toDateString() == week.toDateString())
         return 4;
     else if(today.toDateString() == five.toDateString())
         return 5;
+    else if(today.toDateString() == ant.toDateString())
+        return 2;
+    else if(today.toDateString() == date.toDateString())
+        return 1;
+    else if(today.toDateString() < date.toDateString())
+        return 0;
     else
         return null;
 
@@ -46,7 +46,7 @@ let notifications = [];
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 09;
-rule.minute = 27;
+rule.minute = 38;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
