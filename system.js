@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const schedule = require('node-schedule');
 
-/*
+
 function checkDate(fech, sum){
     let sp = fech.split('/');
     const days = sp[0] ;
@@ -34,8 +34,8 @@ let notifications = [];
 
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-//rule.hour = 12;
-//rule.minute = 10;
+rule.hour = 08;
+rule.minute = 45;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -84,7 +84,7 @@ const j = schedule.scheduleJob(rule, function(){
 
 
 });
-*/
+
 
 function connectionSQL(){
     const con = mysql.createConnection({
