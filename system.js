@@ -15,20 +15,20 @@ function checkDate(fech, sum){
     let week = new Date(year, month, days);
     let date = new Date(year, month, days);
     ant.setDate(date.getDate() + (sum - 1));
-    five.setDate(date.getDate() + (sum - 5));
-    week.setDate(date.getDate() + (sum - 7));
+    if(sum > 5)
+        five.setDate(date.getDate() + (sum - 5));
+    if(sum > 7)
+        week.setDate(date.getDate() + (sum - 7));
     date.setDate(date.getDate() + sum);
     
     
     
     let today = new Date();
 
-    console.log(five, today);
-    console.log(week, today);
 
-    if(today.toDateString() == week.toDateString())
+    if(today.toDateString() == week.toDateString() && sum > 7)
         return 4;
-    else if(today.toDateString() == five.toDateString())
+    else if(today.toDateString() == five.toDateString() && sum > 5)
         return 5;
     else if(today.toDateString() == ant.toDateString())
         return 2;
@@ -46,7 +46,7 @@ let notifications = [];
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 09;
-rule.minute = 38;
+rule.minute = 44;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
