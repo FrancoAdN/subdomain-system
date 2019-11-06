@@ -43,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(98, 84);
+            this.label1.Location = new System.Drawing.Point(112, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 18);
             this.label1.TabIndex = 0;
@@ -81,7 +81,7 @@
             // ordBox
             // 
             this.ordBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.ordBox.Location = new System.Drawing.Point(163, 81);
+            this.ordBox.Location = new System.Drawing.Point(177, 88);
             this.ordBox.Name = "ordBox";
             this.ordBox.Size = new System.Drawing.Size(189, 24);
             this.ordBox.TabIndex = 5;
@@ -106,7 +106,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(60, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(74, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 81;
