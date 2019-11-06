@@ -53,6 +53,7 @@ const j = schedule.scheduleJob(rule, function(){
         con.query(sql, function (err, result, fields) {
             if (err) { console.error(err);}
             else{
+                console.log(result);
                 for(let r of result[0]){
                     let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
