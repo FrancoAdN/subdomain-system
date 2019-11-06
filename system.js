@@ -34,8 +34,8 @@ let notifications = [];
 
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-rule.hour = 08;
-rule.minute = 58;
+rule.hour = 09;
+rule.minute = 01;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -48,6 +48,7 @@ const j = schedule.scheduleJob(rule, function(){
     sql += "SELECT pmde, fecha_conf, orden FROM rep_lab WHERE entregado = false AND Confirmado = true;";
     sql += "SELECT pmde, fecha_conf, orden FROM ord_nac WHERE entregado = false AND Confirmado = true;";
     sql += "SELECT pmde, fecha_conf, orden FROM ord_ext WHERE entregado = false AND Confirmado = true;";
+    sql += "SELECT pmde, fecha_conf, orden FROM asis_tec WHERE entregado = false AND Confirmado = true;";
     con.connect(function(err) {
         if (err) {console.error(err);}
         con.query(sql, function (err, result, fields) {
@@ -73,6 +74,12 @@ const j = schedule.scheduleJob(rule, function(){
                     let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
                         notifications.push({cod: notif, db: 'ord_ext', orden: r.orden});
+                }
+
+                for(let r of result[4]){
+                    let notif = checkDate(r.fecha_conf, r.pmde);
+                    if(notif != null)
+                        notifications.push({cod: notif, db: 'asis_tec', orden: r.orden});
                 }
 
             }
