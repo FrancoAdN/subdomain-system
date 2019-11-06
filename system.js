@@ -19,11 +19,12 @@ function checkDate(fech, sum){
     week.setDate(date.getDate() + (sum - 7));
     date.setDate(date.getDate() + sum);
     
-    console.log(five, date);
-    console.log(week, date);
+    
     
     let today = new Date();
 
+    console.log(five, today);
+    console.log(week, today);
 
     if(today.toDateString() < date.toDateString())
         return 0;
@@ -45,7 +46,7 @@ let notifications = [];
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
 rule.hour = 09;
-rule.minute = 18;
+rule.minute = 21;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
