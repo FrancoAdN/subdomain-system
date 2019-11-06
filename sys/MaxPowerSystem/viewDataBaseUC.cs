@@ -1252,5 +1252,9 @@ namespace MaxPowerSystem
             }
         }
 
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Pestaña para realizar busquedas y/o consultas en la base de datos de MaxPower System.");
+        }
     }
 }

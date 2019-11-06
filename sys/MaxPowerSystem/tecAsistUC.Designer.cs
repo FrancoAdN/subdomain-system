@@ -59,6 +59,7 @@ namespace MaxPowerSystem
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,7 +72,7 @@ namespace MaxPowerSystem
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label1.Location = new System.Drawing.Point(50, 24);
+            this.label1.Location = new System.Drawing.Point(54, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 18);
             this.label1.TabIndex = 0;
@@ -81,7 +82,7 @@ namespace MaxPowerSystem
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label2.Location = new System.Drawing.Point(50, 104);
+            this.label2.Location = new System.Drawing.Point(54, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 1;
@@ -91,7 +92,7 @@ namespace MaxPowerSystem
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(50, 271);
+            this.label3.Location = new System.Drawing.Point(54, 292);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 18);
             this.label3.TabIndex = 2;
@@ -101,7 +102,7 @@ namespace MaxPowerSystem
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(50, 320);
+            this.label4.Location = new System.Drawing.Point(54, 341);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 18);
             this.label4.TabIndex = 3;
@@ -110,7 +111,7 @@ namespace MaxPowerSystem
             // boxEnterprise
             // 
             this.boxEnterprise.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxEnterprise.Location = new System.Drawing.Point(171, 20);
+            this.boxEnterprise.Location = new System.Drawing.Point(175, 41);
             this.boxEnterprise.Name = "boxEnterprise";
             this.boxEnterprise.Size = new System.Drawing.Size(212, 24);
             this.boxEnterprise.TabIndex = 4;
@@ -118,7 +119,7 @@ namespace MaxPowerSystem
             // boxAsist
             // 
             this.boxAsist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxAsist.Location = new System.Drawing.Point(171, 101);
+            this.boxAsist.Location = new System.Drawing.Point(175, 122);
             this.boxAsist.Multiline = true;
             this.boxAsist.Name = "boxAsist";
             this.boxAsist.Size = new System.Drawing.Size(212, 91);
@@ -127,7 +128,7 @@ namespace MaxPowerSystem
             // boxPrice
             // 
             this.boxPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxPrice.Location = new System.Drawing.Point(171, 269);
+            this.boxPrice.Location = new System.Drawing.Point(175, 290);
             this.boxPrice.Name = "boxPrice";
             this.boxPrice.Size = new System.Drawing.Size(212, 24);
             this.boxPrice.TabIndex = 6;
@@ -136,7 +137,7 @@ namespace MaxPowerSystem
             // boxForm
             // 
             this.boxForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxForm.Location = new System.Drawing.Point(171, 317);
+            this.boxForm.Location = new System.Drawing.Point(175, 338);
             this.boxForm.Name = "boxForm";
             this.boxForm.Size = new System.Drawing.Size(212, 24);
             this.boxForm.TabIndex = 7;
@@ -145,7 +146,7 @@ namespace MaxPowerSystem
             // 
             this.labPor.AutoSize = true;
             this.labPor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labPor.Location = new System.Drawing.Point(514, 23);
+            this.labPor.Location = new System.Drawing.Point(518, 44);
             this.labPor.Name = "labPor";
             this.labPor.Size = new System.Drawing.Size(32, 18);
             this.labPor.TabIndex = 8;
@@ -154,7 +155,7 @@ namespace MaxPowerSystem
             // boxDays
             // 
             this.boxDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxDays.Location = new System.Drawing.Point(552, 20);
+            this.boxDays.Location = new System.Drawing.Point(556, 41);
             this.boxDays.Name = "boxDays";
             this.boxDays.Size = new System.Drawing.Size(27, 24);
             this.boxDays.TabIndex = 9;
@@ -164,7 +165,7 @@ namespace MaxPowerSystem
             // 
             this.labDay.AutoSize = true;
             this.labDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labDay.Location = new System.Drawing.Point(585, 23);
+            this.labDay.Location = new System.Drawing.Point(589, 44);
             this.labDay.Name = "labDay";
             this.labDay.Size = new System.Drawing.Size(55, 18);
             this.labDay.TabIndex = 10;
@@ -173,7 +174,7 @@ namespace MaxPowerSystem
             // boxHours
             // 
             this.boxHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxHours.Location = new System.Drawing.Point(646, 20);
+            this.boxHours.Location = new System.Drawing.Point(650, 41);
             this.boxHours.Name = "boxHours";
             this.boxHours.Size = new System.Drawing.Size(25, 24);
             this.boxHours.TabIndex = 11;
@@ -183,7 +184,7 @@ namespace MaxPowerSystem
             // 
             this.labAsist.AutoSize = true;
             this.labAsist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labAsist.Location = new System.Drawing.Point(677, 23);
+            this.labAsist.Location = new System.Drawing.Point(681, 44);
             this.labAsist.Name = "labAsist";
             this.labAsist.Size = new System.Drawing.Size(270, 18);
             this.labAsist.TabIndex = 12;
@@ -193,7 +194,7 @@ namespace MaxPowerSystem
             // 
             this.labTec.AutoSize = true;
             this.labTec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labTec.Location = new System.Drawing.Point(677, 57);
+            this.labTec.Location = new System.Drawing.Point(681, 78);
             this.labTec.Name = "labTec";
             this.labTec.Size = new System.Drawing.Size(98, 18);
             this.labTec.TabIndex = 13;
@@ -204,7 +205,7 @@ namespace MaxPowerSystem
             // 
             this.labForAsist.AutoSize = true;
             this.labForAsist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labForAsist.Location = new System.Drawing.Point(770, 57);
+            this.labForAsist.Location = new System.Drawing.Point(774, 78);
             this.labForAsist.Name = "labForAsist";
             this.labForAsist.Size = new System.Drawing.Size(173, 18);
             this.labForAsist.TabIndex = 14;
@@ -213,7 +214,7 @@ namespace MaxPowerSystem
             // boxDetalle
             // 
             this.boxDetalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.boxDetalle.Location = new System.Drawing.Point(475, 101);
+            this.boxDetalle.Location = new System.Drawing.Point(479, 122);
             this.boxDetalle.Multiline = true;
             this.boxDetalle.Name = "boxDetalle";
             this.boxDetalle.Size = new System.Drawing.Size(472, 174);
@@ -224,7 +225,7 @@ namespace MaxPowerSystem
             this.buttonWordFile.AutoSize = true;
             this.buttonWordFile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonWordFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.buttonWordFile.Location = new System.Drawing.Point(390, 355);
+            this.buttonWordFile.Location = new System.Drawing.Point(394, 376);
             this.buttonWordFile.Name = "buttonWordFile";
             this.buttonWordFile.Size = new System.Drawing.Size(193, 31);
             this.buttonWordFile.TabIndex = 16;
@@ -236,7 +237,7 @@ namespace MaxPowerSystem
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label5.Location = new System.Drawing.Point(50, 66);
+            this.label5.Location = new System.Drawing.Point(54, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 18);
             this.label5.TabIndex = 17;
@@ -245,7 +246,7 @@ namespace MaxPowerSystem
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox1.Location = new System.Drawing.Point(171, 63);
+            this.textBox1.Location = new System.Drawing.Point(175, 84);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(212, 24);
             this.textBox1.TabIndex = 18;
@@ -253,7 +254,7 @@ namespace MaxPowerSystem
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.TabIndex = 31;
@@ -262,7 +263,7 @@ namespace MaxPowerSystem
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 261);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 282);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.TabIndex = 32;
@@ -271,7 +272,7 @@ namespace MaxPowerSystem
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 312);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 333);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.TabIndex = 33;
@@ -281,7 +282,7 @@ namespace MaxPowerSystem
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label9.Location = new System.Drawing.Point(50, 223);
+            this.label9.Location = new System.Drawing.Point(54, 244);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 73;
@@ -294,7 +295,7 @@ namespace MaxPowerSystem
             this.combMon.Items.AddRange(new object[] {
             "USD",
             "ARS"});
-            this.combMon.Location = new System.Drawing.Point(171, 220);
+            this.combMon.Location = new System.Drawing.Point(175, 241);
             this.combMon.Name = "combMon";
             this.combMon.Size = new System.Drawing.Size(212, 26);
             this.combMon.TabIndex = 72;
@@ -303,7 +304,7 @@ namespace MaxPowerSystem
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(50, 122);
+            this.label6.Location = new System.Drawing.Point(54, 143);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 18);
             this.label6.TabIndex = 74;
@@ -312,7 +313,7 @@ namespace MaxPowerSystem
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(8, 216);
+            this.pictureBox4.Location = new System.Drawing.Point(15, 235);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.TabIndex = 75;
@@ -321,7 +322,7 @@ namespace MaxPowerSystem
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.Location = new System.Drawing.Point(8, 60);
+            this.pictureBox5.Location = new System.Drawing.Point(15, 78);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(32, 32);
             this.pictureBox5.TabIndex = 76;
@@ -330,16 +331,27 @@ namespace MaxPowerSystem
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(8, 108);
+            this.pictureBox6.Location = new System.Drawing.Point(15, 129);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(32, 32);
             this.pictureBox6.TabIndex = 77;
             this.pictureBox6.TabStop = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(360, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(180, 23);
+            this.label10.TabIndex = 100;
+            this.label10.Text = "Asistencia técnica";
+            // 
             // tecAsistUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
@@ -369,7 +381,7 @@ namespace MaxPowerSystem
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "tecAsistUC";
-            this.Size = new System.Drawing.Size(981, 400);
+            this.Size = new System.Drawing.Size(981, 430);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -413,5 +425,6 @@ namespace MaxPowerSystem
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label10;
     }
 }

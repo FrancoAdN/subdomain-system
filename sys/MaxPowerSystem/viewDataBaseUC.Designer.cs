@@ -46,11 +46,12 @@
             this.pbCuit = new System.Windows.Forms.PictureBox();
             this.pbEnt = new System.Windows.Forms.PictureBox();
             this.newSearch = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dbSolicitudesUC1 = new MaxPowerSystem.dbSolicitudesUC();
             this.dbEnterprise1 = new MaxPowerSystem.dbEnterprise();
             this.dbVentProd1 = new MaxPowerSystem.dbVentProd();
             this.dbOrdExt1 = new MaxPowerSystem.dbOrdExt();
             this.dbTecAsist1 = new MaxPowerSystem.dbTecAsist();
-            this.dbSolicitudesUC1 = new MaxPowerSystem.dbSolicitudesUC();
             this.countPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOrd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCuit)).BeginInit();
@@ -254,44 +255,55 @@
             this.newSearch.Visible = false;
             this.newSearch.Click += new System.EventHandler(this.new_Search);
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.Location = new System.Drawing.Point(917, 25);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 31);
+            this.button1.TabIndex = 35;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            // 
+            // dbSolicitudesUC1
+            // 
+            this.dbSolicitudesUC1.Location = new System.Drawing.Point(0, 58);
+            this.dbSolicitudesUC1.Name = "dbSolicitudesUC1";
+            this.dbSolicitudesUC1.Size = new System.Drawing.Size(997, 328);
+            this.dbSolicitudesUC1.TabIndex = 34;
+            // 
             // dbEnterprise1
             // 
             this.dbEnterprise1.Location = new System.Drawing.Point(0, 56);
             this.dbEnterprise1.Name = "dbEnterprise1";
-            this.dbEnterprise1.Size = new System.Drawing.Size(920, 333);
+            this.dbEnterprise1.Size = new System.Drawing.Size(997, 333);
             this.dbEnterprise1.TabIndex = 14;
             // 
             // dbVentProd1
             // 
             this.dbVentProd1.Location = new System.Drawing.Point(0, 56);
             this.dbVentProd1.Name = "dbVentProd1";
-            this.dbVentProd1.Size = new System.Drawing.Size(920, 343);
+            this.dbVentProd1.Size = new System.Drawing.Size(997, 343);
             this.dbVentProd1.TabIndex = 12;
             // 
             // dbOrdExt1
             // 
             this.dbOrdExt1.Location = new System.Drawing.Point(0, 56);
             this.dbOrdExt1.Name = "dbOrdExt1";
-            this.dbOrdExt1.Size = new System.Drawing.Size(920, 330);
+            this.dbOrdExt1.Size = new System.Drawing.Size(997, 330);
             this.dbOrdExt1.TabIndex = 11;
             // 
             // dbTecAsist1
             // 
             this.dbTecAsist1.Location = new System.Drawing.Point(0, 56);
             this.dbTecAsist1.Name = "dbTecAsist1";
-            this.dbTecAsist1.Size = new System.Drawing.Size(920, 330);
+            this.dbTecAsist1.Size = new System.Drawing.Size(997, 330);
             this.dbTecAsist1.TabIndex = 10;
-            // 
-            // dbSolicitudesUC1
-            // 
-            this.dbSolicitudesUC1.Location = new System.Drawing.Point(0, 58);
-            this.dbSolicitudesUC1.Name = "dbSolicitudesUC1";
-            this.dbSolicitudesUC1.Size = new System.Drawing.Size(920, 328);
-            this.dbSolicitudesUC1.TabIndex = 34;
             // 
             // viewDataBaseUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dbSolicitudesUC1);
             this.Controls.Add(this.pbOrd);
             this.Controls.Add(this.pbCuit);
@@ -346,6 +358,7 @@
         private System.Windows.Forms.PictureBox pbCuit;
         private System.Windows.Forms.PictureBox pbOrd;
         private dbSolicitudesUC dbSolicitudesUC1;
+        private System.Windows.Forms.Button button1;
     }
 
 

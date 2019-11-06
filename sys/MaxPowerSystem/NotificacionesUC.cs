@@ -40,7 +40,7 @@ namespace MaxPowerSystem
             if (json.Type == JTokenType.Array)
             {
                 Controls.Remove(panel);
-                panel.Location = new System.Drawing.Point(50, 50);
+                panel.Location = new System.Drawing.Point(100, 60);
                 panel.Size = new Size(800, 400);
                 panel.MaximumSize = new Size(800, 400);
                 panel.AutoScroll = true;
@@ -154,5 +154,8 @@ namespace MaxPowerSystem
 
             
         }
+
+
+
     }
 }

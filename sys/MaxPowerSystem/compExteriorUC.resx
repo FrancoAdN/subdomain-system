@@ -118,25 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
-        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAXn0AAF59AFCcMjOAAAC3klE
-        QVRYR8WXS+hNURSHr2dMFCWPCYUBA0YGRh4Tr2KCZGoujxBKKRkzkdeM8owZE48ZChNFMcFAFCWPvF/f
-        d7rrtu9xz+ve/z+/+mrfffZaa5999157nVZNTYPNcAlewG/4k+ML3IcjsATGwcCaCjtAx98gH7SIt3AR
-        VsBYaKyRsAruwC/oFeQHfG5ju9eY93AcZkJtuXS+tW+ROnMiz+E0bIV1sLiN7W1wBp5BftJ3YRFUyuCH
-        wP8zdfAYnNRsGAVF8pljtoM2qY8nsAwK5bIbJA3u8h6DWdBU2mirj/D3EBZAT62GNxCDP4DLOshu1lYf
-        +gq/V2EydMndfhtikKug4Wgo0iSY0cZ2kfShr1hZj/Ae6JJLn55tl67qzQ/Cyza2y6SvkxD+3ajzINN0
-        uAfx8BG4kap0FMLGdpXmgL7DZj9kMsN9hXjgDq4jM57nX2zX0U6IOCY3//osY0WnS+NM68hxplxpYmMM
-        Y32EtZDl9piAiaTsnA8qfZ+FiHcAujafu3W4tRci3nk74sdPMKXW1UYwz4vtuloPxjLmAztiAmYs83pd
-        NT0FIWNEdnxqx/+cgPdDx4nL4vLUVb8T2ADxF9y0I70smmzCfiewD8LuhB1pFmxyDPuZgL7PgTbWDFug
-        dbjdIU0SUT8TSBPRK1gIraWQVj9eTHXUzwR2Q9hchvGQ3VQXIB4M52UUVdJ32AQdrQQLyHA43NfxdZgI
-        HY0BM1oMGOqCJC313oHl+j+ydLZ6jUkMVUlm8CjJPP/WAYUnzdLZ7BSTMEecgjp7Ii9ttE3zjL8nQKks
-        na1ew0jcPBYTOi3LEz5zzC5Iy3KLFoNnBUgdzYdrkH5g2PYMe597paYfJqZw+0wyjknt/M9d9so3z8vS
-        2erVr6FwllL1aeZRuwHLoWwzl2oEzAXfwBruE+QDpfjmr+EKeM67jtogciJTYA1YRlnJWEx4n7tpb4EX
-        i7nd9JpluGq1Wn8BUFBI/cIcu7AAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6

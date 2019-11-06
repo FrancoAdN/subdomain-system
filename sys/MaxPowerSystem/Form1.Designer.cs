@@ -83,7 +83,7 @@ namespace MaxPowerSystem
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             flowLayoutPanel1.Controls.Add(this.button1);
             flowLayoutPanel1.Controls.Add(this.button4);
             flowLayoutPanel1.Controls.Add(this.button2);
@@ -109,7 +109,7 @@ namespace MaxPowerSystem
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -127,7 +127,7 @@ namespace MaxPowerSystem
             // button4
             // 
             this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -143,7 +143,7 @@ namespace MaxPowerSystem
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -159,7 +159,7 @@ namespace MaxPowerSystem
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -176,7 +176,7 @@ namespace MaxPowerSystem
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -193,7 +193,7 @@ namespace MaxPowerSystem
             // button8
             // 
             this.button8.AutoSize = true;
-            this.button8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
@@ -209,7 +209,7 @@ namespace MaxPowerSystem
             // 
             // ATButton
             // 
-            this.ATButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ATButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.ATButton.FlatAppearance.BorderSize = 0;
             this.ATButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ATButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
@@ -226,7 +226,7 @@ namespace MaxPowerSystem
             // 
             // RLButton
             // 
-            this.RLButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.RLButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.RLButton.FlatAppearance.BorderSize = 0;
             this.RLButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RLButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -243,7 +243,7 @@ namespace MaxPowerSystem
             // 
             // VPButton
             // 
-            this.VPButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.VPButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.VPButton.FlatAppearance.BorderSize = 0;
             this.VPButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VPButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,7 +261,7 @@ namespace MaxPowerSystem
             // button3
             // 
             this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -277,7 +277,7 @@ namespace MaxPowerSystem
             // 
             // OCNButton
             // 
-            this.OCNButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.OCNButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.OCNButton.FlatAppearance.BorderSize = 0;
             this.OCNButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OCNButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -294,7 +294,7 @@ namespace MaxPowerSystem
             // 
             // OCEButton
             // 
-            this.OCEButton.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.OCEButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.OCEButton.FlatAppearance.BorderSize = 0;
             this.OCEButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OCEButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,7 +312,7 @@ namespace MaxPowerSystem
             // OACButton
             // 
             this.OACButton.AutoSize = true;
-            this.OACButton.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.OACButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.OACButton.FlatAppearance.BorderSize = 0;
             this.OACButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OACButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -329,7 +329,7 @@ namespace MaxPowerSystem
             // button9
             // 
             this.button9.AutoSize = true;
-            this.button9.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -345,7 +345,7 @@ namespace MaxPowerSystem
             // button10
             // 
             this.button10.AutoSize = true;
-            this.button10.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -361,7 +361,7 @@ namespace MaxPowerSystem
             // button11
             // 
             this.button11.AutoSize = true;
-            this.button11.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -428,63 +428,63 @@ namespace MaxPowerSystem
             // 
             // solicitudesUC1
             // 
-            this.solicitudesUC1.Location = new System.Drawing.Point(0, 0);
+            this.solicitudesUC1.Location = new System.Drawing.Point(15, 15);
             this.solicitudesUC1.Name = "solicitudesUC1";
             this.solicitudesUC1.Size = new System.Drawing.Size(984, 561);
             this.solicitudesUC1.TabIndex = 9;
             // 
             // notificacionesUC1
             // 
-            this.notificacionesUC1.Location = new System.Drawing.Point(0, 0);
+            this.notificacionesUC1.Location = new System.Drawing.Point(15, 0);
             this.notificacionesUC1.Name = "notificacionesUC1";
             this.notificacionesUC1.Size = new System.Drawing.Size(984, 561);
             this.notificacionesUC1.TabIndex = 8;
             // 
             // compNacUC1
             // 
-            this.compNacUC1.Location = new System.Drawing.Point(3, 0);
+            this.compNacUC1.Location = new System.Drawing.Point(100, 15);
             this.compNacUC1.Name = "compNacUC1";
             this.compNacUC1.Size = new System.Drawing.Size(984, 561);
             this.compNacUC1.TabIndex = 6;
             // 
             // compExteriorUC1
             // 
-            this.compExteriorUC1.Location = new System.Drawing.Point(3, 0);
+            this.compExteriorUC1.Location = new System.Drawing.Point(100, 15);
             this.compExteriorUC1.Name = "compExteriorUC1";
             this.compExteriorUC1.Size = new System.Drawing.Size(981, 561);
             this.compExteriorUC1.TabIndex = 5;
             // 
             // repProdUC1
             // 
-            this.repProdUC1.Location = new System.Drawing.Point(3, 0);
+            this.repProdUC1.Location = new System.Drawing.Point(100, 15);
             this.repProdUC1.Name = "repProdUC1";
             this.repProdUC1.Size = new System.Drawing.Size(981, 561);
             this.repProdUC1.TabIndex = 4;
             // 
             // ventaProdUC1
             // 
-            this.ventaProdUC1.Location = new System.Drawing.Point(3, 0);
+            this.ventaProdUC1.Location = new System.Drawing.Point(100, 15);
             this.ventaProdUC1.Name = "ventaProdUC1";
             this.ventaProdUC1.Size = new System.Drawing.Size(981, 561);
             this.ventaProdUC1.TabIndex = 3;
             // 
             // tecAsistUC1
             // 
-            this.tecAsistUC1.Location = new System.Drawing.Point(3, 0);
+            this.tecAsistUC1.Location = new System.Drawing.Point(15, 15);
             this.tecAsistUC1.Name = "tecAsistUC1";
             this.tecAsistUC1.Size = new System.Drawing.Size(984, 561);
             this.tecAsistUC1.TabIndex = 1;
             // 
             // viewDataBaseUC1
             // 
-            this.viewDataBaseUC1.Location = new System.Drawing.Point(3, 0);
+            this.viewDataBaseUC1.Location = new System.Drawing.Point(15, 0);
             this.viewDataBaseUC1.Name = "viewDataBaseUC1";
             this.viewDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.viewDataBaseUC1.TabIndex = 0;
             // 
             // uploadDataBaseUC1
             // 
-            this.uploadDataBaseUC1.Location = new System.Drawing.Point(15, 0);
+            this.uploadDataBaseUC1.Location = new System.Drawing.Point(75, 15);
             this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
             this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.uploadDataBaseUC1.TabIndex = 2;
@@ -492,14 +492,14 @@ namespace MaxPowerSystem
             // 
             // ordConfUC1
             // 
-            this.ordConfUC1.Location = new System.Drawing.Point(3, 0);
+            this.ordConfUC1.Location = new System.Drawing.Point(15, 0);
             this.ordConfUC1.Name = "ordConfUC1";
             this.ordConfUC1.Size = new System.Drawing.Size(978, 561);
             this.ordConfUC1.TabIndex = 7;
             // 
             // flowLayoutPanel3
             // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.flowLayoutPanel3.Controls.Add(this.button7);
             this.flowLayoutPanel3.Controls.Add(this.panel2);
             this.flowLayoutPanel3.Controls.Add(this.panel4);
@@ -513,7 +513,7 @@ namespace MaxPowerSystem
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
@@ -525,6 +525,7 @@ namespace MaxPowerSystem
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.panel2.Location = new System.Drawing.Point(909, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 67);
@@ -532,6 +533,7 @@ namespace MaxPowerSystem
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(488, 3);
             this.panel4.Name = "panel4";
@@ -552,6 +554,7 @@ namespace MaxPowerSystem
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.panel5.Location = new System.Drawing.Point(282, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 67);
