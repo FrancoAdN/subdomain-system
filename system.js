@@ -19,6 +19,8 @@ function checkDate(fech, sum){
     week.setDate(date.getDate() + (sum - 7));
     date.setDate(date.getDate() + sum);
     
+    console.log(five, date);
+    console.log(week, date);
     
     let today = new Date();
 
