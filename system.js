@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const schedule = require('node-schedule');
 
-/*
+
 function checkDate(fech, sum){
     let sp = fech.split('/');
     const days = sp[0] ;
@@ -11,20 +11,31 @@ function checkDate(fech, sum){
     const year = sp[2];
     
     let ant = new Date(year, month, days);
+    let five = new Date(year, month, days);
+    let week = new Date(year, month, days);
     let date = new Date(year, month, days);
     ant.setDate(date.getDate() + (sum - 1));
+    if(sum > 5)
+        five.setDate(date.getDate() + (sum - 5));
+    if(sum > 7)
+        week.setDate(date.getDate() + (sum - 7));
     date.setDate(date.getDate() + sum);
+    
     
     
     let today = new Date();
 
 
-    if(today.toDateString() < date.toDateString())
-        return 0;
-    else if(today.toDateString() == date.toDateString())
-        return 1;
+    if(today.toDateString() == week.toDateString() && sum > 7)
+        return 4;
+    else if(today.toDateString() == five.toDateString() && sum > 5)
+        return 5;
     else if(today.toDateString() == ant.toDateString())
         return 2;
+    else if(today.toDateString() == date.toDateString())
+        return 1;
+    else if(today.toDateString() < date.toDateString())
+        return 0;
     else
         return null;
 
@@ -34,8 +45,8 @@ let notifications = [];
 
 let rule = new schedule.RecurrenceRule();
 rule.dayOfWeek = [new schedule.Range(1, 5)];
-//rule.hour = 12;
-//rule.minute = 10;
+rule.hour = 09;
+rule.minute = 44;
 
 //DATE SCHEDULE
 const j = schedule.scheduleJob(rule, function(){
@@ -48,11 +59,13 @@ const j = schedule.scheduleJob(rule, function(){
     sql += "SELECT pmde, fecha_conf, orden FROM rep_lab WHERE entregado = false AND Confirmado = true;";
     sql += "SELECT pmde, fecha_conf, orden FROM ord_nac WHERE entregado = false AND Confirmado = true;";
     sql += "SELECT pmde, fecha_conf, orden FROM ord_ext WHERE entregado = false AND Confirmado = true;";
+
     con.connect(function(err) {
         if (err) {console.error(err);}
         con.query(sql, function (err, result, fields) {
             if (err) { console.error(err);}
             else{
+                console.log(result);
                 for(let r of result[0]){
                     let notif = checkDate(r.fecha_conf, r.pmde);
                     if(notif != null)
@@ -74,6 +87,7 @@ const j = schedule.scheduleJob(rule, function(){
                         notifications.push({cod: notif, db: 'ord_ext', orden: r.orden});
                 }
 
+
             }
           con.end();
         });
@@ -84,7 +98,7 @@ const j = schedule.scheduleJob(rule, function(){
 
 
 });
-*/
+
 
 function connectionSQL(){
     const con = mysql.createConnection({
@@ -96,6 +110,7 @@ function connectionSQL(){
     });
     return con;
 }
+
 const app = express();
 
 app.use(bodyParser.json({limit:'50mb', extended:true}));
@@ -1034,7 +1049,7 @@ app.get('/tabla/:id', (req, resp) => {
 
 
 // region NOTIFICATIONS
-/*
+
 app.get('/notif', (req, resp) => {
     resp.send(notifications);
 });
@@ -1042,7 +1057,6 @@ app.get('/notif', (req, resp) => {
 app.get('/notif/:id', (req, resp) => {
     resp.send(notifications[req.params.id]);
 });
-*/
 // end of region
 
 
