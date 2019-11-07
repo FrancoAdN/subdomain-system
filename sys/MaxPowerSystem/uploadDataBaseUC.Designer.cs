@@ -67,7 +67,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.labTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -441,21 +441,21 @@
             this.label15.TabIndex = 38;
             this.label15.Text = "Cargar";
             // 
-            // label16
+            // labTitulo
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(340, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(98, 23);
-            this.label16.TabIndex = 117;
-            this.label16.Text = "Empresas";
+            this.labTitulo.AutoSize = true;
+            this.labTitulo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTitulo.Location = new System.Drawing.Point(340, 0);
+            this.labTitulo.Name = "labTitulo";
+            this.labTitulo.Size = new System.Drawing.Size(98, 23);
+            this.labTitulo.TabIndex = 117;
+            this.labTitulo.Text = "Empresas";
             // 
             // uploadDataBaseUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.labTitulo);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -549,6 +549,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label labTitulo;
     }
 }

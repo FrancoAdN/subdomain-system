@@ -268,9 +268,11 @@ namespace MaxPowerSystem
             ordConfUC1.Hide();
             notificacionesUC1.Hide();
             solicitudesUC1.Hide();
+            uploadDataBaseUC1.Hide();
 
-            uploadDataBaseUC1.Show();
-            uploadDataBaseUC1.BringToFront();
+            button6.Visible = !button6.Visible;
+            button5.Visible = !button5.Visible;
+            
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -363,6 +365,7 @@ namespace MaxPowerSystem
                 ATButton.Visible = false;
                 RLButton.Visible = false;
                 VPButton.Visible = false;
+                viewCot.Visible = false;
 
                 uploadDataBaseUC1.Hide();
                 viewDataBaseUC1.Hide();
@@ -380,10 +383,12 @@ namespace MaxPowerSystem
             {
                 OCNButton.Visible = false;
                 OCEButton.Visible = false;
+                viewOrdC.Visible = false;
 
                 ATButton.Visible = true;
                 RLButton.Visible = true;
                 VPButton.Visible = true;
+                viewCot.Visible = true;
             }
 
             
@@ -395,6 +400,7 @@ namespace MaxPowerSystem
             {
                 OCNButton.Visible = false;
                 OCEButton.Visible = false;
+                viewOrdC.Visible = false;
 
                 uploadDataBaseUC1.Hide();
                 viewDataBaseUC1.Hide();
@@ -412,9 +418,11 @@ namespace MaxPowerSystem
                 ATButton.Visible = false;
                 RLButton.Visible = false;
                 VPButton.Visible = false;
+                viewCot.Visible = false;
 
                 OCEButton.Visible = true;
                 OCNButton.Visible = true;
+                viewOrdC.Visible = true;
             }
         }
 
@@ -433,6 +441,11 @@ namespace MaxPowerSystem
 
             ordConfUC1.Show();
             ordConfUC1.BringToFront();
+
+            viewPend.Visible = !viewPend.Visible;
+            viewOrd.Visible = !viewOrd.Visible;
+
+
         }
 
         private void Button11_MouseClick(object sender, MouseEventArgs e)
@@ -467,6 +480,42 @@ namespace MaxPowerSystem
 
             solicitudesUC1.Show();
             solicitudesUC1.BringToFront();
+        }
+
+        private void button6_MouseClick(object sender, MouseEventArgs e)
+        {
+            uploadDataBaseUC1.Hide();
+            viewDataBaseUC1.Hide();
+            tecAsistUC1.Hide();
+            ventaProdUC1.Hide();
+            repProdUC1.Hide();
+            compNacUC1.Hide();
+            compExteriorUC1.Hide();
+            ordConfUC1.Hide();
+            notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
+
+            uploadDataBaseUC1.changeName("Proveedores");
+            uploadDataBaseUC1.Show();
+            uploadDataBaseUC1.BringToFront();
+        }
+
+        private void button5_MouseClick(object sender, MouseEventArgs e)
+        {
+            uploadDataBaseUC1.Hide();
+            viewDataBaseUC1.Hide();
+            tecAsistUC1.Hide();
+            ventaProdUC1.Hide();
+            repProdUC1.Hide();
+            compNacUC1.Hide();
+            compExteriorUC1.Hide();
+            ordConfUC1.Hide();
+            notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
+
+            uploadDataBaseUC1.changeName("Clientes");
+            uploadDataBaseUC1.Show();
+            uploadDataBaseUC1.BringToFront();
         }
 
 

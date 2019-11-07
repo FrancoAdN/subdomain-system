@@ -174,11 +174,18 @@ namespace MaxPowerSystem
             }
             else
                 dbOrdConf1.Hide();
+                newSearch.Visible = false;
 
-
+            cmbDb2.SelectedIndex = cmbDb2.Items.Count - 1;
+            
 
         }
 
 
+
+        private void new_Search2(object sender, EventArgs e)
+        {
+            dbOrdConf1.Hide();
+        }
     }
 }
