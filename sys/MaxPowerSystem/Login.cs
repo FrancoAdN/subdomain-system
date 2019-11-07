@@ -38,8 +38,10 @@ namespace MaxPowerSystem
         {
             if (e.KeyChar == '\r' || e.KeyChar == '\n')
             {
+                e.Handled = true;
                 this.ValLogin(new object(), new EventArgs());
             }
         }
+
     }
 }

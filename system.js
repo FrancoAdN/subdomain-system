@@ -1362,7 +1362,36 @@ app.post('/sol', (req, resp) => {
 
 });
 
-//enf of region
+//end of region
+
+//region LOGIN
+app.get('/login', (req, resp) => {
+    const usr = req.query.usr;
+    const pwd = req.query.pwd;
+    const con = connectionSQL();
+    let sql =  `SELECT * FROM empleados WHERE usuario LIKE '${usr}' AND pwd = '${pwd}'`;
+    //http://localhost:3030/login?usr=franco&&pwd=123
+    console.log(req.query.usr);
+    console.log(req.query.pwd);
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else if(result.length == 1)
+                resp.send("true");
+            else
+                resp.send("false");
+          con.end();
+        });
+    });
+    
+});
+//end of region
 
 
 
