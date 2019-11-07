@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -60,30 +62,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(3, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.Size = new System.Drawing.Size(147, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "MaxPower System";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(198, 12);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.button2.Location = new System.Drawing.Point(275, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(25, 32);
             this.button2.TabIndex = 1;
-            this.button2.Text = "minimizar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button2_MouseClick);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(279, 12);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(313, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(32, 32);
             this.button1.TabIndex = 0;
-            this.button1.Text = "cerrar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button1_MouseClick);
             // 
@@ -104,7 +113,7 @@
             // pwdBox
             // 
             this.pwdBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pwdBox.Location = new System.Drawing.Point(114, 220);
+            this.pwdBox.Location = new System.Drawing.Point(83, 216);
             this.pwdBox.Name = "pwdBox";
             this.pwdBox.PasswordChar = '*';
             this.pwdBox.Size = new System.Drawing.Size(197, 26);
@@ -114,7 +123,7 @@
             // usrBox
             // 
             this.usrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usrBox.Location = new System.Drawing.Point(114, 157);
+            this.usrBox.Location = new System.Drawing.Point(85, 156);
             this.usrBox.Name = "usrBox";
             this.usrBox.Size = new System.Drawing.Size(197, 26);
             this.usrBox.TabIndex = 4;
@@ -132,22 +141,25 @@
             // 
             // passwordPB
             // 
-            this.passwordPB.Location = new System.Drawing.Point(46, 209);
+            this.passwordPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("passwordPB.BackgroundImage")));
+            this.passwordPB.Location = new System.Drawing.Point(45, 213);
             this.passwordPB.Name = "passwordPB";
-            this.passwordPB.Size = new System.Drawing.Size(43, 40);
+            this.passwordPB.Size = new System.Drawing.Size(32, 32);
             this.passwordPB.TabIndex = 2;
             this.passwordPB.TabStop = false;
             // 
             // userPB
             // 
-            this.userPB.Location = new System.Drawing.Point(46, 146);
+            this.userPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userPB.BackgroundImage")));
+            this.userPB.Location = new System.Drawing.Point(45, 153);
             this.userPB.Name = "userPB";
-            this.userPB.Size = new System.Drawing.Size(43, 40);
+            this.userPB.Size = new System.Drawing.Size(32, 32);
             this.userPB.TabIndex = 1;
             this.userPB.TabStop = false;
             // 
             // logoPB
             // 
+            this.logoPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoPB.BackgroundImage")));
             this.logoPB.Location = new System.Drawing.Point(124, 27);
             this.logoPB.Name = "logoPB";
             this.logoPB.Size = new System.Drawing.Size(122, 95);
