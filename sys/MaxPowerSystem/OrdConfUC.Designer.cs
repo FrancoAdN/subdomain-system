@@ -61,7 +61,7 @@
             "Ordenes confirmadas",
             "Ordenes sin confirmar",
             "(seleccionar)"});
-            this.cmbDb2.Location = new System.Drawing.Point(325, 5);
+            this.cmbDb2.Location = new System.Drawing.Point(321, 25);
             this.cmbDb2.Name = "cmbDb2";
             this.cmbDb2.Size = new System.Drawing.Size(210, 26);
             this.cmbDb2.TabIndex = 2;
@@ -71,12 +71,13 @@
             // 
             this.newSearch.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.newSearch.Image = ((System.Drawing.Image)(resources.GetObject("newSearch.Image")));
-            this.newSearch.Location = new System.Drawing.Point(577, 5);
+            this.newSearch.Location = new System.Drawing.Point(555, 25);
             this.newSearch.Name = "newSearch";
             this.newSearch.Size = new System.Drawing.Size(31, 27);
             this.newSearch.TabIndex = 4;
             this.newSearch.UseVisualStyleBackColor = true;
             this.newSearch.Visible = false;
+            this.newSearch.Click += new System.EventHandler(this.new_Search2);
             // 
             // ordBox
             // 

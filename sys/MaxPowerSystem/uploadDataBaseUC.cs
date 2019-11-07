@@ -13,9 +13,18 @@ namespace MaxPowerSystem
 {
     public partial class uploadDataBaseUC : UserControl
     {
+        string titulo;
+        
         public uploadDataBaseUC()
         {
             InitializeComponent();
+
+        }
+
+        public void changeName(string tit)
+        {
+            titulo = tit;
+            labTitulo.Text = tit;
         }
 
         private void insertData(object sender, MouseEventArgs e)

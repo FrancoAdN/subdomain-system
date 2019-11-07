@@ -52,12 +52,15 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.BoxRefOrd = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // maxPlBox
@@ -108,7 +111,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.90278F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.09722F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
             this.tableLayoutPanel1.Controls.Add(this.DescBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.CantBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.UnitPrBox, 1, 1);
@@ -131,7 +134,7 @@
             this.DescBox.Location = new System.Drawing.Point(75, 51);
             this.DescBox.Multiline = true;
             this.DescBox.Name = "DescBox";
-            this.DescBox.Size = new System.Drawing.Size(156, 81);
+            this.DescBox.Size = new System.Drawing.Size(154, 81);
             this.DescBox.TabIndex = 34;
             // 
             // CantBox
@@ -150,10 +153,10 @@
             // 
             this.UnitPrBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UnitPrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.UnitPrBox.Location = new System.Drawing.Point(237, 51);
+            this.UnitPrBox.Location = new System.Drawing.Point(235, 51);
             this.UnitPrBox.Multiline = true;
             this.UnitPrBox.Name = "UnitPrBox";
-            this.UnitPrBox.Size = new System.Drawing.Size(119, 81);
+            this.UnitPrBox.Size = new System.Drawing.Size(121, 81);
             this.UnitPrBox.TabIndex = 35;
             this.UnitPrBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UnitPrBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
@@ -177,7 +180,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label4.Location = new System.Drawing.Point(75, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(156, 48);
+            this.label4.Size = new System.Drawing.Size(154, 48);
             this.label4.TabIndex = 36;
             this.label4.Text = "Descripción";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,9 +190,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(237, 0);
+            this.label6.Location = new System.Drawing.Point(235, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 48);
+            this.label6.Size = new System.Drawing.Size(121, 48);
             this.label6.TabIndex = 37;
             this.label6.Text = "Precio Unitario";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -329,17 +332,39 @@
             this.label2.TabIndex = 117;
             this.label2.Text = "Orden de compra Exterior";
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(18, 251);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.TabIndex = 124;
+            this.pictureBox5.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label10.Location = new System.Drawing.Point(60, 258);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(145, 18);
+            this.label10.TabIndex = 123;
+            this.label10.Text = "Referencia de orden:";
+            // 
             // BoxRefOrd
             // 
-            this.BoxRefOrd.Location = new System.Drawing.Point(280, 285);
+            this.BoxRefOrd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxRefOrd.Location = new System.Drawing.Point(211, 255);
             this.BoxRefOrd.Name = "BoxRefOrd";
-            this.BoxRefOrd.Size = new System.Drawing.Size(100, 20);
-            this.BoxRefOrd.TabIndex = 118;
+            this.BoxRefOrd.Size = new System.Drawing.Size(137, 24);
+            this.BoxRefOrd.TabIndex = 122;
             // 
             // compExteriorUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.BoxRefOrd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
@@ -366,6 +391,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,6 +422,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox BoxRefOrd;
     }
 }
