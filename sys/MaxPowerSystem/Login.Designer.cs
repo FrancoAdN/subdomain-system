@@ -42,6 +42,7 @@ namespace MaxPowerSystem
             this.passwordPB = new System.Windows.Forms.PictureBox();
             this.userPB = new System.Windows.Forms.PictureBox();
             this.logoPB = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordPB)).BeginInit();
@@ -101,6 +102,7 @@ namespace MaxPowerSystem
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.pwdBox);
             this.panel2.Controls.Add(this.usrBox);
             this.panel2.Controls.Add(this.button3);
@@ -117,7 +119,7 @@ namespace MaxPowerSystem
             // 
             this.pwdBox.AcceptsReturn = true;
             this.pwdBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pwdBox.Location = new System.Drawing.Point(83, 216);
+            this.pwdBox.Location = new System.Drawing.Point(89, 214);
             this.pwdBox.Name = "pwdBox";
             this.pwdBox.Size = new System.Drawing.Size(197, 26);
             this.pwdBox.TabIndex = 5;
@@ -128,7 +130,7 @@ namespace MaxPowerSystem
             // usrBox
             // 
             this.usrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usrBox.Location = new System.Drawing.Point(85, 156);
+            this.usrBox.Location = new System.Drawing.Point(89, 173);
             this.usrBox.Name = "usrBox";
             this.usrBox.Size = new System.Drawing.Size(197, 26);
             this.usrBox.TabIndex = 4;
@@ -142,7 +144,7 @@ namespace MaxPowerSystem
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(83, 272);
+            this.button3.Location = new System.Drawing.Point(85, 270);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(197, 31);
             this.button3.TabIndex = 3;
@@ -153,7 +155,7 @@ namespace MaxPowerSystem
             // passwordPB
             // 
             this.passwordPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("passwordPB.BackgroundImage")));
-            this.passwordPB.Location = new System.Drawing.Point(45, 213);
+            this.passwordPB.Location = new System.Drawing.Point(49, 208);
             this.passwordPB.Name = "passwordPB";
             this.passwordPB.Size = new System.Drawing.Size(32, 32);
             this.passwordPB.TabIndex = 2;
@@ -162,7 +164,7 @@ namespace MaxPowerSystem
             // userPB
             // 
             this.userPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userPB.BackgroundImage")));
-            this.userPB.Location = new System.Drawing.Point(45, 153);
+            this.userPB.Location = new System.Drawing.Point(49, 170);
             this.userPB.Name = "userPB";
             this.userPB.Size = new System.Drawing.Size(32, 32);
             this.userPB.TabIndex = 1;
@@ -171,11 +173,21 @@ namespace MaxPowerSystem
             // logoPB
             // 
             this.logoPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoPB.BackgroundImage")));
-            this.logoPB.Location = new System.Drawing.Point(133, 27);
+            this.logoPB.Location = new System.Drawing.Point(136, 29);
             this.logoPB.Name = "logoPB";
-            this.logoPB.Size = new System.Drawing.Size(94, 96);
+            this.logoPB.Size = new System.Drawing.Size(98, 92);
             this.logoPB.TabIndex = 0;
             this.logoPB.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(46, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(122, 18);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Inicio de sesión";
             // 
             // Login
             // 
@@ -213,5 +225,6 @@ namespace MaxPowerSystem
         private System.Windows.Forms.PictureBox passwordPB;
         private System.Windows.Forms.PictureBox userPB;
         private System.Windows.Forms.PictureBox logoPB;
+        private System.Windows.Forms.Label label2;
     }
 }
