@@ -1383,7 +1383,7 @@ app.get('/login', (req, resp) => {
                 console.error(err);
                 resp.send("0");
             }else if(result.length == 1)
-                resp.send("true");
+                resp.send(result);
             else
                 resp.send("false");
           con.end();
