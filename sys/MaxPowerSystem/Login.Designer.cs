@@ -100,6 +100,7 @@ namespace MaxPowerSystem
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pwdBox);
             this.panel2.Controls.Add(this.usrBox);
             this.panel2.Controls.Add(this.button3);
@@ -120,9 +121,9 @@ namespace MaxPowerSystem
             this.pwdBox.Name = "pwdBox";
             this.pwdBox.Size = new System.Drawing.Size(197, 26);
             this.pwdBox.TabIndex = 5;
+            this.pwdBox.GotFocus += new System.EventHandler(this.OnFocusPWD);
             this.pwdBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox2_KeyPress);
-            this.pwdBox.GotFocus += new EventHandler(this.OnFocusPWD);
-            this.pwdBox.LostFocus += new EventHandler(this.LostFocusPWD);
+            this.pwdBox.LostFocus += new System.EventHandler(this.LostFocusPWD);
             // 
             // usrBox
             // 
@@ -131,18 +132,22 @@ namespace MaxPowerSystem
             this.usrBox.Name = "usrBox";
             this.usrBox.Size = new System.Drawing.Size(197, 26);
             this.usrBox.TabIndex = 4;
-            this.usrBox.GotFocus += new EventHandler(this.TextGotFocus);
-            this.usrBox.LostFocus += new EventHandler(this.TextLostFocus);
+            this.usrBox.GotFocus += new System.EventHandler(this.TextGotFocus);
+            this.usrBox.LostFocus += new System.EventHandler(this.TextLostFocus);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(71, 272);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(83, 272);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(211, 31);
+            this.button3.Size = new System.Drawing.Size(197, 31);
             this.button3.TabIndex = 3;
             this.button3.Text = "Iniciar Sesión";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ValLogin);
             // 
             // passwordPB
@@ -166,9 +171,9 @@ namespace MaxPowerSystem
             // logoPB
             // 
             this.logoPB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logoPB.BackgroundImage")));
-            this.logoPB.Location = new System.Drawing.Point(124, 27);
+            this.logoPB.Location = new System.Drawing.Point(133, 27);
             this.logoPB.Name = "logoPB";
-            this.logoPB.Size = new System.Drawing.Size(122, 95);
+            this.logoPB.Size = new System.Drawing.Size(94, 96);
             this.logoPB.TabIndex = 0;
             this.logoPB.TabStop = false;
             // 
