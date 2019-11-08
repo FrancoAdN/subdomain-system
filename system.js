@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
 const schedule = require('node-schedule');
+const path = require('path');
 
 
 function checkDate(fech, sum){
@@ -112,6 +113,8 @@ function connectionSQL(){
 }
 
 const app = express();
+
+app.use(express.static('public'));
 
 app.use(bodyParser.json({limit:'50mb', extended:true}));
 
@@ -1390,6 +1393,22 @@ app.get('/login', (req, resp) => {
         });
     });
     
+});
+
+app.get('/register', (req, resp) => {
+    resp.sendFile(path.join(__dirname + '/public/register.html'));
+});
+
+app.post('/register', (req, resp) => {
+    const data = req.body;
+    if(data.admin == 'on'){
+       data.admin = true;
+    }else{
+        data["admin"] = false;
+    }
+    const con = connectionSQL();
+    let sql =  `SELECT * FROM empleados WHERE usuario LIKE '${usr}' AND pwd = '${pwd}'`;
+    // resp.send(req.body);
 });
 //end of region
 
