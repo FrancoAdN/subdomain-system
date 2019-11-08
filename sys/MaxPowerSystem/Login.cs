@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
+using System.Net;
 
 namespace MaxPowerSystem
 {
@@ -76,9 +78,48 @@ namespace MaxPowerSystem
 
         private void ValLogin(object sender, EventArgs e)
         {
+            bool err = false;
             string usr = usrBox.Text;
             string pwd = pwdBox.Text;
-            Console.WriteLine($"User: {usr}, Pwd: {pwd}");
+            if ((!string.IsNullOrEmpty(usr) && !string.IsNullOrEmpty(pwd)) || usr == "Usuario" || pwdBox.PasswordChar != '\0')
+            {
+                clientREST client = new clientREST();
+                client.endPoint = "http://system.maxpower-ar.com/login?usr=" + pwd + "&&pwd=" + pwd;
+                client.httpMethod = httpVerb.GET;
+                string resp = string.Empty;
+                JToken json = "";
+                resp = client.makeRequest();
+                json = JToken.Parse(resp);
+                if (resp == "0")
+                {
+                    err = true;
+                    MessageBox.Show("SQL ERROR (Cod. 0)", "Maxpower System dice: ");
+                }
+                else if (resp == "false")
+                {
+                    err = true;
+                    MessageBox.Show("Usuario o contraseña incorrecta", "Maxpower System dice: ");
+                }
+                else if (!(json.Count() == 1))
+                    err = true;
+
+
+                if (!err)
+                {
+                    Console.WriteLine("User logged on " + json[0]["usuario"]);
+                    Form1 f1 = new Form1();
+                    this.Hide();
+                    f1.ShowDialog();
+                    this.Close();
+                }
+
+
+
+            }
+            else
+                MessageBox.Show("Los campos deben estar completos para iniciar sesion", "Maxpower System dice: ");
+
+
         }
 
         private void TextBox2_KeyPress(object sender, KeyPressEventArgs e)
