@@ -1400,14 +1400,15 @@ app.get('/register', (req, resp) => {
 });
 
 app.post('/register', (req, resp) => {
-    const data = req.body;
+    let data = req.body;
     if(data.admin == 'on'){
        data.admin = true;
     }else{
         data["admin"] = false;
     }
+    data["usr"] = data.name +' '+ data.last;
     const con = connectionSQL();
-    let sql =  `SELECT * FROM empleados WHERE usuario LIKE '${usr}' AND pwd = '${pwd}'`;
+    let sql =  `INSERT INTO empleados (usuario, nombre, apellido, contraseña, admin) values ()`;
     // resp.send(req.body);
 });
 //end of region
