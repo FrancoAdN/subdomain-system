@@ -84,7 +84,8 @@ namespace MaxPowerSystem
             if ((!string.IsNullOrEmpty(usr) && !string.IsNullOrEmpty(pwd)) || usr == "Usuario" || pwdBox.PasswordChar != '\0')
             {
                 clientREST client = new clientREST();
-                client.endPoint = "http://system.maxpower-ar.com/login?usr=" + pwd + "&&pwd=" + pwd;
+                client.endPoint = "http://system.maxpower-ar.com/login?usr=" + usr + "&&pwd=" + pwd;
+                Console.WriteLine(client.endPoint);
                 client.httpMethod = httpVerb.GET;
                 string resp = string.Empty;
                 JToken json = "";
