@@ -16,12 +16,13 @@ namespace MaxPowerSystem
 {
     public partial class Form1 : Form
     {
-
+        public int IdUser;
+        public bool Admin;
         public Form1()
         {
             InitializeComponent();
-        }
 
+        }
         public void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
             object matchCase = true;
@@ -108,7 +109,6 @@ namespace MaxPowerSystem
 
         private void ViewDataBaseUC1_Load(object sender, EventArgs e)
         {
-
         }
 
         public void CreateTableWord(object filename, object SaveAs, object arr, int n_table)
@@ -224,7 +224,18 @@ namespace MaxPowerSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            if (Admin)
+            {
+                button9.Visible = true;
+                button10.Visible = true;
+            }
+            else
+            {
+                button9.Visible = false;
+                button10.Visible = false;
+
+            }
+
             //HIDE EVERY USER CONTROL
             uploadDataBaseUC1.Hide();
             tecAsistUC1.Hide();

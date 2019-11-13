@@ -64,10 +64,6 @@ namespace MaxPowerSystem
         }
         private void Button1_MouseClick(object sender, MouseEventArgs e)
         {
-            /*Form1 f1 = new Form1();
-            this.Hide();
-            f1.ShowDialog();
-            this.Close();*/
             Application.Exit();
         }
 
@@ -85,7 +81,6 @@ namespace MaxPowerSystem
             {
                 clientREST client = new clientREST();
                 client.endPoint = "http://system.maxpower-ar.com/login?usr=" + usr + "&&pwd=" + pwd;
-                Console.WriteLine(client.endPoint);
                 client.httpMethod = httpVerb.GET;
                 string resp = string.Empty;
                 JToken json = "";
@@ -107,9 +102,10 @@ namespace MaxPowerSystem
 
                 if (!err)
                 {
-                    Console.WriteLine("User logged on " + json[0]["usuario"]);
                     Form1 f1 = new Form1();
                     this.Hide();
+                    f1.IdUser = (int)json[0]["id_empleado"];
+                    f1.Admin = (bool)json[0]["admin"];
                     f1.ShowDialog();
                     this.Close();
                 }
