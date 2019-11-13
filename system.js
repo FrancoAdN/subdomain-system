@@ -1409,7 +1409,7 @@ app.post('/register', (req, resp) => {
     data["usr"] = data.name +' '+ data.last;
     console.log(data);
     const con = connectionSQL();
-    let sql =  `INSERT INTO empleados (usuario, nombre, apellido, contraseña, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
+    let sql =  `INSERT INTO empleados (usuario, nombre, apellido, pwd, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
     con.connect(function(err) {
         if (err) {
             console.error(err);
