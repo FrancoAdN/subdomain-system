@@ -1373,7 +1373,6 @@ app.get('/login', (req, resp) => {
     const pwd = req.query.pwd;
     const con = connectionSQL();
     let sql =  `SELECT * FROM empleados WHERE usuario LIKE '${usr}' AND pwd = '${pwd}'`;
-    //http://localhost:3030/login?usr=franco&&pwd=123
     console.log(req.query.usr);
     console.log(req.query.pwd);
     con.connect(function(err) {
