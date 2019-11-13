@@ -1419,7 +1419,7 @@ app.post('/register', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }else if(result.length != 0)
+            }else if(result.length == 0)
                 exists = false;
             else
                 exists = true;
