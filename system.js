@@ -1419,6 +1419,7 @@ app.post('/register', async (req, resp) => {
                 console.error(err);
                 resp.send("0");
             }else if(result.length == 0){
+                con.end();
                 sql =  `INSERT INTO empleados (usuario, nombre, apellido, pwd, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
                 con.connect(function(err) {
                     if (err) {
