@@ -1398,9 +1398,8 @@ app.get('/register', (req, resp) => {
     resp.sendFile(path.join(__dirname + '/public/register.html'));
 });
 
-app.post('/register', (req, resp) => {
+app.post('/register', async (req, resp) => {
     let data = req.body;
-    let exists = false;
 
     if(data.admin == 'on'){
        data.admin = true;
@@ -1420,39 +1419,29 @@ app.post('/register', (req, resp) => {
                 console.error(err);
                 resp.send("0");
             }else if(result.length == 0){
-                exists = false;
-                console.log(result);
+                sql =  `INSERT INTO empleados (usuario, nombre, apellido, pwd, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
+                con.connect(function(err) {
+                    if (err) {
+                        console.error(err);
+                        resp.send("0");
+                    }
+                    con.query(sql, function (err, result, fields) {
+                        if (err) {
+                            console.error(err);
+                            resp.send("0");
+                        }else
+                            resp.redirect('/register');
+                    con.end();
+                    });
+                });
             }
             else{
-                exists = true;
-                console.log(result);
+                resp.send("User already exists");
             }
                 
           con.end();
         });
     });
-    console.log(exists);
-
-    /*if(!exists){
-        const con = connectionSQL();
-        sql =  `INSERT INTO empleados (usuario, nombre, apellido, pwd, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
-        con.connect(function(err) {
-            if (err) {
-                console.error(err);
-                resp.send("0");
-            }
-            con.query(sql, function (err, result, fields) {
-                if (err) {
-                    console.error(err);
-                    resp.send("0");
-                }else
-                    resp.redirect('/register');
-            con.end();
-            });
-        });
-    }else{
-        resp.send("User already exists");
-    }*/
 });
 //end of region
 
