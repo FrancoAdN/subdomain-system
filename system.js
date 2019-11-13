@@ -1400,15 +1400,16 @@ app.get('/register', (req, resp) => {
 
 app.post('/register', (req, resp) => {
     let data = req.body;
+    let exists = false;
+
     if(data.admin == 'on'){
        data.admin = true;
     }else{
         data["admin"] = false;
     }
     data["usr"] = data.name +' '+ data.last;
-    console.log(data);
     const con = connectionSQL();
-    let sql =  `INSERT INTO empleados (usuario, nombre, apellido, pwd, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
+    let sql =  `SELECT * FROM empleados WHERE nombre LIKE '${data.name}' AND apellido LIKE '${data.last}'`;
     con.connect(function(err) {
         if (err) {
             console.error(err);
@@ -1418,11 +1419,34 @@ app.post('/register', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }else
-                resp.redirect('/register');
+            }else if(result.length != 0)
+                exists = false;
+            else
+                exists = true;
           con.end();
         });
     });
+
+    if(!exists){
+        const con = connectionSQL();
+        sql =  `INSERT INTO empleados (usuario, nombre, apellido, pwd, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
+        con.connect(function(err) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }
+            con.query(sql, function (err, result, fields) {
+                if (err) {
+                    console.error(err);
+                    resp.send("0");
+                }else
+                    resp.redirect('/register');
+            con.end();
+            });
+        });
+    }else{
+        resp.send("User already exists");
+    }
 });
 //end of region
 
