@@ -187,5 +187,10 @@ namespace MaxPowerSystem
         {
             dbOrdConf1.Hide();
         }
+
+        private void infoOrd_MouseClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Pestaña para consultar las ordenes confirmadas y pendientes (sin confirmar) de confirmacion. Desde el menu desplegable se selecciona 'ordenes sin confirmar' para acceder a estas. Las mismas pueden ser confirmadas haciendo 'click' en el numero de orden correspondiente.");
+        }
     }
 }

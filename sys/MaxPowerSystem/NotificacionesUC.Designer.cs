@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotificacionesUC));
             this.label1 = new System.Windows.Forms.Label();
+            this.infoNot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -41,10 +43,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Notificaciones";
             // 
+            // infoNot
+            // 
+            this.infoNot.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("infoNot.BackgroundImage")));
+            this.infoNot.Location = new System.Drawing.Point(893, 11);
+            this.infoNot.Name = "infoNot";
+            this.infoNot.Size = new System.Drawing.Size(34, 31);
+            this.infoNot.TabIndex = 83;
+            this.infoNot.UseVisualStyleBackColor = true;
+            this.infoNot.MouseClick += new System.Windows.Forms.MouseEventHandler(this.infoNot_MouseClick);
+            // 
             // NotificacionesUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.infoNot);
             this.Controls.Add(this.label1);
             this.Name = "NotificacionesUC";
             this.Size = new System.Drawing.Size(984, 561);
@@ -56,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button infoNot;
     }
 }

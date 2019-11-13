@@ -37,9 +37,11 @@ namespace MaxPowerSystem
             this.button14 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.viewSol = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.viewArt = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.ATButton = new System.Windows.Forms.Button();
@@ -51,8 +53,6 @@ namespace MaxPowerSystem
             this.OCNButton = new System.Windows.Forms.Button();
             this.viewOrdC = new System.Windows.Forms.Button();
             this.OACButton = new System.Windows.Forms.Button();
-            this.viewPend = new System.Windows.Forms.Button();
-            this.viewOrd = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -97,9 +97,11 @@ namespace MaxPowerSystem
             flowLayoutPanel1.Controls.Add(this.button14);
             flowLayoutPanel1.Controls.Add(this.button1);
             flowLayoutPanel1.Controls.Add(this.button4);
+            flowLayoutPanel1.Controls.Add(this.viewSol);
             flowLayoutPanel1.Controls.Add(this.button2);
             flowLayoutPanel1.Controls.Add(this.button5);
             flowLayoutPanel1.Controls.Add(this.button6);
+            flowLayoutPanel1.Controls.Add(this.button15);
             flowLayoutPanel1.Controls.Add(this.viewArt);
             flowLayoutPanel1.Controls.Add(this.button8);
             flowLayoutPanel1.Controls.Add(this.ATButton);
@@ -111,8 +113,6 @@ namespace MaxPowerSystem
             flowLayoutPanel1.Controls.Add(this.OCNButton);
             flowLayoutPanel1.Controls.Add(this.viewOrdC);
             flowLayoutPanel1.Controls.Add(this.OACButton);
-            flowLayoutPanel1.Controls.Add(this.viewPend);
-            flowLayoutPanel1.Controls.Add(this.viewOrd);
             flowLayoutPanel1.Controls.Add(this.button9);
             flowLayoutPanel1.Controls.Add(this.button10);
             flowLayoutPanel1.Controls.Add(this.button11);
@@ -184,6 +184,21 @@ namespace MaxPowerSystem
             this.button4.UseVisualStyleBackColor = false;
             this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button4_MouseClick);
             // 
+            // viewSol
+            // 
+            this.viewSol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.viewSol.FlatAppearance.BorderSize = 0;
+            this.viewSol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewSol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewSol.ForeColor = System.Drawing.Color.White;
+            this.viewSol.Location = new System.Drawing.Point(3, 135);
+            this.viewSol.Name = "viewSol";
+            this.viewSol.Size = new System.Drawing.Size(197, 26);
+            this.viewSol.TabIndex = 15;
+            this.viewSol.Text = "Buscar";
+            this.viewSol.UseVisualStyleBackColor = false;
+            this.viewSol.Visible = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
@@ -191,7 +206,7 @@ namespace MaxPowerSystem
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 132);
+            this.button2.Location = new System.Drawing.Point(0, 164);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 28);
@@ -207,7 +222,7 @@ namespace MaxPowerSystem
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(0, 160);
+            this.button5.Location = new System.Drawing.Point(0, 192);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(197, 26);
@@ -225,7 +240,7 @@ namespace MaxPowerSystem
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(0, 186);
+            this.button6.Location = new System.Drawing.Point(0, 218);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(197, 26);
@@ -236,6 +251,25 @@ namespace MaxPowerSystem
             this.button6.Visible = false;
             this.button6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button6_MouseClick);
             // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.button15.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button15.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button15.Location = new System.Drawing.Point(0, 244);
+            this.button15.Margin = new System.Windows.Forms.Padding(0);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(197, 26);
+            this.button15.TabIndex = 15;
+            this.button15.Text = "Buscar";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.UseWaitCursor = true;
+            this.button15.Visible = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
             // viewArt
             // 
             this.viewArt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
@@ -243,7 +277,7 @@ namespace MaxPowerSystem
             this.viewArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewArt.ForeColor = System.Drawing.Color.White;
-            this.viewArt.Location = new System.Drawing.Point(0, 212);
+            this.viewArt.Location = new System.Drawing.Point(0, 270);
             this.viewArt.Margin = new System.Windows.Forms.Padding(0);
             this.viewArt.Name = "viewArt";
             this.viewArt.Size = new System.Drawing.Size(197, 28);
@@ -259,7 +293,7 @@ namespace MaxPowerSystem
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 240);
+            this.button8.Location = new System.Drawing.Point(0, 298);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(197, 32);
@@ -275,7 +309,7 @@ namespace MaxPowerSystem
             this.ATButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ATButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.ATButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ATButton.Location = new System.Drawing.Point(0, 272);
+            this.ATButton.Location = new System.Drawing.Point(0, 330);
             this.ATButton.Margin = new System.Windows.Forms.Padding(0);
             this.ATButton.Name = "ATButton";
             this.ATButton.Size = new System.Drawing.Size(197, 26);
@@ -292,7 +326,7 @@ namespace MaxPowerSystem
             this.RLButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RLButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RLButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.RLButton.Location = new System.Drawing.Point(0, 298);
+            this.RLButton.Location = new System.Drawing.Point(0, 356);
             this.RLButton.Margin = new System.Windows.Forms.Padding(0);
             this.RLButton.Name = "RLButton";
             this.RLButton.Size = new System.Drawing.Size(197, 26);
@@ -309,7 +343,7 @@ namespace MaxPowerSystem
             this.VPButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.VPButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VPButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.VPButton.Location = new System.Drawing.Point(0, 324);
+            this.VPButton.Location = new System.Drawing.Point(0, 382);
             this.VPButton.Margin = new System.Windows.Forms.Padding(0);
             this.VPButton.Name = "VPButton";
             this.VPButton.Size = new System.Drawing.Size(197, 26);
@@ -324,9 +358,9 @@ namespace MaxPowerSystem
             this.viewCot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.viewCot.FlatAppearance.BorderSize = 0;
             this.viewCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewCot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewCot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.viewCot.ForeColor = System.Drawing.Color.White;
-            this.viewCot.Location = new System.Drawing.Point(0, 350);
+            this.viewCot.Location = new System.Drawing.Point(0, 408);
             this.viewCot.Margin = new System.Windows.Forms.Padding(0);
             this.viewCot.Name = "viewCot";
             this.viewCot.Size = new System.Drawing.Size(197, 26);
@@ -334,6 +368,7 @@ namespace MaxPowerSystem
             this.viewCot.Text = "Buscar";
             this.viewCot.UseVisualStyleBackColor = false;
             this.viewCot.Visible = false;
+            this.viewCot.Click += new System.EventHandler(this.viewCot_Click);
             // 
             // button3
             // 
@@ -343,12 +378,12 @@ namespace MaxPowerSystem
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 376);
+            this.button3.Location = new System.Drawing.Point(0, 434);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(197, 32);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Orden de compra";
+            this.button3.Text = "Ordenes de compra";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.showMenComp);
             // 
@@ -359,7 +394,7 @@ namespace MaxPowerSystem
             this.OCEButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OCEButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OCEButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.OCEButton.Location = new System.Drawing.Point(0, 408);
+            this.OCEButton.Location = new System.Drawing.Point(0, 466);
             this.OCEButton.Margin = new System.Windows.Forms.Padding(0);
             this.OCEButton.Name = "OCEButton";
             this.OCEButton.Size = new System.Drawing.Size(197, 26);
@@ -376,7 +411,7 @@ namespace MaxPowerSystem
             this.OCNButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OCNButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OCNButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.OCNButton.Location = new System.Drawing.Point(0, 434);
+            this.OCNButton.Location = new System.Drawing.Point(0, 492);
             this.OCNButton.Margin = new System.Windows.Forms.Padding(0);
             this.OCNButton.Name = "OCNButton";
             this.OCNButton.Size = new System.Drawing.Size(197, 26);
@@ -391,9 +426,9 @@ namespace MaxPowerSystem
             this.viewOrdC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.viewOrdC.FlatAppearance.BorderSize = 0;
             this.viewOrdC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewOrdC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewOrdC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.viewOrdC.ForeColor = System.Drawing.Color.White;
-            this.viewOrdC.Location = new System.Drawing.Point(0, 460);
+            this.viewOrdC.Location = new System.Drawing.Point(0, 518);
             this.viewOrdC.Margin = new System.Windows.Forms.Padding(0);
             this.viewOrdC.Name = "viewOrdC";
             this.viewOrdC.Size = new System.Drawing.Size(197, 26);
@@ -401,6 +436,7 @@ namespace MaxPowerSystem
             this.viewOrdC.Text = "Buscar";
             this.viewOrdC.UseVisualStyleBackColor = false;
             this.viewOrdC.Visible = false;
+            this.viewOrdC.Click += new System.EventHandler(this.viewOrdC_Click);
             // 
             // OACButton
             // 
@@ -410,7 +446,7 @@ namespace MaxPowerSystem
             this.OACButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OACButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OACButton.ForeColor = System.Drawing.Color.White;
-            this.OACButton.Location = new System.Drawing.Point(0, 486);
+            this.OACButton.Location = new System.Drawing.Point(0, 544);
             this.OACButton.Margin = new System.Windows.Forms.Padding(0);
             this.OACButton.Name = "OACButton";
             this.OACButton.Size = new System.Drawing.Size(197, 32);
@@ -418,38 +454,6 @@ namespace MaxPowerSystem
             this.OACButton.Text = "Ordenes";
             this.OACButton.UseVisualStyleBackColor = false;
             this.OACButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OACButton_MouseClick);
-            // 
-            // viewPend
-            // 
-            this.viewPend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
-            this.viewPend.FlatAppearance.BorderSize = 0;
-            this.viewPend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewPend.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewPend.ForeColor = System.Drawing.Color.White;
-            this.viewPend.Location = new System.Drawing.Point(0, 518);
-            this.viewPend.Margin = new System.Windows.Forms.Padding(0);
-            this.viewPend.Name = "viewPend";
-            this.viewPend.Size = new System.Drawing.Size(197, 26);
-            this.viewPend.TabIndex = 1;
-            this.viewPend.Text = "Pendientes";
-            this.viewPend.UseVisualStyleBackColor = false;
-            this.viewPend.Visible = false;
-            // 
-            // viewOrd
-            // 
-            this.viewOrd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
-            this.viewOrd.FlatAppearance.BorderSize = 0;
-            this.viewOrd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewOrd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewOrd.ForeColor = System.Drawing.Color.White;
-            this.viewOrd.Location = new System.Drawing.Point(0, 544);
-            this.viewOrd.Margin = new System.Windows.Forms.Padding(0);
-            this.viewOrd.Name = "viewOrd";
-            this.viewOrd.Size = new System.Drawing.Size(197, 26);
-            this.viewOrd.TabIndex = 2;
-            this.viewOrd.Text = "Buscar";
-            this.viewOrd.UseVisualStyleBackColor = false;
-            this.viewOrd.Visible = false;
             // 
             // button9
             // 
@@ -459,7 +463,7 @@ namespace MaxPowerSystem
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 570);
+            this.button9.Location = new System.Drawing.Point(0, 576);
             this.button9.Margin = new System.Windows.Forms.Padding(0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(197, 32);
@@ -476,7 +480,7 @@ namespace MaxPowerSystem
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 602);
+            this.button10.Location = new System.Drawing.Point(0, 608);
             this.button10.Margin = new System.Windows.Forms.Padding(0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(197, 32);
@@ -493,7 +497,7 @@ namespace MaxPowerSystem
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 634);
+            this.button11.Location = new System.Drawing.Point(0, 640);
             this.button11.Margin = new System.Windows.Forms.Padding(0);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(197, 32);
@@ -802,8 +806,8 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Button viewArt;
         private System.Windows.Forms.Button viewCot;
         private System.Windows.Forms.Button viewOrdC;
-        private System.Windows.Forms.Button viewPend;
-        private System.Windows.Forms.Button viewOrd;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button viewSol;
     }
 }
 

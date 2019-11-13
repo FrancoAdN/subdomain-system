@@ -155,7 +155,9 @@ namespace MaxPowerSystem
             
         }
 
-
-
+        private void infoNot_MouseClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("Pestaña donde se recibiran las notificaciones correspondientes a los procesos y/o tareas que se encuentren realizadas, esten pendientes o requieran de atencion de un usuario provenientes de MaxPower System.");
+        }
     }
 }

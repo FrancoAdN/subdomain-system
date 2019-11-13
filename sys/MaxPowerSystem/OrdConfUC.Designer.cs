@@ -36,6 +36,7 @@
             this.dbOrdConf1 = new MaxPowerSystem.dbOrdConf();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.infoOrd = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,10 +114,21 @@
             this.pictureBox1.TabIndex = 81;
             this.pictureBox1.TabStop = false;
             // 
+            // infoOrd
+            // 
+            this.infoOrd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("infoOrd.BackgroundImage")));
+            this.infoOrd.Location = new System.Drawing.Point(893, 25);
+            this.infoOrd.Name = "infoOrd";
+            this.infoOrd.Size = new System.Drawing.Size(34, 31);
+            this.infoOrd.TabIndex = 82;
+            this.infoOrd.UseVisualStyleBackColor = true;
+            this.infoOrd.MouseClick += new System.Windows.Forms.MouseEventHandler(this.infoOrd_MouseClick);
+            // 
             // OrdConfUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.infoOrd);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dbOrdConf1);
@@ -141,5 +153,6 @@
         private dbOrdConf dbOrdConf1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button infoOrd;
     }
 }

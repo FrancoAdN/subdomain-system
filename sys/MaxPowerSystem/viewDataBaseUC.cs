@@ -31,6 +31,32 @@ namespace MaxPowerSystem
             //init(15, 5);
         }
 
+        public void changeVal(string ent)
+        {
+            cmbDb.Items.Clear();
+            if(ent == "Empresas")
+            {
+                cmbDb.Items.AddRange(new object[] {
+                "Empresas",
+                "(seleccionar)"});
+            }
+            else if(ent == "Cot")
+            {
+                cmbDb.Items.AddRange(new object[] {
+                "Cot. Asistencia técnica",
+                "Cot. Reparación de laboratorio",
+                "Cot. Venta de productos",
+                "(seleccionar)"});
+
+            }
+            else if(ent == "Ord")
+            {
+                cmbDb.Items.AddRange(new object[] {
+                "Orden de compra exterior",
+                "Orden de compra nacional",
+                "(seleccionar)"});
+            }
+        }
 
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -1254,7 +1280,9 @@ namespace MaxPowerSystem
 
         private void button1_MouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("Pestaña para realizar busquedas y/o consultas en la base de datos de MaxPower System.");
+            MessageBox.Show("Pestaña para realizar busquedas y/o consultas de las distintas pestañas del sistema en la base de datos de MaxPower System.");
         }
+
+
     }
 }

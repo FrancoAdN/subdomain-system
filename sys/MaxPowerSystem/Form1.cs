@@ -272,6 +272,7 @@ namespace MaxPowerSystem
 
             button6.Visible = !button6.Visible;
             button5.Visible = !button5.Visible;
+            button15.Visible = !button15.Visible;
             
         }
 
@@ -442,9 +443,6 @@ namespace MaxPowerSystem
             ordConfUC1.Show();
             ordConfUC1.BringToFront();
 
-            viewPend.Visible = !viewPend.Visible;
-            viewOrd.Visible = !viewOrd.Visible;
-
 
         }
 
@@ -480,6 +478,8 @@ namespace MaxPowerSystem
 
             solicitudesUC1.Show();
             solicitudesUC1.BringToFront();
+
+            viewSol.Visible = !viewSol.Visible;
         }
 
         private void button6_MouseClick(object sender, MouseEventArgs e)
@@ -516,6 +516,60 @@ namespace MaxPowerSystem
             uploadDataBaseUC1.changeName("Clientes");
             uploadDataBaseUC1.Show();
             uploadDataBaseUC1.BringToFront();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            uploadDataBaseUC1.Hide();
+            viewDataBaseUC1.Hide();
+            tecAsistUC1.Hide();
+            ventaProdUC1.Hide();
+            repProdUC1.Hide();
+            compNacUC1.Hide();
+            compExteriorUC1.Hide();
+            ordConfUC1.Hide();
+            notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
+
+            viewDataBaseUC1.changeVal("Empresas");
+            viewDataBaseUC1.Show();
+            viewDataBaseUC1.BringToFront();
+        }
+
+        private void viewCot_Click(object sender, EventArgs e)
+        {
+            uploadDataBaseUC1.Hide();
+            viewDataBaseUC1.Hide();
+            tecAsistUC1.Hide();
+            ventaProdUC1.Hide();
+            repProdUC1.Hide();
+            compNacUC1.Hide();
+            compExteriorUC1.Hide();
+            ordConfUC1.Hide();
+            notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
+
+            viewDataBaseUC1.changeVal("Cot");
+            viewDataBaseUC1.Show();
+            viewDataBaseUC1.BringToFront();
+        }
+
+        private void viewOrdC_Click(object sender, EventArgs e)
+        {
+            uploadDataBaseUC1.Hide();
+            viewDataBaseUC1.Hide();
+            tecAsistUC1.Hide();
+            ventaProdUC1.Hide();
+            repProdUC1.Hide();
+            compNacUC1.Hide();
+            compExteriorUC1.Hide();
+            ordConfUC1.Hide();
+            notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
+
+            viewDataBaseUC1.changeVal("Ord");
+            viewDataBaseUC1.Show();
+            viewDataBaseUC1.BringToFront();
         }
 
 
