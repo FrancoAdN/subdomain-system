@@ -1407,9 +1407,24 @@ app.post('/register', (req, resp) => {
         data["admin"] = false;
     }
     data["usr"] = data.name +' '+ data.last;
+    console.log(data);
     const con = connectionSQL();
-    let sql =  `INSERT INTO empleados (usuario, nombre, apellido, contraseña, admin) values ()`;
-    // resp.send(req.body);
+    let sql =  `INSERT INTO empleados (usuario, nombre, apellido, contraseña, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
+    console.log(sql);
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else
+                resp.redirect('/register');
+          con.end();
+        });
+    });
 });
 //end of region
 
