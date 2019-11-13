@@ -1431,6 +1431,7 @@ app.post('/register', (req, resp) => {
           con.end();
         });
     });
+    console.log(exists);
 
     /*if(!exists){
         const con = connectionSQL();
