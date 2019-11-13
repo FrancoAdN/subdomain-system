@@ -1419,15 +1419,20 @@ app.post('/register', (req, resp) => {
             if (err) {
                 console.error(err);
                 resp.send("0");
-            }else if(result.length == 0)
+            }else if(result.length == 0){
                 exists = false;
-            else
+                console.log(result);
+            }
+            else{
                 exists = true;
+                console.log(result);
+            }
+                
           con.end();
         });
     });
 
-    if(!exists){
+    /*if(!exists){
         const con = connectionSQL();
         sql =  `INSERT INTO empleados (usuario, nombre, apellido, pwd, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
         con.connect(function(err) {
@@ -1446,7 +1451,7 @@ app.post('/register', (req, resp) => {
         });
     }else{
         resp.send("User already exists");
-    }
+    }*/
 });
 //end of region
 
