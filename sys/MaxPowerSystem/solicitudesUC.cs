@@ -24,8 +24,9 @@ namespace MaxPowerSystem
             string prec = boxPrec.Text;
             string cli = boxCli.Text;
             string desc = boxDesc.Text;
+            string t_solicitud = tSolicitud.Text;
 
-            if (string.IsNullOrEmpty(prec) || string.IsNullOrEmpty(cli) || string.IsNullOrEmpty(desc))
+            if (string.IsNullOrEmpty(prec) || string.IsNullOrEmpty(cli) || string.IsNullOrEmpty(desc) || string.IsNullOrEmpty(t_solicitud))
                 MessageBox.Show("Debe completar todos los campos para poder guardar la solicitud.", "Maxpower System dice: ");
             else
             {
@@ -90,6 +91,7 @@ namespace MaxPowerSystem
                     postJ["proc"] = prec;
                     postJ["cliente"] = cli;
                     postJ["descr"] = desc;
+                    postJ["t_sol"] = t_solicitud;
                     postJ["fecha"] = DateTime.Now.ToString("dd/MM/yyyy");
 
                     client.endPoint = "http://system.maxpower-ar.com/sol";

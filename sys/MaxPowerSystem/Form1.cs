@@ -19,6 +19,7 @@ namespace MaxPowerSystem
     {
         public int IdUser;
         public bool Admin;
+        public string UserName;
         public Form1()
         {
             InitializeComponent();
@@ -107,9 +108,7 @@ namespace MaxPowerSystem
 
         }
 
-        private void ViewDataBaseUC1_Load(object sender, EventArgs e)
-        {
-        }
+
 
         public void CreateTableWord(object filename, object SaveAs, object arr, int n_table)
         {
@@ -270,16 +269,6 @@ namespace MaxPowerSystem
         private void Button2_Click(object sender, EventArgs e)
         {
             // SHOW UP DB UC
-            viewDataBaseUC1.Hide();
-            tecAsistUC1.Hide();
-            ventaProdUC1.Hide();
-            repProdUC1.Hide();
-            compExteriorUC1.Hide();
-            compNacUC1.Hide();
-            ordConfUC1.Hide();
-            notificacionesUC1.Hide();
-            solicitudesUC1.Hide();
-            uploadDataBaseUC1.Hide();
 
             button6.Visible = !button6.Visible;
             button5.Visible = !button5.Visible;

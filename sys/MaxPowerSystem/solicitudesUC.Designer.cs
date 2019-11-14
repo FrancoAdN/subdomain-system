@@ -41,7 +41,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.combInco = new System.Windows.Forms.ComboBox();
+            this.tSolicitud = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -165,25 +165,25 @@
             this.label5.TabIndex = 118;
             this.label5.Text = "Tipo de solicitud:";
             // 
-            // combInco
+            // tSolicitud
             // 
-            this.combInco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combInco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.combInco.FormattingEnabled = true;
-            this.combInco.Items.AddRange(new object[] {
+            this.tSolicitud.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tSolicitud.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.tSolicitud.FormattingEnabled = true;
+            this.tSolicitud.Items.AddRange(new object[] {
             "Cot. Asistencia técnica",
             "Cot. Reparación de laboratorio",
             "Cot. Venta de productos"});
-            this.combInco.Location = new System.Drawing.Point(207, 355);
-            this.combInco.Name = "combInco";
-            this.combInco.Size = new System.Drawing.Size(246, 26);
-            this.combInco.TabIndex = 119;
+            this.tSolicitud.Location = new System.Drawing.Point(207, 355);
+            this.tSolicitud.Name = "tSolicitud";
+            this.tSolicitud.Size = new System.Drawing.Size(246, 26);
+            this.tSolicitud.TabIndex = 119;
             // 
             // solicitudesUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.combInco);
+            this.Controls.Add(this.tSolicitud);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
@@ -220,6 +220,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox combInco;
+        private System.Windows.Forms.ComboBox tSolicitud;
     }
 }
