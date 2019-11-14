@@ -90,7 +90,7 @@
             this.countPanel.Controls.Add(this.leftLab, 1, 0);
             this.countPanel.Controls.Add(this.rightLab, 2, 0);
             this.countPanel.Controls.Add(this.rightBut, 3, 0);
-            this.countPanel.Location = new System.Drawing.Point(349, 414);
+            this.countPanel.Location = new System.Drawing.Point(348, 454);
             this.countPanel.Name = "countPanel";
             this.countPanel.RowCount = 1;
             this.countPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -297,7 +297,7 @@
             // 
             this.dbTecAsist1.Location = new System.Drawing.Point(0, 56);
             this.dbTecAsist1.Name = "dbTecAsist1";
-            this.dbTecAsist1.Size = new System.Drawing.Size(997, 330);
+            this.dbTecAsist1.Size = new System.Drawing.Size(997, 377);
             this.dbTecAsist1.TabIndex = 10;
             // 
             // viewDataBaseUC
@@ -323,7 +323,7 @@
             this.Controls.Add(this.countPanel);
             this.Controls.Add(this.cmbDb);
             this.Name = "viewDataBaseUC";
-            this.Size = new System.Drawing.Size(1000, 470);
+            this.Size = new System.Drawing.Size(1000, 539);
             this.countPanel.ResumeLayout(false);
             this.countPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOrd)).EndInit();

@@ -14,6 +14,7 @@ namespace MaxPowerSystem
 {
     public partial class tecAsistUC : UserControl
     {
+        public int IdUser;
         public tecAsistUC()
         {
             InitializeComponent();
@@ -25,8 +26,7 @@ namespace MaxPowerSystem
         {
             
             string detail = labPor.Text +" "+ boxDays.Text +" "+ labDay.Text +" "+ boxHours.Text +" "+ labAsist.Text +" "+ labTec.Text +" "+ labForAsist.Text +" "+ boxDetalle.Text; 
-            Form1 F1= new Form1();
-            
+            Form1 F1 = new Form1();
             if(!string.IsNullOrEmpty(boxEnterprise.Text) && 
                 !string.IsNullOrEmpty(boxAsist.Text) &&
                 !string.IsNullOrEmpty(boxPrice.Text) &&
@@ -34,8 +34,7 @@ namespace MaxPowerSystem
                 !string.IsNullOrEmpty(boxDays.Text) &&
                 !string.IsNullOrEmpty(boxHours.Text) &&
                 !string.IsNullOrEmpty(boxDetalle.Text) &&
-                !string.IsNullOrEmpty(combMon.Text) &&
-                !string.IsNullOrEmpty(BoxRef.Text))
+                !string.IsNullOrEmpty(combMon.Text))
             {
                 JToken json = "";
                 bool err = false; 
@@ -174,9 +173,8 @@ namespace MaxPowerSystem
                             client.postJSON += "}";
                             temp = JToken.Parse(client.postJSON);
                             temp["mon"] = combMon.Text;
-                            temp["id_empleado"] = F1.IdUser;
+                            temp["id_empleado"] = this.IdUser;
                             client.postJSON = temp.ToString();
-                            Console.WriteLine(client.postJSON);
 
                             client.endPoint = "http://system.maxpower-ar.com/asis_tec";
 

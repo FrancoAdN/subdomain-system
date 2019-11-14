@@ -44,7 +44,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.maxPlBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +54,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.boxRef = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,7 +69,7 @@
             this.agregarProd.Location = new System.Drawing.Point(537, 226);
             this.agregarProd.Name = "agregarProd";
             this.agregarProd.Size = new System.Drawing.Size(129, 29);
-            this.agregarProd.TabIndex = 50;
+            this.agregarProd.TabIndex = 6;
             this.agregarProd.Text = "Agregar producto";
             this.agregarProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.agregarProd.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.90278F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.09722F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.Controls.Add(this.DescBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.CantBox, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.UnitPrBox, 1, 1);
@@ -110,11 +110,11 @@
             // 
             this.DescBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DescBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.DescBox.Location = new System.Drawing.Point(77, 51);
+            this.DescBox.Location = new System.Drawing.Point(76, 51);
             this.DescBox.Multiline = true;
             this.DescBox.Name = "DescBox";
             this.DescBox.Size = new System.Drawing.Size(159, 81);
-            this.DescBox.TabIndex = 34;
+            this.DescBox.TabIndex = 4;
             // 
             // CantBox
             // 
@@ -123,8 +123,8 @@
             this.CantBox.Location = new System.Drawing.Point(3, 51);
             this.CantBox.Multiline = true;
             this.CantBox.Name = "CantBox";
-            this.CantBox.Size = new System.Drawing.Size(68, 81);
-            this.CantBox.TabIndex = 33;
+            this.CantBox.Size = new System.Drawing.Size(67, 81);
+            this.CantBox.TabIndex = 3;
             this.CantBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CantBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
             // 
@@ -132,11 +132,11 @@
             // 
             this.UnitPrBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UnitPrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.UnitPrBox.Location = new System.Drawing.Point(242, 51);
+            this.UnitPrBox.Location = new System.Drawing.Point(241, 51);
             this.UnitPrBox.Multiline = true;
             this.UnitPrBox.Name = "UnitPrBox";
-            this.UnitPrBox.Size = new System.Drawing.Size(114, 81);
-            this.UnitPrBox.TabIndex = 35;
+            this.UnitPrBox.Size = new System.Drawing.Size(115, 81);
+            this.UnitPrBox.TabIndex = 5;
             this.UnitPrBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.UnitPrBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.notNumberCheck);
             // 
@@ -147,7 +147,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 48);
+            this.label3.Size = new System.Drawing.Size(67, 48);
             this.label3.TabIndex = 35;
             this.label3.Text = "Cantidad";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,7 +157,7 @@
             this.label4.AutoSize = true;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(77, 0);
+            this.label4.Location = new System.Drawing.Point(76, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(159, 48);
             this.label4.TabIndex = 36;
@@ -169,9 +169,9 @@
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(242, 0);
+            this.label6.Location = new System.Drawing.Point(241, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 48);
+            this.label6.Size = new System.Drawing.Size(115, 48);
             this.label6.TabIndex = 37;
             this.label6.Text = "Precio Unitario (USD)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,7 +184,7 @@
             this.buttonWordFile.Location = new System.Drawing.Point(260, 441);
             this.buttonWordFile.Name = "buttonWordFile";
             this.buttonWordFile.Size = new System.Drawing.Size(238, 31);
-            this.buttonWordFile.TabIndex = 55;
+            this.buttonWordFile.TabIndex = 10;
             this.buttonWordFile.Text = "Generar cotización de reparación";
             this.buttonWordFile.UseVisualStyleBackColor = true;
             this.buttonWordFile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.genWord);
@@ -234,14 +234,6 @@
             this.pictureBox5.TabIndex = 94;
             this.pictureBox5.TabStop = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox1.Location = new System.Drawing.Point(64, 115);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 24);
-            this.textBox1.TabIndex = 93;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -259,7 +251,7 @@
             this.maxPlBox.Multiline = true;
             this.maxPlBox.Name = "maxPlBox";
             this.maxPlBox.Size = new System.Drawing.Size(88, 25);
-            this.maxPlBox.TabIndex = 90;
+            this.maxPlBox.TabIndex = 9;
             this.maxPlBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
@@ -279,7 +271,7 @@
             this.EntBox.Multiline = true;
             this.EntBox.Name = "EntBox";
             this.EntBox.Size = new System.Drawing.Size(285, 25);
-            this.EntBox.TabIndex = 87;
+            this.EntBox.TabIndex = 1;
             // 
             // PayBox
             // 
@@ -288,7 +280,7 @@
             this.PayBox.Multiline = true;
             this.PayBox.Name = "PayBox";
             this.PayBox.Size = new System.Drawing.Size(285, 84);
-            this.PayBox.TabIndex = 89;
+            this.PayBox.TabIndex = 8;
             // 
             // label5
             // 
@@ -307,7 +299,7 @@
             this.EntregaBox.Multiline = true;
             this.EntregaBox.Name = "EntregaBox";
             this.EntregaBox.Size = new System.Drawing.Size(285, 73);
-            this.EntregaBox.TabIndex = 88;
+            this.EntregaBox.TabIndex = 7;
             // 
             // label2
             // 
@@ -339,17 +331,26 @@
             this.label10.TabIndex = 99;
             this.label10.Text = "Reparacion de laboratorio";
             // 
+            // boxRef
+            // 
+            this.boxRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.boxRef.Location = new System.Drawing.Point(64, 115);
+            this.boxRef.Multiline = true;
+            this.boxRef.Name = "boxRef";
+            this.boxRef.Size = new System.Drawing.Size(285, 25);
+            this.boxRef.TabIndex = 2;
+            // 
             // repProdUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.boxRef);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.maxPlBox);
             this.Controls.Add(this.label8);
@@ -393,7 +394,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox maxPlBox;
         private System.Windows.Forms.Label label8;
@@ -404,5 +404,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox boxRef;
     }
 }

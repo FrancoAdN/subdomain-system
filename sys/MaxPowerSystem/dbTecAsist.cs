@@ -45,11 +45,12 @@ namespace MaxPowerSystem
         {
             entLab.Text = (String)json[Index]["emp"];
             labTdAsist.Text = (String)json[Index]["tipo"];
-            labPrice.Text = (String)json[Index]["precio"];
+            labPrice.Text = (String)json[Index]["precio"] +" "+ (String)json[Index]["mon"];
             fdpLab.Text = (String)json[Index]["fdp"];
             labDet.Text = (String)json[Index]["det"];
             labDate.Text = (String)json[Index]["fecha"];
             labOrden.Text = (String)json[Index]["orden"];
+            labRef.Text = (String)json[Index]["ref"];
         }
 
 

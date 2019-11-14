@@ -170,6 +170,7 @@ namespace MaxPowerSystem
                         data.Add(new Files("MAX-" + nof + "-AR19-1", "<noferta>"));
                         data.Add(new Files(DateTime.Now.ToString("dd/MM/yyyy"), "<fecha>"));
                         data.Add(new Files(EntBox.Text, "<empresa>"));
+                        data.Add(new Files(boxRef.Text, "<ref>"));
                         data.Add(new Files(precio.ToString(), "<precio>"));
                         data.Add(new Files(EntregaBox.Text, "<entrega>"));
                         data.Add(new Files(PayBox.Text, "<formadepago>"));

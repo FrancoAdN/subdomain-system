@@ -24,6 +24,12 @@ namespace MaxPowerSystem
         {
             InitializeComponent();
         }
+
+        public int IdUserValue()
+        {
+            return this.IdUser;
+        }
+
         public void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
             object matchCase = true;
@@ -107,7 +113,6 @@ namespace MaxPowerSystem
             return true;
 
         }
-
 
 
         public void CreateTableWord(object filename, object SaveAs, object arr, int n_table)
@@ -289,6 +294,7 @@ namespace MaxPowerSystem
             notificacionesUC1.Hide();
             solicitudesUC1.Hide();
 
+            tecAsistUC1.IdUser = IdUser;
             tecAsistUC1.Show();
             tecAsistUC1.BringToFront();
         }
