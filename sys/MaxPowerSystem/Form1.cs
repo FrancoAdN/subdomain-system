@@ -312,6 +312,7 @@ namespace MaxPowerSystem
             notificacionesUC1.Hide();
             solicitudesUC1.Hide();
 
+            repProdUC1.IdUser = IdUser;
             repProdUC1.Show();
             repProdUC1.BringToFront();
         }
