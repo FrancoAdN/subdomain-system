@@ -33,7 +33,9 @@ namespace MaxPowerSystem
                 !string.IsNullOrEmpty(boxForm.Text) &&
                 !string.IsNullOrEmpty(boxDays.Text) &&
                 !string.IsNullOrEmpty(boxHours.Text) &&
-                !string.IsNullOrEmpty(boxDetalle.Text))
+                !string.IsNullOrEmpty(boxDetalle.Text) &&
+                !string.IsNullOrEmpty(combMon.Text) &&
+                !string.IsNullOrEmpty(BoxRef.Text))
             {
                 JToken json = "";
                 bool err = false; 
@@ -92,8 +94,9 @@ namespace MaxPowerSystem
                     }
 
                     data.Add(new Files(DateTime.Now.ToString("dd/MM/yyyy"), "<fecha>"));
-                    data.Add(new Files((string)json[0]["tel"], "<tel>"));
+                    data.Add(new Files((string)json[0]["telcom"], "<tel>"));
                     data.Add(new Files(boxEnterprise.Text, "<empresa>"));
+                    data.Add(new Files(BoxRef.Text, "<ref>"));
                     data.Add(new Files(boxAsist.Text, "<asistencia>"));
                     data.Add(new Files(detail, "<detalle>"));
                     data.Add(new Files(boxPrice.Text, "<precio>"));

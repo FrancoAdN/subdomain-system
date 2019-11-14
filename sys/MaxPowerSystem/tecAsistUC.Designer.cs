@@ -49,7 +49,7 @@ namespace MaxPowerSystem
             this.boxDetalle = new System.Windows.Forms.TextBox();
             this.buttonWordFile = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.BoxRef = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -243,13 +243,13 @@ namespace MaxPowerSystem
             this.label5.TabIndex = 17;
             this.label5.Text = "Referencia:";
             // 
-            // textBox1
+            // BoxRef
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.textBox1.Location = new System.Drawing.Point(175, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 24);
-            this.textBox1.TabIndex = 5;
+            this.BoxRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.BoxRef.Location = new System.Drawing.Point(175, 84);
+            this.BoxRef.Name = "BoxRef";
+            this.BoxRef.Size = new System.Drawing.Size(212, 24);
+            this.BoxRef.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -299,7 +299,7 @@ namespace MaxPowerSystem
             this.combMon.Location = new System.Drawing.Point(175, 241);
             this.combMon.Name = "combMon";
             this.combMon.Size = new System.Drawing.Size(212, 26);
-            this.combMon.TabIndex = 72;
+            this.combMon.TabIndex = 7;
             // 
             // label6
             // 
@@ -362,7 +362,7 @@ namespace MaxPowerSystem
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BoxRef);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonWordFile);
             this.Controls.Add(this.boxDetalle);
@@ -416,7 +416,7 @@ namespace MaxPowerSystem
         private System.Windows.Forms.TextBox boxDetalle;
         private System.Windows.Forms.Button buttonWordFile;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox BoxRef;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

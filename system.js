@@ -700,6 +700,7 @@ app.get('/asis_tec/emp/:id', (req, resp) => {
 
 app.post('/asis_tec', (req, resp) => {
     const data = req.body;
+    console.log(data);
     data.precio = parseInt(data.precio);
     const nof = parseInt(data.noferta.split('-')[1]);
     data['conf'] = false;
