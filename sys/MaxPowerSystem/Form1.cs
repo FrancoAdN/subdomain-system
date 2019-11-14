@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using Word = Microsoft.Office.Interop.Word;
 
+
 namespace MaxPowerSystem
 {
     public partial class Form1 : Form
@@ -22,7 +23,6 @@ namespace MaxPowerSystem
         public Form1()
         {
             InitializeComponent();
-
         }
         public void FindAndReplace(Word.Application wordApp, object ToFindText, object replaceWithText)
         {
@@ -572,7 +572,36 @@ namespace MaxPowerSystem
             viewDataBaseUC1.BringToFront();
         }
 
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            viewHora.Text = DateTime.Now.ToString("hh:mm");
+            viewFecha.Text = DateTime.Now.ToLongDateString();
+        }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.maxpower-ar.com");
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/MaxPower-Industrial-Automation-100690231314367/");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://ar.linkedin.com/in/maxpower-industrial-automation-8186903a");
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/maxpower.industrial/?igshid=1q4yb71nbyhec");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/channel/UCXcFJ1D2XFs2NL_5RulBmJw");
+        }
     }
 
 }

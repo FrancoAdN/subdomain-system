@@ -62,15 +62,9 @@ namespace MaxPowerSystem
                 pwdBox.ForeColor = Color.LightGray;
             }
         }
-        private void Button1_MouseClick(object sender, MouseEventArgs e)
-        {
-            Application.Exit();
-        }
 
-        private void Button2_MouseClick(object sender, MouseEventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+
+
 
         private void ValLogin(object sender, EventArgs e)
         {
@@ -129,5 +123,53 @@ namespace MaxPowerSystem
             }
         }
 
+        private void iconminimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void iconrestaurar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Normal;
+            iconrestaurar.Visible = false;
+            iconmaximizar.Visible = true;
+        }
+
+        private void iconcerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void iconmaximizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+            iconrestaurar.Visible = true;
+            iconmaximizar.Visible = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.instagram.com/maxpower.industrial/?igshid=1q4yb71nbyhec");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.facebook.com/MaxPower-Industrial-Automation-100690231314367/");
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.youtube.com/channel/UCXcFJ1D2XFs2NL_5RulBmJw");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://ar.linkedin.com/in/maxpower-industrial-automation-8186903a");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://maxpower-ar.com");
+        }
     }
 }
