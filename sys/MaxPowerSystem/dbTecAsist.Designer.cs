@@ -46,17 +46,21 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.labRef = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // labFdp
             // 
             this.labFdp.AutoSize = true;
             this.labFdp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFdp.Location = new System.Drawing.Point(50, 253);
+            this.labFdp.Location = new System.Drawing.Point(50, 327);
             this.labFdp.Name = "labFdp";
             this.labFdp.Size = new System.Drawing.Size(127, 18);
             this.labFdp.TabIndex = 10;
@@ -66,7 +70,7 @@
             // 
             this.labPrec.AutoSize = true;
             this.labPrec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPrec.Location = new System.Drawing.Point(50, 209);
+            this.labPrec.Location = new System.Drawing.Point(50, 283);
             this.labPrec.Name = "labPrec";
             this.labPrec.Size = new System.Drawing.Size(62, 18);
             this.labPrec.TabIndex = 9;
@@ -76,7 +80,7 @@
             // 
             this.labType.AutoSize = true;
             this.labType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labType.Location = new System.Drawing.Point(50, 77);
+            this.labType.Location = new System.Drawing.Point(50, 151);
             this.labType.Name = "labType";
             this.labType.Size = new System.Drawing.Size(150, 18);
             this.labType.TabIndex = 8;
@@ -97,7 +101,7 @@
             // 
             this.labDate.AutoSize = true;
             this.labDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labDate.Location = new System.Drawing.Point(741, 261);
+            this.labDate.Location = new System.Drawing.Point(739, 352);
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(110, 18);
             this.labDate.TabIndex = 19;
@@ -107,7 +111,7 @@
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(852, 251);
+            this.button1.Location = new System.Drawing.Point(850, 342);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(34, 35);
             this.button1.TabIndex = 20;
@@ -126,7 +130,7 @@
             // labTdAsist
             // 
             this.labTdAsist.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labTdAsist.Location = new System.Drawing.Point(50, 100);
+            this.labTdAsist.Location = new System.Drawing.Point(50, 174);
             this.labTdAsist.Name = "labTdAsist";
             this.labTdAsist.Size = new System.Drawing.Size(250, 100);
             this.labTdAsist.TabIndex = 22;
@@ -135,7 +139,7 @@
             // labPrice
             // 
             this.labPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.labPrice.Location = new System.Drawing.Point(115, 209);
+            this.labPrice.Location = new System.Drawing.Point(115, 283);
             this.labPrice.Name = "labPrice";
             this.labPrice.Size = new System.Drawing.Size(198, 21);
             this.labPrice.TabIndex = 23;
@@ -144,7 +148,7 @@
             // fdpLab
             // 
             this.fdpLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.fdpLab.Location = new System.Drawing.Point(50, 273);
+            this.fdpLab.Location = new System.Drawing.Point(50, 347);
             this.fdpLab.Name = "fdpLab";
             this.fdpLab.Size = new System.Drawing.Size(316, 21);
             this.fdpLab.TabIndex = 24;
@@ -155,7 +159,7 @@
             this.labDet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.labDet.Location = new System.Drawing.Point(352, 50);
             this.labDet.Name = "labDet";
-            this.labDet.Size = new System.Drawing.Size(514, 161);
+            this.labDet.Size = new System.Drawing.Size(514, 119);
             this.labDet.TabIndex = 26;
             this.labDet.Text = "label5";
             // 
@@ -192,7 +196,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(8, 70);
+            this.pictureBox2.Location = new System.Drawing.Point(8, 144);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.TabIndex = 29;
@@ -201,7 +205,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(8, 202);
+            this.pictureBox3.Location = new System.Drawing.Point(8, 276);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.TabIndex = 30;
@@ -210,16 +214,48 @@
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(8, 247);
+            this.pictureBox4.Location = new System.Drawing.Point(8, 321);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.TabIndex = 31;
             this.pictureBox4.TabStop = false;
             // 
+            // labRef
+            // 
+            this.labRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.labRef.Location = new System.Drawing.Point(50, 94);
+            this.labRef.Name = "labRef";
+            this.labRef.Size = new System.Drawing.Size(250, 29);
+            this.labRef.TabIndex = 33;
+            this.labRef.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(50, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 18);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Referencia:";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(8, 73);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.TabIndex = 77;
+            this.pictureBox5.TabStop = false;
+            // 
             // dbTecAsist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.labRef);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -238,11 +274,12 @@
             this.Controls.Add(this.labType);
             this.Controls.Add(this.labEnt);
             this.Name = "dbTecAsist";
-            this.Size = new System.Drawing.Size(920, 333);
+            this.Size = new System.Drawing.Size(920, 404);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +304,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label labRef;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

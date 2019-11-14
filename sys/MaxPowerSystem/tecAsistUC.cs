@@ -14,6 +14,7 @@ namespace MaxPowerSystem
 {
     public partial class tecAsistUC : UserControl
     {
+        public int IdUser;
         public tecAsistUC()
         {
             InitializeComponent();
@@ -25,15 +26,15 @@ namespace MaxPowerSystem
         {
             
             string detail = labPor.Text +" "+ boxDays.Text +" "+ labDay.Text +" "+ boxHours.Text +" "+ labAsist.Text +" "+ labTec.Text +" "+ labForAsist.Text +" "+ boxDetalle.Text; 
-            Form1 F1= new Form1();
-            
+            Form1 F1 = new Form1();
             if(!string.IsNullOrEmpty(boxEnterprise.Text) && 
                 !string.IsNullOrEmpty(boxAsist.Text) &&
                 !string.IsNullOrEmpty(boxPrice.Text) &&
                 !string.IsNullOrEmpty(boxForm.Text) &&
                 !string.IsNullOrEmpty(boxDays.Text) &&
                 !string.IsNullOrEmpty(boxHours.Text) &&
-                !string.IsNullOrEmpty(boxDetalle.Text))
+                !string.IsNullOrEmpty(boxDetalle.Text) &&
+                !string.IsNullOrEmpty(combMon.Text))
             {
                 JToken json = "";
                 bool err = false; 
@@ -92,8 +93,9 @@ namespace MaxPowerSystem
                     }
 
                     data.Add(new Files(DateTime.Now.ToString("dd/MM/yyyy"), "<fecha>"));
-                    data.Add(new Files((string)json[0]["tel"], "<tel>"));
+                    data.Add(new Files((string)json[0]["telcom"], "<tel>"));
                     data.Add(new Files(boxEnterprise.Text, "<empresa>"));
+                    data.Add(new Files(BoxRef.Text, "<ref>"));
                     data.Add(new Files(boxAsist.Text, "<asistencia>"));
                     data.Add(new Files(detail, "<detalle>"));
                     data.Add(new Files(boxPrice.Text, "<precio>"));
@@ -153,7 +155,10 @@ namespace MaxPowerSystem
                             boxDetalle.Text = "";
                             boxDays.Text = "";
                             boxHours.Text = "";
+                            combMon.Text = "";
+                            BoxRef.Text = "";
 
+                            JToken temp;
                             client.postJSON = string.Empty;
                             client.postJSON = "{";
                             char[] tr = { '{', '}' };
@@ -163,9 +168,13 @@ namespace MaxPowerSystem
                                 aux += d.toSTR();
                             }
                             aux = aux.Remove(aux.Length - 1);
+                            
                             client.postJSON += aux;
                             client.postJSON += "}";
-
+                            temp = JToken.Parse(client.postJSON);
+                            temp["mon"] = combMon.Text;
+                            temp["id_empleado"] = this.IdUser;
+                            client.postJSON = temp.ToString();
 
                             client.endPoint = "http://system.maxpower-ar.com/asis_tec";
 

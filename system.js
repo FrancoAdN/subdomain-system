@@ -601,7 +601,8 @@ app.post('/rep_lab', (req, resp) => {
     data.plazomax = parseInt(data.plazomax);
     data['conf'] = false;
     const nof = parseInt(data.noferta.split('-')[1]);
-    let sql =  `INSERT INTO rep_lab (emp, edm, precio, cdp, pmde, orden, fecha, confirmado) values ('${data.empresa}', '${data.entrega}', ${data.precio}, '${data.formadepago}', '${data.plazomax}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    console.log(data.id_empleado);
+    let sql =  `INSERT INTO rep_lab (emp, edm, precio, cdp, pmde, ref, orden, fecha, confirmado, id_empleado) values ('${data.empresa}', '${data.entrega}', ${data.precio}, '${data.formadepago}', '${data.plazomax}', '${data.ref}','${data.noferta}', '${data.fecha}', ${data.conf}, ${data.id_empleado});
     UPDATE last SET num = ${nof};`;
     for(let t of data.tabla){
         t.cant = parseInt(t.cant);
@@ -706,7 +707,7 @@ app.post('/asis_tec', (req, resp) => {
 
 
     const con = connectionSQL();
-    const sql =  `INSERT INTO asis_tec (emp, tipo, precio, fdp, det, orden, fecha, confirmado) values ('${data.empresa}', '${data.asistencia}', ${data.precio}, '${data.formadepago}', '${data.detalle}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    const sql =  `INSERT INTO asis_tec (emp, tipo, precio, fdp, det, mon, ref, orden, fecha, confirmado, id_empleado) values ('${data.empresa}', '${data.asistencia}', ${data.precio}, '${data.formadepago}', '${data.detalle}', '${data.mon}', '${data.ref}', '${data.noferta}', '${data.fecha}', ${data.conf}, ${data.id_empleado});
     UPDATE last SET num = ${nof};`;
     con.connect(function(err) {
         if (err){

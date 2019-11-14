@@ -17,6 +17,7 @@ namespace MaxPowerSystem
         private List<Detalle> productos = new List<Detalle>();
 
         internal List<Detalle> Productos { get => productos; set => productos = value; }
+        public int IdUser;
         public repProdUC()
         {
             InitializeComponent();
@@ -63,7 +64,7 @@ namespace MaxPowerSystem
 
         private void genWord(object sender, MouseEventArgs e)
         {
-
+            JToken tempJ = "";
             object temp = @"C:\Program Files\Maxpower\Maxpower System\static\temp_rep_prod.docx";
             object SaveAs = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\MaxPowerSystem\MaxPowerSystem\Reparación de laboratorio\test_rep.docx";
             if (Productos.Count > 0 &&
@@ -121,9 +122,19 @@ namespace MaxPowerSystem
 
                 if (!err)
                 {
-                    data.Add(new Files((string)json[0]["cont"], "<para>"));
-                    data.Add(new Files((string)json[0]["mail"], "<email>"));
-                    data.Add(new Files((string)json[0]["tel"], "<tel>"));
+                    string msg = $"Contacto 1: {json[0]["cont"]}\n\nContacto 2: {json[0]["contb"]}\n\n\nPresione \"Si\" para el contacto 1, \"No\" para el contacto 2";
+                    if (MessageBox.Show(msg, "Maxpower System dice: ", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        data.Add(new Files((string)json[0]["cont"], "<para>"));
+                        data.Add(new Files((string)json[0]["mail"], "<email>"));
+                    }
+                    else
+                    {
+                        data.Add(new Files((string)json[0]["contb"], "<para>"));
+                        data.Add(new Files((string)json[0]["mailb"], "<email>"));
+                    }
+                    data.Add(new Files((string)json[0]["telcom"], "<tel>"));
+
                     Form1 F1 = new Form1();
                     Productos.Add(new Detalle("Cant.", "Descripción", "Precio unitario USD", "Precio Total USD"));
                     try
@@ -170,6 +181,7 @@ namespace MaxPowerSystem
                         data.Add(new Files("MAX-" + nof + "-AR19-1", "<noferta>"));
                         data.Add(new Files(DateTime.Now.ToString("dd/MM/yyyy"), "<fecha>"));
                         data.Add(new Files(EntBox.Text, "<empresa>"));
+                        data.Add(new Files(boxRef.Text, "<ref>"));
                         data.Add(new Files(precio.ToString(), "<precio>"));
                         data.Add(new Files(EntregaBox.Text, "<entrega>"));
                         data.Add(new Files(PayBox.Text, "<formadepago>"));
@@ -192,6 +204,7 @@ namespace MaxPowerSystem
                             EntregaBox.Text = "";
                             PayBox.Text = "";
                             maxPlBox.Text = "";
+                            boxRef.Text = "";
 
                             client.postJSON = string.Empty;
                             client.postJSON = "{";
@@ -212,6 +225,10 @@ namespace MaxPowerSystem
                             aux += prod;
                             aux += "]}";
                             client.postJSON += aux;
+
+                            tempJ = JToken.Parse(client.postJSON);
+                            tempJ["id_empleado"] = this.IdUser;
+                            client.postJSON = tempJ.ToString();
 
                             client.endPoint = "http://system.maxpower-ar.com/rep_lab";
                             client.httpMethod = httpVerb.POST;
