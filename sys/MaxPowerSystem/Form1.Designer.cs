@@ -30,6 +30,7 @@ namespace MaxPowerSystem
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button13 = new System.Windows.Forms.Button();
@@ -56,7 +57,14 @@ namespace MaxPowerSystem
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.viewHora = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.viewFecha = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -79,9 +87,14 @@ namespace MaxPowerSystem
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -116,11 +129,12 @@ namespace MaxPowerSystem
             flowLayoutPanel1.Controls.Add(this.button9);
             flowLayoutPanel1.Controls.Add(this.button10);
             flowLayoutPanel1.Controls.Add(this.button11);
+            flowLayoutPanel1.Controls.Add(this.button16);
             flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             flowLayoutPanel1.ForeColor = System.Drawing.Color.Transparent;
             flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new System.Drawing.Size(200, 666);
+            flowLayoutPanel1.Size = new System.Drawing.Size(200, 687);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // button13
@@ -156,14 +170,17 @@ namespace MaxPowerSystem
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 74);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(197, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Buscar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -173,14 +190,17 @@ namespace MaxPowerSystem
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 102);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(197, 30);
+            this.button4.Size = new System.Drawing.Size(197, 38);
             this.button4.TabIndex = 1;
             this.button4.Text = "Solicitud de cliente";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button4_MouseClick);
             // 
@@ -189,9 +209,9 @@ namespace MaxPowerSystem
             this.viewSol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.viewSol.FlatAppearance.BorderSize = 0;
             this.viewSol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewSol.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewSol.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewSol.ForeColor = System.Drawing.Color.White;
-            this.viewSol.Location = new System.Drawing.Point(3, 135);
+            this.viewSol.Location = new System.Drawing.Point(3, 143);
             this.viewSol.Name = "viewSol";
             this.viewSol.Size = new System.Drawing.Size(197, 26);
             this.viewSol.TabIndex = 15;
@@ -204,9 +224,11 @@ namespace MaxPowerSystem
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 164);
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(0, 172);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(197, 28);
@@ -220,9 +242,9 @@ namespace MaxPowerSystem
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(0, 192);
+            this.button5.Location = new System.Drawing.Point(0, 200);
             this.button5.Margin = new System.Windows.Forms.Padding(0);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(197, 26);
@@ -238,9 +260,9 @@ namespace MaxPowerSystem
             this.button6.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(0, 218);
+            this.button6.Location = new System.Drawing.Point(0, 226);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(197, 26);
@@ -257,9 +279,9 @@ namespace MaxPowerSystem
             this.button15.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button15.Location = new System.Drawing.Point(0, 244);
+            this.button15.Location = new System.Drawing.Point(0, 252);
             this.button15.Margin = new System.Windows.Forms.Padding(0);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(197, 26);
@@ -275,9 +297,11 @@ namespace MaxPowerSystem
             this.viewArt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.viewArt.FlatAppearance.BorderSize = 0;
             this.viewArt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewArt.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewArt.ForeColor = System.Drawing.Color.White;
-            this.viewArt.Location = new System.Drawing.Point(0, 270);
+            this.viewArt.Image = ((System.Drawing.Image)(resources.GetObject("viewArt.Image")));
+            this.viewArt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.viewArt.Location = new System.Drawing.Point(0, 278);
             this.viewArt.Margin = new System.Windows.Forms.Padding(0);
             this.viewArt.Name = "viewArt";
             this.viewArt.Size = new System.Drawing.Size(197, 28);
@@ -291,12 +315,14 @@ namespace MaxPowerSystem
             this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 298);
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(0, 306);
             this.button8.Margin = new System.Windows.Forms.Padding(0);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(197, 32);
+            this.button8.Size = new System.Drawing.Size(197, 38);
             this.button8.TabIndex = 4;
             this.button8.Text = "Cotizaciones";
             this.button8.UseVisualStyleBackColor = false;
@@ -307,9 +333,9 @@ namespace MaxPowerSystem
             this.ATButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.ATButton.FlatAppearance.BorderSize = 0;
             this.ATButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ATButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.ATButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ATButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.ATButton.Location = new System.Drawing.Point(0, 330);
+            this.ATButton.Location = new System.Drawing.Point(0, 344);
             this.ATButton.Margin = new System.Windows.Forms.Padding(0);
             this.ATButton.Name = "ATButton";
             this.ATButton.Size = new System.Drawing.Size(197, 26);
@@ -324,9 +350,9 @@ namespace MaxPowerSystem
             this.RLButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.RLButton.FlatAppearance.BorderSize = 0;
             this.RLButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RLButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RLButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.RLButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.RLButton.Location = new System.Drawing.Point(0, 356);
+            this.RLButton.Location = new System.Drawing.Point(0, 370);
             this.RLButton.Margin = new System.Windows.Forms.Padding(0);
             this.RLButton.Name = "RLButton";
             this.RLButton.Size = new System.Drawing.Size(197, 26);
@@ -341,9 +367,9 @@ namespace MaxPowerSystem
             this.VPButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.VPButton.FlatAppearance.BorderSize = 0;
             this.VPButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.VPButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VPButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VPButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.VPButton.Location = new System.Drawing.Point(0, 382);
+            this.VPButton.Location = new System.Drawing.Point(0, 396);
             this.VPButton.Margin = new System.Windows.Forms.Padding(0);
             this.VPButton.Name = "VPButton";
             this.VPButton.Size = new System.Drawing.Size(197, 26);
@@ -358,9 +384,9 @@ namespace MaxPowerSystem
             this.viewCot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.viewCot.FlatAppearance.BorderSize = 0;
             this.viewCot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewCot.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.viewCot.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewCot.ForeColor = System.Drawing.Color.White;
-            this.viewCot.Location = new System.Drawing.Point(0, 408);
+            this.viewCot.Location = new System.Drawing.Point(0, 422);
             this.viewCot.Margin = new System.Windows.Forms.Padding(0);
             this.viewCot.Name = "viewCot";
             this.viewCot.Size = new System.Drawing.Size(197, 26);
@@ -376,14 +402,17 @@ namespace MaxPowerSystem
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 434);
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 448);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(197, 32);
+            this.button3.Size = new System.Drawing.Size(204, 38);
             this.button3.TabIndex = 5;
-            this.button3.Text = "Ordenes de compra";
+            this.button3.Text = "       Ordenes de compra";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.showMenComp);
             // 
@@ -392,9 +421,9 @@ namespace MaxPowerSystem
             this.OCEButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.OCEButton.FlatAppearance.BorderSize = 0;
             this.OCEButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OCEButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCEButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OCEButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.OCEButton.Location = new System.Drawing.Point(0, 466);
+            this.OCEButton.Location = new System.Drawing.Point(0, 486);
             this.OCEButton.Margin = new System.Windows.Forms.Padding(0);
             this.OCEButton.Name = "OCEButton";
             this.OCEButton.Size = new System.Drawing.Size(197, 26);
@@ -409,9 +438,9 @@ namespace MaxPowerSystem
             this.OCNButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.OCNButton.FlatAppearance.BorderSize = 0;
             this.OCNButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OCNButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OCNButton.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OCNButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.OCNButton.Location = new System.Drawing.Point(0, 492);
+            this.OCNButton.Location = new System.Drawing.Point(0, 512);
             this.OCNButton.Margin = new System.Windows.Forms.Padding(0);
             this.OCNButton.Name = "OCNButton";
             this.OCNButton.Size = new System.Drawing.Size(197, 26);
@@ -426,9 +455,9 @@ namespace MaxPowerSystem
             this.viewOrdC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.viewOrdC.FlatAppearance.BorderSize = 0;
             this.viewOrdC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewOrdC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.viewOrdC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewOrdC.ForeColor = System.Drawing.Color.White;
-            this.viewOrdC.Location = new System.Drawing.Point(0, 518);
+            this.viewOrdC.Location = new System.Drawing.Point(0, 538);
             this.viewOrdC.Margin = new System.Windows.Forms.Padding(0);
             this.viewOrdC.Name = "viewOrdC";
             this.viewOrdC.Size = new System.Drawing.Size(197, 26);
@@ -444,12 +473,14 @@ namespace MaxPowerSystem
             this.OACButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.OACButton.FlatAppearance.BorderSize = 0;
             this.OACButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OACButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OACButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OACButton.ForeColor = System.Drawing.Color.White;
-            this.OACButton.Location = new System.Drawing.Point(0, 544);
+            this.OACButton.Image = ((System.Drawing.Image)(resources.GetObject("OACButton.Image")));
+            this.OACButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OACButton.Location = new System.Drawing.Point(0, 564);
             this.OACButton.Margin = new System.Windows.Forms.Padding(0);
             this.OACButton.Name = "OACButton";
-            this.OACButton.Size = new System.Drawing.Size(197, 32);
+            this.OACButton.Size = new System.Drawing.Size(197, 38);
             this.OACButton.TabIndex = 6;
             this.OACButton.Text = "Ordenes";
             this.OACButton.UseVisualStyleBackColor = false;
@@ -461,12 +492,14 @@ namespace MaxPowerSystem
             this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(0, 576);
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(0, 602);
             this.button9.Margin = new System.Windows.Forms.Padding(0);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(197, 32);
+            this.button9.Size = new System.Drawing.Size(197, 38);
             this.button9.TabIndex = 7;
             this.button9.Text = "Finanzas";
             this.button9.UseVisualStyleBackColor = false;
@@ -478,12 +511,14 @@ namespace MaxPowerSystem
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(0, 608);
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(0, 640);
             this.button10.Margin = new System.Windows.Forms.Padding(0);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(197, 32);
+            this.button10.Size = new System.Drawing.Size(197, 38);
             this.button10.TabIndex = 8;
             this.button10.Text = "Facturación";
             this.button10.UseVisualStyleBackColor = false;
@@ -495,19 +530,45 @@ namespace MaxPowerSystem
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(0, 640);
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(0, 678);
             this.button11.Margin = new System.Windows.Forms.Padding(0);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(197, 32);
+            this.button11.Size = new System.Drawing.Size(197, 38);
             this.button11.TabIndex = 9;
             this.button11.Text = "Notificaciones";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Button11_MouseClick);
             // 
+            // button16
+            // 
+            this.button16.AutoSize = true;
+            this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.White;
+            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
+            this.button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button16.Location = new System.Drawing.Point(0, 716);
+            this.button16.Margin = new System.Windows.Forms.Padding(0);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(197, 38);
+            this.button16.TabIndex = 17;
+            this.button16.Text = "Estadisticas";
+            this.button16.UseVisualStyleBackColor = false;
+            // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.viewHora);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.viewFecha);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label2);
@@ -523,24 +584,88 @@ namespace MaxPowerSystem
             this.panel1.Controls.Add(this.ordConfUC1);
             this.panel1.Location = new System.Drawing.Point(200, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 561);
+            this.panel1.Size = new System.Drawing.Size(984, 617);
             this.panel1.TabIndex = 0;
+            // 
+            // viewHora
+            // 
+            this.viewHora.AutoSize = true;
+            this.viewHora.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.viewHora.Location = new System.Drawing.Point(562, 458);
+            this.viewHora.Name = "viewHora";
+            this.viewHora.Size = new System.Drawing.Size(170, 56);
+            this.viewHora.TabIndex = 35;
+            this.viewHora.Text = "label3";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.Location = new System.Drawing.Point(877, 38);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(877, 76);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 33;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.Location = new System.Drawing.Point(839, 38);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.TabIndex = 32;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.Location = new System.Drawing.Point(839, 76);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.TabIndex = 31;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // viewFecha
+            // 
+            this.viewFecha.AutoSize = true;
+            this.viewFecha.BackColor = System.Drawing.Color.Transparent;
+            this.viewFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.viewFecha.Location = new System.Drawing.Point(606, 532);
+            this.viewFecha.Name = "viewFecha";
+            this.viewFecha.Size = new System.Drawing.Size(65, 22);
+            this.viewFecha.TabIndex = 30;
+            this.viewFecha.Text = "label2";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkVisited = true;
-            this.linkLabel1.Location = new System.Drawing.Point(431, 209);
+            this.linkLabel1.Location = new System.Drawing.Point(819, 117);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(117, 13);
             this.linkLabel1.TabIndex = 14;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "www.maxpower-ar.com";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(185, 17);
+            this.pictureBox2.Location = new System.Drawing.Point(185, 10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(586, 135);
             this.pictureBox2.TabIndex = 11;
@@ -551,7 +676,7 @@ namespace MaxPowerSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(283, 170);
+            this.label2.Location = new System.Drawing.Point(283, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(413, 29);
             this.label2.TabIndex = 10;
@@ -559,7 +684,7 @@ namespace MaxPowerSystem
             // 
             // solicitudesUC1
             // 
-            this.solicitudesUC1.Location = new System.Drawing.Point(15, 15);
+            this.solicitudesUC1.Location = new System.Drawing.Point(15, 0);
             this.solicitudesUC1.Name = "solicitudesUC1";
             this.solicitudesUC1.Size = new System.Drawing.Size(984, 561);
             this.solicitudesUC1.TabIndex = 9;
@@ -573,35 +698,35 @@ namespace MaxPowerSystem
             // 
             // compNacUC1
             // 
-            this.compNacUC1.Location = new System.Drawing.Point(100, 15);
+            this.compNacUC1.Location = new System.Drawing.Point(100, 0);
             this.compNacUC1.Name = "compNacUC1";
             this.compNacUC1.Size = new System.Drawing.Size(984, 561);
             this.compNacUC1.TabIndex = 6;
             // 
             // compExteriorUC1
             // 
-            this.compExteriorUC1.Location = new System.Drawing.Point(100, 15);
+            this.compExteriorUC1.Location = new System.Drawing.Point(100, 0);
             this.compExteriorUC1.Name = "compExteriorUC1";
             this.compExteriorUC1.Size = new System.Drawing.Size(981, 561);
             this.compExteriorUC1.TabIndex = 5;
             // 
             // repProdUC1
             // 
-            this.repProdUC1.Location = new System.Drawing.Point(100, 15);
+            this.repProdUC1.Location = new System.Drawing.Point(100, 0);
             this.repProdUC1.Name = "repProdUC1";
             this.repProdUC1.Size = new System.Drawing.Size(981, 561);
             this.repProdUC1.TabIndex = 4;
             // 
             // ventaProdUC1
             // 
-            this.ventaProdUC1.Location = new System.Drawing.Point(100, 15);
+            this.ventaProdUC1.Location = new System.Drawing.Point(100, 0);
             this.ventaProdUC1.Name = "ventaProdUC1";
             this.ventaProdUC1.Size = new System.Drawing.Size(981, 561);
             this.ventaProdUC1.TabIndex = 3;
             // 
             // tecAsistUC1
             // 
-            this.tecAsistUC1.Location = new System.Drawing.Point(15, 15);
+            this.tecAsistUC1.Location = new System.Drawing.Point(15, 0);
             this.tecAsistUC1.Name = "tecAsistUC1";
             this.tecAsistUC1.Size = new System.Drawing.Size(984, 561);
             this.tecAsistUC1.TabIndex = 1;
@@ -615,7 +740,7 @@ namespace MaxPowerSystem
             // 
             // uploadDataBaseUC1
             // 
-            this.uploadDataBaseUC1.Location = new System.Drawing.Point(75, 15);
+            this.uploadDataBaseUC1.Location = new System.Drawing.Point(75, 0);
             this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
             this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.uploadDataBaseUC1.TabIndex = 2;
@@ -721,19 +846,24 @@ namespace MaxPowerSystem
             this.label5.TabIndex = 0;
             this.label5.Text = "Menu";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 666);
+            this.ClientSize = new System.Drawing.Size(1184, 687);
             this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(flowLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1200, 726);
-            this.MinimumSize = new System.Drawing.Size(1200, 600);
+            this.MaximumSize = new System.Drawing.Size(1200, 800);
+            this.MinimumSize = new System.Drawing.Size(1200, 726);
             this.Name = "Form1";
             this.Text = "MaxPower System";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -741,6 +871,10 @@ namespace MaxPowerSystem
             flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -808,6 +942,14 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Button viewOrdC;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button viewSol;
+        private System.Windows.Forms.Label viewFecha;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label viewHora;
     }
 }
 
