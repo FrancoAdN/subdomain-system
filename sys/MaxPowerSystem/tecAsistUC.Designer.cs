@@ -123,7 +123,7 @@ namespace MaxPowerSystem
             this.boxAsist.Multiline = true;
             this.boxAsist.Name = "boxAsist";
             this.boxAsist.Size = new System.Drawing.Size(212, 91);
-            this.boxAsist.TabIndex = 5;
+            this.boxAsist.TabIndex = 6;
             // 
             // boxPrice
             // 
@@ -131,7 +131,7 @@ namespace MaxPowerSystem
             this.boxPrice.Location = new System.Drawing.Point(175, 290);
             this.boxPrice.Name = "boxPrice";
             this.boxPrice.Size = new System.Drawing.Size(212, 24);
-            this.boxPrice.TabIndex = 6;
+            this.boxPrice.TabIndex = 8;
             this.boxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxPrice_KeyPress);
             // 
             // boxForm
@@ -140,7 +140,7 @@ namespace MaxPowerSystem
             this.boxForm.Location = new System.Drawing.Point(175, 338);
             this.boxForm.Name = "boxForm";
             this.boxForm.Size = new System.Drawing.Size(212, 24);
-            this.boxForm.TabIndex = 7;
+            this.boxForm.TabIndex = 9;
             // 
             // labPor
             // 
@@ -158,7 +158,7 @@ namespace MaxPowerSystem
             this.boxDays.Location = new System.Drawing.Point(556, 41);
             this.boxDays.Name = "boxDays";
             this.boxDays.Size = new System.Drawing.Size(27, 24);
-            this.boxDays.TabIndex = 9;
+            this.boxDays.TabIndex = 10;
             this.boxDays.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BoxDays_KeyPress);
             // 
             // labDay
@@ -218,7 +218,7 @@ namespace MaxPowerSystem
             this.boxDetalle.Multiline = true;
             this.boxDetalle.Name = "boxDetalle";
             this.boxDetalle.Size = new System.Drawing.Size(472, 174);
-            this.boxDetalle.TabIndex = 15;
+            this.boxDetalle.TabIndex = 12;
             // 
             // buttonWordFile
             // 
@@ -249,7 +249,7 @@ namespace MaxPowerSystem
             this.textBox1.Location = new System.Drawing.Point(175, 84);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(212, 24);
-            this.textBox1.TabIndex = 18;
+            this.textBox1.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -292,6 +292,7 @@ namespace MaxPowerSystem
             // 
             this.combMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.combMon.FormattingEnabled = true;
+            this.combMon.ItemHeight = 18;
             this.combMon.Items.AddRange(new object[] {
             "USD",
             "ARS"});

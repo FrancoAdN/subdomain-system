@@ -106,6 +106,7 @@ namespace MaxPowerSystem
                     this.Hide();
                     f1.IdUser = (int)json[0]["id_empleado"];
                     f1.Admin = (bool)json[0]["admin"];
+                    f1.UserName = (String)json[0]["usuario"];
                     f1.ShowDialog();
                     this.Close();
                 }

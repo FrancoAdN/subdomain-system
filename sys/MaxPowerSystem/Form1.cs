@@ -18,6 +18,7 @@ namespace MaxPowerSystem
     {
         public int IdUser;
         public bool Admin;
+        public string UserName;
         public Form1()
         {
             InitializeComponent();

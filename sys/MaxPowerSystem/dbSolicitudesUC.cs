@@ -27,6 +27,7 @@ namespace MaxPowerSystem
             labDesc.Text = (String)json[Index]["descr"];
             labDate.Text = (String)json[Index]["fecha"];
             labOrd.Text = (String)json[Index]["orden"];
+            labTSol.Text = (String)json[Index]["tipo"];
 
         }
     }
