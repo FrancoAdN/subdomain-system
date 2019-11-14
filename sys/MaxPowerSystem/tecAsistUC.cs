@@ -156,6 +156,9 @@ namespace MaxPowerSystem
                             boxDetalle.Text = "";
                             boxDays.Text = "";
                             boxHours.Text = "";
+                            combMon.Text = "";
+                            BoxRef.Text = "";
+
                             JToken temp;
                             client.postJSON = string.Empty;
                             client.postJSON = "{";
@@ -171,6 +174,7 @@ namespace MaxPowerSystem
                             client.postJSON += "}";
                             temp = JToken.Parse(client.postJSON);
                             temp["mon"] = combMon.Text;
+                            temp["id_empleado"] = F1.IdUser;
                             client.postJSON = temp.ToString();
                             Console.WriteLine(client.postJSON);
 

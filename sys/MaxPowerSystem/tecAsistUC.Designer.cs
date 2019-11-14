@@ -290,6 +290,7 @@ namespace MaxPowerSystem
             // 
             // combMon
             // 
+            this.combMon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.combMon.FormattingEnabled = true;
             this.combMon.ItemHeight = 18;

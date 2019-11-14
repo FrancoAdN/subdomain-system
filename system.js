@@ -700,14 +700,13 @@ app.get('/asis_tec/emp/:id', (req, resp) => {
 
 app.post('/asis_tec', (req, resp) => {
     const data = req.body;
-    console.log(data);
     data.precio = parseInt(data.precio);
     const nof = parseInt(data.noferta.split('-')[1]);
     data['conf'] = false;
 
 
     const con = connectionSQL();
-    const sql =  `INSERT INTO asis_tec (emp, tipo, precio, fdp, det, mon, ref, orden, fecha, confirmado) values ('${data.empresa}', '${data.asistencia}', ${data.precio}, '${data.formadepago}', '${data.detalle}', '${data.mon}', '${data.ref}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    const sql =  `INSERT INTO asis_tec (emp, tipo, precio, fdp, det, mon, ref, orden, fecha, confirmado, id_empleado) values ('${data.empresa}', '${data.asistencia}', ${data.precio}, '${data.formadepago}', '${data.detalle}', '${data.mon}', '${data.ref}', '${data.noferta}', '${data.fecha}', ${data.conf}, ${data.id_empleado});
     UPDATE last SET num = ${nof};`;
     con.connect(function(err) {
         if (err){
