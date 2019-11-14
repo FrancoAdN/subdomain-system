@@ -228,6 +228,7 @@ namespace MaxPowerSystem
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            label6.Text = UserName;
             if (Admin)
             {
                 button9.Visible = true;
