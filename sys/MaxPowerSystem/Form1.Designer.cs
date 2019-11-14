@@ -59,9 +59,6 @@ namespace MaxPowerSystem
             this.button11 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuProgressBar2 = new Bunifu.UI.Winforms.BunifuProgressBar();
-            this.bunifuProgressBar1 = new Bunifu.UI.Winforms.BunifuProgressBar();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -72,7 +69,6 @@ namespace MaxPowerSystem
             this.label6 = new System.Windows.Forms.Label();
             this.viewFecha = new System.Windows.Forms.Label();
             this.viewHora = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -97,8 +93,6 @@ namespace MaxPowerSystem
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuCircleProgress1 = new Bunifu.UI.WinForms.BunifuCircleProgress();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -108,7 +102,6 @@ namespace MaxPowerSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.idPanel.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -578,13 +571,8 @@ namespace MaxPowerSystem
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuCircleProgressbar1);
-            this.panel1.Controls.Add(this.bunifuProgressBar2);
-            this.panel1.Controls.Add(this.bunifuProgressBar1);
-            this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.idPanel);
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.solicitudesUC1);
@@ -601,52 +589,6 @@ namespace MaxPowerSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(984, 617);
             this.panel1.TabIndex = 0;
-            // 
-            // bunifuProgressBar2
-            // 
-            this.bunifuProgressBar2.Animation = 35;
-            this.bunifuProgressBar2.AnimationStep = 10;
-            this.bunifuProgressBar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuProgressBar2.BackgroundImage")));
-            this.bunifuProgressBar2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuProgressBar2.BorderRadius = 1;
-            this.bunifuProgressBar2.BorderThickness = 1;
-            this.bunifuProgressBar2.Location = new System.Drawing.Point(24, 340);
-            this.bunifuProgressBar2.MaximumValue = 100;
-            this.bunifuProgressBar2.MinimumValue = 0;
-            this.bunifuProgressBar2.Name = "bunifuProgressBar2";
-            this.bunifuProgressBar2.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuProgressBar2.ProgressColorLeft = System.Drawing.Color.Red;
-            this.bunifuProgressBar2.ProgressColorRight = System.Drawing.Color.Red;
-            this.bunifuProgressBar2.Size = new System.Drawing.Size(284, 8);
-            this.bunifuProgressBar2.TabIndex = 44;
-            this.bunifuProgressBar2.Value = 35;
-            // 
-            // bunifuProgressBar1
-            // 
-            this.bunifuProgressBar1.Animation = 0;
-            this.bunifuProgressBar1.AnimationStep = 10;
-            this.bunifuProgressBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuProgressBar1.BackgroundImage")));
-            this.bunifuProgressBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuProgressBar1.BorderRadius = 1;
-            this.bunifuProgressBar1.BorderThickness = 1;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(24, 326);
-            this.bunifuProgressBar1.MaximumValue = 100;
-            this.bunifuProgressBar1.MinimumValue = 0;
-            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bunifuProgressBar1.ProgressColorLeft = System.Drawing.Color.Lime;
-            this.bunifuProgressBar1.ProgressColorRight = System.Drawing.Color.DodgerBlue;
-            this.bunifuProgressBar1.Size = new System.Drawing.Size(284, 8);
-            this.bunifuProgressBar1.TabIndex = 42;
-            this.bunifuProgressBar1.Value = 50;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(339, 368);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(150, 135);
-            this.panel7.TabIndex = 40;
             // 
             // tableLayoutPanel1
             // 
@@ -766,15 +708,6 @@ namespace MaxPowerSystem
             this.viewHora.Size = new System.Drawing.Size(84, 28);
             this.viewHora.TabIndex = 35;
             this.viewHora.Text = "label3";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.bunifuCircleProgress1);
-            this.panel3.Location = new System.Drawing.Point(172, 368);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(150, 135);
-            this.panel3.TabIndex = 39;
             // 
             // linkLabel1
             // 
@@ -991,57 +924,6 @@ namespace MaxPowerSystem
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // bunifuCircleProgressbar1
-            // 
-            this.bunifuCircleProgressbar1.animated = false;
-            this.bunifuCircleProgressbar1.animationIterval = 5;
-            this.bunifuCircleProgressbar1.animationSpeed = 300;
-            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.White;
-            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
-            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.SlateGray;
-            this.bunifuCircleProgressbar1.LabelVisible = true;
-            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar1.LineThickness = 5;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(24, 368);
-            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar1.MaxValue = 100;
-            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
-            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.Blue;
-            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(135, 135);
-            this.bunifuCircleProgressbar1.TabIndex = 45;
-            this.bunifuCircleProgressbar1.Value = 35;
-            // 
-            // bunifuCircleProgress1
-            // 
-            this.bunifuCircleProgress1.Animated = true;
-            this.bunifuCircleProgress1.AnimationInterval = 1;
-            this.bunifuCircleProgress1.AnimationSpeed = 1;
-            this.bunifuCircleProgress1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgress1.CircleMargin = 10;
-            this.bunifuCircleProgress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
-            this.bunifuCircleProgress1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCircleProgress1.IsPercentage = true;
-            this.bunifuCircleProgress1.LineProgressThickness = 8;
-            this.bunifuCircleProgress1.LineThickness = 5;
-            this.bunifuCircleProgress1.Location = new System.Drawing.Point(5, 0);
-            this.bunifuCircleProgress1.Name = "bunifuCircleProgress1";
-            this.bunifuCircleProgress1.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgress1.ProgressColor = System.Drawing.Color.Purple;
-            this.bunifuCircleProgress1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCircleProgress1.Size = new System.Drawing.Size(135, 135);
-            this.bunifuCircleProgress1.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.bunifuCircleProgress1.SubScriptMargin = new System.Windows.Forms.Padding(5, -35, 0, 0);
-            this.bunifuCircleProgress1.SubScriptText = "";
-            this.bunifuCircleProgress1.SuperScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
-            this.bunifuCircleProgress1.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
-            this.bunifuCircleProgress1.SuperScriptText = "%";
-            this.bunifuCircleProgress1.TabIndex = 16;
-            this.bunifuCircleProgress1.Text = "35";
-            this.bunifuCircleProgress1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
-            this.bunifuCircleProgress1.Value = 38;
-            // 
             // Form1
             // 
             this.AcceptButton = this.button12;
@@ -1070,7 +952,6 @@ namespace MaxPowerSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.idPanel.ResumeLayout(false);
             this.idPanel.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -1150,14 +1031,8 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Panel idPanel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel7;
         private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
-        private Bunifu.UI.Winforms.BunifuProgressBar bunifuProgressBar2;
-        private Bunifu.UI.Winforms.BunifuProgressBar bunifuProgressBar1;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
-        private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress1;
     }
 }
 
