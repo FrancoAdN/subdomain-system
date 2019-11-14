@@ -59,12 +59,20 @@ namespace MaxPowerSystem
             this.button11 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.viewHora = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.bunifuProgressBar2 = new Bunifu.UI.Winforms.BunifuProgressBar();
+            this.bunifuProgressBar1 = new Bunifu.UI.Winforms.BunifuProgressBar();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.idPanel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.viewFecha = new System.Windows.Forms.Label();
+            this.viewHora = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,6 +89,7 @@ namespace MaxPowerSystem
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -88,15 +97,21 @@ namespace MaxPowerSystem
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
+            this.bunifuCircleProgress1 = new Bunifu.UI.WinForms.BunifuCircleProgress();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.idPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.flowLayoutPanel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -563,13 +578,13 @@ namespace MaxPowerSystem
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.viewHora);
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.pictureBox6);
-            this.panel1.Controls.Add(this.viewFecha);
-            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.bunifuCircleProgressbar1);
+            this.panel1.Controls.Add(this.bunifuProgressBar2);
+            this.panel1.Controls.Add(this.bunifuProgressBar1);
+            this.panel1.Controls.Add(this.panel7);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Controls.Add(this.idPanel);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.solicitudesUC1);
@@ -587,56 +602,147 @@ namespace MaxPowerSystem
             this.panel1.Size = new System.Drawing.Size(984, 617);
             this.panel1.TabIndex = 0;
             // 
-            // viewHora
+            // bunifuProgressBar2
             // 
-            this.viewHora.AutoSize = true;
-            this.viewHora.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.viewHora.Location = new System.Drawing.Point(562, 458);
-            this.viewHora.Name = "viewHora";
-            this.viewHora.Size = new System.Drawing.Size(170, 56);
-            this.viewHora.TabIndex = 35;
-            this.viewHora.Text = "label3";
+            this.bunifuProgressBar2.Animation = 35;
+            this.bunifuProgressBar2.AnimationStep = 10;
+            this.bunifuProgressBar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuProgressBar2.BackgroundImage")));
+            this.bunifuProgressBar2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuProgressBar2.BorderRadius = 1;
+            this.bunifuProgressBar2.BorderThickness = 1;
+            this.bunifuProgressBar2.Location = new System.Drawing.Point(24, 340);
+            this.bunifuProgressBar2.MaximumValue = 100;
+            this.bunifuProgressBar2.MinimumValue = 0;
+            this.bunifuProgressBar2.Name = "bunifuProgressBar2";
+            this.bunifuProgressBar2.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuProgressBar2.ProgressColorLeft = System.Drawing.Color.Red;
+            this.bunifuProgressBar2.ProgressColorRight = System.Drawing.Color.Red;
+            this.bunifuProgressBar2.Size = new System.Drawing.Size(284, 8);
+            this.bunifuProgressBar2.TabIndex = 44;
+            this.bunifuProgressBar2.Value = 35;
             // 
-            // pictureBox4
+            // bunifuProgressBar1
             // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(877, 38);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 34;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.bunifuProgressBar1.Animation = 0;
+            this.bunifuProgressBar1.AnimationStep = 10;
+            this.bunifuProgressBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuProgressBar1.BackgroundImage")));
+            this.bunifuProgressBar1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuProgressBar1.BorderRadius = 1;
+            this.bunifuProgressBar1.BorderThickness = 1;
+            this.bunifuProgressBar1.Location = new System.Drawing.Point(24, 326);
+            this.bunifuProgressBar1.MaximumValue = 100;
+            this.bunifuProgressBar1.MinimumValue = 0;
+            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
+            this.bunifuProgressBar1.ProgressBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bunifuProgressBar1.ProgressColorLeft = System.Drawing.Color.Lime;
+            this.bunifuProgressBar1.ProgressColorRight = System.Drawing.Color.DodgerBlue;
+            this.bunifuProgressBar1.Size = new System.Drawing.Size(284, 8);
+            this.bunifuProgressBar1.TabIndex = 42;
+            this.bunifuProgressBar1.Value = 50;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.White;
+            this.panel7.Location = new System.Drawing.Point(339, 368);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(150, 135);
+            this.panel7.TabIndex = 40;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(67, 81);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(71, 75);
+            this.tableLayoutPanel1.TabIndex = 38;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(877, 76);
+            this.pictureBox3.Location = new System.Drawing.Point(38, 40);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 32);
             this.pictureBox3.TabIndex = 33;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox6.TabIndex = 31;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.Location = new System.Drawing.Point(3, 40);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(29, 32);
+            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.Location = new System.Drawing.Point(839, 38);
+            this.pictureBox5.Location = new System.Drawing.Point(38, 3);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox5.Size = new System.Drawing.Size(30, 31);
             this.pictureBox5.TabIndex = 32;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // pictureBox6
+            // idPanel
             // 
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.Location = new System.Drawing.Point(839, 76);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.TabIndex = 31;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.idPanel.BackColor = System.Drawing.Color.White;
+            this.idPanel.Controls.Add(this.label4);
+            this.idPanel.Controls.Add(this.label6);
+            this.idPanel.Controls.Add(this.viewFecha);
+            this.idPanel.Controls.Add(this.viewHora);
+            this.idPanel.Controls.Add(this.linkLabel1);
+            this.idPanel.Location = new System.Drawing.Point(0, 0);
+            this.idPanel.Name = "idPanel";
+            this.idPanel.Size = new System.Drawing.Size(987, 50);
+            this.idPanel.TabIndex = 36;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 23);
+            this.label4.TabIndex = 36;
+            this.label4.Text = "Bienvenido:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.label6.Location = new System.Drawing.Point(142, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 23);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "label6";
             // 
             // viewFecha
             // 
@@ -644,17 +750,37 @@ namespace MaxPowerSystem
             this.viewFecha.BackColor = System.Drawing.Color.Transparent;
             this.viewFecha.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.viewFecha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
-            this.viewFecha.Location = new System.Drawing.Point(606, 532);
+            this.viewFecha.Location = new System.Drawing.Point(552, 15);
             this.viewFecha.Name = "viewFecha";
             this.viewFecha.Size = new System.Drawing.Size(65, 22);
             this.viewFecha.TabIndex = 30;
             this.viewFecha.Text = "label2";
             // 
+            // viewHora
+            // 
+            this.viewHora.AutoSize = true;
+            this.viewHora.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewHora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.viewHora.Location = new System.Drawing.Point(874, 9);
+            this.viewHora.Name = "viewHora";
+            this.viewHora.Size = new System.Drawing.Size(84, 28);
+            this.viewHora.TabIndex = 35;
+            this.viewHora.Text = "label3";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.bunifuCircleProgress1);
+            this.panel3.Location = new System.Drawing.Point(172, 368);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(150, 135);
+            this.panel3.TabIndex = 39;
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.LinkVisited = true;
-            this.linkLabel1.Location = new System.Drawing.Point(819, 117);
+            this.linkLabel1.Location = new System.Drawing.Point(327, 19);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(117, 13);
             this.linkLabel1.TabIndex = 14;
@@ -665,7 +791,7 @@ namespace MaxPowerSystem
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.Location = new System.Drawing.Point(185, 10);
+            this.pictureBox2.Location = new System.Drawing.Point(203, 56);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(586, 135);
             this.pictureBox2.TabIndex = 11;
@@ -676,7 +802,7 @@ namespace MaxPowerSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(283, 156);
+            this.label2.Location = new System.Drawing.Point(293, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(413, 29);
             this.label2.TabIndex = 10;
@@ -684,63 +810,63 @@ namespace MaxPowerSystem
             // 
             // solicitudesUC1
             // 
-            this.solicitudesUC1.Location = new System.Drawing.Point(15, 0);
+            this.solicitudesUC1.Location = new System.Drawing.Point(15, 1000);
             this.solicitudesUC1.Name = "solicitudesUC1";
             this.solicitudesUC1.Size = new System.Drawing.Size(984, 561);
             this.solicitudesUC1.TabIndex = 9;
             // 
             // notificacionesUC1
             // 
-            this.notificacionesUC1.Location = new System.Drawing.Point(15, 0);
+            this.notificacionesUC1.Location = new System.Drawing.Point(15, 1000);
             this.notificacionesUC1.Name = "notificacionesUC1";
             this.notificacionesUC1.Size = new System.Drawing.Size(984, 561);
             this.notificacionesUC1.TabIndex = 8;
             // 
             // compNacUC1
             // 
-            this.compNacUC1.Location = new System.Drawing.Point(100, 0);
+            this.compNacUC1.Location = new System.Drawing.Point(100, 1000);
             this.compNacUC1.Name = "compNacUC1";
             this.compNacUC1.Size = new System.Drawing.Size(984, 561);
             this.compNacUC1.TabIndex = 6;
             // 
             // compExteriorUC1
             // 
-            this.compExteriorUC1.Location = new System.Drawing.Point(100, 0);
+            this.compExteriorUC1.Location = new System.Drawing.Point(100, 1000);
             this.compExteriorUC1.Name = "compExteriorUC1";
             this.compExteriorUC1.Size = new System.Drawing.Size(981, 561);
             this.compExteriorUC1.TabIndex = 5;
             // 
             // repProdUC1
             // 
-            this.repProdUC1.Location = new System.Drawing.Point(100, 0);
+            this.repProdUC1.Location = new System.Drawing.Point(100, 1000);
             this.repProdUC1.Name = "repProdUC1";
             this.repProdUC1.Size = new System.Drawing.Size(981, 561);
             this.repProdUC1.TabIndex = 4;
             // 
             // ventaProdUC1
             // 
-            this.ventaProdUC1.Location = new System.Drawing.Point(100, 0);
+            this.ventaProdUC1.Location = new System.Drawing.Point(100, 1000);
             this.ventaProdUC1.Name = "ventaProdUC1";
             this.ventaProdUC1.Size = new System.Drawing.Size(981, 561);
             this.ventaProdUC1.TabIndex = 3;
             // 
             // tecAsistUC1
             // 
-            this.tecAsistUC1.Location = new System.Drawing.Point(15, 0);
+            this.tecAsistUC1.Location = new System.Drawing.Point(15, 1000);
             this.tecAsistUC1.Name = "tecAsistUC1";
             this.tecAsistUC1.Size = new System.Drawing.Size(984, 561);
             this.tecAsistUC1.TabIndex = 1;
             // 
             // viewDataBaseUC1
             // 
-            this.viewDataBaseUC1.Location = new System.Drawing.Point(15, 0);
+            this.viewDataBaseUC1.Location = new System.Drawing.Point(15, 1000);
             this.viewDataBaseUC1.Name = "viewDataBaseUC1";
             this.viewDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.viewDataBaseUC1.TabIndex = 0;
             // 
             // uploadDataBaseUC1
             // 
-            this.uploadDataBaseUC1.Location = new System.Drawing.Point(75, 0);
+            this.uploadDataBaseUC1.Location = new System.Drawing.Point(75, 1000);
             this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
             this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.uploadDataBaseUC1.TabIndex = 2;
@@ -748,7 +874,7 @@ namespace MaxPowerSystem
             // 
             // ordConfUC1
             // 
-            this.ordConfUC1.Location = new System.Drawing.Point(15, 0);
+            this.ordConfUC1.Location = new System.Drawing.Point(15, 1000);
             this.ordConfUC1.Name = "ordConfUC1";
             this.ordConfUC1.Size = new System.Drawing.Size(978, 561);
             this.ordConfUC1.TabIndex = 7;
@@ -782,16 +908,30 @@ namespace MaxPowerSystem
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
-            this.panel2.Location = new System.Drawing.Point(909, 3);
+            this.panel2.Controls.Add(this.bunifuDatepicker1);
+            this.panel2.Location = new System.Drawing.Point(782, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 67);
+            this.panel2.Size = new System.Drawing.Size(327, 67);
             this.panel2.TabIndex = 9;
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(12, 17);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(303, 36);
+            this.bunifuDatepicker1.TabIndex = 46;
+            this.bunifuDatepicker1.Value = new System.DateTime(2019, 11, 14, 14, 10, 57, 648);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(488, 3);
+            this.panel4.Location = new System.Drawing.Point(361, 3);
             this.panel4.Name = "panel4";
             this.panel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.panel4.Size = new System.Drawing.Size(415, 67);
@@ -811,16 +951,16 @@ namespace MaxPowerSystem
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
-            this.panel5.Location = new System.Drawing.Point(282, 3);
+            this.panel5.Location = new System.Drawing.Point(290, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 67);
+            this.panel5.Size = new System.Drawing.Size(65, 67);
             this.panel5.TabIndex = 10;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.pictureBox1);
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Location = new System.Drawing.Point(11, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(273, 67);
             this.panel6.TabIndex = 10;
@@ -851,14 +991,65 @@ namespace MaxPowerSystem
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+            // bunifuCircleProgressbar1
+            // 
+            this.bunifuCircleProgressbar1.animated = false;
+            this.bunifuCircleProgressbar1.animationIterval = 5;
+            this.bunifuCircleProgressbar1.animationSpeed = 300;
+            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.White;
+            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
+            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.SlateGray;
+            this.bunifuCircleProgressbar1.LabelVisible = true;
+            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
+            this.bunifuCircleProgressbar1.LineThickness = 5;
+            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(24, 368);
+            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.bunifuCircleProgressbar1.MaxValue = 100;
+            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
+            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.Gainsboro;
+            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.Blue;
+            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(135, 135);
+            this.bunifuCircleProgressbar1.TabIndex = 45;
+            this.bunifuCircleProgressbar1.Value = 35;
+            // 
+            // bunifuCircleProgress1
+            // 
+            this.bunifuCircleProgress1.Animated = true;
+            this.bunifuCircleProgress1.AnimationInterval = 1;
+            this.bunifuCircleProgress1.AnimationSpeed = 1;
+            this.bunifuCircleProgress1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCircleProgress1.CircleMargin = 10;
+            this.bunifuCircleProgress1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold);
+            this.bunifuCircleProgress1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuCircleProgress1.IsPercentage = true;
+            this.bunifuCircleProgress1.LineProgressThickness = 8;
+            this.bunifuCircleProgress1.LineThickness = 5;
+            this.bunifuCircleProgress1.Location = new System.Drawing.Point(5, 0);
+            this.bunifuCircleProgress1.Name = "bunifuCircleProgress1";
+            this.bunifuCircleProgress1.ProgressBackColor = System.Drawing.Color.Gainsboro;
+            this.bunifuCircleProgress1.ProgressColor = System.Drawing.Color.Purple;
+            this.bunifuCircleProgress1.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCircleProgress1.Size = new System.Drawing.Size(135, 135);
+            this.bunifuCircleProgress1.SubScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.bunifuCircleProgress1.SubScriptMargin = new System.Windows.Forms.Padding(5, -35, 0, 0);
+            this.bunifuCircleProgress1.SubScriptText = "";
+            this.bunifuCircleProgress1.SuperScriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.bunifuCircleProgress1.SuperScriptMargin = new System.Windows.Forms.Padding(5, 50, 0, 0);
+            this.bunifuCircleProgress1.SuperScriptText = "%";
+            this.bunifuCircleProgress1.TabIndex = 16;
+            this.bunifuCircleProgress1.Text = "35";
+            this.bunifuCircleProgress1.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.bunifuCircleProgress1.Value = 38;
+            // 
             // Form1
             // 
             this.AcceptButton = this.button12;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1184, 687);
-            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.flowLayoutPanel3);
             this.Controls.Add(flowLayoutPanel1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -872,12 +1063,17 @@ namespace MaxPowerSystem
             flowLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.idPanel.ResumeLayout(false);
+            this.idPanel.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flowLayoutPanel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -951,6 +1147,17 @@ namespace MaxPowerSystem
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label viewHora;
+        private System.Windows.Forms.Panel idPanel;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel7;
+        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.UI.Winforms.BunifuProgressBar bunifuProgressBar2;
+        private Bunifu.UI.Winforms.BunifuProgressBar bunifuProgressBar1;
+        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
+        private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress1;
     }
 }
 
