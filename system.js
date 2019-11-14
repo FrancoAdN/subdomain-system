@@ -707,7 +707,7 @@ app.post('/asis_tec', (req, resp) => {
 
 
     const con = connectionSQL();
-    const sql =  `INSERT INTO asis_tec (emp, tipo, precio, fdp, det, orden, fecha, confirmado) values ('${data.empresa}', '${data.asistencia}', ${data.precio}, '${data.formadepago}', '${data.detalle}', '${data.noferta}', '${data.fecha}', ${data.conf});
+    const sql =  `INSERT INTO asis_tec (emp, tipo, precio, fdp, det, mon, ref, orden, fecha, confirmado) values ('${data.empresa}', '${data.asistencia}', ${data.precio}, '${data.formadepago}', '${data.detalle}', '${data.mon}', '${data.ref}', '${data.noferta}', '${data.fecha}', ${data.conf});
     UPDATE last SET num = ${nof};`;
     con.connect(function(err) {
         if (err){

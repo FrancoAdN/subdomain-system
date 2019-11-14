@@ -156,7 +156,7 @@ namespace MaxPowerSystem
                             boxDetalle.Text = "";
                             boxDays.Text = "";
                             boxHours.Text = "";
-
+                            JToken temp;
                             client.postJSON = string.Empty;
                             client.postJSON = "{";
                             char[] tr = { '{', '}' };
@@ -166,9 +166,13 @@ namespace MaxPowerSystem
                                 aux += d.toSTR();
                             }
                             aux = aux.Remove(aux.Length - 1);
+                            
                             client.postJSON += aux;
                             client.postJSON += "}";
-
+                            temp = JToken.Parse(client.postJSON);
+                            temp["mon"] = combMon.Text;
+                            client.postJSON = temp.ToString();
+                            Console.WriteLine(client.postJSON);
 
                             client.endPoint = "http://system.maxpower-ar.com/asis_tec";
 
