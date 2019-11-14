@@ -1407,7 +1407,7 @@ app.post('/register', (req, resp) => {
         data["admin"] = false;
     }
     data["usr"] = data.name +' '+ data.last;
-    const con = connectionSQL();
+    /*const con = connectionSQL();
     let sql =  `SELECT * FROM empleados WHERE nombre LIKE '${data.name}' AND apellido LIKE '${data.last}'`;
     con.connect(function(err) {
         if (err) {
@@ -1440,6 +1440,34 @@ app.post('/register', (req, resp) => {
                 resp.send("User already exists");
             }
                 
+          con.end();
+        });
+    });*/
+    const con = connectionSQL();
+
+    const sql =  `SELECT * FROM empleados WHERE nombre LIKE '${data.name}' AND apellido LIKE '${data.last}';`;
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+          if (err){
+            console.error(err);
+            resp.send("0");
+          }else if(result.length == 0){
+            const qry = `INSERT INTO empleados (usuario, nombre, apellido, pwd, admin) values ('${data.usr}','${data.name}','${data.last}','${data.pwd}', ${data.admin})`;
+            con.query(qry, function (err, result, fields) {
+                if (err){
+                    console.error(err);
+                    resp.send("0");
+                }else{
+                    resp.redirect('/register');
+                }
+            });
+          }else{
+            resp.send("User already exists");
+          }
           con.end();
         });
     });
