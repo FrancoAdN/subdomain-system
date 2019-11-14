@@ -741,63 +741,63 @@ namespace MaxPowerSystem
             // 
             // solicitudesUC1
             // 
-            this.solicitudesUC1.Location = new System.Drawing.Point(15, 1000);
+            this.solicitudesUC1.Location = new System.Drawing.Point(0, 0);
             this.solicitudesUC1.Name = "solicitudesUC1";
             this.solicitudesUC1.Size = new System.Drawing.Size(984, 561);
             this.solicitudesUC1.TabIndex = 9;
             // 
             // notificacionesUC1
             // 
-            this.notificacionesUC1.Location = new System.Drawing.Point(15, 1000);
+            this.notificacionesUC1.Location = new System.Drawing.Point(0, 0);
             this.notificacionesUC1.Name = "notificacionesUC1";
-            this.notificacionesUC1.Size = new System.Drawing.Size(984, 561);
+            this.notificacionesUC1.Size = new System.Drawing.Size(984, 626);
             this.notificacionesUC1.TabIndex = 8;
             // 
             // compNacUC1
             // 
-            this.compNacUC1.Location = new System.Drawing.Point(100, 1000);
+            this.compNacUC1.Location = new System.Drawing.Point(0, 0);
             this.compNacUC1.Name = "compNacUC1";
-            this.compNacUC1.Size = new System.Drawing.Size(984, 561);
+            this.compNacUC1.Size = new System.Drawing.Size(984, 626);
             this.compNacUC1.TabIndex = 6;
             // 
             // compExteriorUC1
             // 
-            this.compExteriorUC1.Location = new System.Drawing.Point(100, 1000);
+            this.compExteriorUC1.Location = new System.Drawing.Point(0, 0);
             this.compExteriorUC1.Name = "compExteriorUC1";
-            this.compExteriorUC1.Size = new System.Drawing.Size(981, 561);
+            this.compExteriorUC1.Size = new System.Drawing.Size(981, 617);
             this.compExteriorUC1.TabIndex = 5;
             // 
             // repProdUC1
             // 
-            this.repProdUC1.Location = new System.Drawing.Point(100, 1000);
+            this.repProdUC1.Location = new System.Drawing.Point(0, 0);
             this.repProdUC1.Name = "repProdUC1";
             this.repProdUC1.Size = new System.Drawing.Size(981, 561);
             this.repProdUC1.TabIndex = 4;
             // 
             // ventaProdUC1
             // 
-            this.ventaProdUC1.Location = new System.Drawing.Point(100, 1000);
+            this.ventaProdUC1.Location = new System.Drawing.Point(0, 0);
             this.ventaProdUC1.Name = "ventaProdUC1";
             this.ventaProdUC1.Size = new System.Drawing.Size(981, 561);
             this.ventaProdUC1.TabIndex = 3;
             // 
             // tecAsistUC1
             // 
-            this.tecAsistUC1.Location = new System.Drawing.Point(15, 1000);
+            this.tecAsistUC1.Location = new System.Drawing.Point(0, 0);
             this.tecAsistUC1.Name = "tecAsistUC1";
             this.tecAsistUC1.Size = new System.Drawing.Size(984, 561);
             this.tecAsistUC1.TabIndex = 1;
             // 
             // viewDataBaseUC1
             // 
-            this.viewDataBaseUC1.Location = new System.Drawing.Point(15, 1000);
+            this.viewDataBaseUC1.Location = new System.Drawing.Point(0, 0);
             this.viewDataBaseUC1.Name = "viewDataBaseUC1";
             this.viewDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.viewDataBaseUC1.TabIndex = 0;
             // 
             // uploadDataBaseUC1
             // 
-            this.uploadDataBaseUC1.Location = new System.Drawing.Point(75, 1000);
+            this.uploadDataBaseUC1.Location = new System.Drawing.Point(0, 0);
             this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
             this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
             this.uploadDataBaseUC1.TabIndex = 2;
@@ -805,7 +805,7 @@ namespace MaxPowerSystem
             // 
             // ordConfUC1
             // 
-            this.ordConfUC1.Location = new System.Drawing.Point(15, 1000);
+            this.ordConfUC1.Location = new System.Drawing.Point(0, 0);
             this.ordConfUC1.Name = "ordConfUC1";
             this.ordConfUC1.Size = new System.Drawing.Size(978, 561);
             this.ordConfUC1.TabIndex = 7;
