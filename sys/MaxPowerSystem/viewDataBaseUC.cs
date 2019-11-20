@@ -34,13 +34,13 @@ namespace MaxPowerSystem
         public void changeVal(string ent)
         {
             cmbDb.Items.Clear();
-            if(ent == "Empresas")
+            if (ent == "Empresas")
             {
                 cmbDb.Items.AddRange(new object[] {
                 "Empresas",
                 "(seleccionar)"});
             }
-            else if(ent == "Cot")
+            else if (ent == "Cot")
             {
                 cmbDb.Items.AddRange(new object[] {
                 "Cot. Asistencia técnica",
@@ -49,11 +49,30 @@ namespace MaxPowerSystem
                 "(seleccionar)"});
 
             }
-            else if(ent == "Ord")
+            else if (ent == "Ord")
             {
                 cmbDb.Items.AddRange(new object[] {
                 "Orden de compra exterior",
                 "Orden de compra nacional",
+                "(seleccionar)"});
+            }
+            else if (ent == "All")
+            {
+                cmbDb.Items.AddRange(new object[] {
+                "Empresas",
+                "Solicitudes",
+                "Cot. Asistencia técnica",
+                "Cot. Reparación de laboratorio",
+                "Cot. Venta de productos",
+                "Orden de compra exterior",
+                "Orden de compra nacional",
+                "(seleccionar)"});
+
+            }
+            else if (ent == "Sol")
+            {
+                cmbDb.Items.AddRange(new object[] {
+                "Solicitudes",
                 "(seleccionar)"});
             }
         }

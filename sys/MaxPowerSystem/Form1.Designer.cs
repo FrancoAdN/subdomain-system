@@ -224,6 +224,7 @@ namespace MaxPowerSystem
             this.viewSol.Text = "Buscar";
             this.viewSol.UseVisualStyleBackColor = false;
             this.viewSol.Visible = false;
+            this.viewSol.Click += new System.EventHandler(this.ViewSol_Click);
             // 
             // button2
             // 
@@ -314,6 +315,7 @@ namespace MaxPowerSystem
             this.viewArt.TabIndex = 3;
             this.viewArt.Text = "Articulos";
             this.viewArt.UseVisualStyleBackColor = false;
+            this.viewArt.Click += new System.EventHandler(this.ViewArt_Click);
             // 
             // button8
             // 
