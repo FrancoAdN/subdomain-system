@@ -139,7 +139,6 @@ C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSyst
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.FormArticulos.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.Login.resources
 <<<<<<< HEAD
-C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\bin\Debug\Bunifu_UI_v1.5.3.dll
 =======
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.NotificacionesUC.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.OrdConfUC.resources
