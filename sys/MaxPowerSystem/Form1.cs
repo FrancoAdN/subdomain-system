@@ -268,6 +268,7 @@ namespace MaxPowerSystem
             notificacionesUC1.Hide();
             solicitudesUC1.Hide();
 
+            viewDataBaseUC1.changeVal("All");
             viewDataBaseUC1.Show();
             viewDataBaseUC1.BringToFront();
         }
@@ -579,6 +580,23 @@ namespace MaxPowerSystem
             viewDataBaseUC1.Show();
             viewDataBaseUC1.BringToFront();
         }
+        private void ViewSol_Click(object sender, EventArgs e)
+        {
+            uploadDataBaseUC1.Hide();
+            viewDataBaseUC1.Hide();
+            tecAsistUC1.Hide();
+            ventaProdUC1.Hide();
+            repProdUC1.Hide();
+            compNacUC1.Hide();
+            compExteriorUC1.Hide();
+            ordConfUC1.Hide();
+            notificacionesUC1.Hide();
+            solicitudesUC1.Hide();
+
+            viewDataBaseUC1.changeVal("Sol");
+            viewDataBaseUC1.Show();
+            viewDataBaseUC1.BringToFront();
+        }
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
@@ -611,7 +629,11 @@ namespace MaxPowerSystem
             System.Diagnostics.Process.Start("https://www.youtube.com/channel/UCXcFJ1D2XFs2NL_5RulBmJw");
         }
 
-
+        private void ViewArt_Click(object sender, EventArgs e)
+        {
+            FormArticulos fa = new FormArticulos();
+            fa.ShowDialog();
+        }
     }
 
 }

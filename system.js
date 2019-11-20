@@ -125,7 +125,7 @@ app.get('/', (req, resp) => {
     resp.send("WELCOME TO THE SYSTEM SERVER OF MAXPOWER INDUSTRIAL AUTOMATION \n\n\n\nTHIS SERVER IS USED TO MAKE REQUESTS");
 });
 
-//region ORDEN NACIONAL
+//#region ORDEN NACIONAL
 app.get('/ord_nac', (req, resp) => {
     const con = connectionSQL();
     const sql =  'SELECT * FROM `ord_nac` oc INNER JOIN `tabla` t ON oc.orden = t.orden';
@@ -289,9 +289,9 @@ app.post('/ord_nac', (req, resp) => {
     
 })
 
-//end of region
+//#endregion
 
-//region ORDEN EXTERIOR
+//#region ORDEN EXTERIOR
 app.get('/ord_ext', (req, resp) => {
     const sql =  'SELECT * FROM `ord_ext` oe INNER JOIN `tabla` t ON oe.orden = t.orden';
     const con = connectionSQL();
@@ -459,10 +459,10 @@ app.post('/ord_ext', (req, resp) => {
     });
 
 })
-//end of region
+//#endregion
 
 
-//region REPARACION DE LABORATORIO
+//#region REPARACION DE LABORATORIO
 
 app.get('/rep_lab', (req, resp) => {
     const sql =  'SELECT * FROM `rep_lab` rp INNER JOIN `tabla` t ON rp.orden = t.orden';
@@ -627,11 +627,11 @@ app.post('/rep_lab', (req, resp) => {
     resp.send("1");
 });
 
-//end of region
+//#endregion
 
 
 
-//region ASISTENCIA TECNICA
+//#region ASISTENCIA TECNICA
 
 app.get('/asis_tec', (req, resp) => {
     const con = connectionSQL();
@@ -725,10 +725,10 @@ app.post('/asis_tec', (req, resp) => {
     resp.send("1");
 }),
 
-//end of region
+//#endregion
 
 
-//region VENTA DE PRODUCTOS
+//#region VENTA DE PRODUCTOS
 
 app.get('/venta_prod', (req, resp) => {
     const con = connectionSQL();
@@ -893,10 +893,10 @@ app.post('/venta_prod', (req, resp) => {
     resp.send("1");
 });
 
-//end of region
+//#endregion
 
 
-//region EMPRESAS
+//#region EMPRESAS
 app.post('/emp', (req, resp) => {
     let emp = req.body;
     emp.cuit = parseInt(emp.cuit);
@@ -982,11 +982,11 @@ app.get('/emp/:id', (req, resp) => {
         });
     });
 });
-//end of region
+//#endregion
 
 
 
-
+//#region UTILITIES
 app.get('/last', (req, resp) => {
     const con = connectionSQL();
     const sql = 'SELECT * FROM last';
@@ -1050,8 +1050,9 @@ app.get('/tabla/:id', (req, resp) => {
     });
 });
 
+//#endregion
 
-// region NOTIFICATIONS
+//#region NOTIFICATIONS
 
 app.get('/notif', (req, resp) => {
     resp.send(notifications);
@@ -1060,10 +1061,10 @@ app.get('/notif', (req, resp) => {
 app.get('/notif/:id', (req, resp) => {
     resp.send(notifications[req.params.id]);
 });
-// end of region
+//#endregion
 
 
-//region ORDENES A CONFIRMAR
+//#region ORDENES A CONFIRMAR
 app.get('/nconfirm', (req, resp) => {
     const con = connectionSQL();
     let sql =  'SELECT emp, pmde, fecha, orden FROM venta_prod WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM rep_lab WHERE Confirmado = false; SELECT emp, fecha, orden FROM ord_nac WHERE Confirmado = false; SELECT emp, pmde, fecha, orden FROM ord_ext WHERE Confirmado = false;';
@@ -1271,10 +1272,10 @@ app.post('/confirm', (req, resp) => {
 
 
 });
-//end of region
+//#endregion
 
 
-//region SOLICITUDES
+//#region SOLICITUDES
 
 app.get('/sol', (req, resp) => {
     const con = connectionSQL();
@@ -1341,6 +1342,29 @@ app.get('/sol/emp/:emp', (req, resp) => {
     });
 });
 
+app.get('/s/last', (req, resp) => {
+
+    const con = connectionSQL();
+    let sql =  "SELECT orden, cliente, descr FROM solicitudes WHERE tipo = 'Cot. Venta de productos' ORDER BY id_sol DESC LIMIT 10;";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else{
+                resp.send(result);
+            }
+                
+          con.end();
+        });
+    });
+    
+});
+
 app.post('/sol', (req, resp) => {
     const con = connectionSQL();
     const data = req.body;
@@ -1365,9 +1389,10 @@ app.post('/sol', (req, resp) => {
 
 });
 
-//end of region
+//#endregion
 
-//region LOGIN
+
+//#region LOGIN
 app.get('/login', (req, resp) => {
     const usr = req.query.usr;
     const pwd = req.query.pwd;
@@ -1436,7 +1461,7 @@ app.post('/register', (req, resp) => {
         });
     });
 });
-//end of region
+//#endregion
 
 
 
