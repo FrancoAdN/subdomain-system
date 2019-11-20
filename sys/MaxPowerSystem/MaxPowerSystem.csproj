@@ -159,6 +159,12 @@
     <Compile Include="NotificacionesUC.Designer.cs">
       <DependentUpon>NotificacionesUC.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdConfUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrdConfUC.Designer.cs">
+      <DependentUpon>OrdConfUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -276,6 +282,9 @@
     <EmbeddedResource Include="obj\Release\MaxPowerSystem.uploadDataBaseUC.resources" />
     <EmbeddedResource Include="obj\Release\MaxPowerSystem.ventaProdUC.resources" />
     <EmbeddedResource Include="obj\Release\MaxPowerSystem.viewDataBaseUC.resources" />
+    <EmbeddedResource Include="OrdConfUC.resx">
+      <DependentUpon>OrdConfUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
