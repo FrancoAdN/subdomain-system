@@ -1342,7 +1342,7 @@ app.get('/sol/emp/:emp', (req, resp) => {
     });
 });
 
-app.get('/s/last', (req,resp) => {
+app.get('/s/last', (req, resp) => {
 
     const con = connectionSQL();
     let sql =  "SELECT orden, cliente, descr FROM solicitudes WHERE tipo = 'Cot. Venta de productos' ORDER BY id_sol DESC LIMIT 10;";
