@@ -1343,8 +1343,7 @@ app.get('/sol/emp/:emp', (req, resp) => {
 });
 
 app.get('/s/last', (req,resp) => {
-    console.log('last');
-//SELECT * FROM solicitudes WHERE tipo = 'Cot. Venta de productos' ORDER BY id_sol DESC LIMIT 10;
+
     const con = connectionSQL();
     let sql =  "SELECT orden, cliente, descr FROM solicitudes WHERE tipo = 'Cot. Venta de productos' ORDER BY id_sol DESC LIMIT 10;";
     con.connect(function(err) {
@@ -1363,6 +1362,7 @@ app.get('/s/last', (req,resp) => {
           con.end();
         });
     });
+    
 });
 
 app.post('/sol', (req, resp) => {
