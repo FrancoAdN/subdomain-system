@@ -50,6 +50,8 @@ namespace MaxPowerSystem
             this.passwordPB = new System.Windows.Forms.PictureBox();
             this.userPB = new System.Windows.Forms.PictureBox();
             this.logoPB = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).BeginInit();
@@ -146,6 +148,8 @@ namespace MaxPowerSystem
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -228,22 +232,28 @@ namespace MaxPowerSystem
             // pwdBox
             // 
             this.pwdBox.AcceptsReturn = true;
+            this.pwdBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pwdBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pwdBox.ForeColor = System.Drawing.Color.DarkGray;
             this.pwdBox.Location = new System.Drawing.Point(85, 138);
             this.pwdBox.Name = "pwdBox";
-            this.pwdBox.Size = new System.Drawing.Size(197, 26);
+            this.pwdBox.Size = new System.Drawing.Size(197, 19);
             this.pwdBox.TabIndex = 5;
+            this.pwdBox.Text = "Password";
             this.pwdBox.GotFocus += new System.EventHandler(this.OnFocusPWD);
             this.pwdBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox2_KeyPress);
             this.pwdBox.LostFocus += new System.EventHandler(this.LostFocusPWD);
             // 
             // usrBox
             // 
+            this.usrBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usrBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usrBox.ForeColor = System.Drawing.Color.DarkGray;
             this.usrBox.Location = new System.Drawing.Point(85, 97);
             this.usrBox.Name = "usrBox";
-            this.usrBox.Size = new System.Drawing.Size(197, 26);
+            this.usrBox.Size = new System.Drawing.Size(197, 19);
             this.usrBox.TabIndex = 4;
+            this.usrBox.Text = "Username";
             this.usrBox.GotFocus += new System.EventHandler(this.TextGotFocus);
             this.usrBox.LostFocus += new System.EventHandler(this.TextLostFocus);
             // 
@@ -288,6 +298,22 @@ namespace MaxPowerSystem
             this.logoPB.Size = new System.Drawing.Size(270, 316);
             this.logoPB.TabIndex = 0;
             this.logoPB.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Location = new System.Drawing.Point(85, 123);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 2);
+            this.panel3.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Location = new System.Drawing.Point(85, 163);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 2);
+            this.panel4.TabIndex = 13;
             // 
             // Login
             // 
@@ -342,5 +368,7 @@ namespace MaxPowerSystem
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }

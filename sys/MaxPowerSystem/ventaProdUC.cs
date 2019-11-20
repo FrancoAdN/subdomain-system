@@ -275,7 +275,10 @@ namespace MaxPowerSystem
             }
         }
 
- 
+        private void addProduct(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 
 
