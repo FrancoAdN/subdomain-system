@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label9 = new System.Windows.Forms.Label();
-            this.combMon = new System.Windows.Forms.ComboBox();
+            this.cmbOrd = new System.Windows.Forms.ComboBox();
             this.labEnt = new System.Windows.Forms.Label();
             this.resEnt = new System.Windows.Forms.Label();
             this.resDesc = new System.Windows.Forms.Label();
@@ -47,18 +47,16 @@
             this.label9.TabIndex = 112;
             this.label9.Text = "Orden:";
             // 
-            // combMon
+            // cmbOrd
             // 
-            this.combMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.combMon.FormattingEnabled = true;
-            this.combMon.Items.AddRange(new object[] {
-            "USD",
-            "EUROS",
-            "ARS"});
-            this.combMon.Location = new System.Drawing.Point(279, 42);
-            this.combMon.Name = "combMon";
-            this.combMon.Size = new System.Drawing.Size(265, 26);
-            this.combMon.TabIndex = 111;
+            this.cmbOrd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.cmbOrd.FormattingEnabled = true;
+            this.cmbOrd.Location = new System.Drawing.Point(279, 40);
+            this.cmbOrd.Name = "cmbOrd";
+            this.cmbOrd.Size = new System.Drawing.Size(265, 26);
+            this.cmbOrd.TabIndex = 111;
+            this.cmbOrd.SelectedIndexChanged += new System.EventHandler(this.CmbOrd_SelectedIndexChanged);
+            this.cmbOrd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CmbOrd_KeyPress);
             // 
             // labEnt
             // 
@@ -120,7 +118,7 @@
             this.Controls.Add(this.resEnt);
             this.Controls.Add(this.labEnt);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.combMon);
+            this.Controls.Add(this.cmbOrd);
             this.Name = "compArticulosUC";
             this.Size = new System.Drawing.Size(763, 439);
             this.Load += new System.EventHandler(this.CompArticulosUC_Load);
@@ -132,7 +130,7 @@
         #endregion
 
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox combMon;
+        private System.Windows.Forms.ComboBox cmbOrd;
         private System.Windows.Forms.Label labEnt;
         private System.Windows.Forms.Label resEnt;
         private System.Windows.Forms.Label resDesc;
