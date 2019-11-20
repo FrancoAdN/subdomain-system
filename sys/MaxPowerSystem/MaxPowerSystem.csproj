@@ -51,21 +51,9 @@
     <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu.Core, Version=1.11.5.21, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
-    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
-      <HintPath>..\..\..\..\Downloads\sad\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
-      <HintPath>..\..\..\..\Downloads\sad\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
-      <HintPath>..\..\..\..\Downloads\sad\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
-      <HintPath>..\..\..\..\Downloads\sad\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
-    </Reference>
-    <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\Downloads\sad\Bunifu_UI_v1.5.3.dll</HintPath>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\GUI\Design Dashboard Modern\BUNIFU UI\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -158,12 +146,6 @@
     </Compile>
     <Compile Include="NotificacionesUC.Designer.cs">
       <DependentUpon>NotificacionesUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="OrdConfUC.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="OrdConfUC.Designer.cs">
-      <DependentUpon>OrdConfUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -276,9 +258,6 @@
     <EmbeddedResource Include="obj\Release\MaxPowerSystem.uploadDataBaseUC.resources" />
     <EmbeddedResource Include="obj\Release\MaxPowerSystem.ventaProdUC.resources" />
     <EmbeddedResource Include="obj\Release\MaxPowerSystem.viewDataBaseUC.resources" />
-    <EmbeddedResource Include="OrdConfUC.resx">
-      <DependentUpon>OrdConfUC.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

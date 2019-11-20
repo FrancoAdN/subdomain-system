@@ -267,6 +267,11 @@ namespace MaxPowerSystem
                 MessageBox.Show("Todo los campos deben estar completos", "Maxpower System dice: ");
             }
         }
+
+        private void addProduct(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 
 }
