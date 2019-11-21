@@ -59,6 +59,8 @@ namespace MaxPowerSystem
 
         }
 
+        
+
         private void CmbOrd_SelectedIndexChanged(object sender, EventArgs e)
         {
             string ord = (String)cmbOrd.SelectedItem;
@@ -156,9 +158,12 @@ namespace MaxPowerSystem
 
         private void ButAccept_MouseClick(object sender, MouseEventArgs e)
         {
+
             this.Hide();
+            FormArticulos.Orden = cmbOrd.Text;
             FormArticulos fa = new FormArticulos();
-            fa.setOrd(cmbOrd.Text);
+            fa.setOrd();
+
         }
 
     }

@@ -38,6 +38,8 @@ namespace MaxPowerSystem
             this.iconminimizar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -50,8 +52,6 @@ namespace MaxPowerSystem
             this.passwordPB = new System.Windows.Forms.PictureBox();
             this.userPB = new System.Windows.Forms.PictureBox();
             this.logoPB = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconmaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconrestaurar)).BeginInit();
@@ -167,6 +167,22 @@ namespace MaxPowerSystem
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(628, 334);
             this.panel2.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Location = new System.Drawing.Point(85, 163);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(200, 2);
+            this.panel4.TabIndex = 13;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Location = new System.Drawing.Point(85, 123);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 2);
+            this.panel3.TabIndex = 12;
             // 
             // linkLabel1
             // 
@@ -298,22 +314,6 @@ namespace MaxPowerSystem
             this.logoPB.Size = new System.Drawing.Size(270, 316);
             this.logoPB.TabIndex = 0;
             this.logoPB.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Location = new System.Drawing.Point(85, 123);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 2);
-            this.panel3.TabIndex = 12;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel4.Location = new System.Drawing.Point(85, 163);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 2);
-            this.panel4.TabIndex = 13;
             // 
             // Login
             // 

@@ -67,6 +67,7 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -83,6 +84,13 @@
     </Compile>
     <Compile Include="agregarArtUC.Designer.cs">
       <DependentUpon>agregarArtUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Articulo.cs" />
+    <Compile Include="artProvUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="artProvUC.Designer.cs">
+      <DependentUpon>artProvUC.cs</DependentUpon>
     </Compile>
     <Compile Include="clientREST.cs" />
     <Compile Include="compArticulosUC.cs">
@@ -221,6 +229,9 @@
     </Compile>
     <EmbeddedResource Include="agregarArtUC.resx">
       <DependentUpon>agregarArtUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="artProvUC.resx">
+      <DependentUpon>artProvUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="compArticulosUC.resx">
       <DependentUpon>compArticulosUC.cs</DependentUpon>
