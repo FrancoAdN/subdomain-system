@@ -1495,6 +1495,27 @@ app.get('/seguridad', (req, resp) => {
     });
 
 });
+app.get('/electronicos', (req, resp) => {
+
+    
+    const con = conSQL();
+    const sql =  'SELECT Nombre FROM p_electronicos ORDER BY Codigo ASC;';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else
+                resp.send(result);
+          con.end();
+        });
+    });
+
+});
 
 //#endregion
 
