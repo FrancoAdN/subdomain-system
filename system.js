@@ -1510,6 +1510,7 @@ app.get('/electronicos', (req, resp) => {
                 console.error(err);
                 resp.send("0");
             }else
+                console.log(result.length);
                 resp.send(result);
           con.end();
         });
