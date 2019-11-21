@@ -137,12 +137,6 @@ C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSyst
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.Form1.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.FormArticulos.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.Login.resources
-<<<<<<< HEAD
-C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\bin\Debug\Bunifu_UI_v1.5.3.dll
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4993ed097942028b00ccefd7530fe6075a3def46
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.NotificacionesUC.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.OrdConfUC.resources
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.Properties.Resources.resources
@@ -158,3 +152,5 @@ C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSyst
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.exe
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.pdb
 C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csprojAssemblyReference.cache
+C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\subdomain-system\sys\MaxPowerSystem\obj\Debug\MaxPowerSystem.agregarArtUC.resources

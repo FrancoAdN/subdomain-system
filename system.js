@@ -112,6 +112,17 @@ function connectionSQL(){
     return con;
 }
 
+function conSQL(){
+    const con = mysql.createConnection({
+        host: "localhost",
+        user: "maxpower_francoadinapoli",
+        password: "Fa42904558.;",
+        database: "maxpower_db" ,
+        multipleStatements: true
+    });
+    return con;
+}
+
 const app = express();
 
 app.use(express.static('public'));
@@ -461,7 +472,6 @@ app.post('/ord_ext', (req, resp) => {
 })
 //#endregion
 
-
 //#region REPARACION DE LABORATORIO
 
 app.get('/rep_lab', (req, resp) => {
@@ -628,7 +638,6 @@ app.post('/rep_lab', (req, resp) => {
 });
 
 //#endregion
-
 
 
 //#region ASISTENCIA TECNICA
@@ -1463,6 +1472,30 @@ app.post('/register', (req, resp) => {
 });
 //#endregion
 
+//#region GET PRODUCTS
 
+app.get('/seguridad', (req, resp) => {
+
+    
+    const con = conSQL();
+    const sql =  'SELECT Nombre FROM p_seguridad ORDER BY Codigo ASC;';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else
+                resp.send(result);
+          con.end();
+        });
+    });
+
+});
+
+//#endregion
 
 app.listen(3030, () => console.log('Server running'));
