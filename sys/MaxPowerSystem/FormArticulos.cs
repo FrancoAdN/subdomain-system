@@ -88,7 +88,9 @@ namespace MaxPowerSystem
 
         private void FormArticulos_Load(object sender, EventArgs e)
         {
+            uploadDataBaseUC1.Hide();
             artProvUC1.Hide();
+            artProvUC1.addprov = addProv;
             agregarArtUC1.openprov = openProv;
             compArticulosUC1.openart = openAddArt;
             compArticulosUC1.Show();
@@ -106,6 +108,14 @@ namespace MaxPowerSystem
         public void openProv()
         {
             artProvUC1.setValues();
+        }
+
+        public void addProv(string prop)
+        {
+            uploadDataBaseUC1.changeName("Proveedores");
+            uploadDataBaseUC1.setProv(prop);
+            uploadDataBaseUC1.Show();
+            uploadDataBaseUC1.BringToFront();
         }
 
     }
