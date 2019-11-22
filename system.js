@@ -1083,7 +1083,7 @@ app.get('/prov/:id', (req, resp) => {
 app.get('/prov/rub/:rub', (req, resp) => {
     const con = connectionSQL();
     const rub = req.params.rub;
-    let sql = `SELECT * FROM prov WHERE rub LIKE '${rub}'`;
+    let sql = `SELECT emp FROM prov WHERE rub LIKE '${rub}'`;
     
 
     con.connect(function(err) {
