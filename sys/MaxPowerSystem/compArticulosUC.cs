@@ -160,12 +160,18 @@ namespace MaxPowerSystem
 
         private void ButAccept_MouseClick(object sender, MouseEventArgs e)
         {
+<<<<<<< HEAD
+            this.Hide();
+            FormArticulos fa = new FormArticulos();
+            fa.setOrd(cmbOrd.Text);
+=======
 
             this.Hide();
             FormArticulos.Orden = cmbOrd.Text;
             if (openart != null)
                 openart();
 
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
         }
 
     }

@@ -85,6 +85,8 @@
     <Compile Include="agregarArtUC.Designer.cs">
       <DependentUpon>agregarArtUC.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
     <Compile Include="Articulo.cs" />
     <Compile Include="artProvUC.cs">
       <SubType>UserControl</SubType>
@@ -92,6 +94,7 @@
     <Compile Include="artProvUC.Designer.cs">
       <DependentUpon>artProvUC.cs</DependentUpon>
     </Compile>
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
     <Compile Include="clientREST.cs" />
     <Compile Include="compArticulosUC.cs">
       <SubType>UserControl</SubType>
@@ -154,6 +157,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="FormArticulos.cs">
       <SubType>Form</SubType>
@@ -230,9 +239,12 @@
     <EmbeddedResource Include="agregarArtUC.resx">
       <DependentUpon>agregarArtUC.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
     <EmbeddedResource Include="artProvUC.resx">
       <DependentUpon>artProvUC.cs</DependentUpon>
     </EmbeddedResource>
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
     <EmbeddedResource Include="compArticulosUC.resx">
       <DependentUpon>compArticulosUC.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormArticulos.resx">
       <DependentUpon>FormArticulos.cs</DependentUpon>

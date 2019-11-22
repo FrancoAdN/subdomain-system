@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dbVentProd));
-            this.labPmde = new System.Windows.Forms.Label();
-            this.labMon = new System.Windows.Forms.Label();
-            this.labInco = new System.Windows.Forms.Label();
+            this.pmdeLab = new System.Windows.Forms.Label();
             this.labEnt = new System.Windows.Forms.Label();
+            this.labInco = new System.Windows.Forms.Label();
+            this.labMon = new System.Windows.Forms.Label();
+            this.labPmde = new System.Windows.Forms.Label();
             this.entLab = new System.Windows.Forms.Label();
             this.edmLab = new System.Windows.Forms.Label();
             this.cdpLab = new System.Windows.Forms.Label();
-            this.pmdeLab = new System.Windows.Forms.Label();
             this.labDate = new System.Windows.Forms.Label();
             this.labOrden = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -54,46 +54,63 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
-            // labPmde
+            // pmdeLab
             // 
-            this.labPmde.AutoSize = true;
-            this.labPmde.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPmde.Location = new System.Drawing.Point(50, 308);
-            this.labPmde.Name = "labPmde";
-            this.labPmde.Size = new System.Drawing.Size(204, 18);
-            this.labPmde.TabIndex = 10;
-            this.labPmde.Text = "Plazo máximo de entrega:";
+            this.pmdeLab.AutoSize = true;
+            this.pmdeLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.pmdeLab.Location = new System.Drawing.Point(50, 326);
+            this.pmdeLab.Name = "pmdeLab";
+            this.pmdeLab.Size = new System.Drawing.Size(0, 18);
+            this.pmdeLab.TabIndex = 14;
+            this.pmdeLab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pmde_click);
             // 
-            // labMon
+            // labEnt
             // 
-            this.labMon.AutoSize = true;
-            this.labMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labMon.Location = new System.Drawing.Point(50, 209);
-            this.labMon.Name = "labMon";
-            this.labMon.Size = new System.Drawing.Size(172, 18);
-            this.labMon.TabIndex = 9;
-            this.labMon.Text = "Condiciones de pago:";
+            this.labEnt.AutoSize = true;
+            this.labEnt.BackColor = System.Drawing.Color.Transparent;
+            this.labEnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEnt.ForeColor = System.Drawing.Color.White;
+            this.labEnt.Location = new System.Drawing.Point(50, 20);
+            this.labEnt.Name = "labEnt";
+            this.labEnt.Size = new System.Drawing.Size(80, 18);
+            this.labEnt.TabIndex = 7;
+            this.labEnt.Text = "Empresa:";
             // 
             // labInco
             // 
             this.labInco.AutoSize = true;
+            this.labInco.BackColor = System.Drawing.Color.Transparent;
             this.labInco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labInco.ForeColor = System.Drawing.Color.White;
             this.labInco.Location = new System.Drawing.Point(50, 77);
             this.labInco.Name = "labInco";
             this.labInco.Size = new System.Drawing.Size(139, 18);
             this.labInco.TabIndex = 8;
             this.labInco.Text = "Lugar de entrega:";
             // 
-            // labEnt
+            // labMon
             // 
-            this.labEnt.AutoSize = true;
-            this.labEnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEnt.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labEnt.Location = new System.Drawing.Point(50, 20);
-            this.labEnt.Name = "labEnt";
-            this.labEnt.Size = new System.Drawing.Size(80, 18);
-            this.labEnt.TabIndex = 7;
-            this.labEnt.Text = "Empresa:";
+            this.labMon.AutoSize = true;
+            this.labMon.BackColor = System.Drawing.Color.Transparent;
+            this.labMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labMon.ForeColor = System.Drawing.Color.White;
+            this.labMon.Location = new System.Drawing.Point(50, 209);
+            this.labMon.Name = "labMon";
+            this.labMon.Size = new System.Drawing.Size(172, 18);
+            this.labMon.TabIndex = 9;
+            this.labMon.Text = "Condiciones de pago:";
+            // 
+            // labPmde
+            // 
+            this.labPmde.AutoSize = true;
+            this.labPmde.BackColor = System.Drawing.Color.Transparent;
+            this.labPmde.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPmde.ForeColor = System.Drawing.Color.White;
+            this.labPmde.Location = new System.Drawing.Point(50, 308);
+            this.labPmde.Name = "labPmde";
+            this.labPmde.Size = new System.Drawing.Size(204, 18);
+            this.labPmde.TabIndex = 10;
+            this.labPmde.Text = "Plazo máximo de entrega:";
             // 
             // entLab
             // 
@@ -107,6 +124,7 @@
             // 
             // edmLab
             // 
+            this.edmLab.BackColor = System.Drawing.Color.Transparent;
             this.edmLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.edmLab.Location = new System.Drawing.Point(50, 114);
             this.edmLab.Name = "edmLab";
@@ -116,6 +134,7 @@
             // 
             // cdpLab
             // 
+            this.cdpLab.BackColor = System.Drawing.Color.Transparent;
             this.cdpLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.cdpLab.Location = new System.Drawing.Point(50, 238);
             this.cdpLab.Name = "cdpLab";
@@ -123,20 +142,12 @@
             this.cdpLab.TabIndex = 13;
             this.cdpLab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cdp_click);
             // 
-            // pmdeLab
-            // 
-            this.pmdeLab.AutoSize = true;
-            this.pmdeLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.pmdeLab.Location = new System.Drawing.Point(50, 326);
-            this.pmdeLab.Name = "pmdeLab";
-            this.pmdeLab.Size = new System.Drawing.Size(0, 18);
-            this.pmdeLab.TabIndex = 14;
-            this.pmdeLab.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pmde_click);
-            // 
             // labDate
             // 
             this.labDate.AutoSize = true;
+            this.labDate.BackColor = System.Drawing.Color.Transparent;
             this.labDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDate.ForeColor = System.Drawing.Color.White;
             this.labDate.Location = new System.Drawing.Point(740, 308);
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(110, 18);
@@ -168,7 +179,9 @@
             // labPrec
             // 
             this.labPrec.AutoSize = true;
+            this.labPrec.BackColor = System.Drawing.Color.Transparent;
             this.labPrec.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPrec.ForeColor = System.Drawing.Color.White;
             this.labPrec.Location = new System.Drawing.Point(440, 308);
             this.labPrec.Name = "labPrec";
             this.labPrec.Size = new System.Drawing.Size(105, 18);
@@ -186,6 +199,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 15);
             this.pictureBox1.Name = "pictureBox1";
@@ -195,6 +209,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.Location = new System.Drawing.Point(8, 70);
             this.pictureBox3.Name = "pictureBox3";
@@ -204,6 +219,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.Location = new System.Drawing.Point(8, 202);
             this.pictureBox2.Name = "pictureBox2";
@@ -213,6 +229,7 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.Location = new System.Drawing.Point(8, 301);
             this.pictureBox4.Name = "pictureBox4";
@@ -222,6 +239,7 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.Location = new System.Drawing.Point(402, 301);
             this.pictureBox5.Name = "pictureBox5";
@@ -233,6 +251,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
@@ -251,6 +270,7 @@
             this.Controls.Add(this.labMon);
             this.Controls.Add(this.labInco);
             this.Controls.Add(this.labEnt);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "dbVentProd";
             this.Size = new System.Drawing.Size(920, 400);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -264,15 +284,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label labPmde;
-        private System.Windows.Forms.Label labMon;
-        private System.Windows.Forms.Label labInco;
+        private System.Windows.Forms.Label pmdeLab;
         private System.Windows.Forms.Label labEnt;
+        private System.Windows.Forms.Label labInco;
+        private System.Windows.Forms.Label labMon;
+        private System.Windows.Forms.Label labPmde;
         private System.Windows.Forms.Label entLab;
         private System.Windows.Forms.Label edmLab;
         private System.Windows.Forms.Label cdpLab;
-        private System.Windows.Forms.Label pmdeLab;
         private System.Windows.Forms.Label labDate;
         private System.Windows.Forms.Label labOrden;
         private System.Windows.Forms.Button button1;

@@ -31,14 +31,25 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.compArticulosUC1 = new MaxPowerSystem.compArticulosUC();
             this.agregarArtUC1 = new MaxPowerSystem.agregarArtUC();
+<<<<<<< HEAD
+=======
             this.artProvUC1 = new MaxPowerSystem.artProvUC();
+<<<<<<< HEAD
             this.uploadDataBaseUC1 = new MaxPowerSystem.uploadDataBaseUC();
+=======
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
+            this.panel1.SuspendLayout();
+>>>>>>> 94bfd326347c71038fecc0b27392461e24976108
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
+<<<<<<< HEAD
             this.panel2.Controls.Add(this.uploadDataBaseUC1);
+=======
+            this.panel2.Controls.Add(this.agregarArtUC1);
+>>>>>>> 94bfd326347c71038fecc0b27392461e24976108
             this.panel2.Controls.Add(this.compArticulosUC1);
             this.panel2.Controls.Add(this.agregarArtUC1);
             this.panel2.Controls.Add(this.artProvUC1);
@@ -61,6 +72,11 @@
             this.agregarArtUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.agregarArtUC1.Location = new System.Drawing.Point(0, 0);
             this.agregarArtUC1.Name = "agregarArtUC1";
+<<<<<<< HEAD
+            this.agregarArtUC1.Size = new System.Drawing.Size(763, 439);
+            this.agregarArtUC1.TabIndex = 1;
+            // 
+=======
             this.agregarArtUC1.Orden = null;
             this.agregarArtUC1.Size = new System.Drawing.Size(904, 521);
             this.agregarArtUC1.TabIndex = 1;
@@ -73,6 +89,7 @@
             this.artProvUC1.Size = new System.Drawing.Size(904, 521);
             this.artProvUC1.TabIndex = 2;
             // 
+<<<<<<< HEAD
             // uploadDataBaseUC1
             // 
             this.uploadDataBaseUC1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -81,6 +98,9 @@
             this.uploadDataBaseUC1.Size = new System.Drawing.Size(904, 521);
             this.uploadDataBaseUC1.TabIndex = 3;
             // 
+=======
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
+>>>>>>> 94bfd326347c71038fecc0b27392461e24976108
             // FormArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -101,7 +121,13 @@
         private System.Windows.Forms.Panel panel2;
         private compArticulosUC compArticulosUC1;
         private agregarArtUC agregarArtUC1;
+<<<<<<< HEAD
+=======
         public artProvUC artProvUC1;
+<<<<<<< HEAD
         private uploadDataBaseUC uploadDataBaseUC1;
+=======
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
+>>>>>>> 94bfd326347c71038fecc0b27392461e24976108
     }
 }

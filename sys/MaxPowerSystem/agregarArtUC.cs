@@ -1,13 +1,50 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+=======
 using System.Linq;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
 
 namespace MaxPowerSystem
 {
     public partial class agregarArtUC : UserControl
     {
+<<<<<<< HEAD
+        public string Title;
+        public agregarArtUC()
+        {
+            InitializeComponent();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void SetTitle(string t)
+        {
+            Title = t;
+            labOrden.Text = Title;
+        }
+
+        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Char chr = e.KeyChar;
+            if (!Char.IsDigit(chr) && chr != 8)
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se aceptan numeros", "Maxpower System dice: ");
+            }
+=======
         public delegate void OutsideFunc();
         public OutsideFunc openprov;
 
@@ -220,6 +257,7 @@ namespace MaxPowerSystem
 
             }
             
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
         }
     }
 }

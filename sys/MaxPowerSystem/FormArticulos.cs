@@ -12,6 +12,9 @@ namespace MaxPowerSystem
 {
     public partial class FormArticulos : Form
     {
+<<<<<<< HEAD
+        public string Orden;
+=======
         public static string _orden;
         
         public static string Orden
@@ -81,6 +84,7 @@ namespace MaxPowerSystem
             }
         }
 
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
         public FormArticulos()
         {
             InitializeComponent();
@@ -97,6 +101,19 @@ namespace MaxPowerSystem
             compArticulosUC1.BringToFront();
         }
 
+<<<<<<< HEAD
+        public void setOrd(string o)
+        {
+            Orden = o;
+
+            agregarArtUC1.SetTitle(Orden);
+            agregarArtUC1.Show();
+            agregarArtUC1.BringToFront();
+            
+
+        }
+
+=======
         public void openAddArt()
         {
 
@@ -110,6 +127,7 @@ namespace MaxPowerSystem
             artProvUC1.setValues();
         }
 
+<<<<<<< HEAD
         public void addProv(string prop)
         {
             uploadDataBaseUC1.changeName("Proveedores");
@@ -118,5 +136,8 @@ namespace MaxPowerSystem
             uploadDataBaseUC1.BringToFront();
         }
 
+=======
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
+>>>>>>> 94bfd326347c71038fecc0b27392461e24976108
     }
 }
