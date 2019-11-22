@@ -8,6 +8,8 @@ namespace MaxPowerSystem
 {
     public partial class agregarArtUC : UserControl
     {
+        public delegate void OutsideFunc();
+        public OutsideFunc openprov;
 
         public string Orden { get; set; }
         public agregarArtUC()
@@ -211,12 +213,13 @@ namespace MaxPowerSystem
                     Arts.Add(new Articulo(item.SubItems[0].Text, item.SubItems[1].Text, int.Parse(item.SubItems[2].Text)));
                 }
                 FormArticulos.ListArt.SetArticulos(Arts);
+                FormArticulos.Index = 0;
+                this.Hide();
+                if (openprov != null)
+                    openprov();
 
             }
-            FormArticulos.Index = 0;
-            this.Hide();
-            FormArticulos fa = new FormArticulos();
-            fa.openProv();
+            
         }
     }
 }

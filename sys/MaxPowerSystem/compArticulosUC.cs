@@ -14,6 +14,8 @@ namespace MaxPowerSystem
 {
     public partial class compArticulosUC : UserControl
     {
+        public delegate void OpenAddArt();
+        public OpenAddArt openart;
         JToken json = "";
         public compArticulosUC()
         {
@@ -161,8 +163,8 @@ namespace MaxPowerSystem
 
             this.Hide();
             FormArticulos.Orden = cmbOrd.Text;
-            FormArticulos fa = new FormArticulos();
-            fa.setOrd();
+            if (openart != null)
+                openart();
 
         }
 

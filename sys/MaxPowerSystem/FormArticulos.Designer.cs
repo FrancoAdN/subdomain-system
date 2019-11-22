@@ -32,8 +32,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.agregarArtUC1 = new MaxPowerSystem.agregarArtUC();
             this.compArticulosUC1 = new MaxPowerSystem.compArticulosUC();
+            this.agregarArtUC1 = new MaxPowerSystem.agregarArtUC();
             this.artProvUC1 = new MaxPowerSystem.artProvUC();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,14 +69,22 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.artProvUC1);
-            this.panel2.Controls.Add(this.agregarArtUC1);
             this.panel2.Controls.Add(this.compArticulosUC1);
+            this.panel2.Controls.Add(this.agregarArtUC1);
+            this.panel2.Controls.Add(this.artProvUC1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(141, 82);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(763, 439);
             this.panel2.TabIndex = 2;
+            // 
+            // compArticulosUC1
+            // 
+            this.compArticulosUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.compArticulosUC1.Location = new System.Drawing.Point(0, 0);
+            this.compArticulosUC1.Name = "compArticulosUC1";
+            this.compArticulosUC1.Size = new System.Drawing.Size(763, 439);
+            this.compArticulosUC1.TabIndex = 0;
             // 
             // agregarArtUC1
             // 
@@ -86,14 +94,6 @@
             this.agregarArtUC1.Orden = null;
             this.agregarArtUC1.Size = new System.Drawing.Size(763, 439);
             this.agregarArtUC1.TabIndex = 1;
-            // 
-            // compArticulosUC1
-            // 
-            this.compArticulosUC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.compArticulosUC1.Location = new System.Drawing.Point(0, 0);
-            this.compArticulosUC1.Name = "compArticulosUC1";
-            this.compArticulosUC1.Size = new System.Drawing.Size(763, 439);
-            this.compArticulosUC1.TabIndex = 0;
             // 
             // artProvUC1
             // 
@@ -130,6 +130,6 @@
         private System.Windows.Forms.Button button1;
         private compArticulosUC compArticulosUC1;
         private agregarArtUC agregarArtUC1;
-        private artProvUC artProvUC1;
+        public artProvUC artProvUC1;
     }
 }

@@ -12,6 +12,7 @@ namespace MaxPowerSystem
 {
     public partial class artProvUC : UserControl
     {
+
         List<Articulo> _arts;
         public artProvUC()
         {
@@ -20,8 +21,13 @@ namespace MaxPowerSystem
 
         public void setValues()
         {
+            this.Visible = true;
+            this.Show();
+            this.BringToFront();
             _arts = (List<Articulo>)FormArticulos.ListArt.GetArticulos();
             labProd.Text = _arts[FormArticulos.Index].producto;
+
         }
+
     }
 }

@@ -89,11 +89,13 @@ namespace MaxPowerSystem
         private void FormArticulos_Load(object sender, EventArgs e)
         {
             artProvUC1.Hide();
+            agregarArtUC1.openprov = openProv;
+            compArticulosUC1.openart = openAddArt;
             compArticulosUC1.Show();
             compArticulosUC1.BringToFront();
         }
 
-        public void setOrd()
+        public void openAddArt()
         {
 
             agregarArtUC1.Show();
@@ -104,8 +106,6 @@ namespace MaxPowerSystem
         public void openProv()
         {
             artProvUC1.setValues();
-            artProvUC1.Show();
-            artProvUC1.BringToFront();
         }
 
     }

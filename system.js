@@ -993,6 +993,117 @@ app.get('/emp/:id', (req, resp) => {
 });
 //#endregion
 
+//#region PROVEEDORES
+app.post('/prov', (req, resp) => {
+    let emp = req.body;
+    emp.cuit = parseInt(emp.cuit);
+    emp.tel = parseInt(emp.tel);
+    emp.telb = parseInt(emp.telb);
+    emp.telcom = parseInt(emp.telcom);
+
+    const con = connectionSQL();
+
+    const sql =  "SELECT * FROM prov WHERE `emp` = '" + emp.emp  + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+          if (err){
+            console.error(err);
+            resp.send("0");
+          }else if(result.length == 0){
+            const qry = `INSERT into prov (emp, cuit, dir, loc, web, telcom, rub, cont, mail, tel, contb, mailb, telb) 
+            VALUES ('${emp.emp}', ${emp.cuit}, '${emp.dir}', '${emp.loc}', '${emp.web}', ${emp.telcom}, '${emp.rub}', '${emp.cont}', '${emp.mail}', ${emp.tel}, '${emp.contb}', '${emp.mailb}', ${emp.telb});`;
+            con.query(qry, function (err, result, fields) {
+                if (err){
+                    console.error(err);
+                    resp.send("0");
+                }else{
+                    console.log("INSERT DONE");
+                    resp.send("1");
+                }
+            });
+          }else{
+            resp.send("2");
+          }
+          con.end();
+        });
+    });
+});
+
+app.get('/prov', (req, resp) => {
+    const sql = "SELECT * FROM prov";
+    const con = connectionSQL();
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else
+                resp.send(result);
+          con.end();
+        });
+    });
+});
+
+app.get('/prov/:id', (req, resp) => {
+    const con = connectionSQL();
+    
+    let sql = "SELECT * FROM prov WHERE";
+    if(parseInt(req.params.id))
+        sql += " `cuit` = " + req.params.id;
+    else
+        sql += " `emp` = '" + req.params.id +"';";
+    
+
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else if(result.length != 0)
+                resp.send(result);
+            else
+                resp.send("9");
+          con.end();
+        });
+    });
+});
+
+app.get('/prov/rub/:rub', (req, resp) => {
+    const con = connectionSQL();
+    const rub = req.params.rub;
+    let sql = `SELECT * FROM prov WHERE rub LIKE '${rub}'`;
+    
+
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else if(result.length != 0)
+                resp.send(result);
+            else
+                resp.send("15");
+          con.end();
+        });
+    });
+});
+//#endregion
 
 
 //#region UTILITIES
