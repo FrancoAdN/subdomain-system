@@ -107,6 +107,7 @@
             this.butAccept.Text = "Aceptar";
             this.butAccept.UseVisualStyleBackColor = true;
             this.butAccept.Visible = false;
+            this.butAccept.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ButAccept_MouseClick);
             // 
             // compArticulosUC
             // 

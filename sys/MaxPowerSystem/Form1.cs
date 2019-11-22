@@ -634,6 +634,8 @@ namespace MaxPowerSystem
             FormArticulos fa = new FormArticulos();
             fa.ShowDialog();
         }
+
+
     }
 
 }

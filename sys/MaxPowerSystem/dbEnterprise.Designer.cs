@@ -70,7 +70,9 @@
             // labEmp
             // 
             this.labEmp.AutoSize = true;
+            this.labEmp.BackColor = System.Drawing.Color.Transparent;
             this.labEmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEmp.ForeColor = System.Drawing.Color.White;
             this.labEmp.Location = new System.Drawing.Point(50, 20);
             this.labEmp.Name = "labEmp";
             this.labEmp.Size = new System.Drawing.Size(75, 18);
@@ -80,7 +82,9 @@
             // labCuit
             // 
             this.labCuit.AutoSize = true;
+            this.labCuit.BackColor = System.Drawing.Color.Transparent;
             this.labCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCuit.ForeColor = System.Drawing.Color.White;
             this.labCuit.Location = new System.Drawing.Point(50, 80);
             this.labCuit.Name = "labCuit";
             this.labCuit.Size = new System.Drawing.Size(38, 18);
@@ -90,7 +94,9 @@
             // labLoc
             // 
             this.labLoc.AutoSize = true;
+            this.labLoc.BackColor = System.Drawing.Color.Transparent;
             this.labLoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLoc.ForeColor = System.Drawing.Color.White;
             this.labLoc.Location = new System.Drawing.Point(50, 172);
             this.labLoc.Name = "labLoc";
             this.labLoc.Size = new System.Drawing.Size(80, 18);
@@ -100,7 +106,9 @@
             // labDir
             // 
             this.labDir.AutoSize = true;
+            this.labDir.BackColor = System.Drawing.Color.Transparent;
             this.labDir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDir.ForeColor = System.Drawing.Color.White;
             this.labDir.Location = new System.Drawing.Point(50, 140);
             this.labDir.Name = "labDir";
             this.labDir.Size = new System.Drawing.Size(80, 18);
@@ -110,7 +118,9 @@
             // labTelCom
             // 
             this.labTelCom.AutoSize = true;
+            this.labTelCom.BackColor = System.Drawing.Color.Transparent;
             this.labTelCom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTelCom.ForeColor = System.Drawing.Color.White;
             this.labTelCom.Location = new System.Drawing.Point(287, 80);
             this.labTelCom.Name = "labTelCom";
             this.labTelCom.Size = new System.Drawing.Size(118, 18);
@@ -120,7 +130,9 @@
             // labWeb
             // 
             this.labWeb.AutoSize = true;
+            this.labWeb.BackColor = System.Drawing.Color.Transparent;
             this.labWeb.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labWeb.ForeColor = System.Drawing.Color.White;
             this.labWeb.Location = new System.Drawing.Point(287, 23);
             this.labWeb.Name = "labWeb";
             this.labWeb.Size = new System.Drawing.Size(46, 18);
@@ -129,8 +141,10 @@
             // 
             // groupCont
             // 
+            this.groupCont.BackColor = System.Drawing.Color.Transparent;
             this.groupCont.Controls.Add(this.panel1);
             this.groupCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.groupCont.ForeColor = System.Drawing.Color.White;
             this.groupCont.Location = new System.Drawing.Point(628, 20);
             this.groupCont.Name = "groupCont";
             this.groupCont.Size = new System.Drawing.Size(200, 108);
@@ -142,9 +156,11 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.labTel);
             this.panel1.Controls.Add(this.labMail);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(3, 22);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(194, 83);
@@ -172,8 +188,10 @@
             // 
             // groupContB
             // 
+            this.groupContB.BackColor = System.Drawing.Color.Transparent;
             this.groupContB.Controls.Add(this.panel2);
             this.groupContB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Bold);
+            this.groupContB.ForeColor = System.Drawing.Color.White;
             this.groupContB.Location = new System.Drawing.Point(628, 134);
             this.groupContB.Name = "groupContB";
             this.groupContB.Size = new System.Drawing.Size(200, 108);
@@ -185,9 +203,11 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.AutoSize = true;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.labTelB);
             this.panel2.Controls.Add(this.labMailB);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(3, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(194, 83);
@@ -216,7 +236,9 @@
             // labRub
             // 
             this.labRub.AutoSize = true;
+            this.labRub.BackColor = System.Drawing.Color.Transparent;
             this.labRub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labRub.ForeColor = System.Drawing.Color.White;
             this.labRub.Location = new System.Drawing.Point(287, 140);
             this.labRub.Name = "labRub";
             this.labRub.Size = new System.Drawing.Size(54, 18);
@@ -313,6 +335,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
@@ -331,6 +355,7 @@
             this.Controls.Add(this.labDir);
             this.Controls.Add(this.labCuit);
             this.Controls.Add(this.labEmp);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "dbEnterprise";
             this.Size = new System.Drawing.Size(920, 330);
             this.groupCont.ResumeLayout(false);

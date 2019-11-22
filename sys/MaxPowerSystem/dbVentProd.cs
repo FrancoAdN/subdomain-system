@@ -144,6 +144,14 @@ namespace MaxPowerSystem
             Console.WriteLine("Regen file " +db);
         }
 
+        private void cdp_click(object sender, MouseEventArgs e)
+        {
 
+        }
+
+        private void edm_click(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

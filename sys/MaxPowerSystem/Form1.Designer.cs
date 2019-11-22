@@ -33,6 +33,7 @@ namespace MaxPowerSystem
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.viewSol = new System.Windows.Forms.Button();
@@ -50,12 +51,11 @@ namespace MaxPowerSystem
             this.OCEButton = new System.Windows.Forms.Button();
             this.OCNButton = new System.Windows.Forms.Button();
             this.viewOrdC = new System.Windows.Forms.Button();
-            this.OACButton = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.OACButton = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -65,34 +65,34 @@ namespace MaxPowerSystem
             this.viewFecha = new System.Windows.Forms.Label();
             this.viewHora = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.ordConfUC1 = new MaxPowerSystem.OrdConfUC();
-            this.uploadDataBaseUC1 = new MaxPowerSystem.uploadDataBaseUC();
-            this.viewDataBaseUC1 = new MaxPowerSystem.viewDataBaseUC();
-            this.tecAsistUC1 = new MaxPowerSystem.tecAsistUC();
-            this.ventaProdUC1 = new MaxPowerSystem.ventaProdUC();
-            this.repProdUC1 = new MaxPowerSystem.repProdUC();
-            this.compExteriorUC1 = new MaxPowerSystem.compExteriorUC();
-            this.compNacUC1 = new MaxPowerSystem.compNacUC();
-            this.notificacionesUC1 = new MaxPowerSystem.NotificacionesUC();
-            this.solicitudesUC1 = new MaxPowerSystem.solicitudesUC();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.solicitudesUC1 = new MaxPowerSystem.solicitudesUC();
+            this.notificacionesUC1 = new MaxPowerSystem.NotificacionesUC();
+            this.compNacUC1 = new MaxPowerSystem.compNacUC();
+            this.compExteriorUC1 = new MaxPowerSystem.compExteriorUC();
+            this.repProdUC1 = new MaxPowerSystem.repProdUC();
+            this.ventaProdUC1 = new MaxPowerSystem.ventaProdUC();
+            this.tecAsistUC1 = new MaxPowerSystem.tecAsistUC();
+            this.viewDataBaseUC1 = new MaxPowerSystem.viewDataBaseUC();
+            this.uploadDataBaseUC1 = new MaxPowerSystem.uploadDataBaseUC();
+            this.ordConfUC1 = new MaxPowerSystem.OrdConfUC();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.bunifuGradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel4.SuspendLayout();
+            this.bunifuGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -126,6 +126,40 @@ namespace MaxPowerSystem
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new System.Drawing.Size(200, 617);
             flowLayoutPanel1.TabIndex = 1;
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "      Menu";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 80D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(194, 40);
+            this.bunifuFlatButton1.TabIndex = 39;
+            this.bunifuFlatButton1.Text = "      Menu";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // button1
             // 
@@ -432,25 +466,6 @@ namespace MaxPowerSystem
             this.viewOrdC.Visible = false;
             this.viewOrdC.Click += new System.EventHandler(this.viewOrdC_Click);
             // 
-            // OACButton
-            // 
-            this.OACButton.AutoSize = true;
-            this.OACButton.BackColor = System.Drawing.Color.Transparent;
-            this.OACButton.FlatAppearance.BorderSize = 0;
-            this.OACButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OACButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OACButton.ForeColor = System.Drawing.Color.White;
-            this.OACButton.Image = ((System.Drawing.Image)(resources.GetObject("OACButton.Image")));
-            this.OACButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.OACButton.Location = new System.Drawing.Point(0, 574);
-            this.OACButton.Margin = new System.Windows.Forms.Padding(0);
-            this.OACButton.Name = "OACButton";
-            this.OACButton.Size = new System.Drawing.Size(197, 38);
-            this.OACButton.TabIndex = 6;
-            this.OACButton.Text = "Ordenes";
-            this.OACButton.UseVisualStyleBackColor = false;
-            this.OACButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OACButton_MouseClick);
-            // 
             // button9
             // 
             this.button9.AutoSize = true;
@@ -469,6 +484,25 @@ namespace MaxPowerSystem
             this.button9.Text = "Finanzas";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Visible = false;
+            // 
+            // OACButton
+            // 
+            this.OACButton.AutoSize = true;
+            this.OACButton.BackColor = System.Drawing.Color.Transparent;
+            this.OACButton.FlatAppearance.BorderSize = 0;
+            this.OACButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OACButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OACButton.ForeColor = System.Drawing.Color.White;
+            this.OACButton.Image = ((System.Drawing.Image)(resources.GetObject("OACButton.Image")));
+            this.OACButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.OACButton.Location = new System.Drawing.Point(0, 574);
+            this.OACButton.Margin = new System.Windows.Forms.Padding(0);
+            this.OACButton.Name = "OACButton";
+            this.OACButton.Size = new System.Drawing.Size(197, 38);
+            this.OACButton.TabIndex = 6;
+            this.OACButton.Text = "Ordenes";
+            this.OACButton.UseVisualStyleBackColor = false;
+            this.OACButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OACButton_MouseClick);
             // 
             // button10
             // 
@@ -525,18 +559,6 @@ namespace MaxPowerSystem
             this.button16.TabIndex = 17;
             this.button16.Text = "Estadisticas";
             this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(3, 5);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(69, 62);
-            this.button7.TabIndex = 8;
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // pictureBox3
             // 
@@ -646,128 +668,14 @@ namespace MaxPowerSystem
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.White;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 18.25F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(524, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "MaxPower System";
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuDatepicker1);
-            this.bunifuGradientPanel1.Controls.Add(this.button7);
-            this.bunifuGradientPanel1.Controls.Add(this.label1);
-            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1184, 70);
-            this.bunifuGradientPanel1.TabIndex = 40;
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(922, 16);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(259, 36);
-            this.bunifuDatepicker1.TabIndex = 9;
-            this.bunifuDatepicker1.Value = new System.DateTime(2019, 11, 20, 9, 0, 52, 860);
-            // 
-            // ordConfUC1
-            // 
-            this.ordConfUC1.Location = new System.Drawing.Point(0, 0);
-            this.ordConfUC1.Name = "ordConfUC1";
-            this.ordConfUC1.Size = new System.Drawing.Size(978, 561);
-            this.ordConfUC1.TabIndex = 7;
-            // 
-            // uploadDataBaseUC1
-            // 
-            this.uploadDataBaseUC1.Location = new System.Drawing.Point(0, 0);
-            this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
-            this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
-            this.uploadDataBaseUC1.TabIndex = 2;
-            this.uploadDataBaseUC1.Load += new System.EventHandler(this.UploadDataBaseUC1_Load);
-            // 
-            // viewDataBaseUC1
-            // 
-            this.viewDataBaseUC1.Location = new System.Drawing.Point(0, 0);
-            this.viewDataBaseUC1.Name = "viewDataBaseUC1";
-            this.viewDataBaseUC1.Size = new System.Drawing.Size(984, 561);
-            this.viewDataBaseUC1.TabIndex = 0;
-            // 
-            // tecAsistUC1
-            // 
-            this.tecAsistUC1.Location = new System.Drawing.Point(0, 0);
-            this.tecAsistUC1.Name = "tecAsistUC1";
-            this.tecAsistUC1.Size = new System.Drawing.Size(984, 561);
-            this.tecAsistUC1.TabIndex = 1;
-            // 
-            // ventaProdUC1
-            // 
-            this.ventaProdUC1.Location = new System.Drawing.Point(0, 0);
-            this.ventaProdUC1.Name = "ventaProdUC1";
-            this.ventaProdUC1.Size = new System.Drawing.Size(981, 561);
-            this.ventaProdUC1.TabIndex = 3;
-            // 
-            // repProdUC1
-            // 
-            this.repProdUC1.Location = new System.Drawing.Point(0, 0);
-            this.repProdUC1.Name = "repProdUC1";
-            this.repProdUC1.Size = new System.Drawing.Size(981, 561);
-            this.repProdUC1.TabIndex = 4;
-            // 
-            // compExteriorUC1
-            // 
-            this.compExteriorUC1.Location = new System.Drawing.Point(0, 0);
-            this.compExteriorUC1.Name = "compExteriorUC1";
-            this.compExteriorUC1.Size = new System.Drawing.Size(981, 617);
-            this.compExteriorUC1.TabIndex = 5;
-            // 
-            // compNacUC1
-            // 
-            this.compNacUC1.Location = new System.Drawing.Point(0, 0);
-            this.compNacUC1.Name = "compNacUC1";
-            this.compNacUC1.Size = new System.Drawing.Size(984, 626);
-            this.compNacUC1.TabIndex = 6;
-            // 
-            // notificacionesUC1
-            // 
-            this.notificacionesUC1.Location = new System.Drawing.Point(0, 0);
-            this.notificacionesUC1.Name = "notificacionesUC1";
-            this.notificacionesUC1.Size = new System.Drawing.Size(984, 626);
-            this.notificacionesUC1.TabIndex = 8;
-            // 
-            // solicitudesUC1
-            // 
-            this.solicitudesUC1.Location = new System.Drawing.Point(0, 0);
-            this.solicitudesUC1.Name = "solicitudesUC1";
-            this.solicitudesUC1.Size = new System.Drawing.Size(984, 561);
-            this.solicitudesUC1.TabIndex = 9;
-            // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.bunifuGradientPanel3);
             this.panel1.Controls.Add(this.solicitudesUC1);
             this.panel1.Controls.Add(this.notificacionesUC1);
@@ -807,6 +715,91 @@ namespace MaxPowerSystem
             this.bunifuGradientPanel3.Size = new System.Drawing.Size(984, 617);
             this.bunifuGradientPanel3.TabIndex = 42;
             // 
+            // solicitudesUC1
+            // 
+            this.solicitudesUC1.BackColor = System.Drawing.Color.Transparent;
+            this.solicitudesUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("solicitudesUC1.BackgroundImage")));
+            this.solicitudesUC1.Location = new System.Drawing.Point(0, 0);
+            this.solicitudesUC1.Name = "solicitudesUC1";
+            this.solicitudesUC1.Size = new System.Drawing.Size(984, 561);
+            this.solicitudesUC1.TabIndex = 9;
+            // 
+            // notificacionesUC1
+            // 
+            this.notificacionesUC1.Location = new System.Drawing.Point(0, 0);
+            this.notificacionesUC1.Name = "notificacionesUC1";
+            this.notificacionesUC1.Size = new System.Drawing.Size(984, 626);
+            this.notificacionesUC1.TabIndex = 8;
+            // 
+            // compNacUC1
+            // 
+            this.compNacUC1.BackColor = System.Drawing.Color.Transparent;
+            this.compNacUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("compNacUC1.BackgroundImage")));
+            this.compNacUC1.ForeColor = System.Drawing.Color.Black;
+            this.compNacUC1.Location = new System.Drawing.Point(0, 0);
+            this.compNacUC1.Name = "compNacUC1";
+            this.compNacUC1.Size = new System.Drawing.Size(984, 626);
+            this.compNacUC1.TabIndex = 6;
+            // 
+            // compExteriorUC1
+            // 
+            this.compExteriorUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("compExteriorUC1.BackgroundImage")));
+            this.compExteriorUC1.ForeColor = System.Drawing.Color.White;
+            this.compExteriorUC1.Location = new System.Drawing.Point(0, 0);
+            this.compExteriorUC1.Name = "compExteriorUC1";
+            this.compExteriorUC1.Size = new System.Drawing.Size(981, 617);
+            this.compExteriorUC1.TabIndex = 5;
+            // 
+            // repProdUC1
+            // 
+            this.repProdUC1.BackColor = System.Drawing.Color.Transparent;
+            this.repProdUC1.Location = new System.Drawing.Point(0, 0);
+            this.repProdUC1.Name = "repProdUC1";
+            this.repProdUC1.Size = new System.Drawing.Size(981, 561);
+            this.repProdUC1.TabIndex = 4;
+            // 
+            // ventaProdUC1
+            // 
+            this.ventaProdUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ventaProdUC1.BackgroundImage")));
+            this.ventaProdUC1.Location = new System.Drawing.Point(0, 0);
+            this.ventaProdUC1.Name = "ventaProdUC1";
+            this.ventaProdUC1.Size = new System.Drawing.Size(981, 561);
+            this.ventaProdUC1.TabIndex = 3;
+            // 
+            // tecAsistUC1
+            // 
+            this.tecAsistUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tecAsistUC1.BackgroundImage")));
+            this.tecAsistUC1.Location = new System.Drawing.Point(0, 0);
+            this.tecAsistUC1.Name = "tecAsistUC1";
+            this.tecAsistUC1.Size = new System.Drawing.Size(984, 561);
+            this.tecAsistUC1.TabIndex = 1;
+            // 
+            // viewDataBaseUC1
+            // 
+            this.viewDataBaseUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("viewDataBaseUC1.BackgroundImage")));
+            this.viewDataBaseUC1.ForeColor = System.Drawing.Color.White;
+            this.viewDataBaseUC1.Location = new System.Drawing.Point(0, 0);
+            this.viewDataBaseUC1.Name = "viewDataBaseUC1";
+            this.viewDataBaseUC1.Size = new System.Drawing.Size(984, 561);
+            this.viewDataBaseUC1.TabIndex = 0;
+            // 
+            // uploadDataBaseUC1
+            // 
+            this.uploadDataBaseUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("uploadDataBaseUC1.BackgroundImage")));
+            this.uploadDataBaseUC1.Location = new System.Drawing.Point(0, 0);
+            this.uploadDataBaseUC1.Name = "uploadDataBaseUC1";
+            this.uploadDataBaseUC1.Size = new System.Drawing.Size(984, 561);
+            this.uploadDataBaseUC1.TabIndex = 2;
+            this.uploadDataBaseUC1.Load += new System.EventHandler(this.UploadDataBaseUC1_Load);
+            // 
+            // ordConfUC1
+            // 
+            this.ordConfUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ordConfUC1.BackgroundImage")));
+            this.ordConfUC1.Location = new System.Drawing.Point(0, 0);
+            this.ordConfUC1.Name = "ordConfUC1";
+            this.ordConfUC1.Size = new System.Drawing.Size(978, 561);
+            this.ordConfUC1.TabIndex = 7;
+            // 
             // bunifuGradientPanel4
             // 
             this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
@@ -822,44 +815,66 @@ namespace MaxPowerSystem
             this.bunifuGradientPanel4.Size = new System.Drawing.Size(200, 617);
             this.bunifuGradientPanel4.TabIndex = 43;
             // 
-            // bunifuFlatButton1
+            // label1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "      Menu";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 80D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(3, 3);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(194, 40);
-            this.bunifuFlatButton1.TabIndex = 39;
-            this.bunifuFlatButton1.Text = "      Menu";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 18.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(524, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(232, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "MaxPower System";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(3, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(69, 62);
+            this.button7.TabIndex = 8;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // bunifuDatepicker1
+            // 
+            this.bunifuDatepicker1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatepicker1.BorderRadius = 0;
+            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.FormatCustom = null;
+            this.bunifuDatepicker1.Location = new System.Drawing.Point(922, 16);
+            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
+            this.bunifuDatepicker1.Size = new System.Drawing.Size(259, 36);
+            this.bunifuDatepicker1.TabIndex = 9;
+            this.bunifuDatepicker1.Value = new System.DateTime(2019, 11, 20, 9, 0, 52, 860);
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.bunifuDatepicker1);
+            this.bunifuGradientPanel1.Controls.Add(this.button7);
+            this.bunifuGradientPanel1.Controls.Add(this.label1);
+            this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(66)))));
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(17)))), ((int)(((byte)(10)))));
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1184, 70);
+            this.bunifuGradientPanel1.TabIndex = 40;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Maroon;
             this.ClientSize = new System.Drawing.Size(1184, 687);
             this.Controls.Add(this.bunifuGradientPanel4);
             this.Controls.Add(this.panel1);
@@ -878,12 +893,12 @@ namespace MaxPowerSystem
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.bunifuGradientPanel3.PerformLayout();
             this.bunifuGradientPanel4.ResumeLayout(false);
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -912,8 +927,6 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button viewArt;
         private System.Windows.Forms.Button viewCot;
@@ -930,8 +943,6 @@ namespace MaxPowerSystem
         private System.Windows.Forms.Label viewHora;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
         private OrdConfUC ordConfUC1;
         private uploadDataBaseUC uploadDataBaseUC1;
         private viewDataBaseUC viewDataBaseUC1;
@@ -946,6 +957,10 @@ namespace MaxPowerSystem
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button7;
+        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
     }
 }
 

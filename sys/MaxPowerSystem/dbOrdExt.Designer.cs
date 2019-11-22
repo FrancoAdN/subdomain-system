@@ -57,8 +57,9 @@
             // labEnt
             // 
             this.labEnt.AutoSize = true;
+            this.labEnt.BackColor = System.Drawing.Color.Transparent;
             this.labEnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labEnt.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labEnt.ForeColor = System.Drawing.Color.White;
             this.labEnt.Location = new System.Drawing.Point(50, 23);
             this.labEnt.Name = "labEnt";
             this.labEnt.Size = new System.Drawing.Size(80, 18);
@@ -86,7 +87,9 @@
             // labInco
             // 
             this.labInco.AutoSize = true;
+            this.labInco.BackColor = System.Drawing.Color.Transparent;
             this.labInco.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labInco.ForeColor = System.Drawing.Color.White;
             this.labInco.Location = new System.Drawing.Point(51, 77);
             this.labInco.Name = "labInco";
             this.labInco.Size = new System.Drawing.Size(79, 18);
@@ -105,7 +108,9 @@
             // labMon
             // 
             this.labMon.AutoSize = true;
+            this.labMon.BackColor = System.Drawing.Color.Transparent;
             this.labMon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labMon.ForeColor = System.Drawing.Color.White;
             this.labMon.Location = new System.Drawing.Point(51, 140);
             this.labMon.Name = "labMon";
             this.labMon.Size = new System.Drawing.Size(73, 18);
@@ -124,7 +129,9 @@
             // labPmde
             // 
             this.labPmde.AutoSize = true;
+            this.labPmde.BackColor = System.Drawing.Color.Transparent;
             this.labPmde.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPmde.ForeColor = System.Drawing.Color.White;
             this.labPmde.Location = new System.Drawing.Point(46, 277);
             this.labPmde.Name = "labPmde";
             this.labPmde.Size = new System.Drawing.Size(204, 18);
@@ -134,7 +141,9 @@
             // labDate
             // 
             this.labDate.AutoSize = true;
+            this.labDate.BackColor = System.Drawing.Color.Transparent;
             this.labDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labDate.ForeColor = System.Drawing.Color.White;
             this.labDate.Location = new System.Drawing.Point(715, 277);
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(110, 18);
@@ -165,7 +174,9 @@
             // labP
             // 
             this.labP.AutoSize = true;
+            this.labP.BackColor = System.Drawing.Color.Transparent;
             this.labP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labP.ForeColor = System.Drawing.Color.White;
             this.labP.Location = new System.Drawing.Point(533, 277);
             this.labP.Name = "labP";
             this.labP.Size = new System.Drawing.Size(40, 18);
@@ -231,6 +242,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -249,6 +262,7 @@
             this.Controls.Add(this.labInco);
             this.Controls.Add(this.labValEnt);
             this.Controls.Add(this.labEnt);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "dbOrdExt";
             this.Size = new System.Drawing.Size(920, 330);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

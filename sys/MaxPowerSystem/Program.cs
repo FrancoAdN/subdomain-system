@@ -36,9 +36,10 @@ namespace MaxPowerSystem
            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Login());
+            Application.Run(new Login());
             //Application.Run(new Form1());
-            Application.Run(new FormArticulos());
+            //Application.Run(new FormArticulos());
+            //Application.Run(new Form2());
         }
     }
 }

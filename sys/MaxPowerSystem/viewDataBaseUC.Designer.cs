@@ -81,6 +81,7 @@
             // 
             // countPanel
             // 
+            this.countPanel.BackColor = System.Drawing.Color.Transparent;
             this.countPanel.ColumnCount = 4;
             this.countPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.76191F));
             this.countPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.23809F));
@@ -102,6 +103,7 @@
             // 
             this.leftBut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.leftBut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.leftBut.ForeColor = System.Drawing.Color.Black;
             this.leftBut.Location = new System.Drawing.Point(3, 3);
             this.leftBut.Name = "leftBut";
             this.leftBut.Size = new System.Drawing.Size(40, 24);
@@ -139,6 +141,7 @@
             // 
             this.rightBut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rightBut.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rightBut.ForeColor = System.Drawing.Color.Black;
             this.rightBut.Location = new System.Drawing.Point(127, 3);
             this.rightBut.Name = "rightBut";
             this.rightBut.Size = new System.Drawing.Size(36, 24);
@@ -151,7 +154,9 @@
             // ordLab
             // 
             this.ordLab.AutoSize = true;
+            this.ordLab.BackColor = System.Drawing.Color.Transparent;
             this.ordLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordLab.ForeColor = System.Drawing.Color.White;
             this.ordLab.Location = new System.Drawing.Point(50, 139);
             this.ordLab.Name = "ordLab";
             this.ordLab.Size = new System.Drawing.Size(59, 18);
@@ -179,7 +184,9 @@
             // labEnt
             // 
             this.labEnt.AutoSize = true;
+            this.labEnt.BackColor = System.Drawing.Color.Transparent;
             this.labEnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labEnt.ForeColor = System.Drawing.Color.White;
             this.labEnt.Location = new System.Drawing.Point(50, 177);
             this.labEnt.Name = "labEnt";
             this.labEnt.Size = new System.Drawing.Size(80, 18);
@@ -199,7 +206,9 @@
             // labCuit
             // 
             this.labCuit.AutoSize = true;
+            this.labCuit.BackColor = System.Drawing.Color.Transparent;
             this.labCuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCuit.ForeColor = System.Drawing.Color.White;
             this.labCuit.Location = new System.Drawing.Point(50, 217);
             this.labCuit.Name = "labCuit";
             this.labCuit.Size = new System.Drawing.Size(74, 18);
@@ -209,7 +218,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(27, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 18);
@@ -218,6 +229,7 @@
             // 
             // pbOrd
             // 
+            this.pbOrd.BackColor = System.Drawing.Color.Transparent;
             this.pbOrd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbOrd.BackgroundImage")));
             this.pbOrd.Location = new System.Drawing.Point(15, 130);
             this.pbOrd.Name = "pbOrd";
@@ -227,6 +239,7 @@
             // 
             // pbCuit
             // 
+            this.pbCuit.BackColor = System.Drawing.Color.Transparent;
             this.pbCuit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbCuit.BackgroundImage")));
             this.pbCuit.Location = new System.Drawing.Point(15, 208);
             this.pbCuit.Name = "pbCuit";
@@ -236,6 +249,7 @@
             // 
             // pbEnt
             // 
+            this.pbEnt.BackColor = System.Drawing.Color.Transparent;
             this.pbEnt.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbEnt.BackgroundImage")));
             this.pbEnt.Location = new System.Drawing.Point(15, 170);
             this.pbEnt.Name = "pbEnt";
@@ -267,6 +281,9 @@
             // 
             // dbSolicitudesUC1
             // 
+            this.dbSolicitudesUC1.BackColor = System.Drawing.Color.Transparent;
+            this.dbSolicitudesUC1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dbSolicitudesUC1.BackgroundImage")));
+            this.dbSolicitudesUC1.ForeColor = System.Drawing.Color.White;
             this.dbSolicitudesUC1.Location = new System.Drawing.Point(0, 58);
             this.dbSolicitudesUC1.Name = "dbSolicitudesUC1";
             this.dbSolicitudesUC1.Size = new System.Drawing.Size(997, 328);
@@ -274,6 +291,9 @@
             // 
             // dbEnterprise1
             // 
+            this.dbEnterprise1.BackColor = System.Drawing.Color.Transparent;
+            this.dbEnterprise1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dbEnterprise1.BackgroundImage")));
+            this.dbEnterprise1.ForeColor = System.Drawing.Color.White;
             this.dbEnterprise1.Location = new System.Drawing.Point(0, 56);
             this.dbEnterprise1.Name = "dbEnterprise1";
             this.dbEnterprise1.Size = new System.Drawing.Size(997, 333);
@@ -281,6 +301,8 @@
             // 
             // dbVentProd1
             // 
+            this.dbVentProd1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dbVentProd1.BackgroundImage")));
+            this.dbVentProd1.ForeColor = System.Drawing.Color.White;
             this.dbVentProd1.Location = new System.Drawing.Point(0, 56);
             this.dbVentProd1.Name = "dbVentProd1";
             this.dbVentProd1.Size = new System.Drawing.Size(997, 343);
@@ -288,6 +310,9 @@
             // 
             // dbOrdExt1
             // 
+            this.dbOrdExt1.BackColor = System.Drawing.Color.Transparent;
+            this.dbOrdExt1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dbOrdExt1.BackgroundImage")));
+            this.dbOrdExt1.ForeColor = System.Drawing.Color.White;
             this.dbOrdExt1.Location = new System.Drawing.Point(0, 56);
             this.dbOrdExt1.Name = "dbOrdExt1";
             this.dbOrdExt1.Size = new System.Drawing.Size(997, 330);
@@ -295,6 +320,8 @@
             // 
             // dbTecAsist1
             // 
+            this.dbTecAsist1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dbTecAsist1.BackgroundImage")));
+            this.dbTecAsist1.ForeColor = System.Drawing.Color.White;
             this.dbTecAsist1.Location = new System.Drawing.Point(0, 56);
             this.dbTecAsist1.Name = "dbTecAsist1";
             this.dbTecAsist1.Size = new System.Drawing.Size(997, 377);
@@ -303,6 +330,7 @@
             // viewDataBaseUC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dbSolicitudesUC1);
             this.Controls.Add(this.pbOrd);
@@ -322,6 +350,7 @@
             this.Controls.Add(this.newSearch);
             this.Controls.Add(this.countPanel);
             this.Controls.Add(this.cmbDb);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "viewDataBaseUC";
             this.Size = new System.Drawing.Size(1000, 539);
             this.countPanel.ResumeLayout(false);

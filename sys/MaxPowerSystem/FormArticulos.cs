@@ -12,6 +12,7 @@ namespace MaxPowerSystem
 {
     public partial class FormArticulos : Form
     {
+        public string Orden;
         public FormArticulos()
         {
             InitializeComponent();
@@ -22,5 +23,17 @@ namespace MaxPowerSystem
             compArticulosUC1.Show();
             compArticulosUC1.BringToFront();
         }
+
+        public void setOrd(string o)
+        {
+            Orden = o;
+
+            agregarArtUC1.SetTitle(Orden);
+            agregarArtUC1.Show();
+            agregarArtUC1.BringToFront();
+            
+
+        }
+
     }
 }

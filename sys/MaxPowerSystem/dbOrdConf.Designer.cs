@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(dbOrdConf));
             this.SuspendLayout();
             // 
             // dbOrdConf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "dbOrdConf";
             this.Size = new System.Drawing.Size(656, 333);
             this.ResumeLayout(false);
