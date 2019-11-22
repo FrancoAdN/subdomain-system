@@ -34,6 +34,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.compArticulosUC1 = new MaxPowerSystem.compArticulosUC();
             this.agregarArtUC1 = new MaxPowerSystem.agregarArtUC();
+<<<<<<< HEAD
+=======
+            this.artProvUC1 = new MaxPowerSystem.artProvUC();
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +74,8 @@
             // 
             this.panel2.Controls.Add(this.agregarArtUC1);
             this.panel2.Controls.Add(this.compArticulosUC1);
+            this.panel2.Controls.Add(this.agregarArtUC1);
+            this.panel2.Controls.Add(this.artProvUC1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(141, 82);
             this.panel2.Name = "panel2";
@@ -89,9 +95,24 @@
             this.agregarArtUC1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.agregarArtUC1.Location = new System.Drawing.Point(0, 0);
             this.agregarArtUC1.Name = "agregarArtUC1";
+<<<<<<< HEAD
             this.agregarArtUC1.Size = new System.Drawing.Size(763, 439);
             this.agregarArtUC1.TabIndex = 1;
             // 
+=======
+            this.agregarArtUC1.Orden = null;
+            this.agregarArtUC1.Size = new System.Drawing.Size(763, 439);
+            this.agregarArtUC1.TabIndex = 1;
+            // 
+            // artProvUC1
+            // 
+            this.artProvUC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.artProvUC1.Location = new System.Drawing.Point(0, 0);
+            this.artProvUC1.Name = "artProvUC1";
+            this.artProvUC1.Size = new System.Drawing.Size(763, 439);
+            this.artProvUC1.TabIndex = 2;
+            // 
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
             // FormArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,5 +140,9 @@
         private System.Windows.Forms.Button button1;
         private compArticulosUC compArticulosUC1;
         private agregarArtUC agregarArtUC1;
+<<<<<<< HEAD
+=======
+        public artProvUC artProvUC1;
+>>>>>>> f20159896b464afdfbf0f7961a90edb0a2ba5124
     }
 }

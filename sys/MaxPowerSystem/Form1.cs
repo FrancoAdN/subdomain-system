@@ -114,7 +114,6 @@ namespace MaxPowerSystem
 
         }
 
-
         public void CreateTableWord(object filename, object SaveAs, object arr, int n_table)
         {
 
@@ -505,6 +504,7 @@ namespace MaxPowerSystem
             solicitudesUC1.Hide();
 
             uploadDataBaseUC1.changeName("Proveedores");
+            uploadDataBaseUC1.setProv("All");
             uploadDataBaseUC1.Show();
             uploadDataBaseUC1.BringToFront();
         }

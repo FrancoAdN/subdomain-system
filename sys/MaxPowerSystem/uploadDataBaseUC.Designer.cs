@@ -69,6 +69,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.comboRub = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -84,6 +85,7 @@
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.comboRub);
             this.bunifuGradientPanel1.Controls.Add(this.labTitulo);
             this.bunifuGradientPanel1.Controls.Add(this.label15);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox8);
@@ -410,6 +412,7 @@
             this.button1.Size = new System.Drawing.Size(39, 37);
             this.button1.TabIndex = 145;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.insertData);
             // 
             // label13
             // 
@@ -555,6 +558,16 @@
             this.label1.TabIndex = 118;
             this.label1.Text = "Empresa:";
             // 
+            // comboRub
+            // 
+            this.comboRub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboRub.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboRub.FormattingEnabled = true;
+            this.comboRub.Location = new System.Drawing.Point(169, 272);
+            this.comboRub.Name = "comboRub";
+            this.comboRub.Size = new System.Drawing.Size(244, 26);
+            this.comboRub.TabIndex = 157;
+            // 
             // uploadDataBaseUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -618,5 +631,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboRub;
     }
 }

@@ -100,11 +100,11 @@
             // 
             // butAccept
             // 
-            this.butAccept.Location = new System.Drawing.Point(358, 393);
+            this.butAccept.Location = new System.Drawing.Point(649, 399);
             this.butAccept.Name = "butAccept";
             this.butAccept.Size = new System.Drawing.Size(75, 23);
             this.butAccept.TabIndex = 117;
-            this.butAccept.Text = "Aceptar";
+            this.butAccept.Text = "Siguiente >";
             this.butAccept.UseVisualStyleBackColor = true;
             this.butAccept.Visible = false;
             this.butAccept.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ButAccept_MouseClick);

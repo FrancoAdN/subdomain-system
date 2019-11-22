@@ -112,6 +112,17 @@ function connectionSQL(){
     return con;
 }
 
+function conSQL(){
+    const con = mysql.createConnection({
+        host: "localhost",
+        user: "maxpower_francoadinapoli",
+        password: "Fa42904558.;",
+        database: "maxpower_db" ,
+        multipleStatements: true
+    });
+    return con;
+}
+
 const app = express();
 
 app.use(express.static('public'));
@@ -461,7 +472,6 @@ app.post('/ord_ext', (req, resp) => {
 })
 //#endregion
 
-
 //#region REPARACION DE LABORATORIO
 
 app.get('/rep_lab', (req, resp) => {
@@ -628,7 +638,6 @@ app.post('/rep_lab', (req, resp) => {
 });
 
 //#endregion
-
 
 
 //#region ASISTENCIA TECNICA
@@ -984,6 +993,117 @@ app.get('/emp/:id', (req, resp) => {
 });
 //#endregion
 
+//#region PROVEEDORES
+app.post('/prov', (req, resp) => {
+    let emp = req.body;
+    emp.cuit = parseInt(emp.cuit);
+    emp.tel = parseInt(emp.tel);
+    emp.telb = parseInt(emp.telb);
+    emp.telcom = parseInt(emp.telcom);
+
+    const con = connectionSQL();
+
+    const sql =  "SELECT * FROM prov WHERE `emp` = '" + emp.emp  + "';";
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+          if (err){
+            console.error(err);
+            resp.send("0");
+          }else if(result.length == 0){
+            const qry = `INSERT into prov (emp, cuit, dir, loc, web, telcom, rub, cont, mail, tel, contb, mailb, telb) 
+            VALUES ('${emp.emp}', ${emp.cuit}, '${emp.dir}', '${emp.loc}', '${emp.web}', ${emp.telcom}, '${emp.rub}', '${emp.cont}', '${emp.mail}', ${emp.tel}, '${emp.contb}', '${emp.mailb}', ${emp.telb});`;
+            con.query(qry, function (err, result, fields) {
+                if (err){
+                    console.error(err);
+                    resp.send("0");
+                }else{
+                    console.log("INSERT DONE");
+                    resp.send("1");
+                }
+            });
+          }else{
+            resp.send("2");
+          }
+          con.end();
+        });
+    });
+});
+
+app.get('/prov', (req, resp) => {
+    const sql = "SELECT * FROM prov";
+    const con = connectionSQL();
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else
+                resp.send(result);
+          con.end();
+        });
+    });
+});
+
+app.get('/prov/:id', (req, resp) => {
+    const con = connectionSQL();
+    
+    let sql = "SELECT * FROM prov WHERE";
+    if(parseInt(req.params.id))
+        sql += " `cuit` = " + req.params.id;
+    else
+        sql += " `emp` = '" + req.params.id +"';";
+    
+
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else if(result.length != 0)
+                resp.send(result);
+            else
+                resp.send("9");
+          con.end();
+        });
+    });
+});
+
+app.get('/prov/rub/:rub', (req, resp) => {
+    const con = connectionSQL();
+    const rub = req.params.rub;
+    let sql = `SELECT emp FROM prov WHERE rub LIKE '${rub}'`;
+    
+
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else if(result.length != 0)
+                resp.send(result);
+            else
+                resp.send("15");
+          con.end();
+        });
+    });
+});
+//#endregion
 
 
 //#region UTILITIES
@@ -1463,6 +1583,52 @@ app.post('/register', (req, resp) => {
 });
 //#endregion
 
+//#region GET PRODUCTS
 
+app.get('/seguridad', (req, resp) => {
+
+    
+    const con = conSQL();
+    const sql =  'SELECT Nombre FROM p_seguridad ORDER BY Codigo ASC;';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else
+                resp.send(result);
+          con.end();
+        });
+    });
+
+});
+app.get('/electronicos', (req, resp) => {
+
+    
+    const con = conSQL();
+    const sql =  'SELECT Nombre FROM p_electronicos ORDER BY Codigo ASC;';
+    con.connect(function(err) {
+        if (err) {
+            console.error(err);
+            resp.send("0");
+        }
+        con.query(sql, function (err, result, fields) {
+            if (err) {
+                console.error(err);
+                resp.send("0");
+            }else
+                console.log(result.length);
+                resp.send(result);
+          con.end();
+        });
+    });
+
+});
+
+//#endregion
 
 app.listen(3030, () => console.log('Server running'));
