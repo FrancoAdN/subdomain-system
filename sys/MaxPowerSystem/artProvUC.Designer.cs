@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labProd = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboProv = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
@@ -74,13 +74,13 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Proveedores:";
             // 
-            // comboBox1
+            // comboProv
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(70, 56);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(272, 21);
-            this.comboBox1.TabIndex = 3;
+            this.comboProv.FormattingEnabled = true;
+            this.comboProv.Location = new System.Drawing.Point(77, 56);
+            this.comboProv.Name = "comboProv";
+            this.comboProv.Size = new System.Drawing.Size(272, 21);
+            this.comboProv.TabIndex = 3;
             // 
             // label3
             // 
@@ -138,7 +138,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 112);
+            this.textBox1.Location = new System.Drawing.Point(77, 114);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(84, 20);
             this.textBox1.TabIndex = 14;
@@ -196,7 +196,7 @@
             this.Controls.Add(this.boxCant);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboProv);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labProd);
             this.Controls.Add(this.label1);
@@ -212,7 +212,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labProd;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboProv;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;

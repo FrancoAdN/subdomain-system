@@ -4,9 +4,8 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json.Linq;
 
 namespace MaxPowerSystem
 {
@@ -26,6 +25,7 @@ namespace MaxPowerSystem
             this.BringToFront();
             _arts = (List<Articulo>)FormArticulos.ListArt.GetArticulos();
             labProd.Text = _arts[FormArticulos.Index].producto;
+
 
         }
 
